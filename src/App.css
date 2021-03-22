@@ -1,0 +1,115 @@
+.App {
+  height: 100%;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.footerStyle {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  font-family: "Open Sans", serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 0.7rem;
+  background-color: #2d3436;
+  background-image: linear-gradient(to right, #2d3436, #000000, #2d3436);
+}
+
+.lightText {
+  font-family: "Open Sans", serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: white;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  flex: 1;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.icon {
+  color: white;
+}
+
+.icon[type = 'github']:hover {
+  color: dimgrey;
+}
+
+.icon[type = 'bitbucket']:hover {
+  color: #1a74ed;
+}
+
+.icon[type = 'email']:hover {
+  color: darkred;
+}
+
+.lightText:hover {
+  color: orange;
+}
+
+.websiteName {
+  font-family: "Open Sans", serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: orange;
+  flex: 1;
+  margin-left: -25rem;
+  margin-right: 19rem;
+  display: inline;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.item-dashboard {
+  background-color: #282c34;
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+  min-height: 50vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: black;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}

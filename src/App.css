@@ -35,6 +35,15 @@
 
 .icon {
   color: white;
+  margin-top: 10px;
+}
+
+.icon[type = 'email'] {
+  margin-top: 5px;
+}
+
+.icon[type = 'discord'] {
+  margin-top: 20px;
 }
 
 .icon[type = 'github']:hover {
@@ -47,6 +56,10 @@
 
 .icon[type = 'email']:hover {
   color: darkred;
+}
+
+.icon[type = 'discord']:hover {
+  color: #7289da;
 }
 
 .lightText:hover {
@@ -77,12 +90,22 @@
 
 .item-dashboard {
   background-color: #282c34;
-  flex: 1;
-  flex-direction: column;
   text-align: center;
   min-height: 50vh;
   font-size: calc(10px + 2vmin);
   color: white;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 40px;
+  position: relative;
 }
 
 .navbar {
@@ -95,8 +118,49 @@
   padding-bottom: 1rem;
 }
 
+.iconDiv {
+  width: 100px;
+  height: 100px;
+}
+
 .App-link {
   color: #61dafb;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltipText {
+  visibility: hidden;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-size: 0.65rem;
+  padding: 3px 0;
+  margin-top: -20px;
+  margin-left: -20px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip .tooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltipText {
+  visibility: visible;
 }
 
 @keyframes App-logo-spin {

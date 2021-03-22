@@ -5,11 +5,11 @@ const Navbar = () => {
     const navbarOptions = ['about', 'projects', 'skills', 'hobby', 'contact'];
 
     const generateNavbar = (navbarOptions) => {
-        return navbarOptions.map(el => <a href={'#' + el} className={'lightText'}>{el.charAt(0).toUpperCase() + el.slice(1)}</a>);
+        return navbarOptions.map(el => <a href={'#' + el} className={'navbarText'}>{el.charAt(0).toUpperCase() + el.slice(1)}</a>);
     }
 
     return (
-      <div className={'navbar'}>
+      <div className={'navbarContent'}>
           <p className={'websiteName'}>{websiteName}</p>
           {generateNavbar(navbarOptions)}
       </div>

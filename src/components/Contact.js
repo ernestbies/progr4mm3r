@@ -15,17 +15,17 @@ const Contact = () => {
         input.remove();
 
         let tooltipText = document.getElementsByClassName('tooltipText');
-        tooltipText[0].textContent = 'Username copied!';
+        tooltipText[0].innerHTML = '<p style="color: orange; display: inline;">tsl#2025</p> has been copied to clipboard!';
     };
 
     const outCopyName = () => {
         let tooltipText = document.getElementsByClassName('tooltipText');
-        tooltipText[0].textContent = 'Click here to copy the username';
+        tooltipText[0].innerHTML = '<p>Click here to copy the username</p>';
     }
 
     return (
         <div id={'contact'} className={'item-dashboard'}>
-            <p style={{color: 'white', display: 'inline-block', fontFamily: 'Open Sans', fontWeight: 300}}>Contact with me</p>
+            <p style={{color: 'white', display: 'inline-block', fontFamily: 'Open Sans', fontWeight: 300, marginTop: 20}}>Contact with me</p>
             <div className={'contact-icons'}>
                 <div className={'iconDiv'}>
                     <a color={'white'} target={'_blank'} rel={'noreferrer'} style={{outline: 'none'}} href={'https://github.com/ernestbies/'}>
@@ -40,7 +40,7 @@ const Contact = () => {
                         <CgMail size={100} type={'email'} className={'icon'}/></a>
                 </div>
                 <div className={'iconDiv'}>
-                    <div className={'tooltip'}>
+                    <div className={'tooltipClass'}>
                         <button id={'discordIcon'} onClick={() => copyName()} onMouseOut={() => outCopyName()}
                                 color={'white'} style={{backgroundColor: 'transparent', borderWidth: 0, cursor: 'pointer'}}>
                             <span className={'tooltipText'}>Click here to copy the username</span>

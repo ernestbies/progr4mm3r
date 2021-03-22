@@ -120,7 +120,11 @@
   height: auto;
   margin: 0 auto;
   padding-top: 40px;
-  position: relative;
+}
+
+.language-icons {
+  display: flex;
+  margin: 0 auto;
 }
 
 .navbarContent {
@@ -179,6 +183,43 @@
 .tooltipClass:hover .tooltipText {
   visibility: visible;
 }
+
+.tooltipClassSmall {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltipClassSmall .tooltipText {
+  visibility: hidden;
+  width: 60px;
+  height: 20px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  font-size: 0.65rem;
+  margin-top: -28px;
+  padding: 3px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltipClassSmall .tooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltipClassSmall:hover .tooltipText {
+  visibility: visible;
+}
+
 
 @keyframes App-logo-spin {
   from {

@@ -30,6 +30,7 @@ const Hobby = () => {
                 <Carousel.Item className={'carousel-item'}>
                     <div style={{display: 'flex', justifyContent: 'column'}}>
                         <img
+                            alt={''}
                             className={'d-block w-50'}
                             src={'/images/esports.jpg'}
                             style={{opacity: 0.5, flex: 1}}
@@ -54,6 +55,7 @@ const Hobby = () => {
                 <Carousel.Item className={'carousel-item'}>
                     <div style={{display: 'flex', justifyContent: 'column'}}>
                         <img
+                            alt={''}
                             className={'d-block w-50'}
                             src={'/images/programming.jpg'}
                             style={{opacity: 0.5, flex: 1}}
@@ -78,6 +80,7 @@ const Hobby = () => {
                 <Carousel.Item className={'carousel-item'}>
                     <div style={{display: 'flex', justifyContent: 'column'}}>
                         <img
+                            alt={''}
                             className={'d-block w-50'}
                             src={'/images/cinematography.jpg'}
                             style={{opacity: 0.5, flex: 1}}

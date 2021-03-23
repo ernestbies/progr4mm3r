@@ -192,13 +192,14 @@
 
 .tooltipClassSmall .tooltipText {
   visibility: hidden;
-  width: 60px;
+  width: 70px;
   height: 20px;
   background-color: black;
   color: #fff;
   text-align: center;
   font-size: 0.65rem;
   margin-top: -28px;
+  margin-left: -8px;
   padding: 3px 0;
   border-radius: 6px;
   position: absolute;
@@ -219,7 +220,6 @@
 .tooltipClassSmall:hover .tooltipText {
   visibility: visible;
 }
-
 
 @keyframes App-logo-spin {
   from {

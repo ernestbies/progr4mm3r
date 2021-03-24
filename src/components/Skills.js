@@ -3,7 +3,7 @@ import React from 'react';
 const Skills = () => {
     return (
         <div id={'skills'} className={'item-dashboard'} style={{backgroundColor: '#1d2026'}}>
-            <p style={{paddingTop: 5, fontFamily: 'Open Sans'}}>Skills</p>
+            <p style={{color: 'white', display: 'inline-block', fontFamily: 'Open Sans', fontWeight: 300, marginTop: 20}}>Skills</p>
             <p style={{fontSize: 15, marginTop: 15, fontFamily: 'Open Sans'}}>I am constantly trying to gain knowledge
                 and improve my programming skills.<br/>
                 I have learned many programming languages, but I mainly focus on <code

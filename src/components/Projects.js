@@ -5,7 +5,7 @@ import {
     FaGithub,
     FaWrench,
     FaYoutube,
-    FcAndroidOs,
+    FcAndroidOs, FcLinux,
     IoLogoApple
 } from "react-icons/all";
 
@@ -37,7 +37,7 @@ const Projects = () => {
         },
         spaceships: {
             name: 'Spaceships',
-            description: 'Spaceships is a puzzle game combining two popular games "Ships" and "Minesweeper" based on a client-server architecture. The aim of the game is to find all the ships on the board in the fewest possible steps, using the information on how many ships there are in near an exposed space on the board.',
+            description: 'Spaceships is a puzzle game combining two popular games "Ships" and "Minesweeper" based on a client-server architecture. The aim of the game is to find all the ships on the board in the fewest possible steps.',
             technologies: {
                 pc: ['Java', 'C++', 'Apache Netbeans IDE', 'Swing', 'Qt'],
                 mobile: ['Java', 'Android Studio'],
@@ -48,6 +48,33 @@ const Projects = () => {
             image: 'images/projects/spaceships.png',
             links: {
                 github: 'https://github.com/ernestbies/SpaceShips'
+            }
+        },
+        apocalyptogame: {
+            name: 'ApocalyptoGame',
+            description: '"ApocalyptoGame" is a first-person shooter (FPS) game. There is one main plot of the game in the game. In the game, we play the role of a soldier set in a post-apocalyptic world. The player\'s task is to destroy the enemy ship. The player has the ability to interact with the environment, can pick up items. In order to destroy a ship, the player must collect four cells that will help him power the generator. The way to get cells is different - some of them are located on the map, some of them can be obtained by the player by killing aliens, and the last one is possible after killing the boss. After collecting all the cells, the player can power the generator on the map, which will blow up the enemy ship. The game has a developed combat and healing system.',
+            technologies: ['C#', 'Unity'],
+            image: 'images/projects/apocalyptogame.png',
+            links: {
+                github: 'https://github.com/ernestbies/ApocalyptoGame'
+            }
+        },
+        quiz: {
+            name: 'Quiz app',
+            description: 'Mobile application that allows you to solve on-line tests. Tests are downloaded from an external server. The user has the option of solving a specific test, has a specific time to answer a specific question. In addition, they can choose a random test and view all their and other users\' results. The application has a drawer menu that makes it easy to access all screens. It was my first application created with React Native framework. The application is designed for Android and iOS.',
+            technologies: ['JavaScript', 'React Native', 'RN Splash Screen', 'RN Navigation', 'Async Storage', 'NetInfo', 'Vector icons', 'SQLite'],
+            image: 'images/projects/quiz-dashboard.png',
+            links: {
+                github: 'https://github.com/ernestbies/Quiz'
+            }
+        },
+        imagebinarizer: {
+            name: 'Image binarizer',
+            description: 'The application allows you to binarize images. The application supports the basic types of binarization - low-level, high-level, two-threshold, conditional. It allows you to load any image (color or black and white), and then select a specific operation. The application works in a distributed environment using Remote Method Invocation (RMI) - a mechanism that enables remote methods of objects invocation. These objects can reside in other Java virtual machines that can be on other computers. In RMI technology, it is necessary to run three processes: client, server, register of objects.',
+            technologies: ['Java', 'Apache NetBeans IDE', 'Swing', 'Remote Method Invocation (RMI)'],
+            image: 'images/projects/imagebinarizer.png',
+            links: {
+                github: 'https://github.com/ernestbies/Image'
             }
         }
     };
@@ -83,7 +110,7 @@ const Projects = () => {
                         />
                         <div style={{margin: 40, textAlign: 'left', flex: 1}}>
                             <div style={{display: 'flex', alignItems: 'center'}}>
-                                <div style={{width: 5, height: 30, backgroundColor: 'red'}}/>
+                                <div style={{width: 5, height: 30, backgroundColor: 'orange'}}/>
                                 <p style={{
                                     paddingLeft: 7,
                                     fontFamily: 'Open Sans',
@@ -97,7 +124,7 @@ const Projects = () => {
                                 marginRight: 100
                             }}>{projects.mediabrowser.description}</p>
                             <div style={{display: 'flex', marginTop: 30, alignItems: 'center'}}>
-                                <FaWrench color={'red'} size={14} style={{marginRight: 5}}/>
+                                <FaWrench color={'orange'} size={14} style={{marginRight: 5}}/>
                                 <p style={{
                                     fontSize: 14,
                                     fontFamily: 'Open Sans',
@@ -134,6 +161,8 @@ const Projects = () => {
                             </div>
 
                             <div style={{display: 'flex', alignItems: 'center'}}>
+                                <AiFillWindows style={{marginRight: 2}}/>
+                                <FcLinux style={{marginRight: 2}}/>
                                 <FcAndroidOs style={{marginRight: 2}}/>
                                 <IoLogoApple style={{marginRight: 5}}/>
                                 <div style={{width: 1, height: 15, backgroundColor: '#282c34', marginRight: 10}}/>
@@ -235,7 +264,7 @@ const Projects = () => {
                                         style={{marginRight: 5}}
                                         src={'images/projects/osdfcon.png'}/>
                                     <p style={{fontSize: 10, margin: 0, color: 'white'}}>
-                                    Presented at conference</p>
+                                        Presented at conference</p>
                                 </a>
                                 <div style={{
                                     width: 1,
@@ -358,6 +387,62 @@ const Projects = () => {
                                 <AiFillWindows style={{marginRight: 2}}/>
                                 <FcAndroidOs style={{marginRight: 5}}/>
                                 <div style={{width: 1, height: 15, backgroundColor: '#282c34', marginRight: 10}}/>
+                                <a style={{
+                                    display: 'flex',
+                                    flexDirection: 'row',
+                                    textDecoration: 'none',
+                                    alignItems: 'center',
+                                    textAlign: 'center'
+                                }} href={projects.spaceships.links.github}>
+                                    <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
+                                    <p style={{fontSize: 10, margin: 0, color: 'white'}}>
+                                        Check out project page</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <Carousel.Caption/>
+                </Carousel.Item>
+
+                <Carousel.Item className={'carousel-item'}>
+                    <div style={{display: 'flex', justifyContent: 'column', height: '60vh'}}>
+                        <img
+                            alt={''}
+                            className={'d-block w-50'}
+                            src={projects.apocalyptogame.image}
+                            style={{opacity: 0.8, flex: 1}}
+                        />
+                        <div style={{margin: 40, textAlign: 'left', flex: 1}}>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
+                                <div style={{width: 5, height: 30, backgroundColor: 'red'}}/>
+                                <p style={{
+                                    paddingLeft: 7,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{projects.apocalyptogame.name}</p>
+                            </div>
+                            <p style={{
+                                fontSize: 12,
+                                fontFamily: 'Open Sans',
+                                marginTop: 30,
+                                marginRight: 100
+                            }}>{projects.apocalyptogame.description}</p>
+                            <div style={{display: 'flex', marginTop: 30, alignItems: 'center'}}>
+                                <FaWrench color={'red'} size={14} style={{marginRight: 5}}/>
+                                <p style={{
+                                    fontSize: 14,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{'Technologies used in project'}</p>
+                            </div>
+                            <code style={{
+                                fontSize: 12,
+                                fontStyle: 'normal'
+                            }}>{renderTechnologies(projects.apocalyptogame.technologies)}</code>
+
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: 10}}>
+                                <AiFillWindows style={{marginRight: 10}}/>
+                                <div style={{width: 1, height: 15, backgroundColor: '#282c34', marginRight: 10}}/>
                                 <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
                                     <a style={{
                                         display: 'flex',
@@ -365,7 +450,7 @@ const Projects = () => {
                                         textDecoration: 'none',
                                         alignItems: 'center',
                                         textAlign: 'center'
-                                    }} href={projects.spaceships.links.github}>
+                                    }} href={projects.apocalyptogame.links.github}>
                                         <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
                                         <p style={{fontSize: 10, margin: 0, color: 'white'}}>
                                             Check out project page</p>
@@ -376,6 +461,125 @@ const Projects = () => {
                     </div>
                     <Carousel.Caption/>
                 </Carousel.Item>
+
+                <Carousel.Item className={'carousel-item'}>
+                    <div style={{display: 'flex', justifyContent: 'column', height: '60vh'}}>
+                        <img
+                            alt={''}
+                            className={'d-block w-50'}
+                            src={projects.quiz.image}
+                            style={{opacity: 0.9, flex: 1}}
+                        />
+                        <div style={{margin: 40, textAlign: 'left', flex: 1}}>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
+                                <div style={{width: 5, height: 30, backgroundColor: 'yellow'}}/>
+                                <p style={{
+                                    paddingLeft: 7,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{projects.quiz.name}</p>
+                            </div>
+                            <p style={{
+                                fontSize: 12,
+                                fontFamily: 'Open Sans',
+                                marginTop: 30,
+                                marginRight: 100
+                            }}>{projects.quiz.description}</p>
+                            <div style={{display: 'flex', marginTop: 30, alignItems: 'center'}}>
+                                <FaWrench color={'yellow'} size={14} style={{marginRight: 5}}/>
+                                <p style={{
+                                    fontSize: 14,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{'Technologies used in project'}</p>
+                            </div>
+                            <code style={{
+                                fontSize: 12,
+                                fontStyle: 'normal'
+                            }}>{renderTechnologies(projects.quiz.technologies)}</code>
+
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: 10}}>
+                                <FcAndroidOs style={{marginRight: 2}}/>
+                                <IoLogoApple style={{marginRight: 5}}/>
+                                <div style={{width: 1, height: 15, backgroundColor: '#282c34', marginRight: 10}}/>
+                                <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+                                    <a style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        textDecoration: 'none',
+                                        alignItems: 'center',
+                                        textAlign: 'center'
+                                    }} href={projects.quiz.links.github}>
+                                        <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
+                                        <p style={{fontSize: 10, margin: 0, color: 'white'}}>
+                                            Check out project page</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <Carousel.Caption/>
+                </Carousel.Item>
+
+                <Carousel.Item className={'carousel-item'}>
+                    <div style={{display: 'flex', justifyContent: 'column', height: '60vh'}}>
+                        <img
+                            alt={''}
+                            className={'d-block w-50'}
+                            src={projects.imagebinarizer.image}
+                            style={{opacity: 0.7, flex: 1}}
+                        />
+                        <div style={{margin: 40, textAlign: 'left', flex: 1}}>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
+                                <div style={{width: 5, height: 30, backgroundColor: 'grey'}}/>
+                                <p style={{
+                                    paddingLeft: 7,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{projects.imagebinarizer.name}</p>
+                            </div>
+                            <p style={{
+                                fontSize: 12,
+                                fontFamily: 'Open Sans',
+                                marginTop: 30,
+                                marginRight: 100
+                            }}>{projects.imagebinarizer.description}</p>
+                            <div style={{display: 'flex', marginTop: 30, alignItems: 'center'}}>
+                                <FaWrench color={'grey'} size={14} style={{marginRight: 5}}/>
+                                <p style={{
+                                    fontSize: 14,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{'Technologies used in project'}</p>
+                            </div>
+                            <code style={{
+                                fontSize: 12,
+                                fontStyle: 'normal'
+                            }}>{renderTechnologies(projects.imagebinarizer.technologies)}</code>
+
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: 10}}>
+                                <AiFillWindows style={{marginRight: 10}}/>
+                                <div style={{width: 1, height: 15, backgroundColor: '#282c34', marginRight: 10}}/>
+                                <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+                                    <a style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        textDecoration: 'none',
+                                        alignItems: 'center',
+                                        textAlign: 'center'
+                                    }} href={projects.imagebinarizer.links.github}>
+                                        <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
+                                        <p style={{fontSize: 10, margin: 0, color: 'white'}}>
+                                            Check out project page</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <Carousel.Caption/>
+                </Carousel.Item>
+
+
             </Carousel>
         </div>
     );

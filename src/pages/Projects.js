@@ -16,7 +16,7 @@ const Projects = () => {
             description: 'System for searching information about audiovisual materials. Project implemented as part of an engineering thesis. The application allows you to search and view information about movies, series and people related to the film industry. The application is designed for devices with Android and iOS. The application supports Polish and English.',
             technologies: {
                 mobile: ['JavaScript', 'React Native', 'React Native Navigation', 'React Native SVG', 'MobX', 'SQLite'],
-                server: ['Node.js', 'Hapi.js', 'lodash', 'JSON Web Token', 'bcrpyt', 'nodemailer'],
+                server: ['JavaScript', 'Node.js', 'Hapi.js', 'lodash', 'JSON Web Token', 'bcrpyt', 'nodemailer'],
                 database: ['MongoDB', 'mongoose']
             },
             image: 'images/projects/mediabrowser-dashboard.png',
@@ -61,7 +61,7 @@ const Projects = () => {
         },
         quiz: {
             name: 'Quiz app',
-            description: 'Mobile application that allows you to solve on-line tests. Tests are downloaded from an external server. The user has the option of solving a specific test, has a specific time to answer a specific question. In addition, they can choose a random test and view all their and other users\' results. The application has a drawer menu that makes it easy to access all screens. It was my first application created with React Native framework. The application is designed for Android and iOS.',
+            description: 'Mobile application that allows you to solve on-line tests. Tests are downloaded from an external server. The user has the option of solving a specific test, has a specific time to answer a specific question. In addition, they can choose a random test and view all their and other users\' results. The application has a drawer menu that makes it easy to access all screens. The application is designed for Android and iOS.',
             technologies: ['JavaScript', 'React Native', 'RN Splash Screen', 'RN Navigation', 'Async Storage', 'NetInfo', 'Vector icons', 'SQLite'],
             image: 'images/projects/quiz-dashboard.png',
             links: {
@@ -74,7 +74,25 @@ const Projects = () => {
             technologies: ['Java', 'Apache NetBeans IDE', 'Swing', 'Remote Method Invocation (RMI)'],
             image: 'images/projects/imagebinarizer.png',
             links: {
-                github: 'https://github.com/ernestbies/Image'
+                github: 'https://github.com/ernestbies/ImageBinarizer'
+            }
+        },
+        calculator: {
+            name: 'Calculator',
+            description: 'App "Calculator" was created using the React Native framework. It was my first app created in React Native. The application works in landscape and potrait modes. The application has a basic set of math functions such as addition, subtraction, multiplication, division, percent. After changing the orientation, additional options are available.',
+            technologies: ['JavaScript', 'React Native'],
+            image: 'images/projects/calculator-dashboard.png',
+            links: {
+                github: 'https://github.com/ernestbies/CalculatorRN'
+            }
+        },
+        databaseapp: {
+            name: 'Database Connection App',
+            description: 'The application allows you to connect to any PostgreSQL database using the JDBC engine. The login data can be saved and read because the application uses serialization. In the application, it is possible to view all tables in the database. If the table contains users\' contact details (e-mail address), it is possible to send a message. Sending e-mails is performed by Javax Mail. The user can add recipients (TO, CC, BCC), message subject and content. After approval, the e-mail is sent to the selected users.',
+            technologies: ['Java', 'Apache NetBeans IDE', 'Swing', 'JDBC', 'PostgreSQL', 'Javax Mail'],
+            image: 'images/projects/databaseApp.png',
+            links: {
+                github: 'https://github.com/ernestbies/databaseApp'
             }
         }
     };
@@ -579,7 +597,122 @@ const Projects = () => {
                     <Carousel.Caption/>
                 </Carousel.Item>
 
+                <Carousel.Item className={'carousel-item'}>
+                    <div style={{display: 'flex', justifyContent: 'column', height: '60vh'}}>
+                        <img
+                            alt={''}
+                            className={'d-block w-50'}
+                            src={projects.calculator.image}
+                            style={{opacity: 0.9, flex: 1}}
+                        />
+                        <div style={{margin: 40, textAlign: 'left', flex: 1}}>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
+                                <div style={{width: 5, height: 30, backgroundColor: 'blue'}}/>
+                                <p style={{
+                                    paddingLeft: 7,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{projects.calculator.name}</p>
+                            </div>
+                            <p style={{
+                                fontSize: 12,
+                                fontFamily: 'Open Sans',
+                                marginTop: 30,
+                                marginRight: 100
+                            }}>{projects.calculator.description}</p>
+                            <div style={{display: 'flex', marginTop: 30, alignItems: 'center'}}>
+                                <FaWrench color={'blue'} size={14} style={{marginRight: 5}}/>
+                                <p style={{
+                                    fontSize: 14,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{'Technologies used in project'}</p>
+                            </div>
+                            <code style={{
+                                fontSize: 12,
+                                fontStyle: 'normal'
+                            }}>{renderTechnologies(projects.calculator.technologies)}</code>
 
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: 10}}>
+                                <FcAndroidOs style={{marginRight: 2}}/>
+                                <IoLogoApple style={{marginRight: 5}}/>
+                                <div style={{width: 1, height: 15, backgroundColor: '#282c34', marginRight: 10}}/>
+                                <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+                                    <a style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        textDecoration: 'none',
+                                        alignItems: 'center',
+                                        textAlign: 'center'
+                                    }} href={projects.calculator.links.github}>
+                                        <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
+                                        <p style={{fontSize: 10, margin: 0, color: 'white'}}>
+                                            Check out project page</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <Carousel.Caption/>
+                </Carousel.Item>
+
+                <Carousel.Item className={'carousel-item'}>
+                    <div style={{display: 'flex', justifyContent: 'column', height: '60vh'}}>
+                        <img
+                            alt={''}
+                            className={'d-block w-50'}
+                            src={projects.databaseapp.image}
+                            style={{opacity: 0.8, flex: 1}}
+                        />
+                        <div style={{margin: 40, textAlign: 'left', flex: 1}}>
+                            <div style={{display: 'flex', alignItems: 'center'}}>
+                                <div style={{width: 5, height: 30, backgroundColor: '#1E90FF'}}/>
+                                <p style={{
+                                    paddingLeft: 7,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{projects.databaseapp.name}</p>
+                            </div>
+                            <p style={{
+                                fontSize: 12,
+                                fontFamily: 'Open Sans',
+                                marginTop: 30,
+                                marginRight: 100
+                            }}>{projects.databaseapp.description}</p>
+                            <div style={{display: 'flex', marginTop: 30, alignItems: 'center'}}>
+                                <FaWrench color={'#1E90FF'} size={14} style={{marginRight: 5}}/>
+                                <p style={{
+                                    fontSize: 14,
+                                    fontFamily: 'Open Sans',
+                                    margin: 0
+                                }}>{'Technologies used in project'}</p>
+                            </div>
+                            <code style={{
+                                fontSize: 12,
+                                fontStyle: 'normal'
+                            }}>{renderTechnologies(projects.databaseapp.technologies)}</code>
+
+                            <div style={{display: 'flex', alignItems: 'center', marginTop: 10}}>
+                                <AiFillWindows style={{marginRight: 10}}/>
+                                <div style={{width: 1, height: 15, backgroundColor: '#282c34', marginRight: 10}}/>
+                                <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
+                                    <a style={{
+                                        display: 'flex',
+                                        flexDirection: 'row',
+                                        textDecoration: 'none',
+                                        alignItems: 'center',
+                                        textAlign: 'center'
+                                    }} href={projects.databaseapp.links.github}>
+                                        <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
+                                        <p style={{fontSize: 10, margin: 0, color: 'white'}}>
+                                            Check out project page</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <Carousel.Caption/>
+                </Carousel.Item>
             </Carousel>
         </div>
     );

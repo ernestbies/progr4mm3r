@@ -122,6 +122,58 @@ const Projects = () => {
             links: {
                 github: 'https://github.com/ernestbies/databaseApp'
             }
+        },
+        databaseAnalyzer: {
+            name: 'Database Analyzer',
+            description: 'Application for analyzing database performance while using VIEW, MATERIALIZED VIEW, WITH and TEMPORARY TABLE. The application allows you to connect to any PostgreSQL database using the JDBC engine. The login data can be saved and read because the application uses serialization.',
+            technologies: {
+                desktop: ['Java', 'Apache NetBeans IDE', 'Swing', 'JDBC', 'PostgreSQL']
+            },
+            os: ['Windows'],
+            color: '#00008B',
+            image: 'images/projects/databaseAnalyzer.png',
+            links: {
+                github: 'https://github.com/ernestbies/databaseAnalyzer'
+            }
+        },
+        taskPlanner: {
+            name: 'Task planner',
+            description: 'My first school project in Angular. Task Planner covers the basics of Angular. The application includes data binding, the basic appearance of pages using HTML and CSS, forms, tables, dialogs, downloading data using the HTTP protocol from an external server and others.',
+            technologies: {
+                desktop: ['Angular', 'TypeScript', 'HTML', 'CSS']
+            },
+            os: ['Windows'],
+            color: '#DC143C',
+            image: 'images/projects/taskplanner.png',
+            links: {
+                github: 'https://github.com/ernestbies/task_planner'
+            }
+        },
+        pizzeriaDatabase: {
+            name: 'Pizzeria database',
+            description: 'Pizzeria database created with Toad Data Modeler. Basic SQL components (functions, triggers, etc.) have been implemented in the project. The main goal of the project was to create a database for a pizzeria that allows the customer to place orders for the selected type of pizza along with extras, as well as after agreeing to register in the pizzeria database, getting appropriate discounts. Placing an order is possible via the Internet, by phone or in person. After confirming the payment, the preparation of the pizza is transferred for implementation. When ordering via the Internet or by phone, the customer makes payment by the pizza delivery man.',
+            technologies: {
+                desktop: ['Toad Data Modeler', 'SQL', 'PostgreSQL']
+            },
+            os: ['Windows'],
+            color: 'green',
+            image: 'images/projects/pizzeria-database.png',
+            links: {
+                github: 'https://github.com/ernestbies/pizzeria-database'
+            }
+        },
+        carServiceStation: {
+            name: 'Car service station - BPMN',
+            description: 'Project implemented as part of POWER Project (Projekt Współpraca Synergia Zarządzanie w Tarnowie). The subject of the project was to describe and model processes using Business Process Modeling Notation (BPMN) showing the operation of car service station. A detailed course of the repair process of the damaged vehicle will be presented in this project, starting from delivering damaged car for repair to handing over the vehicle. A description of the car engine repair, spare parts ordering, car handover and payment process is presented. The main goal of the project is to present the processes that work in most car service stations.',
+            technologies: {
+                desktop: ['Signavio Process Manager - Academic', 'Business Process Model and Notation (BPMN)']
+            },
+            os: ['Windows'],
+            color: '#D51A1A',
+            image: 'images/projects/car_service_station.png',
+            links: {
+                github: 'https://github.com/ernestbies/Car-service-station-BPMN'
+            }
         }
     };
 
@@ -245,6 +297,62 @@ const Projects = () => {
                         technologies={projects.databaseApp.technologies}
                         os={projects.databaseApp.os}
                         links={projects.databaseApp.links}
+                        infoSize={'24%'}
+                    />
+                    <Carousel.Caption/>
+                </Carousel.Item>
+
+                <Carousel.Item className={'carousel-item'}>
+                    <ProjectItem
+                        image={projects.databaseAnalyzer.image}
+                        color={projects.databaseAnalyzer.color}
+                        name={projects.databaseAnalyzer.name}
+                        description={projects.databaseAnalyzer.description}
+                        technologies={projects.databaseAnalyzer.technologies}
+                        os={projects.databaseAnalyzer.os}
+                        links={projects.databaseAnalyzer.links}
+                        infoSize={'24%'}
+                    />
+                    <Carousel.Caption/>
+                </Carousel.Item>
+
+                <Carousel.Item className={'carousel-item'}>
+                    <ProjectItem
+                        image={projects.taskPlanner.image}
+                        color={projects.taskPlanner.color}
+                        name={projects.taskPlanner.name}
+                        description={projects.taskPlanner.description}
+                        technologies={projects.taskPlanner.technologies}
+                        os={projects.taskPlanner.os}
+                        links={projects.taskPlanner.links}
+                        infoSize={'24%'}
+                    />
+                    <Carousel.Caption/>
+                </Carousel.Item>
+
+                <Carousel.Item className={'carousel-item'}>
+                    <ProjectItem
+                        image={projects.carServiceStation.image}
+                        color={projects.carServiceStation.color}
+                        name={projects.carServiceStation.name}
+                        description={projects.carServiceStation.description}
+                        technologies={projects.carServiceStation.technologies}
+                        os={projects.carServiceStation.os}
+                        links={projects.carServiceStation.links}
+                        infoSize={'24%'}
+                    />
+                    <Carousel.Caption/>
+                </Carousel.Item>
+
+                <Carousel.Item className={'carousel-item'}>
+                    <ProjectItem
+                        image={projects.pizzeriaDatabase.image}
+                        color={projects.pizzeriaDatabase.color}
+                        name={projects.pizzeriaDatabase.name}
+                        description={projects.pizzeriaDatabase.description}
+                        technologies={projects.pizzeriaDatabase.technologies}
+                        os={projects.pizzeriaDatabase.os}
+                        links={projects.pizzeriaDatabase.links}
                         infoSize={'24%'}
                     />
                     <Carousel.Caption/>

@@ -1,7 +1,7 @@
 import {AiFillWindows, FaGithub, FaWrench, FaYoutube, FcAndroidOs, FcLinux, IoLogoApple} from "react-icons/all";
 import React from "react";
 
-const ProjectItem = ({image, color, name, description, technologies, os, languages, links, additionalData}) => {
+const ProjectItem = ({image, color, name, description, technologies, os, languages, links, additionalData, infoSize}) => {
 
     const renderTechnologies = (technologies) => {
         const len = technologies.length;
@@ -93,7 +93,7 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
                     }
                 </div>
 
-                <div style={{display: 'flex', marginTop: 20, alignItems: 'center', justifyContent: 'space-between', width: additionalData ? '80%' : '74%'}}>
+                <div style={{display: 'flex', marginTop: 20, alignItems: 'center', justifyContent: 'space-between', width: infoSize ?? '80%'}}>
                     {
                         os.includes('Windows') && <AiFillWindows/>
                     }
@@ -142,7 +142,7 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
                                 flexDirection: 'row',
                                 textDecoration: 'none',
                                 alignItems: 'center',
-                                textAlign: 'center'
+                                textAlign: 'center',
                             }} href={links.github}>
                                 <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
                                 <p style={{fontSize: 10, margin: 0, color: 'white'}}>

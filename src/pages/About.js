@@ -1,6 +1,5 @@
 import React from 'react';
 import {Avatar} from "@material-ui/core";
-import {GrDocumentText} from "react-icons/all";
 
 const About = () => {
 

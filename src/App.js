@@ -7,19 +7,23 @@ import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
 import Hobby from "./pages/Hobby";
 import Contact from "./pages/Contact";
+import { BrowserRouter as Router, Redirect } from "react-router-dom";
 
 function App() {
 
   return (
-    <div className={'App'}>
-      <Navbar/>
-      <About/>
-      <Projects/>
-      <Skills/>
-      <Hobby/>
-      <Contact/>
-      <Footer/>
-    </div>
+      <Router>
+          <div className={'App'}>
+              <Navbar/>
+              <About/>
+              <Projects/>
+              <Skills/>
+              <Hobby/>
+              <Contact/>
+              <Footer/>
+          </div>
+          <Redirect from="/*" to="/"/>
+      </Router>
   );
 }
 

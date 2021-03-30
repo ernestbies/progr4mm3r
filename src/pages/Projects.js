@@ -186,7 +186,7 @@ const Projects = () => {
                 fontWeight: 300,
                 marginTop: 20
             }}>Projects</p>
-            <Carousel interval={100000000} className={'carousel'}>
+            <Carousel className={'carousel'}>
                 <Carousel.Item className={'carousel-item'}>
                     <ProjectItem
                         image={projects.mediaBrowser.image}

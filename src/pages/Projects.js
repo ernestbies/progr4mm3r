@@ -199,7 +199,6 @@ const Projects = () => {
                         links={projects.mediaBrowser.links}
                         infoSize={'72%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -214,7 +213,6 @@ const Projects = () => {
                         links={projects.mediaBrowser.links}
                         infoSize={'78%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
 
@@ -229,7 +227,6 @@ const Projects = () => {
                         links={projects.spaceships.links}
                         infoSize={'28%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -243,7 +240,6 @@ const Projects = () => {
                         links={projects.apocalyptoGame.links}
                         infoSize={'24%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -257,7 +253,6 @@ const Projects = () => {
                         links={projects.quizApp.links}
                         infoSize={'28%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -271,7 +266,6 @@ const Projects = () => {
                         links={projects.imageBinarizer.links}
                         infoSize={'24%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -285,7 +279,6 @@ const Projects = () => {
                         links={projects.calculatorApp.links}
                         infoSize={'28%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -299,7 +292,6 @@ const Projects = () => {
                         links={projects.databaseApp.links}
                         infoSize={'24%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -313,7 +305,6 @@ const Projects = () => {
                         links={projects.databaseAnalyzer.links}
                         infoSize={'24%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -327,7 +318,6 @@ const Projects = () => {
                         links={projects.taskPlanner.links}
                         infoSize={'24%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -341,7 +331,6 @@ const Projects = () => {
                         links={projects.carServiceStation.links}
                         infoSize={'24%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
 
                 <Carousel.Item className={'carousel-item'}>
@@ -355,7 +344,6 @@ const Projects = () => {
                         links={projects.pizzeriaDatabase.links}
                         infoSize={'24%'}
                     />
-                    <Carousel.Caption/>
                 </Carousel.Item>
             </Carousel>
         </div>

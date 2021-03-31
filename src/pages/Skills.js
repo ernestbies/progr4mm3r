@@ -1,20 +1,8 @@
 import React from 'react';
 import {skills} from "../utils/skills";
+import {renderElements} from "../utils/renderElements";
 
 const Skills = () => {
-
-    const renderSkills = (type, from, to) => {
-        let view = [];
-
-        skills.filter((el) => el.type === type).slice(from, to).map((el) => view.push(
-            <div className={'tooltipClassSmall'}>
-                <span className={'tooltipText'} style={{color: el.color}}>{el.name}</span>
-                <img alt={el.name} src={el.image} width={50} height={50}/>
-            </div>
-        ));
-
-        return view;
-    }
 
     return (
         <div id={'skills'} className={'item-dashboard'} style={{backgroundColor: '#1d2026'}}>
@@ -40,11 +28,11 @@ const Skills = () => {
                         marginBottom: 25,
                         marginTop: 25
                     }}>
-                        {renderSkills('language', 0, 6)}
+                        {renderElements(skills.filter(el => el.type === 'language').slice(0, 6), 'skills')}
                     </div>
 
                     <div style={{display: 'flex', justifyContent: 'space-between', width: '65%', marginBottom: 25}}>
-                        {renderSkills('language', 6, 12)}
+                        {renderElements(skills.filter(el => el.type === 'language').slice(6, 12), 'skills')}
                     </div>
                 </div>
 
@@ -59,11 +47,11 @@ const Skills = () => {
                         marginBottom: 25,
                         marginTop: 25
                     }}>
-                        {renderSkills('technology', 0, 6)}
+                        {renderElements(skills.filter(el => el.type === 'technology').slice(0, 6), 'skills')}
                     </div>
 
                     <div style={{display: 'flex', justifyContent: 'space-between', width: '65%', marginBottom: 25}}>
-                        {renderSkills('technology', 6, 12)}
+                        {renderElements(skills.filter(el => el.type === 'technology').slice(6, 12), 'skills')}
                     </div>
                 </div>
             </div>

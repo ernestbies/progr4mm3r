@@ -1,23 +1,9 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
-import HobbyItem from "../components/HobbyItem";
 import {hobby} from "../utils/hobby";
+import {renderElements} from "../utils/renderElements";
 
 const Hobby = () => {
-
-    const renderHobby = () => {
-        let view = [];
-
-        hobby.map((el) => view.push(
-            <Carousel.Item className={'carousel-item'}>
-                <HobbyItem image={el.image} quote={el.quote}
-                           name={el.name} text={el.text}/>
-                <Carousel.Caption/>
-            </Carousel.Item>)
-        )
-
-        return view;
-    };
 
     return (
         <div id={'hobby'} className={'carousel-style'}>
@@ -29,7 +15,7 @@ const Hobby = () => {
                 marginTop: 20
             }}>Hobby</p>
             <Carousel className={'carousel'}>
-                {renderHobby()}
+                {renderElements(hobby, 'hobby')}
             </Carousel>
         </div>
     );

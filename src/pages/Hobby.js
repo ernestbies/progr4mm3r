@@ -5,6 +5,20 @@ import {hobby} from "../utils/hobby";
 
 const Hobby = () => {
 
+    const renderHobby = () => {
+        let view = [];
+
+        hobby.map((el) => view.push(
+            <Carousel.Item className={'carousel-item'}>
+                <HobbyItem image={el.image} quote={el.quote}
+                           name={el.name} text={el.text}/>
+                <Carousel.Caption/>
+            </Carousel.Item>)
+        )
+
+        return view;
+    };
+
     return (
         <div id={'hobby'} className={'carousel-style'}>
             <p style={{
@@ -15,23 +29,7 @@ const Hobby = () => {
                 marginTop: 20
             }}>Hobby</p>
             <Carousel className={'carousel'}>
-                <Carousel.Item className={'carousel-item'}>
-                    <HobbyItem image={hobby.esports.image} quote={hobby.esports.quote}
-                               name={hobby.esports.name} text={hobby.esports.text}/>
-                    <Carousel.Caption/>
-                </Carousel.Item>
-
-                <Carousel.Item className={'carousel-item'}>
-                    <HobbyItem image={hobby.programming.image} quote={hobby.programming.quote}
-                               name={hobby.programming.name} text={hobby.programming.text}/>
-                    <Carousel.Caption/>
-                </Carousel.Item>
-
-                <Carousel.Item className={'carousel-item'}>
-                    <HobbyItem image={hobby.cinematography.image} quote={hobby.cinematography.quote}
-                               name={hobby.cinematography.name} text={hobby.cinematography.text}/>
-                    <Carousel.Caption/>
-                </Carousel.Item>
+                {renderHobby()}
             </Carousel>
         </div>
     );

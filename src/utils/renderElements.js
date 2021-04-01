@@ -9,7 +9,7 @@ export const renderElements = (elements, type) => {
     switch (type) {
         case 'hobby':
             elements.map((el) => view.push(
-                <Carousel.Item className={'carousel-item'}>
+                <Carousel.Item key={el.id} className={'carousel-item'}>
                     <HobbyItem image={el.image} quote={el.quote}
                                name={el.name} text={el.text}/>
                     <Carousel.Caption/>
@@ -18,7 +18,7 @@ export const renderElements = (elements, type) => {
             break;
         case 'skills':
             elements.map((el) => view.push(
-                <div className={'tooltipClassSmall'}>
+                <div key={el.id} className={'tooltipClassSmall'}>
                     <span className={'tooltipText'} style={{color: el.color}}>{el.name}</span>
                     <img alt={el.name} src={el.image} width={50} height={50}/>
                 </div>
@@ -26,8 +26,9 @@ export const renderElements = (elements, type) => {
             break;
         case 'projects':
             elements.map((el) => view.push(
-                <Carousel.Item className={'carousel-item'}>
+                <Carousel.Item key={el.id} className={'carousel-item'}>
                     <ProjectItem
+                        id={el.id}
                         image={el.image}
                         color={el.color}
                         name={el.name}

@@ -9,12 +9,12 @@ const Navbar = () => {
     }
 
     const generateNavbar = (navbarOptions) => {
-        return navbarOptions.map(el => <p onClick={() => scrollTo(el)} className={'navbarText'}>{el.charAt(0).toUpperCase() + el.slice(1)}</p>);
+        return navbarOptions.map(el => <p key={el} onClick={() => scrollTo(el)} className={'navbarText'}>{el.charAt(0).toUpperCase() + el.slice(1)}</p>);
     }
 
     return (
       <div className={'navbarContent'}>
-          <p className={'websiteName'}>{websiteName}</p>
+          <p key={websiteName} className={'websiteName'}>{websiteName}</p>
           {generateNavbar(navbarOptions)}
       </div>
     );

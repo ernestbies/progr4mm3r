@@ -1,25 +1,27 @@
 import {AiFillWindows, FaGithub, FaWrench, FaYoutube, FcAndroidOs, FcLinux, IoLogoApple} from "react-icons/all";
 import React from "react";
 
-const ProjectItem = ({image, color, name, description, technologies, os, languages, links, additionalData, infoSize}) => {
+const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData, infoSize}) => {
 
     const renderTechnologies = (technologies) => {
         const len = technologies.length;
         return technologies.map((el, i) => {
             if (len === i + 1) {
-                return <p style={{display: 'inline'}}>{el}</p>;
+                return el;
             } else {
-                return <p style={{display: 'inline'}}>{el} <p style={{color: '#A9A9A9', display: 'inline'}}> | </p></p>;
+                return el + ' | '
             }
         });
     }
 
+
     const renderTechnologiesBlock = (technologies) => {
         let view = [];
+        let numOfTechnologies = Object.keys(technologies).length;
 
-        if(Object.keys(technologies).length === 1) {
+        if(numOfTechnologies === 1) {
             view.push(
-                <code style={{
+                <code key={numOfTechnologies} style={{
                     fontSize: 12,
                     fontStyle: 'normal'
                 }}>{renderTechnologies(technologies[Object.keys(technologies)])}</code>
@@ -27,7 +29,7 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
         } else {
             Object.keys(technologies).map((technology) =>
                 view.push(
-                    <p style={{
+                    <p key={technology} style={{
                         fontSize: 12,
                         fontFamily: 'Open Sans',
                         marginBottom: 5
@@ -46,6 +48,7 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
         let view = [];
         languages.map((country) => view.push(
             <img
+                key={country}
                 width={20}
                 height={12}
                 alt={country}
@@ -57,9 +60,9 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
     }
 
     return (
-        <div style={{display: 'flex', justifyContent: 'column', height: '60vh'}}>
+        <div key={id} style={{display: 'flex', justifyContent: 'column', height: '60vh'}}>
             <img
-                alt={''}
+                alt={name}
                 className={'d-block w-50'}
                 src={image}
                 style={{opacity: 0.8, flex: 1}}

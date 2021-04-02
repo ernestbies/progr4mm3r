@@ -2,21 +2,29 @@ import React from 'react';
 
 const Navbar = () => {
     const websiteName = 'ernestbies.com';
-    const navbarOptions = ['about', 'projects', 'skills', 'hobby', 'contact'];
 
     const scrollTo = (id) => {
         window.scrollTo(0, document.getElementById(id).offsetTop)
     }
 
-    const generateNavbar = (navbarOptions) => {
-        return navbarOptions.map(el => <p key={el} onClick={() => scrollTo(el)} className={'navbarText'}>{el.charAt(0).toUpperCase() + el.slice(1)}</p>);
-    }
-
     return (
-      <div className={'navbarContent'}>
-          <p key={websiteName} className={'websiteName'}>{websiteName}</p>
-          {generateNavbar(navbarOptions)}
-      </div>
+        <div className={'navbarContent'}>
+            <p key={websiteName} className={'websiteName'}>{websiteName}</p>
+            <div key={'about'} onClick={() => scrollTo('about')} className={'navbarText'}>
+                {'About'}</div>
+            <div key={'projects'} onClick={() => scrollTo('projects')} className={'navbarText'}>
+                {'Projects'}
+            </div>
+            <div key={'skills'} onClick={() => scrollTo('skills')} className={'navbarText'}>
+                {'Skills'}
+            </div>
+            <div key={'hobby'} onClick={() => scrollTo('hobby')} className={'navbarText'}>
+                {'Hobby'}
+            </div>
+            <div key={'contact'} onClick={() => scrollTo('contact')} className={'navbarText'}>
+                {'Contact'}
+            </div>
+        </div>
     );
 }
 

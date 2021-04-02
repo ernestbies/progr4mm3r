@@ -141,6 +141,10 @@
   z-index: 1;
 }
 
+.is-current {
+  color: orange;
+}
+
 .iconDiv {
   width: 100px;
   height: 100px;

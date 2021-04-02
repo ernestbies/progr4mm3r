@@ -12,7 +12,7 @@ const Navbar = () => {
     return (
         <div className={'navbarContent'}>
             <p key={WEBSITE_NAME} className={'websiteName'}>{WEBSITE_NAME}</p>
-            <Scrollspy style={{display: 'inline'}} offset={-1}
+            <Scrollspy style={{display: 'inline', marginLeft: -55}} offset={-1}
                        items={['about', 'projects', 'skills', 'hobby', 'contact']} currentClassName="is-current">
                 <div key={'about'} onClick={() => scrollTo('about')} className={'navbarText'}>
                     {'About'}</div>

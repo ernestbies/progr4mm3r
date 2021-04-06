@@ -29,14 +29,13 @@
   color: white;
   margin-left: 2.5rem;
   margin-right: 2.5rem;
-  flex: 1;
   display: inline;
   text-decoration: none;
 }
 
 .navbarText:hover {
-  color: orange;
-  text-decoration: none;
+  color: #FF8C00;
+  border-bottom-width: 0;
 }
 
 .icon {
@@ -71,12 +70,13 @@
 .websiteName {
   font-family: "Open Sans", serif;
   font-weight: 300;
-  font-size: 1rem;
   color: orange;
-  flex: 1;
   margin-left: -25rem;
   margin-right: 19rem;
-  display: inline;
+}
+
+.websiteName:hover {
+  color: orange;
 }
 
 .App-header {
@@ -143,6 +143,9 @@
 
 .is-current {
   color: orange;
+  border-bottom-style: solid;
+  border-bottom-width: 3px;
+  padding-bottom: 12px;
 }
 
 .iconDiv {

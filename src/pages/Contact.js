@@ -15,7 +15,7 @@ const Contact = () => {
         input.remove();
 
         let tooltipText = document.getElementById('discordName');
-        tooltipText.innerHTML = '<p style="color: orange; display: inline;">tsl#2025</p> has been copied to clipboard!';
+        tooltipText.innerHTML = '<p style="color: orange; display: inline;">' + DISCORD_NAME +'</p> has been copied to clipboard!';
     };
 
     const outCopyName = () => {

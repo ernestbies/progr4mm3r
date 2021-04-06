@@ -3,7 +3,11 @@ import Scrollspy from 'react-scrollspy'
 
 const Navbar = () => {
 
-    const WEBSITE_NAME = 'ernestbies.com';
+    const websiteInfo = {
+        protocol: 'https://',
+        name: 'ernestbies.com',
+        description: 'Ernest Bieś - portfolio website',
+    }
 
     const scrollTo = (id) => {
         window.scrollTo(0, document.getElementById(id).offsetTop)
@@ -11,7 +15,11 @@ const Navbar = () => {
 
     return (
         <div className={'navbarContent'}>
-            <p key={WEBSITE_NAME} className={'websiteName'}>{WEBSITE_NAME}</p>
+            <a title={websiteInfo.description}
+               href={websiteInfo.protocol + websiteInfo.name}
+               style={{textDecoration: 'none'}}
+               key={websiteInfo.name}
+               className={'websiteName'}>{websiteInfo.name}</a>
             <Scrollspy style={{display: 'inline', marginLeft: -55}} offset={-1}
                        items={['about', 'projects', 'skills', 'hobby', 'contact']} currentClassName="is-current">
                 <div key={'about'} onClick={() => scrollTo('about')} className={'navbarText'}>

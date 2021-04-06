@@ -77,7 +77,7 @@ export const projects = [
     {
         id: 4,
         name: 'Quiz app',
-        description: 'Mobile application that allows you to solve on-line tests. Tests are downloaded from an external server. The user has the option of solving a specific test, has a specific time to answer a specific question. In addition, they can choose a random test and view all their and other users\' results. The application has a drawer menu that makes it easy to access all screens. The application is designed for Android and iOS.',
+        description: 'Mobile application that allows you to solve on-line tests. Tests are downloaded from an external server. The user has the option of solving a specific test, has a specific time to answer a specific question. In addition, user can choose a random test and view results. The application has a drawer menu that makes it easy to access all screens. The application is designed for Android and iOS.',
         technologies: {
             mobile: ['JavaScript', 'React Native', 'RN Splash Screen', 'RN Navigation', 'Async Storage', 'NetInfo', 'Vector icons', 'SQLite']
         },
@@ -122,7 +122,7 @@ export const projects = [
     {
         id: 7,
         name: 'Database Connection App',
-        description: 'The application allows you to connect to any PostgreSQL database using the JDBC engine. The login data can be saved and read because the application uses serialization. In the application, it is possible to view all tables in the database. If the table contains users\' contact details (e-mail address), it is possible to send a message. Sending e-mails is performed by Javax Mail. The user can add recipients (TO, CC, BCC), message subject and content. After approval, the e-mail is sent to the selected users.',
+        description: 'The application allows you to connect to any PostgreSQL database using the JDBC engine. The login data can be saved and read because the application uses serialization. In the application, it is possible to view all tables in the database. If the table contains users\' contact details (e-mail address), it is possible to send a message. Sending e-mails is performed by Javax Mail. User can add recipients (TO, CC, BCC), message subject and content. After approval, the e-mail is sent to the selected users.',
         technologies: {
             desktop: ['Java', 'Apache NetBeans IDE', 'Swing', 'JDBC', 'PostgreSQL', 'Javax Mail']
         },

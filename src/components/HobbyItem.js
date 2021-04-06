@@ -1,6 +1,6 @@
 import React from "react";
 
-const HobbyItem = ({image, quote, name, text}) => {
+const HobbyItem = ({image, quote, name, text, color}) => {
     return (
         <div style={{display: 'flex'}}>
             <img
@@ -11,7 +11,7 @@ const HobbyItem = ({image, quote, name, text}) => {
             />
             <div style={{margin: 40, textAlign: 'left', flex: 1}}>
                 <div style={{display: 'flex', textAlign: 'center', alignItems: 'center'}}>
-                    <div style={{width: 5, height: 30, backgroundColor: 'red'}}/>
+                    <div style={{width: 5, height: 30, backgroundColor: color}}/>
                     <p style={{paddingLeft: 7, fontFamily: 'Open Sans', margin: 0}}>{name}</p>
                 </div>
                 <p style={{

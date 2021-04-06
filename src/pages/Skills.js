@@ -14,10 +14,12 @@ const Skills = () => {
                 marginTop: 20
             }}>Skills</p>
             <p style={{fontSize: 15, marginTop: 15, fontFamily: 'Open Sans'}}>I am constantly trying to gain knowledge
-                and improve my programming skills.<br/>
-                I have learned many programming languages, but I mainly focus on <code
-                    style={{color: 'orange', fontSize: 15}}>Java</code> and <code
-                    style={{color: 'orange', fontSize: 15}}>JavaScript</code>.</p>
+                and improve my programming skills.<br/>I had contact with the following programming languages and
+                technologies while studying computer science.<br/>I mainly focus on <code
+                    style={{color: 'orange', fontSize: 15}}>Java</code> / <code
+                    style={{color: 'orange', fontSize: 15}}>JavaScript</code> and <code
+                    style={{color: 'orange', fontSize: 15}}>React</code> / <code
+                    style={{color: 'orange', fontSize: 15}}>React Native</code>.</p>
             <div className={'language-icons'}>
                 <div style={{flex: 1, display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
                     <p style={{marginTop: 10, fontSize: 14, fontFamily: 'Open Sans'}}>Programming languages</p>

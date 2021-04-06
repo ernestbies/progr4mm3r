@@ -11,7 +11,7 @@ export const renderElements = (elements, type) => {
             elements.map((el) => view.push(
                 <Carousel.Item key={el.id} className={'carousel-item'}>
                     <HobbyItem image={el.image} quote={el.quote}
-                               name={el.name} text={el.text}/>
+                               name={el.name} text={el.text} color={el.color}/>
                     <Carousel.Caption/>
                 </Carousel.Item>)
             )

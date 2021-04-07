@@ -1,5 +1,5 @@
 import React from 'react';
-import {Avatar} from "@material-ui/core";
+import {Avatar} from '@material-ui/core';
 
 const About = () => {
 
@@ -17,17 +17,21 @@ const About = () => {
 
     return (
         <div id={'about'} className={'item-dashboard'}
-             style={{backgroundImage: "url(images/wallpaper.jpg)",
+             style={{
+                 backgroundImage: "url(images/wallpaper.jpg)",
                  backgroundPosition: 'center',
                  backgroundSize: 'cover',
                  display: 'flex',
-                 alignItems: 'stretch'}}>
+                 alignItems: 'stretch'
+             }}>
             <div style={{display: 'flex', textAlign: 'center', alignItems: 'center', flex: 2, flexDirection: 'column'}}>
                 <Avatar src={'images/me.jpg'}
                         style={{display: 'inline-block', marginTop: 90, width: 200, height: 200}}/>
-                <button className={'glow-on-hover'}>
-                    Download my CV
-                </button>
+                <a href={'Ernest_Bies_CV.pdf'} download={'Ernest_Bies_CV.pdf'}>
+                    <button type={'submit'} className={'glow-on-hover'}>
+                        Download my CV
+                    </button>
+                </a>
             </div>
             <div style={{flex: 5, textAlign: 'left', backgroundColor: '#00000090'}}>
                 <div style={{marginTop: 90}}>

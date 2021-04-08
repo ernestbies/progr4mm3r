@@ -21,8 +21,7 @@ const About = () => {
                  backgroundImage: "url(images/wallpaper.jpg)",
                  backgroundPosition: 'center',
                  backgroundSize: 'cover',
-                 display: 'flex',
-                 alignItems: 'stretch'
+                 display: 'flex'
              }}>
             <div style={{display: 'flex', textAlign: 'center', alignItems: 'center', flex: 2, flexDirection: 'column'}}>
                 <Avatar src={'images/me.jpg'}
@@ -73,7 +72,7 @@ const About = () => {
                         }}>{info.city}</p>
                     </div>
                     <div style={{width: '50%', height: 0.5, backgroundColor: 'orange', marginTop: 10, marginLeft: 25}}/>
-                    <div style={{marginLeft: 20, marginTop: 10, width: '56%'}}>
+                    <div style={{marginLeft: 20, marginTop: 10, height: 100, width: 600}}>
                         <p style={{fontSize: 14, fontWeight: 300}}>{info.text}</p>
                     </div>
                 </div>

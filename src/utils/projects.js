@@ -181,7 +181,7 @@ export const projects = [
     },
     {
         id: 11,
-        name: 'Car service station - BPMN',
+        name: 'Car service station',
         description: 'Project implemented as part of POWER Project (Projekt Współpraca Synergia Zarządzanie w Tarnowie). The subject of the project was to describe and model processes using Business Process Modeling Notation (BPMN) showing the operation of car service station. A detailed course of the repair process of the damaged vehicle will be presented in this project, starting from delivering damaged car for repair to handing over the vehicle. A description of the car engine repair, spare parts ordering, car handover and payment process is presented. The main goal of the project is to present the processes that work in most car service stations.',
         technologies: {
             desktop: ['Signavio Process Manager - Academic', 'Business Process Model and Notation (BPMN)']

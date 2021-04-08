@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Timeline from '@material-ui/lab/Timeline';
@@ -19,8 +19,8 @@ import WatchIcon from '@material-ui/icons/LiveTv';
 const useStyles = makeStyles((theme) => ({
     paper: {
         padding: '6px 16px',
-        width: '45%',
-        height: '90%'
+        width: '55%',
+        backgroundColor: '#00000095',
     },
     secondaryTail: {
         backgroundColor: theme.palette.secondary.main,
@@ -35,70 +35,136 @@ export default function MyTimeline() {
             <TimelineItem>
                 <TimelineSeparator>
                     <TimelineDot>
-                        <FastfoodIcon />
+                        <FastfoodIcon/>
                     </TimelineDot>
-                    <TimelineConnector />
+                    <TimelineConnector/>
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper}>
-                        <Typography style={{fontSize: 15}}>Eat</Typography>
-                        <Typography style={{fontSize: 14}}>Because I need strength</Typography>
+                        <Typography style={{
+                            color: 'gray',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontWeight: 'bold',
+                            fontSize: 14
+                        }}>eat</Typography>
+                        <Typography style={{
+                            color: 'orange',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontSize: 14
+                        }}> {'//'} </Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
+                            I need strength</Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
                 <TimelineSeparator>
-                    <TimelineDot color="primary">
-                        <LaptopMacIcon />
+                    <TimelineDot style={{backgroundColor: 'orange'}}>
+                        <LaptopMacIcon/>
                     </TimelineDot>
-                    <TimelineConnector />
+                    <TimelineConnector/>
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
-                        <Typography style={{fontSize: 15}}>Code</Typography>
-                        <Typography style={{fontSize: 14}}>Because I want to develop myself</Typography>
+                        <Typography style={{
+                            color: 'gray',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontWeight: 'bold',
+                            fontSize: 14
+                        }}>code</Typography>
+                        <Typography style={{
+                            color: 'orange',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontSize: 14
+                        }}> {'//'} </Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
+                            I want to develop myself</Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
                 <TimelineSeparator>
-                    <TimelineDot color="primary">
+                    <TimelineDot style={{backgroundColor: 'purple'}}>
                         <SportsEsportsIcon/>
                     </TimelineDot>
                     <TimelineConnector/>
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper}>
-                        <Typography style={{fontSize: 15}}>Play</Typography>
-                        <Typography style={{fontSize: 14}}>Because I want to compete with the best</Typography>
+                        <Typography style={{
+                            color: 'gray',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontWeight: 'bold',
+                            fontSize: 14
+                        }}>play</Typography>
+                        <Typography style={{
+                            color: 'orange',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontSize: 14
+                        }}> {'//'} </Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
+                            I want to compete with the best</Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
                 <TimelineSeparator>
-                    <TimelineDot color="primary">
+                    <TimelineDot style={{backgroundColor: 'red'}}>
                         <PeopleIcon/>
                     </TimelineDot>
                     <TimelineConnector/>
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
-                        <Typography style={{fontSize: 15}}>Meet friends</Typography>
-                        <Typography style={{fontSize: 14}}>Because I want to hang out with my friends</Typography>
+                        <Typography style={{
+                            color: 'gray',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontWeight: 'bold',
+                            fontSize: 14
+                        }}>meet
+                            friends</Typography>
+                        <Typography style={{
+                            color: 'orange',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontSize: 14
+                        }}> {'//'} </Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
+                            I want to develop socially</Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
                 <TimelineSeparator>
-                    <TimelineDot color="primary">
+                    <TimelineDot style={{backgroundColor: 'green'}}>
                         <WatchIcon/>
                     </TimelineDot>
                     <TimelineConnector/>
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper}>
-                        <Typography style={{fontSize: 15}}>Watch movies & series</Typography>
-                        <Typography style={{fontSize: 14}}>Because I want to know the world</Typography>
+                        <Typography style={{
+                            color: 'gray',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontWeight: 'bold',
+                            fontSize: 14
+                        }}>watch movies</Typography>
+                        <Typography style={{
+                            color: 'orange',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontSize: 14
+                        }}> {'//'} </Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
+                            I want to know the world</Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -107,25 +173,51 @@ export default function MyTimeline() {
                     <TimelineDot color="primary">
                         <HotelIcon/>
                     </TimelineDot>
-                    <TimelineConnector/>
+                    <TimelineConnector className={classes.secondaryTail} />
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
-                        <Typography style={{fontSize: 15}}>Sleep</Typography>
-                        <Typography style={{fontSize: 14}}>Because I need a rest</Typography>
+                        <Typography style={{
+                            color: 'gray',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontWeight: 'bold',
+                            fontSize: 14
+                        }}>sleep</Typography>
+                        <Typography style={{
+                            color: 'orange',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontSize: 14
+                        }}> {'//'} </Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
+                            I need a rest</Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
                 <TimelineSeparator>
                     <TimelineDot color="secondary">
-                        <RepeatIcon />
+                        <RepeatIcon/>
                     </TimelineDot>
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper}>
-                        <Typography style={{fontSize: 15}}>Repeat</Typography>
-                        <Typography style={{fontSize: 14}}>Because this is the life I love!</Typography>
+                        <Typography style={{
+                            color: 'gray',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontWeight: 'bold',
+                            fontSize: 14
+                        }}>repeat</Typography>
+                        <Typography style={{
+                            color: 'orange',
+                            display: 'inline',
+                            fontFamily: 'Open Sans',
+                            fontSize: 14
+                        }}> {'//'} </Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
+                            this is the life I love</Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>

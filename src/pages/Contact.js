@@ -24,7 +24,7 @@ const Contact = () => {
     }
 
     return (
-        <div id={'contact'} className={'item-dashboard'}>
+        <div id={'contact'} className={'contact-list'}>
             <p style={{color: 'white', display: 'inline-block', fontFamily: 'Open Sans', fontWeight: 300, marginTop: 20}}>Contact with me</p>
             <div className={'contact-icons'}>
                 <div className={'iconDiv'}>

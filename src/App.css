@@ -96,8 +96,27 @@
   min-height: 50vh;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.skills-container {
+  margin-bottom: 25px;
+  margin-top: 25px;
+  display: flex;
+  width: 90%;
+  height: 150px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-list {
+  background-color: #282c34;
+  text-align: center;
+  min-height: 50vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .carousel-style {
@@ -119,9 +138,6 @@
 .contact-icons {
   display: flex;
   justify-content: space-between;
-  width: 30%;
-  height: auto;
-  margin: 0 auto;
   padding-top: 40px;
 }
 
@@ -150,6 +166,7 @@
 .iconDiv {
   width: 100px;
   height: 100px;
+  margin: 5px;
 }
 
 .App-link {

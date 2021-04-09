@@ -30,7 +30,7 @@
   color: white;
   display: inline-block;
   text-decoration: none;
-  width: 110px;
+  width: 6rem;
 }
 
 .navbarText:hover {
@@ -164,8 +164,8 @@
 }
 
 .iconDiv {
-  width: 100px;
-  height: 100px;
+  width: 6rem;
+  height: 6rem;
   margin: 5px;
 }
 
@@ -181,15 +181,15 @@
 
 .tooltipClass .tooltipText {
   visibility: hidden;
-  width: 140px;
-  height: 40px;
+  width: 7rem;
+  height: 2.5rem;
   background-color: black;
   color: #fff;
   text-align: center;
   font-size: 0.65rem;
   padding: 3px 0;
-  margin-top: -25px;
-  margin-left: -20px;
+  margin-top: -2rem;
+  margin-left: -1rem;
   border-radius: 6px;
   position: absolute;
   z-index: 1;

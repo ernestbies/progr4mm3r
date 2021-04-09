@@ -6,9 +6,14 @@ import MyTimeline from "../components/MyTimeline";
 
 const Hobby = () => {
 
+    const quote = {
+        text: 'The whole secret of a successful life is to find out what is one’s destiny to do, and then do it.',
+        author: 'Henry Ford'
+    };
+
     return (
-        <div>
-            <div id={'hobby'} className={'carousel-style'}>
+        <div id={'hobby'}>
+            <div className={'carousel-style'}>
                 <p style={{
                     color: 'white',
                     display: 'inline-block',
@@ -44,8 +49,7 @@ const Hobby = () => {
                     <MyTimeline/>
                     <section className="component">
                         <blockquote className="callout quote EN">
-                            The whole secret of a successful life is to find out what is one’s destiny to do, and then do it.
-                            <cite> – Henry Ford</cite>
+                            {quote.text}<cite> – </cite>{quote.author}
                         </blockquote>
                     </section>
                 </div>

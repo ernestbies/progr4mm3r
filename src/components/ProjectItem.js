@@ -12,8 +12,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                 return el + ' | '
             }
         });
-    }
-
+    };
 
     const renderTechnologiesBlock = (technologies) => {
         let view = [];
@@ -42,7 +41,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
         }
 
         return view;
-    }
+    };
 
     const renderLanguages = (languages) => {
         let view = [];
@@ -57,7 +56,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
         ))
 
         return view;
-    }
+    };
 
     return (
         <div key={id} style={{display: 'flex', justifyContent: 'column', height: '60vh'}}>

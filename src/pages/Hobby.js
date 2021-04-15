@@ -32,7 +32,7 @@ const Hobby = () => {
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',
                 backgroundRepeat: 'no-repeat',
-                borderTop: 'double',
+                borderTop: '1px solid #FFFFFF90',
                 margin: 'auto',
             }}>
                 <div style={{backgroundColor: '#00000090', textAlign: 'center'}}>

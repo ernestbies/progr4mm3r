@@ -333,7 +333,7 @@
 }
 
 .component{
-  font-family: "Helvetica Neue","Helvetica",Helvetica,Arial,sans-serif;
+  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   width: 750px;
   margin:0 auto;
   padding: 3rem;
@@ -378,4 +378,15 @@
   left: 100%;
   top: auto;
   bottom: -50px;
+}
+
+.knowledge-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  border: 1px solid #FFFFFF90;
+  background: transparent;
+  padding: 20px;
+  width: 330px;
+  height: 600px;
 }

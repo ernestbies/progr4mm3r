@@ -134,9 +134,9 @@ export const skills = [
     },
     {
         id: 19,
-        name: 'Android Studio',
-        image: '/images/technologies/android.png',
-        color: '#00FF7F',
+        name: 'SQLite',
+        image: '/images/technologies/sqlite.png',
+        color: 'blue',
         type: 'technology',
     },
     {

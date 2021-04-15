@@ -1,6 +1,7 @@
 import React from 'react';
 import {skills} from "../utils/skills";
 import {renderElements} from "../utils/renderElements";
+import KnowledgeCard from "../components/KnowledgeCard";
 
 const Skills = () => {
 
@@ -15,7 +16,8 @@ const Skills = () => {
             }}>Skills</p>
             <p style={{fontSize: 15, marginTop: 15, fontFamily: 'Open Sans'}}>I am constantly trying to gain knowledge
                 and improve my programming skills.<br/>I had contact with the following <code style={{fontSize: 14}}>programming
-                    languages</code> and <code style={{fontSize: 14}}>IT technologies</code> while studying Computer Science.</p>
+                    languages</code> and <code style={{fontSize: 14}}>IT technologies</code> while studying Computer
+                Science.</p>
 
             <div className={'language-icons'}>
                 <div style={{flex: 1, display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
@@ -32,6 +34,42 @@ const Skills = () => {
                     <div className={'skills-container'}>
                         {renderElements(skills.filter(el => el.type === 'technology'), 'skills')}
                     </div>
+                </div>
+            </div>
+
+            <div style={{
+                minHeight: 650,
+                backgroundImage: "url(images/wallpaper3.jpg)",
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundAttachment: 'fixed',
+                backgroundRepeat: 'no-repeat',
+                borderTop: '1px solid #FFFFFF90',
+                margin: 'auto',
+            }}>
+                <div style={{backgroundColor: '#00000090', textAlign: 'center'}}>
+                    <p style={{
+                        color: 'white',
+                        display: 'inline-block',
+                        fontFamily: 'Open Sans',
+                        fontWeight: 300,
+                        marginTop: 20,
+                        marginBottom: 50,
+                        fontSize: 24
+                    }}>Practical knowledge</p>
+                </div>
+                <div style={{
+                    display: 'flex',
+                    justifyContent: 'space-evenly',
+                    width: '100%',
+                    height: '100%',
+                    minHeight: 650,
+                    backgroundColor: '#00000090'
+                }}>
+                    <KnowledgeCard type={'frontend'}/>
+                    <KnowledgeCard type={'backend'}/>
+                    <KnowledgeCard type={'databases'}/>
+                    <KnowledgeCard type={'testing'}/>
                 </div>
             </div>
         </div>

@@ -100,8 +100,11 @@ const KnowledgeCard = ({type}) => {
                 {
                     type === 'testing' &&
                     <div style={{height: 30, display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'}}>
+                        <img alt={'js'} style={{width: 25, height: 25}} src={'images/languages/language-js.png'}/>
                         <img alt={'jest'} style={{width: 25, height: 25}} src={'images/technologies/jest.png'}/>
+                        <img alt={'java'} style={{width: 25, height: 25}} src={'images/languages/language-java.png'}/>
                         <img alt={'junit'} style={{width: 25, height: 25}} src={'images/technologies/junit.png'}/>
+                        <img alt={'groovy'} style={{width: 25, height: 25}} src={'images/languages/language-groovy.png'}/>
                         <img alt={'spock'} style={{width: 25, height: 25}} src={'images/technologies/spock.png'}/>
                         <img alt={'git'} style={{width: 25, height: 25}} src={'images/technologies/git.png'}/>
                     </div>

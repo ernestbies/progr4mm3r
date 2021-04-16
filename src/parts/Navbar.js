@@ -3,42 +3,36 @@ import Scrollspy from 'react-scrollspy'
 
 const Navbar = () => {
 
-    const websiteInfo = {
-        protocol: 'https://',
-        name: 'ernestbies.com',
-        description: 'Ernest Bieś - portfolio website',
-    }
+    const scrollTo = (id) => window.scrollTo(0, document.getElementById(id).offsetTop);
 
-    const scrollTo = (id) => {
-        window.scrollTo(0, document.getElementById(id).offsetTop)
+    const toggleMobileMenu = () => {
+        const hamburgerMenu = document.getElementById('hamburger');
+        const navbarContent = document.getElementsByClassName('navbarContent')[0]
+        const navMenu = document.getElementsByClassName('navMenu')[0];
+        hamburgerMenu.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        navbarContent.classList.toggle('active');
     }
 
     return (
-        <div className={'navbarContent'}>
-            <a title={websiteInfo.description}
-               href={websiteInfo.protocol + websiteInfo.name}
-               style={{textDecoration: 'none'}}
-               key={websiteInfo.name}
-               className={'websiteName'}>{websiteInfo.name}</a>
-            <Scrollspy style={{display: 'inline', marginLeft: -55}} offset={-1}
-                       items={['about', 'projects', 'skills', 'hobby', 'contact']} currentClassName="is-current">
-                <div key={'about'} onClick={() => scrollTo('about')} className={'navbarText'}>
-                    {'About'}
-                </div>
-                <div key={'projects'} onClick={() => scrollTo('projects')} className={'navbarText'}>
-                    {'Projects'}
-                </div>
-                <div key={'skills'} onClick={() => scrollTo('skills')} className={'navbarText'}>
-                    {'Skills'}
-                </div>
-                <div key={'hobby'} onClick={() => scrollTo('hobby')} className={'navbarText'}>
-                    {'Hobby'}
-                </div>
-                <div key={'contact'} onClick={() => scrollTo('contact')} className={'navbarText'}>
-                    {'Contact'}
-                </div>
+        <nav className={'navbarContent'}>
+            <div onClick={() => scrollTo('about')} className={'websiteName'}>{'ernestbies.com'}</div>
+            <Scrollspy className={'navMenu'}
+                       items={['about', 'projects', 'skills', 'hobby', 'contact']}
+                       currentClassName={'navbarLinkCurrent'}
+            >
+                <div onClick={() => scrollTo('about')} className={'navbarLink'}>{'About'}</div>
+                <div onClick={() => scrollTo('projects')} className={'navbarLink'}>{'Projects'}</div>
+                <div onClick={() => scrollTo('skills')} className={'navbarLink'}>{'Skills'}</div>
+                <div onClick={() => scrollTo('hobby')} className={'navbarLink'}>{'Hobby'}</div>
+                <div onClick={() => scrollTo('contact')} className={'navbarLink'}>{'Contact'}</div>
             </Scrollspy>
-        </div>
+            <div id={'hamburger'} className={'hamburger'} onClick={() => toggleMobileMenu()}>
+                <span className={'bar'}/>
+                <span className={'bar'} style={{marginTop: 5, marginBottom: 5}}/>
+                <span className={'bar'}/>
+            </div>
+        </nav>
     );
 }
 

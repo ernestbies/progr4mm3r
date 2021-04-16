@@ -1,15 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   height: 100%;
   overflow-x: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .footerStyle {
-  position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -20,22 +20,6 @@
   font-size: 0.7rem;
   background-color: #2d3436;
   background-image: linear-gradient(to right, #2d3436, #000000, #2d3436);
-}
-
-.navbarText {
-  cursor: pointer;
-  font-family: "Open Sans", serif;
-  font-weight: 300;
-  font-size: 1rem;
-  color: white;
-  display: inline-block;
-  text-decoration: none;
-  width: 6rem;
-}
-
-.navbarText:hover {
-  color: #FF8C00;
-  border-bottom-width: 0;
 }
 
 .icon {
@@ -65,14 +49,6 @@
 
 .icon[type = 'discord']:hover {
   color: #7289da;
-}
-
-.websiteName {
-  font-family: "Open Sans", serif;
-  font-weight: 300;
-  color: orange;
-  margin-left: -25rem;
-  margin-right: 19rem;
 }
 
 .websiteName:hover {
@@ -147,20 +123,74 @@
 }
 
 .navbarContent {
-  position: fixed;
   top: 0;
   width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  justify-content: center;
   background-color: black;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 15px;
   z-index: 1;
 }
 
-.is-current {
+.websiteName {
+  cursor: pointer;
+  font-family: 'Open Sans', serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: orange;
+  display: inline;
+  position: absolute;
+  left: 50px;
+}
+
+.websiteName:hover {
+  color: white;
+}
+
+.navMenu {
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 20px;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: orange;
+}
+
+.navbarLink {
+  cursor: pointer;
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: -15px;
+  color: white;
+  display: inline-block;
+  width: 6rem;
+}
+
+.navbarLink:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+.navbarLinkCurrent {
   color: orange;
   border-bottom-style: solid;
   border-bottom-width: 2px;
-  padding-bottom: 12px;
+  padding-bottom: 15px;
 }
 
 .iconDiv {
@@ -245,21 +275,6 @@
 
 .tooltipClassSmall:hover .tooltipText {
   visibility: visible;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .glow-on-hover {
@@ -389,4 +404,45 @@
   padding: 20px;
   width: 330px;
   height: 600px;
+}
+
+@media only screen and (max-width: 992px) {
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navMenu {
+    display: none;
+    width: 100%;
+  }
+
+  .websiteName {
+    position: static;
+  }
+
+  .navbarContent {
+    padding-bottom: 15px;
+  }
+
+  .navMenu.active {
+    margin-top: 15px;
+    display: flex;
+  }
+
+  .navbarContent.active {
+    padding-bottom: 0;
+  }
 }

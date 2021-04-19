@@ -9,6 +9,11 @@
   overflow-x: hidden;
 }
 
+body {
+  padding-top: 50px;
+  margin-left: 15px;
+}
+
 .footerStyle {
   left: 0;
   bottom: 0;
@@ -98,17 +103,10 @@
 .carousel-style {
   background-color: black;
   text-align: center;
-  min-height: 50vh;
   font-size: calc(10px + 2vmin);
   color: white;
-  align-items: center;
-  justify-content: center;
   position: relative;
   z-index: 0;
-}
-
-.carousel-item {
-  justify-content: center;
 }
 
 .contact-icons {
@@ -406,6 +404,37 @@
   height: 600px;
 }
 
+.info-bar {
+  display: flex;
+  background-color: black;
+  align-items: center;
+  width: 60%;
+}
+
+.orange-bar {
+  width: 50%;
+  height: 1px;
+  background-color: orange;
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.info-text {
+  display: inline-block;
+  word-break: break-word;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  max-width: 600px;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.carousel-hobby {
+  display: flex;
+  flex-direction: row;
+}
+
 @media only screen and (max-width: 992px) {
   .hamburger {
     display: block;
@@ -422,6 +451,11 @@
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .carousel-hobby {
+    flex-direction: column;
+    align-items: center;
   }
 
   .navMenu {
@@ -444,5 +478,15 @@
 
   .navbarContent.active {
     padding-bottom: 0;
+  }
+
+  .info-bar {
+    width: 100%;
+  }
+
+  .orange-bar {
+    width: 80%;
+    margin-left: 0;
+    align-self: center;
   }
 }

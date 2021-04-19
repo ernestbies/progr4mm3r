@@ -14,7 +14,7 @@ const Projects = () => {
                 fontWeight: 300,
                 marginTop: 20
             }}>Projects</p>
-            <Carousel className={'carousel'}>
+            <Carousel>
                 {renderElements(projects, 'projects')}
             </Carousel>
         </div>

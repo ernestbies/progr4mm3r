@@ -54,18 +54,32 @@ const KnowledgeCard = ({type}) => {
                 marginBottom: -20,
                 backgroundColor: 'rgba(0,0,0,0.7)'
             }}>
-                <p style={{fontSize: 12, textAlign: 'justify', margin: 10}}>{item.text}
+                <p style={{
+                    fontSize: 11,
+                    fontWeight: 300,
+                    textAlign: 'justify',
+                    fontFamily: 'Open Sans',
+                    margin: 10
+                }}>{item.text}
                     {
                         type === 'backend'
-                        && <a target={'_blank'} rel={'noreferrer'} href={'http://mediabrowser-server.herokuapp.com/documentation'}
-                              style={{fontSize: 12}}> Click here to see my API server docs created with Hapi.js
+                        && <a target={'_blank'} rel={'noreferrer'}
+                              href={'http://mediabrowser-server.herokuapp.com/documentation'}
+                              style={{fontSize: 11, color: 'orange'}}> Click here to see my API server docs created with Hapi.js
                         </a>
                     }
                 </p>
 
                 {
                     type === 'frontend' &&
-                    <div style={{height: 30, display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'}}>
+                    <div style={{
+                        flex: 1,
+                        paddingTop: 35,
+                        height: 30,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-evenly'
+                    }}>
                         <img alt={'js'} style={{width: 25, height: 25}} src={'images/languages/language-js.png'}/>
                         <img alt={'html'} style={{width: 25, height: 25}} src={'images/languages/html.png'}/>
                         <img alt={'css'} style={{width: 25, height: 25}} src={'images/languages/css.png'}/>
@@ -78,7 +92,13 @@ const KnowledgeCard = ({type}) => {
                 }
                 {
                     type === 'backend' &&
-                    <div style={{height: 30, display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'}}>
+                    <div style={{
+                        height: 30,
+                        paddingTop: 35,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-evenly'
+                    }}>
                         <img alt={'js'} style={{width: 25, height: 25}} src={'images/languages/language-js.png'}/>
                         <img alt={'node'} style={{width: 25, height: 25}} src={'images/technologies/nodejs.png'}/>
                         <img alt={'hapi'} style={{width: 25, height: 25}} src={'images/technologies/hapijs.png'}/>
@@ -89,7 +109,13 @@ const KnowledgeCard = ({type}) => {
                 }
                 {
                     type === 'databases' &&
-                    <div style={{height: 30, display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'}}>
+                    <div style={{
+                        height: 30,
+                        paddingTop: 35,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-evenly'
+                    }}>
                         <img alt={'sql'} style={{width: 25, height: 25}} src={'images/languages/language-sql.png'}/>
                         <img alt={'postgresql'} style={{width: 25, height: 25}} src={'images/languages/language-plpgsql.png'}/>
                         <img alt={'mongodb'} style={{width: 25, height: 25}} src={'images/technologies/mongodb.png'}/>
@@ -99,7 +125,13 @@ const KnowledgeCard = ({type}) => {
                 }
                 {
                     type === 'testing' &&
-                    <div style={{height: 30, display: 'flex', alignItems: 'center', justifyContent: 'space-evenly'}}>
+                    <div style={{
+                        height: 30,
+                        paddingTop: 35,
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-evenly'
+                    }}>
                         <img alt={'js'} style={{width: 25, height: 25}} src={'images/languages/language-js.png'}/>
                         <img alt={'jest'} style={{width: 25, height: 25}} src={'images/technologies/jest.png'}/>
                         <img alt={'java'} style={{width: 25, height: 25}} src={'images/languages/language-java.png'}/>

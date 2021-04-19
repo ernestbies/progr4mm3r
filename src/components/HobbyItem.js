@@ -2,9 +2,9 @@ import React from "react";
 
 const HobbyItem = ({image, quote, name, text, color}) => {
     return (
-        <div style={{display: 'flex'}}>
+        <div className={'carousel-hobby'}>
             <img
-                alt={''}
+                alt={name}
                 className={'d-block w-50'}
                 src={image}
                 style={{opacity: 0.5, flex: 1}}
@@ -20,7 +20,13 @@ const HobbyItem = ({image, quote, name, text, color}) => {
                     fontStyle: 'italic',
                     paddingTop: 10
                 }}>{quote}</p>
-                <p style={{fontSize: 12, fontFamily: 'Open Sans', marginTop: 30, marginRight: 100}}>{text}</p>
+                <p style={{
+                    fontSize: 12,
+                    fontFamily: 'Open Sans',
+                    marginTop: 20,
+                    maxWidth: 500,
+                    wordBreak: 'break-word'
+                }}>{text}</p>
             </div>
         </div>
     )

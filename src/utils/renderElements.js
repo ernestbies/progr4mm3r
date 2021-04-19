@@ -1,7 +1,7 @@
-import {Carousel} from "react-bootstrap";
-import HobbyItem from "../components/HobbyItem";
-import React from "react";
-import ProjectItem from "../components/ProjectItem";
+import {Carousel} from 'react-bootstrap';
+import HobbyItem from '../components/HobbyItem';
+import React from 'react';
+import ProjectItem from '../components/ProjectItem';
 
 export const renderElements = (elements, type) => {
     let view = [];
@@ -9,12 +9,10 @@ export const renderElements = (elements, type) => {
     switch (type) {
         case 'hobby':
             elements.map((el) => view.push(
-                <Carousel.Item key={el.id} className={'carousel-item'}>
-                    <HobbyItem image={el.image} quote={el.quote}
-                               name={el.name} text={el.text} color={el.color}/>
-                    <Carousel.Caption/>
-                </Carousel.Item>)
-            )
+                <Carousel.Item key={el.id}>
+                    <HobbyItem image={el.image} quote={el.quote} name={el.name} text={el.text} color={el.color}/>
+                </Carousel.Item>
+            ));
             break;
         case 'skills':
             elements.map((el) => view.push(
@@ -26,7 +24,7 @@ export const renderElements = (elements, type) => {
             break;
         case 'projects':
             elements.map((el) => view.push(
-                <Carousel.Item key={el.id} className={'carousel-item'}>
+                <Carousel.Item key={el.id}>
                     <ProjectItem
                         id={el.id}
                         image={el.image}

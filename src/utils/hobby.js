@@ -3,7 +3,7 @@ export const hobby = [
         id: 0,
         name: 'Esports & gaming',
         quote: 'Practise until your idols become your rivals...',
-        text: 'I have been interested in e-sport and computer games since i was a child. E-sports games are associated with emotions, competition and the desire to constantly improve your skills. These things are not foreign to me. I competed with the best players from around the world in games such as Counter Strike, H1Z1, Apex Legends and VALORANT. E-sport has taught me the desire for continuous development, teamwork, which is a key element of every e-sport game, and drawing conclusions. Learn, compete, win.',
+        text: 'I have been interested in e-sport and computer games since I was a child. E-sports games are associated with emotions, competition and the desire to constantly improve your skills. These things are not foreign to me. I competed with the best players from around the world in games such as Counter Strike, H1Z1, Apex Legends and VALORANT. E-sport has taught me the desire for continuous development, teamwork, which is a key element of every e-sport game, and drawing conclusions. Learn, compete, win.',
         image: '/images/hobby/esports.jpg',
         color: 'red'
     },

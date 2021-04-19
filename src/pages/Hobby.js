@@ -21,12 +21,11 @@ const Hobby = () => {
                     fontWeight: 300,
                     marginTop: 20,
                 }}>Hobby</p>
-                <Carousel className={'carousel'}>
+                <Carousel>
                     {renderElements(hobby, 'hobby')}
                 </Carousel>
             </div>
             <div style={{
-                minHeight: 650,
                 backgroundImage: "url(images/wallpaper2.png)",
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',

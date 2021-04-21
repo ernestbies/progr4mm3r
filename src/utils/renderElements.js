@@ -16,7 +16,7 @@ export const renderElements = (elements, type) => {
             break;
         case 'skills':
             elements.map((el) => view.push(
-                <div key={el.id} style={{width: '14%'}} className={'tooltipClassSmall'}>
+                <div key={el.id} style={{border: 0, margin: 10}} className={'skills-icon tooltipClassSmall'}>
                     <span className={'tooltipText'} style={{color: el.color}}>{el.name}</span>
                     <img alt={el.name} src={el.image} width={50} height={50}/>
                 </div>

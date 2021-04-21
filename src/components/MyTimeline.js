@@ -21,6 +21,9 @@ const useStyles = makeStyles((theme) => ({
         padding: '6px 16px',
         width: '55%',
         backgroundColor: '#00000095',
+        '@media (max-width:992px)': {
+            width: '100%'
+        }
     },
     secondaryTail: {
         backgroundColor: theme.palette.secondary.main,

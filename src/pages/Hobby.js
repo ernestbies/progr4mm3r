@@ -12,7 +12,7 @@ const Hobby = () => {
     };
 
     return (
-        <div id={'hobby'}>
+        <div id={'hobby'} style={{display: 'flex', flexDirection: 'column'}}>
             <div className={'carousel-style'}>
                 <p style={{
                     color: 'white',
@@ -20,19 +20,21 @@ const Hobby = () => {
                     fontFamily: 'Open Sans',
                     fontWeight: 300,
                     marginTop: 20,
+                    fontSize: 23
                 }}>Hobby</p>
                 <Carousel>
                     {renderElements(hobby, 'hobby')}
                 </Carousel>
             </div>
             <div style={{
-                backgroundImage: "url(images/wallpaper2.png)",
+                backgroundImage: "url(images/wallpaper2.jpg)",
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundAttachment: 'fixed',
                 backgroundRepeat: 'no-repeat',
                 borderTop: '1px solid #FFFFFF90',
                 margin: 'auto',
+                width: '100%'
             }}>
                 <div style={{backgroundColor: '#00000090', textAlign: 'center'}}>
                     <p style={{
@@ -41,15 +43,14 @@ const Hobby = () => {
                         fontFamily: 'Open Sans',
                         fontWeight: 300,
                         marginTop: 20,
-                        fontSize: 24,
+                        fontSize: 22,
                     }}>My timeline</p>
                 </div>
-                <div style={{width: '100%', height: '100%', minHeight: 650, backgroundColor: '#00000090'}}>
+                <div style={{backgroundColor: '#00000090', display: 'flex', flexDirection: 'column'}}>
                     <MyTimeline/>
-                    <section className="component">
-                        <blockquote className="callout quote EN">
-                            {quote.text}<cite> – </cite>{quote.author}
-                        </blockquote>
+                    <section className={'quote-component row col-sm-12 col-md-6'}>
+                        <blockquote className={'callout quote EN'}>{quote.text}
+                        <cite> – </cite>{quote.author}</blockquote>
                     </section>
                 </div>
             </div>

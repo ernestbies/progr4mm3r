@@ -12,7 +12,8 @@ const Projects = () => {
                 display: 'inline-block',
                 fontFamily: 'Open Sans',
                 fontWeight: 300,
-                marginTop: 20
+                marginTop: 20,
+                fontSize: 23
             }}>Projects</p>
             <Carousel>
                 {renderElements(projects, 'projects')}

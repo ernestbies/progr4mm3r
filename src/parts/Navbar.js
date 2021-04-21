@@ -3,6 +3,7 @@ import Scrollspy from 'react-scrollspy'
 
 const Navbar = () => {
 
+    const WEBSITE_NAME = 'ernestbies.com';
     const scrollTo = (id) => window.scrollTo(0, document.getElementById(id).offsetTop);
 
     const toggleMobileMenu = () => {
@@ -16,8 +17,9 @@ const Navbar = () => {
 
     return (
         <nav className={'navbarContent'}>
-            <div onClick={() => scrollTo('about')} className={'websiteName'}>{'ernestbies.com'}</div>
+            <div onClick={() => window.scrollTo(0,0)} className={'websiteName'}>{WEBSITE_NAME}</div>
             <Scrollspy className={'navMenu'}
+                       offset={-10}
                        items={['about', 'projects', 'skills', 'hobby', 'contact']}
                        currentClassName={'navbarLinkCurrent'}
             >

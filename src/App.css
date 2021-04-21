@@ -30,10 +30,12 @@ body {
 .icon {
   color: white;
   margin-top: 10px;
+  font-size: 70px;
 }
 
 .icon[type = 'email'] {
   margin-top: 5px;
+  font-size: 90px;
 }
 
 .icon[type = 'discord'] {
@@ -67,7 +69,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
@@ -75,8 +76,17 @@ body {
   background-color: #282c34;
   text-align: center;
   min-height: 50vh;
-  font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.language-icons {
+  display: flex;
+  margin: 0 auto;
+}
+
+.skills-icon {
+  width: 50px;
+  height: 50px;
 }
 
 .skills-container {
@@ -92,8 +102,7 @@ body {
 .contact-list {
   background-color: #282c34;
   text-align: center;
-  min-height: 50vh;
-  font-size: calc(10px + 2vmin);
+  height: 300px;
   color: white;
   display: flex;
   align-items: center;
@@ -113,11 +122,6 @@ body {
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
-}
-
-.language-icons {
-  display: flex;
-  margin: 0 auto;
 }
 
 .navbarContent {
@@ -194,7 +198,6 @@ body {
 .iconDiv {
   width: 6rem;
   height: 6rem;
-  margin: 5px;
 }
 
 .App-link {
@@ -345,14 +348,15 @@ body {
   }
 }
 
-.component{
+.quote-component{
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
   width: 750px;
-  margin:0 auto;
+  margin: 0 auto;
+  align-self: center;
   padding: 3rem;
 }
 
-.component blockquote.quote {
+.quote-component blockquote.quote {
   position: relative;
   text-align: center;
   padding: 1rem 1.2rem;
@@ -361,7 +365,7 @@ body {
   margin: 1rem auto 2rem;
 }
 
-.component blockquote.EN {
+.quote-component blockquote.EN {
   background: linear-gradient(to right, orange 4px, transparent 4px) 0 100%,
           linear-gradient(to left, orange 4px, transparent 4px) 100% 0,
           linear-gradient(to bottom, orange 4px, transparent 4px) 100% 0,
@@ -370,22 +374,22 @@ body {
   background-size: 20px 20px;
 }
 
-.component blockquote.quote:before,
+.quote-component blockquote.quote:before,
 
-.component blockquote.quote:after{
+.quote-component blockquote.quote:after{
   position: absolute;
   color: orange;
   font-size: 60px;
 }
 
-.component blockquote.EN:before{
+.quote-component blockquote.EN:before{
   content: '“';
   top: -30px;
   margin-right: -20px;
   right: 100%;
 }
 
-.component blockquote.EN:after{
+.quote-component blockquote.EN:after{
   content: '”';
   margin-left: -20px;
   left: 100%;
@@ -402,6 +406,7 @@ body {
   padding: 20px;
   width: 330px;
   height: 600px;
+  margin: 10px;
 }
 
 .info-bar {

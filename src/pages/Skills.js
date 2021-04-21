@@ -12,9 +12,10 @@ const Skills = () => {
                 display: 'inline-block',
                 fontFamily: 'Open Sans',
                 fontWeight: 300,
-                marginTop: 20
+                marginTop: 20,
+                fontSize: 23
             }}>Skills</p>
-            <p style={{fontSize: 15, marginTop: 15, fontFamily: 'Open Sans'}}>I am constantly trying to gain knowledge
+            <p style={{fontSize: 15, margin: 15, fontFamily: 'Open Sans'}}>I am constantly trying to gain knowledge
                 and improve my programming skills.<br/>I had contact with the following <code style={{fontSize: 14}}>programming
                     languages</code> and <code style={{fontSize: 14}}>IT technologies</code> while studying Computer
                 Science.</p>
@@ -22,7 +23,7 @@ const Skills = () => {
             <div className={'language-icons'}>
                 <div style={{flex: 1, display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
                     <p style={{marginTop: 10, fontSize: 14, fontFamily: 'Open Sans'}}>Programming languages</p>
-                    <div className={'skills-container'}>
+                    <div className={'skills-container col-9'}>
                         {renderElements(skills.filter(el => el.type === 'language'), 'skills')}
                     </div>
                 </div>
@@ -31,7 +32,7 @@ const Skills = () => {
 
                 <div style={{flex: 1, display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
                     <p style={{marginTop: 10, fontSize: 14, fontFamily: 'Open Sans'}}>Tools and technologies</p>
-                    <div className={'skills-container'}>
+                    <div className={'skills-container col-9'}>
                         {renderElements(skills.filter(el => el.type === 'technology'), 'skills')}
                     </div>
                 </div>
@@ -55,14 +56,12 @@ const Skills = () => {
                         fontWeight: 300,
                         marginTop: 20,
                         marginBottom: 50,
-                        fontSize: 24
+                        fontSize: 22
                     }}>Practical knowledge</p>
                 </div>
-                <div style={{
+                <div className={'row'} style={{
                     display: 'flex',
                     justifyContent: 'space-evenly',
-                    width: '100%',
-                    height: '100%',
                     minHeight: 650,
                     backgroundColor: '#00000090'
                 }}>

@@ -6,11 +6,11 @@ const About = () => {
     const info = {
         name: 'Ernest',
         surname: 'Bieś',
-        country: 'PL',
-        city: 'Dąbrowa Tarnowska',
+        country: 'Poland',
+        languages: ['PL', 'US', 'DE'],
         degree: 'Bachelor\'s in Computer Science',
         dateOfBirth: '1998-03-25',
-        text: 'Hi! I am a graduate of the State Higher Vocational School in Tarnów in the field of Computer Science (with a grade of 5.0 on the diploma). From an early age, I was interested in many things related to Information Technology. In my youth, I ran on-line gaming servers that were popular all over the country. I constantly develop my skills and expand my knowledge. I learn fast, I am communicative and ready to work in a team. I am a kind, reliable and helpful person. In addition to computer science, I am interested in many other things, mainly e-sports and cinematography. Take a look at my website to get to know me better.'
+        text: 'Hi! My name is Ernest and I come from Poland. I am a graduate of the State Higher Vocational School in Tarnów in the field of Computer Science (with a grade of 5.0 on the diploma). From an early age, I was interested in many things related to Information Technology. In my youth, I ran on-line gaming servers that were popular all over the country. I constantly develop my skills and expand my knowledge. I learn fast, I am communicative and ready to work in a team. I am a kind, reliable and helpful person. In addition to computer science, I am interested in many other things, mainly e-sports and cinematography. Take a look at my website to get to know me better.'
     };
 
     const calculateAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e+10);
@@ -18,12 +18,12 @@ const About = () => {
     return (
         <div id={'about'} className={'item-dashboard row'}
              style={{
-                 backgroundImage: "url(images/wallpaper.jpg)",
+                 backgroundImage: "url(images/wallpaper1.jpg)",
                  backgroundPosition: 'center',
                  backgroundSize: 'cover',
                  display: 'flex'
              }}>
-            <div style={{
+            <div className={'col'} style={{
                 flex: 2,
                 display: 'flex',
                 justifyContent: 'center',
@@ -39,7 +39,7 @@ const About = () => {
                     </button>
                 </a>
             </div>
-            <div style={{
+            <div className={'col'} style={{
                 flex: 5,
                 display: 'flex',
                 flexDirection: 'column',
@@ -71,18 +71,26 @@ const About = () => {
                         paddingRight: 7
                     }}>{info.degree}</p>
                     <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
-                    <img
-                        alt={'country'}
-                        width={20}
-                        height={12}
-                        src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + info.country + '.svg'}
-                    />
                     <p style={{
-                        paddingLeft: 7,
+                        paddingRight: 7,
                         fontWeight: 300,
                         fontSize: 15,
                         margin: 0,
-                    }}>{info.city}</p>
+                    }}>{info.country}</p>
+                    <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
+                    {
+                        info.languages.map((el) => {
+                            return (
+                                <img
+                                    alt={el}
+                                    width={20}
+                                    height={12}
+                                    style={{marginRight: 5}}
+                                    src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + el + '.svg'}
+                                />
+                            )
+                        })
+                    }
                 </div>
                 <div className={'orange-bar'}/>
                 <p className={'info-text'}>

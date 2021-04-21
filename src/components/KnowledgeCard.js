@@ -60,14 +60,14 @@ const KnowledgeCard = ({type}) => {
                     textAlign: 'justify',
                     fontFamily: 'Open Sans',
                     margin: 10
-                }}>{item.text}
-                    {
-                        type === 'backend'
-                        && <a target={'_blank'} rel={'noreferrer'}
-                              href={'http://mediabrowser-server.herokuapp.com/documentation'}
-                              style={{fontSize: 11, color: 'orange'}}> Click here to see my API server docs created with Hapi.js
-                        </a>
-                    }
+                }}>{item.text} {
+                    type === 'backend'
+                    && <a target={'_blank'} rel={'noreferrer'}
+                          href={'http://mediabrowser-server.herokuapp.com/documentation'}
+                          style={{fontSize: 11, color: 'orange'}}>Click here to see my API server docs created with
+                        Hapi.js
+                    </a>
+                }
                 </p>
 
                 {
@@ -117,7 +117,8 @@ const KnowledgeCard = ({type}) => {
                         justifyContent: 'space-evenly'
                     }}>
                         <img alt={'sql'} style={{width: 25, height: 25}} src={'images/languages/language-sql.png'}/>
-                        <img alt={'postgresql'} style={{width: 25, height: 25}} src={'images/languages/language-plpgsql.png'}/>
+                        <img alt={'postgresql'} style={{width: 25, height: 25}}
+                             src={'images/languages/language-plpgsql.png'}/>
                         <img alt={'mongodb'} style={{width: 25, height: 25}} src={'images/technologies/mongodb.png'}/>
                         <img alt={'mongoose'} style={{width: 25, height: 25}} src={'images/technologies/mongoose.png'}/>
                         <img alt={'sqlite'} style={{width: 25, height: 25}} src={'images/technologies/sqlite.png'}/>
@@ -136,7 +137,8 @@ const KnowledgeCard = ({type}) => {
                         <img alt={'jest'} style={{width: 25, height: 25}} src={'images/technologies/jest.png'}/>
                         <img alt={'java'} style={{width: 25, height: 25}} src={'images/languages/language-java.png'}/>
                         <img alt={'junit'} style={{width: 25, height: 25}} src={'images/technologies/junit.png'}/>
-                        <img alt={'groovy'} style={{width: 25, height: 25}} src={'images/languages/language-groovy.png'}/>
+                        <img alt={'groovy'} style={{width: 25, height: 25}}
+                             src={'images/languages/language-groovy.png'}/>
                         <img alt={'spock'} style={{width: 25, height: 25}} src={'images/technologies/spock.png'}/>
                         <img alt={'git'} style={{width: 25, height: 25}} src={'images/technologies/git.png'}/>
                     </div>

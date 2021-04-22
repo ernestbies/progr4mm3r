@@ -15,8 +15,7 @@ export const projects = [
         links: {
             github: 'https://github.com/ernestbies/MediaBrowser-mobile',
             youtube: 'https://youtu.be/7r1r9JiKsYc'
-        },
-        infoSize: '72%'
+        }
     },
     {
         id: 1,
@@ -37,8 +36,7 @@ export const projects = [
         links: {
             github: 'https://github.com/ernestbies/Camera-Fingerprint-PRNU',
             youtube: 'https://www.youtube.com/watch?v=lsoqVuuq9T0'
-        },
-        infoSize: '78%'
+        }
     },
     {
         id: 2,
@@ -56,8 +54,7 @@ export const projects = [
         image: 'images/projects/spaceships.png',
         links: {
             github: 'https://github.com/ernestbies/SpaceShips'
-        },
-        infoSize: '28%'
+        }
     },
     {
         id: 3,
@@ -71,23 +68,21 @@ export const projects = [
         image: 'images/projects/apocalyptogame.png',
         links: {
             github: 'https://github.com/ernestbies/ApocalyptoGame'
-        },
-        infoSize: '24%'
+        }
     },
     {
         id: 4,
         name: 'Quiz app',
         description: 'Mobile application that allows you to solve on-line tests. Tests are downloaded from an external server. The user has the option of solving a specific test, has a specific time to answer a specific question. In addition, user can choose a random test and view results. The application has a drawer menu that makes it easy to access all screens. The application is designed for Android and iOS.',
         technologies: {
-            mobile: ['JavaScript', 'React Native', 'RN Splash Screen', 'RN Navigation', 'Async Storage', 'NetInfo', 'Vector icons', 'SQLite']
+            mobile: ['JavaScript', 'React Native', 'RN Navigation', 'Async Storage', 'NetInfo', 'Vector icons', 'SQLite']
         },
         image: 'images/projects/quiz-dashboard.png',
         os: ['Android', 'iOS'],
         color: 'yellow',
         links: {
             github: 'https://github.com/ernestbies/Quiz'
-        },
-        infoSize: '28%'
+        }
     },
     {
         id: 5,
@@ -101,8 +96,7 @@ export const projects = [
         color: 'grey',
         links: {
             github: 'https://github.com/ernestbies/ImageBinarizer'
-        },
-        infoSize: '24%'
+        }
     },
     {
         id: 6,
@@ -116,8 +110,7 @@ export const projects = [
         image: 'images/projects/calculator-dashboard.png',
         links: {
             github: 'https://github.com/ernestbies/CalculatorRN'
-        },
-        infoSize: '28%'
+        }
     },
     {
         id: 7,
@@ -131,8 +124,7 @@ export const projects = [
         image: 'images/projects/databaseApp.png',
         links: {
             github: 'https://github.com/ernestbies/databaseApp'
-        },
-        infoSize: '24%'
+        }
     },
     {
         id: 8,
@@ -146,8 +138,7 @@ export const projects = [
         image: 'images/projects/databaseAnalyzer.png',
         links: {
             github: 'https://github.com/ernestbies/databaseAnalyzer'
-        },
-        infoSize: '24%'
+        }
     },
     {
         id: 9,
@@ -161,8 +152,7 @@ export const projects = [
         image: 'images/projects/taskplanner.png',
         links: {
             github: 'https://github.com/ernestbies/task_planner'
-        },
-        infoSize: '24%'
+        }
     },
     {
         id: 10,
@@ -176,8 +166,7 @@ export const projects = [
         image: 'images/projects/pizzeria-database.png',
         links: {
             github: 'https://github.com/ernestbies/pizzeria-database'
-        },
-        infoSize: '24%'
+        }
     },
     {
         id: 11,
@@ -191,7 +180,6 @@ export const projects = [
         image: 'images/projects/car_service_station.png',
         links: {
             github: 'https://github.com/ernestbies/Car-service-station-BPMN'
-        },
-        infoSize: '24%'
+        }
     }
 ]

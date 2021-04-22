@@ -33,3 +33,9 @@ code {
   font-weight: 700;
   src: url("./assets/fonts/OpenSans-Bold.ttf") format('truetype');
 }
+
+@font-face {
+  font-family: 'Press Start';
+  font-weight: 400;
+  src: url("./assets/fonts/PressStart2P-Regular.ttf") format('truetype');
+}

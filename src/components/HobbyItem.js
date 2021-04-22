@@ -2,12 +2,11 @@ import React from "react";
 
 const HobbyItem = ({image, quote, name, text, color}) => {
     return (
-        <div className={'carousel-hobby'}>
+        <div className={'carousel'}>
             <img
                 alt={name}
-                className={'d-block w-50'}
                 src={image}
-                style={{opacity: 0.5, flex: 1}}
+                style={{opacity: 0.5, flex: 1, width: '100%'}}
             />
             <div style={{margin: 40, textAlign: 'left', flex: 1}}>
                 <div style={{display: 'flex', textAlign: 'center', alignItems: 'center'}}>

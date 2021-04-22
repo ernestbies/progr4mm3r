@@ -1,25 +1,15 @@
 import React from 'react';
 import {Avatar} from '@material-ui/core';
+import {info, calculateAge} from "../utils/information";
 
 const About = () => {
-
-    const info = {
-        name: 'Ernest',
-        surname: 'Bieś',
-        country: 'Poland',
-        languages: ['PL', 'US', 'DE'],
-        degree: 'Bachelor\'s in Computer Science',
-        dateOfBirth: '1998-03-25',
-        text: 'Hi! My name is Ernest and I come from Poland. I am a graduate of the State Higher Vocational School in Tarnów in the field of Computer Science (with a grade of 5.0 on the diploma). From an early age, I was interested in many things related to Information Technology. In my youth, I ran on-line gaming servers that were popular all over the country. I constantly develop my skills and expand my knowledge. I learn fast, I am communicative and ready to work in a team. I am a kind, reliable and helpful person. In addition to computer science, I am interested in many other things, mainly e-sports and cinematography. Take a look at my website to get to know me better.'
-    };
-
-    const calculateAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e+10);
 
     return (
         <div id={'about'} className={'item-dashboard row'}
              style={{
                  backgroundImage: "url(images/wallpaper1.jpg)",
-                 backgroundPosition: 'center',
+                 backgroundPosition: 'center bottom',
+                 backgroundAttachment: 'fixed',
                  backgroundSize: 'cover',
                  display: 'flex'
              }}>
@@ -29,15 +19,18 @@ const About = () => {
                 justifyContent: 'center',
                 textAlign: 'center',
                 alignItems: 'center',
-                flexDirection: 'column'
+                flexDirection: 'column',
+                backgroundColor: '#00000050',
             }}>
                 <Avatar src={'images/me.jpg'}
-                        style={{display: 'inline-block', marginTop: 15, width: 200, height: 200}}/>
-                <a href={'Ernest_Bies_CV.pdf'} style={{marginBottom: 15}} download={'Ernest_Bies_CV.pdf'}>
-                    <button type={'submit'} className={'glow-on-hover'}>
-                        Download my CV
-                    </button>
-                </a>
+                        style={{display: 'inline-block', marginTop: 15, marginBottom: 15, width: 200, height: 200}}/>
+                {
+                    info.achievements.map(el =>
+                        <code style={{fontSize: 12}}>
+                            <span style={{color: 'orange'}}>{'//'}</span> {el}
+                        </code>
+                    )
+                }
             </div>
             <div className={'col'} style={{
                 flex: 5,
@@ -45,57 +38,63 @@ const About = () => {
                 flexDirection: 'column',
                 justifyContent: 'center',
                 textAlign: 'left',
-                backgroundColor: '#00000090'
+                backgroundColor: '#00000090',
             }}>
-                <div className={'info-bar'}>
-                    <div style={{width: 5, height: 30, marginLeft: 20, backgroundColor: 'orange'}}/>
-                    <p style={{
-                        paddingLeft: 7,
-                        fontWeight: 300,
-                        fontSize: 30,
-                        margin: 0,
-                    }}>{info.name + ' ' + info.surname}</p>
+                <div>
+                    <div className={'info-bar'}>
+                        <div style={{width: 5, height: 30, marginLeft: 20, backgroundColor: 'orange'}}/>
+                        <p style={{
+                            paddingLeft: 7,
+                            fontWeight: 300,
+                            fontSize: 30,
+                            margin: 0,
+                        }}>{info.name + ' ' + info.surname}</p>
+                    </div>
+                    <div style={{display: 'flex', alignItems: 'center', marginLeft: 20, marginTop: 10}}>
+                        <p style={{
+                            fontWeight: 300,
+                            fontSize: 15,
+                            margin: 0,
+                            marginRight: 7
+                        }}>{calculateAge(info.dateOfBirth)}</p>
+                        <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
+                        <p style={{
+                            fontWeight: 300,
+                            fontSize: 15,
+                            margin: 0,
+                            paddingRight: 7
+                        }}>{info.degree}</p>
+                        <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
+                        <p style={{
+                            paddingRight: 7,
+                            fontWeight: 300,
+                            fontSize: 15,
+                            margin: 0,
+                        }}>{info.country}</p>
+                        <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
+                        {
+                            info.languages.map((el) => {
+                                return (
+                                    <img
+                                        key={el}
+                                        alt={el}
+                                        width={20}
+                                        height={12}
+                                        style={{marginRight: 5}}
+                                        src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + el + '.svg'}
+                                    />
+                                )
+                            })
+                        }
+                    </div>
+                    <div className={'orange-bar'}/>
+                    <p className={'info-text'}>
+                        {info.text}
+                    </p>
+                    <p className={'colored-text'}>
+                        {'hope u enjoy =)'}
+                    </p>
                 </div>
-                <div style={{display: 'flex', alignItems: 'center', marginLeft: 20, marginTop: 10}}>
-                    <p style={{
-                        fontWeight: 300,
-                        fontSize: 15,
-                        margin: 0,
-                        marginRight: 7
-                    }}>{calculateAge(info.dateOfBirth)}</p>
-                    <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
-                    <p style={{
-                        fontWeight: 300,
-                        fontSize: 15,
-                        margin: 0,
-                        paddingRight: 7
-                    }}>{info.degree}</p>
-                    <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
-                    <p style={{
-                        paddingRight: 7,
-                        fontWeight: 300,
-                        fontSize: 15,
-                        margin: 0,
-                    }}>{info.country}</p>
-                    <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
-                    {
-                        info.languages.map((el) => {
-                            return (
-                                <img
-                                    alt={el}
-                                    width={20}
-                                    height={12}
-                                    style={{marginRight: 5}}
-                                    src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + el + '.svg'}
-                                />
-                            )
-                        })
-                    }
-                </div>
-                <div className={'orange-bar'}/>
-                <p className={'info-text'}>
-                    {info.text}
-                </p>
             </div>
         </div>
     );

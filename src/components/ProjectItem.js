@@ -1,4 +1,13 @@
-import {AiFillWindows, FaGithub, FaWrench, FaYoutube, FcAndroidOs, FcLinux, IoLogoApple} from "react-icons/all";
+import {
+    AiFillInfoCircle,
+    AiFillWindows,
+    FaGithub,
+    FaWrench,
+    FaYoutube,
+    FcAndroidOs,
+    FcLinux,
+    IoLogoApple
+} from "react-icons/all";
 import React from "react";
 
 const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData, infoSize}) => {
@@ -9,7 +18,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
             if (len === i + 1) {
                 return el;
             } else {
-                return el + ' | '
+                return <span key={el}>{el} <span style={{color: '#A9A9A9'}}> | </span></span>;
             }
         });
     };
@@ -18,7 +27,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
         let view = [];
         let numOfTechnologies = Object.keys(technologies).length;
 
-        if(numOfTechnologies === 1) {
+        if (numOfTechnologies === 1) {
             view.push(
                 <code key={numOfTechnologies} style={{
                     fontSize: 12,
@@ -48,6 +57,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
         languages.map((country) => view.push(
             <img
                 key={country}
+                style={{marginRight: 3}}
                 width={20}
                 height={12}
                 alt={country}
@@ -59,12 +69,11 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
     };
 
     return (
-        <div key={id} style={{display: 'flex', justifyContent: 'column', height: '60vh'}}>
+        <div className={'carousel'} key={id}>
             <img
                 alt={name}
-                className={'d-block w-50'}
                 src={image}
-                style={{opacity: 0.8, flex: 1}}
+                style={{opacity: 0.8, flex: 1, width: '100%'}}
             />
             <div style={{margin: 40, textAlign: 'left', flex: 1}}>
                 <div style={{display: 'flex', alignItems: 'center'}}>
@@ -79,7 +88,6 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                     fontSize: 12,
                     fontFamily: 'Open Sans',
                     marginTop: 30,
-                    marginRight: 100
                 }}>{description}</p>
                 <div style={{display: 'flex', marginTop: 30, marginBottom: 10, alignItems: 'center'}}>
                     <FaWrench color={color} size={14} style={{marginRight: 5}}/>
@@ -95,33 +103,55 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                     }
                 </div>
 
-                <div style={{display: 'flex', marginTop: 20, alignItems: 'center', justifyContent: 'space-between', width: infoSize ?? '80%'}}>
+                <div style={{display: 'flex', marginTop: 30, alignItems: 'center'}}>
+                    <AiFillInfoCircle color={color} size={14} style={{marginRight: 5}}/>
+                    <p style={{
+                        fontSize: 14,
+                        fontFamily: 'Open Sans',
+                        margin: 0
+                    }}>{'Technical information'}</p>
+                </div>
+                <div>
                     {
-                        os.includes('Windows') && <AiFillWindows/>
+                        os.includes('Windows') && <AiFillWindows style={{display: 'inline', marginRight: 3}}/>
                     }
                     {
-                        os.includes('Linux') && <FcLinux/>
+                        os.includes('Linux') && <FcLinux style={{marginRight: 3}}/>
                     }
                     {
-                        os.includes('Android') && <FcAndroidOs/>
+                        os.includes('Android') && <FcAndroidOs style={{marginRight: 3}}/>
                     }
                     {
                         os.includes('iOS') && <IoLogoApple/>
                     }
                     {
-                        languages &&  <div style={{width: 1, height: 15, backgroundColor: '#282c34'}}/>
+                        languages && <div style={{
+                            width: 1,
+                            height: 15,
+                            backgroundColor: '#282c34',
+                            marginLeft: 8,
+                            marginRight: 8,
+                            display: 'inline-block',
+                        }}/>
                     }
                     {
                         languages && renderLanguages(languages)
                     }
                     {
-                        additionalData &&  <div style={{width: 1, height: 15, backgroundColor: '#282c34'}}/>
+                        additionalData &&
+                        <div style={{
+                            width: 1,
+                            height: 15,
+                            backgroundColor: '#282c34',
+                            marginLeft: 8,
+                            marginRight: 8,
+                            display: 'inline-block',
+                        }}/>
                     }
                     {
                         additionalData &&
                         <a style={{
-                            display: 'flex',
-                            flexDirection: 'row',
+                            display: 'inline',
                             textDecoration: 'none',
                             alignItems: 'center',
                             textAlign: 'center',
@@ -132,42 +162,50 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                                 height={16}
                                 alt={additionalData.name}
                                 src={additionalData.image}/>
-                            <p style={{fontSize: 10, margin: 0, color: 'white'}}>{additionalData.text}</p>
+                            <p style={{
+                                fontSize: 10,
+                                margin: 0,
+                                color: 'white',
+                                display: 'inline'
+                            }}>{additionalData.text}</p>
                         </a>
                     }
-                    <div style={{width: 1, height: 15, backgroundColor: '#282c34'}}/>
-                    <div style={{display: 'flex', alignItems: 'center', flexDirection: 'row'}}>
-                        {
-                            links.github &&
-                            <a style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                textDecoration: 'none',
-                                alignItems: 'center',
-                                textAlign: 'center',
-                            }} href={links.github}>
-                                <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
-                                <p style={{fontSize: 10, margin: 0, color: 'white'}}>
-                                    Check out project page</p>
-                            </a>
-                        }
-                        {
-                            links.youtube &&
-                            <a style={{
-                                display: 'flex',
-                                flexDirection: 'row',
-                                textDecoration: 'none',
-                                alignItems: 'center',
-                                textAlign: 'center',
-                                marginLeft: 5
-                            }}
-                               href={links.youtube}>
-                                <FaYoutube color={'red'} style={{marginLeft: 5, marginRight: 5}}/>
-                                <p style={{fontSize: 10, margin: 0, color: 'white'}}>
-                                    Check out the presentation video</p>
-                            </a>
-                        }
-                    </div>
+                    <div style={{
+                        width: 1,
+                        height: 15,
+                        backgroundColor: '#282c34',
+                        marginLeft: 8,
+                        marginRight: 8,
+                        display: 'inline-block',
+                    }}/>
+                    {
+                        links.github &&
+                        <a style={{
+                            display: 'inline',
+                            textDecoration: 'none',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                        }} href={links.github}>
+                            <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
+                            <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
+                                Check out project page</p>
+                        </a>
+                    }
+                    {
+                        links.youtube &&
+                        <a style={{
+                            display: 'inline',
+                            textDecoration: 'none',
+                            alignItems: 'center',
+                            textAlign: 'center',
+                            marginLeft: 5
+                        }}
+                           href={links.youtube}>
+                            <FaYoutube color={'red'} style={{marginLeft: 5, marginRight: 5}}/>
+                            <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
+                                Check out the presentation video</p>
+                        </a>
+                    }
                 </div>
             </div>
         </div>

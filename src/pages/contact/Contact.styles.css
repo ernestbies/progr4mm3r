@@ -1,0 +1,52 @@
+.contact-list {
+    background-color: #282c34;
+    text-align: center;
+    height: 300px;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+.icon-item {
+    width: 6rem;
+    height: 6rem;
+}
+
+.icon {
+    color: white;
+    margin-top: 10px;
+    font-size: 70px;
+}
+
+.icon[type = 'email'] {
+    margin-top: 5px;
+    font-size: 90px;
+}
+
+.icon[type = 'discord'] {
+    margin-top: 20px;
+}
+
+.icon[type = 'github']:hover {
+    color: dimgrey;
+}
+
+.icon[type = 'bitbucket']:hover {
+    color: #1a74ed;
+}
+
+.icon[type = 'email']:hover {
+    color: darkred;
+}
+
+.icon[type = 'discord']:hover {
+    color: #7289da;
+}
+

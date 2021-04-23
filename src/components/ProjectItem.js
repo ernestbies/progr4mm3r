@@ -10,7 +10,7 @@ import {
 } from "react-icons/all";
 import React from "react";
 
-const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData, infoSize}) => {
+const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData}) => {
 
     const renderTechnologies = (technologies) => {
         const len = technologies.length;
@@ -69,7 +69,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
     };
 
     return (
-        <div className={'carousel'} key={id}>
+        <div className={'carousel-item'} style={{display: 'flex'}} key={id}>
             <img
                 alt={name}
                 src={image}
@@ -113,16 +113,16 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                 </div>
                 <div>
                     {
-                        os.includes('Windows') && <AiFillWindows style={{display: 'inline', marginRight: 3}}/>
+                        os.includes('Windows') && <AiFillWindows size={20} style={{display: 'inline', marginRight: 3}}/>
                     }
                     {
-                        os.includes('Linux') && <FcLinux style={{marginRight: 3}}/>
+                        os.includes('Linux') && <FcLinux size={20} style={{marginRight: 3}}/>
                     }
                     {
-                        os.includes('Android') && <FcAndroidOs style={{marginRight: 3}}/>
+                        os.includes('Android') && <FcAndroidOs size={20} style={{marginRight: 3}}/>
                     }
                     {
-                        os.includes('iOS') && <IoLogoApple/>
+                        os.includes('iOS') && <IoLogoApple size={20}/>
                     }
                     {
                         languages && <div style={{
@@ -201,7 +201,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                             marginLeft: 5
                         }}
                            href={links.youtube}>
-                            <FaYoutube color={'red'} style={{marginLeft: 5, marginRight: 5}}/>
+                            <FaYoutube color={'red'} size={20} style={{marginLeft: 5, marginRight: 5}}/>
                             <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
                                 Check out the presentation video</p>
                         </a>

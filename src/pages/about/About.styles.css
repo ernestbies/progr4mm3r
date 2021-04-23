@@ -1,0 +1,73 @@
+.about-container {
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    background-color: #00000090;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #00000050;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.orange-bar {
+    width: 60%;
+    height: 1px;
+    background-color: orange;
+    margin-top: 10px;
+    align-self: center;
+}
+
+.info-text {
+    display: inline-block;
+    word-break: break-word;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    max-width: 600px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.info-bar {
+    display: flex;
+    background-color: black;
+    align-items: center;
+    width: 60%;
+}
+
+.colored-text {
+    margin-left: 20px;
+    margin-bottom: -20px;
+    font-family: "Press Start", sans-serif;
+    font-size: 8px;
+    background: -webkit-linear-gradient(#0000FF, #00BFFF, #FF00FF, #FF7300, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media only screen and (max-width: 992px) {
+    .info-bar {
+        width: 100%;
+    }
+
+    .orange-bar {
+        width: 80%;
+        margin-left: 0;
+        align-self: center;
+    }
+}

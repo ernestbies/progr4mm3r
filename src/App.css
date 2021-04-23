@@ -5,203 +5,59 @@
 }
 
 .App {
-  height: 100%;
   overflow-x: hidden;
 }
 
 body {
   padding-top: 50px;
-  margin-left: 15px;
 }
 
-.footerStyle {
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem;
-  font-family: "Open Sans", serif;
-  text-align: center;
+.header-text {
+  color: white;
+  display: inline-block;
+  font-family: 'Open Sans', serif;
   font-weight: 300;
-  font-size: 0.7rem;
-  background-color: #2d3436;
-  background-image: linear-gradient(to right, #2d3436, #000000, #2d3436);
-}
-
-.icon {
-  color: white;
-  margin-top: 10px;
-  font-size: 70px;
-}
-
-.icon[type = 'email'] {
-  margin-top: 5px;
-  font-size: 90px;
-}
-
-.icon[type = 'discord'] {
   margin-top: 20px;
+  font-size: 23px;
 }
 
-.icon[type = 'github']:hover {
-  color: dimgrey;
-}
-
-.icon[type = 'bitbucket']:hover {
-  color: #1a74ed;
-}
-
-.icon[type = 'email']:hover {
-  color: darkred;
-}
-
-.icon[type = 'discord']:hover {
-  color: #7289da;
-}
-
-.websiteName:hover {
-  color: orange;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.header-text-small {
   color: white;
+  display: inline-block;
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  margin-top: 20px;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+
+.wallpaper-container {
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  border-top: 1px solid #FFFFFF90;
+  margin: auto;
+  width: 100%;
 }
 
 .item-dashboard {
   background-color: #282c34;
   text-align: center;
-  min-height: 55vh;
   color: white;
 }
 
-.language-icons {
-  display: flex;
-  margin: 0 auto;
-}
-
-.skills-icon {
-  width: 50px;
-  height: 50px;
-}
-
-.skills-container {
-  margin-bottom: 25px;
-  margin-top: 25px;
-  display: flex;
-  width: 80%;
-  height: 150px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.contact-list {
-  background-color: #282c34;
-  text-align: center;
-  height: 300px;
-  color: white;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+.carousel-item {
+  height: 440px;
 }
 
 .carousel-style {
   background-color: black;
   text-align: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 24px;
   color: white;
   position: relative;
   z-index: 0;
-}
-
-.contact-icons {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 40px;
-}
-
-.navbarContent {
-  top: 0;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  position: fixed;
-  justify-content: center;
-  background-color: black;
-  text-align: center;
-  padding-top: 15px;
-  z-index: 1;
-}
-
-.websiteName {
-  cursor: pointer;
-  font-family: 'Open Sans', serif;
-  font-size: 16px;
-  font-weight: 300;
-  color: orange;
-  display: inline;
-  position: absolute;
-  left: 50px;
-}
-
-.websiteName:hover {
-  color: white;
-}
-
-.navMenu {
-  display: flex;
-  justify-content: center;
-}
-
-.hamburger {
-  display: none;
-  position: absolute;
-  right: 20px;
-}
-
-.bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  background-color: orange;
-}
-
-.navbarLink {
-  cursor: pointer;
-  font-family: 'Open Sans', serif;
-  font-weight: 300;
-  font-size: 16px;
-  margin-bottom: -15px;
-  color: white;
-  display: inline-block;
-  width: 6rem;
-}
-
-.navbarLink:hover {
-  color: orange;
-  text-decoration: none;
-}
-
-.navbarLinkCurrent {
-  color: orange;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  padding-bottom: 15px;
-}
-
-.iconDiv {
-  width: 6rem;
-  height: 6rem;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .tooltipClass {
@@ -263,16 +119,6 @@ body {
   z-index: 1;
 }
 
-.colored-text {
-  margin-left: 20px;
-  margin-bottom: -20px;
-  font-family: "Press Start", sans-serif;
-  font-size: 8px;
-  background: -webkit-linear-gradient(#0000FF, #00BFFF, #FF00FF, #FF7300, #333);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .tooltipClassSmall .tooltipText::after {
   content: "";
   position: absolute;
@@ -288,222 +134,10 @@ body {
   visibility: visible;
 }
 
-.glow-on-hover {
-  margin-top: 18px;
-  width: 180px;
-  height: 25px;
-  outline: none;
-  border-width: 1px;
-  border-color: orange;
-  color: #fff;
-  background: #111;
-  cursor: pointer;
-  position: relative;
-  font-size: 12px;
-  font-weight: 300;
-  z-index: 0;
-  border-radius: 10px;
-}
-
-.glow-on-hover:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  position: absolute;
-  top: -2px;
-  left:-2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
-}
-
-.glow-on-hover:active {
-  color: #000
-}
-
-.glow-on-hover:active:after {
-  background: transparent;
-}
-
-.glow-on-hover:hover:before {
-  opacity: 1;
-}
-
-.glow-on-hover:after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #111;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-.quote-component{
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  width: 750px;
-  margin: 0 auto;
-  align-self: center;
-  padding: 3rem;
-}
-
-.quote-component blockquote.quote {
-  position: relative;
-  text-align: center;
-  padding: 1rem 1.2rem;
-  width: 80%;
-  color: white;
-  margin: 1rem auto 2rem;
-}
-
-.quote-component blockquote.EN {
-  background: linear-gradient(to right, orange 4px, transparent 4px) 0 100%,
-          linear-gradient(to left, orange 4px, transparent 4px) 100% 0,
-          linear-gradient(to bottom, orange 4px, transparent 4px) 100% 0,
-          linear-gradient(to top, orange 4px, transparent 4px) 0 100%;
-  background-repeat: no-repeat;
-  background-size: 20px 20px;
-}
-
-.quote-component blockquote.quote:before,
-
-.quote-component blockquote.quote:after{
-  position: absolute;
-  color: orange;
-  font-size: 60px;
-}
-
-.quote-component blockquote.EN:before{
-  content: '“';
-  top: -30px;
-  margin-right: -20px;
-  right: 100%;
-}
-
-.quote-component blockquote.EN:after{
-  content: '”';
-  margin-left: -20px;
-  left: 100%;
-  top: auto;
-  bottom: -50px;
-}
-
-.knowledge-card {
-  display: flex;
-  flex-direction: column;
-  border-radius: 25px;
-  border: 1px solid #FFFFFF90;
-  background: transparent;
-  padding: 20px;
-  width: 330px;
-  height: 600px;
-  margin: 10px;
-}
-
-.info-bar {
-  display: flex;
-  background-color: black;
-  align-items: center;
-  width: 60%;
-}
-
-.orange-bar {
-  width: 60%;
-  height: 1px;
-  background-color: orange;
-  margin-top: 10px;
-  align-self: center;
-}
-
-.info-text {
-  display: inline-block;
-  word-break: break-word;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-top: 10px;
-  max-width: 600px;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.carousel {
-  display: flex;
-  flex-direction: row;
-  height: 440px;
-}
-
 @media only screen and (max-width: 992px) {
-  .hamburger {
-    display: block;
-    cursor: pointer;
-  }
-
-  .hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .hamburger.active .bar:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-
-  .hamburger.active .bar:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-
-  .carousel {
+  .carousel-item {
     flex-direction: column;
     align-items: center;
     height: 100%;
-  }
-
-  .navMenu {
-    display: none;
-    width: 100%;
-  }
-
-  .websiteName {
-    position: static;
-  }
-
-  .navbarContent {
-    padding-bottom: 15px;
-  }
-
-  .navMenu.active {
-    margin-top: 15px;
-    display: flex;
-  }
-
-  .navbarContent.active {
-    padding-bottom: 0;
-  }
-
-  .info-bar {
-    width: 100%;
-  }
-
-  .orange-bar {
-    width: 80%;
-    margin-left: 0;
-    align-self: center;
   }
 }

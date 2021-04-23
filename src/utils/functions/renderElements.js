@@ -1,7 +1,7 @@
 import {Carousel} from 'react-bootstrap';
-import HobbyItem from '../components/HobbyItem';
+import HobbyItem from '../../components/HobbyItem';
 import React from 'react';
-import ProjectItem from '../components/ProjectItem';
+import ProjectItem from '../../components/ProjectItem';
 
 export const renderElements = (elements, type) => {
     let view = [];

@@ -1,8 +1,8 @@
 import React from "react";
 
-const HobbyItem = ({image, quote, name, text, color}) => {
+const HobbyItem = ({id, image, quote, name, text, color}) => {
     return (
-        <div className={'carousel'}>
+        <div className={'carousel-item'} style={{display: 'flex'}} key={id}>
             <img
                 alt={name}
                 src={image}

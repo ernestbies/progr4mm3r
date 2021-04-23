@@ -1,20 +1,14 @@
 import React from 'react';
-import {skills} from "../utils/skills";
-import {renderElements} from "../utils/renderElements";
-import KnowledgeCard from "../components/KnowledgeCard";
+import {skills} from "../../utils/skills";
+import {renderElements} from "../../utils/functions/renderElements";
+import KnowledgeCard from "../../components/KnowledgeCard";
+import "./Skills.styles.css";
 
 const Skills = () => {
 
     return (
         <div id={'skills'} className={'item-dashboard'} style={{backgroundColor: '#1d2026'}}>
-            <p style={{
-                color: 'white',
-                display: 'inline-block',
-                fontFamily: 'Open Sans',
-                fontWeight: 300,
-                marginTop: 20,
-                fontSize: 23
-            }}>Skills</p>
+            <p className={'header-text'}>Skills</p>
             <p style={{fontSize: 15, margin: 15, fontFamily: 'Open Sans'}}>I am constantly trying to gain knowledge
                 and improve my programming skills.<br/>I had contact with the following <code style={{fontSize: 14}}>programming
                     languages</code> and <code style={{fontSize: 14}}>IT technologies</code> while studying Computer
@@ -38,33 +32,11 @@ const Skills = () => {
                 </div>
             </div>
 
-            <div style={{
-                minHeight: 650,
-                backgroundImage: "url(images/wallpaper3.jpg)",
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundAttachment: 'fixed',
-                backgroundRepeat: 'no-repeat',
-                borderTop: '1px solid #FFFFFF90',
-                margin: 'auto',
-            }}>
+            <div className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper3.jpg)"}}>
                 <div style={{backgroundColor: '#00000090', textAlign: 'center'}}>
-                    <p style={{
-                        color: 'white',
-                        display: 'inline-block',
-                        fontFamily: 'Open Sans',
-                        fontWeight: 300,
-                        marginTop: 20,
-                        marginBottom: 50,
-                        fontSize: 22
-                    }}>Practical knowledge</p>
+                    <p className={'header-text-small'}>Practical knowledge</p>
                 </div>
-                <div className={'row'} style={{
-                    display: 'flex',
-                    justifyContent: 'space-evenly',
-                    minHeight: 650,
-                    backgroundColor: '#00000090'
-                }}>
+                <div className={'knowledge-card-container row'}>
                     <KnowledgeCard type={'frontend'}/>
                     <KnowledgeCard type={'backend'}/>
                     <KnowledgeCard type={'databases'}/>

@@ -1,5 +1,6 @@
 import React from 'react';
 import Scrollspy from 'react-scrollspy'
+import "./Navbar.styles.css";
 
 const Navbar = () => {
 

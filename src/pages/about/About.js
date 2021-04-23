@@ -1,29 +1,15 @@
 import React from 'react';
 import {Avatar} from '@material-ui/core';
-import {info, calculateAge} from "../utils/information";
+import {info, calculateAge} from "../../utils/information";
+import './About.styles.css';
 
 const About = () => {
 
     return (
-        <div id={'about'} className={'item-dashboard row'}
-             style={{
-                 backgroundImage: "url(images/wallpaper1.jpg)",
-                 backgroundPosition: 'center bottom',
-                 backgroundAttachment: 'fixed',
-                 backgroundSize: 'cover',
-                 display: 'flex'
-             }}>
-            <div className={'col'} style={{
-                flex: 2,
-                display: 'flex',
-                justifyContent: 'center',
-                textAlign: 'center',
-                alignItems: 'center',
-                flexDirection: 'column',
-                backgroundColor: '#00000050',
-            }}>
-                <Avatar src={'images/me.jpg'}
-                        style={{display: 'inline-block', marginTop: 15, marginBottom: 15, width: 200, height: 200}}/>
+        <div id={'about'} className={'item-dashboard about-container row'} style={{backgroundImage: 'url(images/wallpaper1.jpg)'}}>
+            <div className={'avatar-container col'} style={{flex: 2}}>
+                <Avatar style={{display: 'inline-block', marginTop: 15, marginBottom: 15, width: 200, height: 200}}
+                        src={'images/me.jpg'}/>
                 {
                     info.achievements.map(el =>
                         <code style={{fontSize: 12}}>
@@ -32,14 +18,7 @@ const About = () => {
                     )
                 }
             </div>
-            <div className={'col'} style={{
-                flex: 5,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                textAlign: 'left',
-                backgroundColor: '#00000090',
-            }}>
+            <div className={'text-container col'} style={{flex: 5}}>
                 <div>
                     <div className={'info-bar'}>
                         <div style={{width: 5, height: 30, marginLeft: 20, backgroundColor: 'orange'}}/>

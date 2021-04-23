@@ -1,8 +1,9 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
-import {hobby} from "../utils/hobby";
-import {renderElements} from "../utils/renderElements";
-import MyTimeline from "../components/MyTimeline";
+import {hobby} from "../../utils/hobby";
+import {renderElements} from "../../utils/functions/renderElements";
+import MyTimeline from "../../components/MyTimeline";
+import "./Hobby.styles.css";
 
 const Hobby = () => {
 
@@ -14,28 +15,12 @@ const Hobby = () => {
     return (
         <div id={'hobby'} style={{display: 'flex', flexDirection: 'column'}}>
             <div className={'carousel-style'}>
-                <p style={{
-                    color: 'white',
-                    display: 'inline-block',
-                    fontFamily: 'Open Sans',
-                    fontWeight: 300,
-                    marginTop: 20,
-                    fontSize: 23
-                }}>Hobby</p>
+                <p className={'header-text'}>Hobby</p>
                 <Carousel>
                     {renderElements(hobby, 'hobby')}
                 </Carousel>
             </div>
-            <div style={{
-                backgroundImage: "url(images/wallpaper2.jpg)",
-                backgroundPosition: 'center',
-                backgroundSize: 'cover',
-                backgroundAttachment: 'fixed',
-                backgroundRepeat: 'no-repeat',
-                borderTop: '1px solid #FFFFFF90',
-                margin: 'auto',
-                width: '100%'
-            }}>
+            <div className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper2.jpg)",}}>
                 <div style={{backgroundColor: '#00000090', textAlign: 'center'}}>
                     <p style={{
                         color: 'white',

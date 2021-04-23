@@ -1,12 +1,12 @@
-import Navbar from "./parts/Navbar";
+import Navbar from "./parts/navbar/Navbar";
 import './App.css';
 import React from "react";
-import Footer from "./parts/Footer";
-import About from "./pages/About";
-import Projects from "./pages/Projects";
-import Skills from "./pages/Skills";
-import Hobby from "./pages/Hobby";
-import Contact from "./pages/Contact";
+import Footer from "./parts/footer/Footer";
+import About from "./pages/about/About";
+import Projects from "./pages/projects/Projects";
+import Skills from "./pages/skills/Skills";
+import Hobby from "./pages/hobby/Hobby";
+import Contact from "./pages/contact/Contact";
 import { BrowserRouter as Router, Redirect } from "react-router-dom";
 
 function App() {

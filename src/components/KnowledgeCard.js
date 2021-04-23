@@ -6,7 +6,17 @@ const KnowledgeCard = ({type}) => {
     const [item] = useState(knowledge[type]);
 
     return (
-        <div className={'knowledge-card'}>
+        <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            borderRadius: 25,
+            border: '1px solid #FFFFFF90',
+            background: 'transparent',
+            padding: 20,
+            width: 330,
+            height: 600,
+            margin: 10
+        }}>
             <div style={{
                 flex: 2,
                 marginTop: -20,

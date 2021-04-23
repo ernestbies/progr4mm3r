@@ -1,6 +1,7 @@
 import React from "react";
+import {FaLaptopCode, IoGameController, IoTvOutline} from "react-icons/all";
 
-const HobbyItem = ({id, image, quote, name, text, color}) => {
+const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
     return (
         <div className={'carousel-item'} style={{display: 'flex'}} key={id}>
             <img
@@ -26,6 +27,15 @@ const HobbyItem = ({id, image, quote, name, text, color}) => {
                     maxWidth: 500,
                     wordBreak: 'break-word'
                 }}>{text}</p>
+                <div>
+                    {
+                        name.includes('Program') ? <FaLaptopCode size={20} color={color} style={{marginRight: 10}}/> :
+                            name.includes('Esports') ?
+                                <IoGameController size={20} color={color} style={{marginRight: 10}}/> :
+                                <IoTvOutline size={20} color={color} style={{marginRight: 10}}/>
+                    }
+                    <span style={{fontFamily: 'Press Start', fontSize: 8}}>{keywords.join(", ").toUpperCase()}</span>
+                </div>
             </div>
         </div>
     )

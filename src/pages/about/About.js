@@ -67,12 +67,7 @@ const About = () => {
                         }
                     </div>
                     <div className={'orange-bar'}/>
-                    <p className={'info-text'}>
-                        {info.text}
-                    </p>
-                    <p className={'colored-text'}>
-                        {'hope u enjoy =)'}
-                    </p>
+                    <p className={'info-text'}>{info.text}</p>
                 </div>
             </div>
         </div>

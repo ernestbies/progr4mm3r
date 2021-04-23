@@ -50,16 +50,6 @@
     width: 60%;
 }
 
-.colored-text {
-    margin-left: 20px;
-    margin-bottom: -20px;
-    font-family: "Press Start", sans-serif;
-    font-size: 8px;
-    background: -webkit-linear-gradient(#0000FF, #00BFFF, #FF00FF, #FF7300, #333);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
 @media only screen and (max-width: 992px) {
     .info-bar {
         width: 100%;

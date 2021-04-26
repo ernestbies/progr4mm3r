@@ -15,7 +15,7 @@ const KnowledgeCard = ({type}) => {
             padding: 20,
             width: 330,
             height: 600,
-            margin: 10
+            margin: 20
         }}>
             <div style={{
                 flex: 2,

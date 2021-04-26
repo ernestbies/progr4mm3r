@@ -7,7 +7,7 @@ const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
             <img
                 alt={name}
                 src={image}
-                style={{opacity: 0.5, flex: 1, width: '100%'}}
+                style={{opacity: 0.5, flex: 1, width: '100%', objectFit: 'contain'}}
             />
             <div style={{margin: 40, textAlign: 'left', flex: 1}}>
                 <div style={{display: 'flex', textAlign: 'center', alignItems: 'center'}}>

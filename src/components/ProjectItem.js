@@ -73,7 +73,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
             <img
                 alt={name}
                 src={image}
-                style={{opacity: 0.8, flex: 1, width: '100%'}}
+                style={{opacity: 0.8, flex: 1, width: '100%', objectFit: 'contain'}}
             />
             <div style={{margin: 40, textAlign: 'left', flex: 1}}>
                 <div style={{display: 'flex', alignItems: 'center'}}>

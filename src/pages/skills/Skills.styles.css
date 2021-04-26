@@ -20,6 +20,6 @@
 
 .knowledge-card-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     min-height: 650px;
 }

@@ -1,6 +1,6 @@
 import {
     AiFillInfoCircle,
-    AiFillWindows,
+    AiFillWindows, FaBitbucket,
     FaGithub,
     FaWrench,
     FaYoutube,
@@ -113,7 +113,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                 </div>
                 <div>
                     {
-                        os.includes('Windows') && <AiFillWindows size={20} style={{display: 'inline', marginRight: 3}}/>
+                        os.includes('Windows') && <AiFillWindows size={20} style={{marginRight: 3}}/>
                     }
                     {
                         os.includes('Linux') && <FcLinux size={20} style={{marginRight: 3}}/>
@@ -122,14 +122,15 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         os.includes('Android') && <FcAndroidOs size={20} style={{marginRight: 3}}/>
                     }
                     {
-                        os.includes('iOS') && <IoLogoApple size={20}/>
+                        os.includes('iOS') && <IoLogoApple size={20} style={{marginRight: 3}}/>
                     }
                     {
-                        languages && <div style={{
+                        languages &&
+                        <div style={{
                             width: 1,
                             height: 15,
                             backgroundColor: '#282c34',
-                            marginLeft: 8,
+                            marginLeft: 5,
                             marginRight: 8,
                             display: 'inline-block',
                         }}/>
@@ -143,7 +144,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                             width: 1,
                             height: 15,
                             backgroundColor: '#282c34',
-                            marginLeft: 8,
+                            marginLeft: 5,
                             marginRight: 8,
                             display: 'inline-block',
                         }}/>
@@ -155,6 +156,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                             textDecoration: 'none',
                             alignItems: 'center',
                             textAlign: 'center',
+                            marginRight: 3
                         }}
                            href={additionalData.link}>
                             <img
@@ -174,7 +176,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         width: 1,
                         height: 15,
                         backgroundColor: '#282c34',
-                        marginLeft: 8,
+                        marginLeft: 5,
                         marginRight: 8,
                         display: 'inline-block',
                     }}/>
@@ -183,10 +185,21 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         <a style={{
                             display: 'inline',
                             textDecoration: 'none',
-                            alignItems: 'center',
                             textAlign: 'center',
                         }} href={links.github}>
                             <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
+                            <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
+                                Check out project page</p>
+                        </a>
+                    }
+                    {
+                        links.bitbucket &&
+                        <a style={{
+                            display: 'inline',
+                            textDecoration: 'none',
+                            textAlign: 'center',
+                        }} href={links.bitbucket}>
+                            <FaBitbucket size={20} style={{marginRight: 5}}/>
                             <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
                                 Check out project page</p>
                         </a>
@@ -196,7 +209,6 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         <a style={{
                             display: 'inline',
                             textDecoration: 'none',
-                            alignItems: 'center',
                             textAlign: 'center',
                             marginLeft: 5
                         }}

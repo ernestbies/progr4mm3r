@@ -24,14 +24,6 @@
     padding-bottom: 30px;
 }
 
-.orange-bar {
-    width: 60%;
-    height: 1px;
-    background-color: orange;
-    margin-top: 10px;
-    align-self: center;
-}
-
 .info-text {
     display: inline-block;
     word-break: break-word;
@@ -43,21 +35,16 @@
     font-weight: 300;
 }
 
-.info-bar {
+.name-bar {
     display: flex;
     background-color: black;
     align-items: center;
-    width: 60%;
+    width: 600px;
 }
 
 @media only screen and (max-width: 992px) {
-    .info-bar {
-        width: 100%;
-    }
 
-    .orange-bar {
-        width: 80%;
-        margin-left: 0;
-        align-self: center;
+    .name-bar {
+        width: 100%;
     }
 }

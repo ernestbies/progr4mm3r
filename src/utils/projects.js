@@ -59,7 +59,7 @@ export const projects = [
     {
         id: 3,
         name: 'ApocalyptoGame',
-        description: '"ApocalyptoGame" is a first-person shooter (FPS) game. There is one main plot of the game in the game. In the game, we play the role of a soldier set in a post-apocalyptic world. The player\'s task is to destroy the enemy ship. The player has the ability to interact with the environment, can pick up items. In order to destroy a ship, the player must collect four cells that will help him power the generator. The way to get cells is different - some of them are located on the map, some of them can be obtained by the player by killing aliens, and the last one is possible after killing the boss. After collecting all the cells, the player can power the generator on the map, which will blow up the enemy ship. The game has a developed combat and healing system.',
+        description: '"ApocalyptoGame" is a first-person shooter (FPS) game. In the game, we play the role of a soldier set in a post-apocalyptic world. The player\'s task is to destroy the enemy ship. The player has the ability to interact with the environment, can pick up items. In order to destroy a ship, the player must collect four cells that will help him power the generator. The way to get cells is different - some of them are located on the map, some of them can be obtained by the player by killing aliens, and the last one is possible after killing the boss. After collecting all the cells, the player can power the generator on the map, which will blow up the enemy ship. The game has a developed combat and healing system.',
         technologies: {
             desktop: ['C#', 'Unity']
         },
@@ -87,7 +87,7 @@ export const projects = [
     {
         id: 5,
         name: 'Image binarizer',
-        description: 'The application allows you to binarize images. The application supports the basic types of binarization - low-level, high-level, two-threshold, conditional. It allows you to load any image (color or black and white), and then select a specific operation. The application works in a distributed environment using Remote Method Invocation (RMI) - a mechanism that enables remote methods of objects invocation. These objects can reside in other Java virtual machines that can be on other computers. In RMI technology, it is necessary to run three processes: client, server, register of objects.',
+        description: 'The application allows you to binarize images. The application supports the basic types of binarization - low-level, high-level, two-threshold, conditional. It allows you to load any image (color or black and white), and then select a specific operation. The application works in a distributed environment using Remote Method Invocation (RMI) - a mechanism that enables remote methods of objects invocation. These objects can reside in other Java virtual machines that can be on other computers. In RMI technology, it is necessary to run three processes: client, server and register of objects.',
         technologies: {
             desktop: ['Java', 'Apache NetBeans IDE', 'Swing', 'Remote Method Invocation (RMI)']
         },
@@ -156,6 +156,34 @@ export const projects = [
     },
     {
         id: 10,
+        name: 'Chess server',
+        description: 'An academic project that checks the correctness of moves on a chess board using unit tests. The project uses the Java programming language, the Spring platform and the JUnit library, which allows you to carry out tests.',
+        technologies: {
+            desktop: ['Java', 'Spring Framework', 'JUnit', 'IntelliJ IDEA']
+        },
+        os: ['Windows'],
+        color: 'red',
+        image: 'images/projects/chess-server.png',
+        links: {
+            bitbucket: 'https://bitbucket.org/ernestbies/tijo-11'
+        }
+    },
+    {
+        id: 11,
+        name: 'Bank App',
+        description: 'An academic project that validates sample basic banking operations using unit tests. The project uses the Java programming language and tests carried out with the Spock library and the Groovy programming language. The basic things related to functional programming were also used, such as streams, maps and filters.',
+        technologies: {
+            desktop: ['Java', 'Groovy', 'Spock', 'IntelliJ IDEA']
+        },
+        os: ['Windows'],
+        color: 'green',
+        image: 'images/projects/bank-app.png',
+        links: {
+            bitbucket: 'https://bitbucket.org/ernestbies/tijo-12'
+        }
+    },
+    {
+        id: 12,
         name: 'Pizzeria database',
         description: 'Pizzeria database created with Toad Data Modeler. Basic SQL components (functions, triggers, etc.) have been implemented in the project. The main goal of the project was to create a database for a pizzeria that allows the customer to place orders for the selected type of pizza along with extras, as well as after agreeing to register in the pizzeria database, getting appropriate discounts. Placing an order is possible via the Internet, by phone or in person. After confirming the payment, the preparation of the pizza is transferred for implementation. When ordering via the Internet or by phone, the customer makes payment by the pizza delivery man.',
         technologies: {
@@ -169,7 +197,7 @@ export const projects = [
         }
     },
     {
-        id: 11,
+        id: 13,
         name: 'Car service station',
         description: 'Project implemented as part of POWER Project (Projekt Współpraca Synergia Zarządzanie w Tarnowie). The subject of the project was to describe and model processes using Business Process Modeling Notation (BPMN) showing the operation of car service station. A detailed course of the repair process of the damaged vehicle will be presented in this project, starting from delivering damaged car for repair to handing over the vehicle. A description of the car engine repair, spare parts ordering, car handover and payment process is presented. The main goal of the project is to present the processes that work in most car service stations.',
         technologies: {

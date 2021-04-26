@@ -33,14 +33,14 @@ const Skills = () => {
             </div>
 
             <div className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper3.jpg)"}}>
-                <div style={{backgroundColor: '#00000090', textAlign: 'center'}}>
+                <div style={{textAlign: 'center', backgroundColor: '#00000090'}}>
                     <p className={'header-text-small'}>Practical knowledge</p>
-                </div>
-                <div className={'knowledge-card-container row'}>
-                    <KnowledgeCard type={'frontend'}/>
-                    <KnowledgeCard type={'backend'}/>
-                    <KnowledgeCard type={'databases'}/>
-                    <KnowledgeCard type={'testing'}/>
+                    <div className={'knowledge-card-container row'}>
+                        <KnowledgeCard type={'frontend'}/>
+                        <KnowledgeCard type={'backend'}/>
+                        <KnowledgeCard type={'databases'}/>
+                        <KnowledgeCard type={'testing'}/>
+                    </div>
                 </div>
             </div>
         </div>

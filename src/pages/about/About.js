@@ -30,38 +30,23 @@ const About = () => {
                     }}>{info.name + ' ' + info.surname}</p>
                 </div>
                 <div style={{
-                    display: 'flex',
+                    display: 'inline-flex',
+                    maxWidth: 365,
                     alignItems: 'center',
                     marginLeft: 20,
+                    marginRight: 20,
                     marginTop: 10,
-                    borderBottomWidth: 2,
+                    borderBottomWidth: 1,
                     borderBottomStyle: 'solid',
                     paddingBottom: 10,
-                    borderColor: 'orange',
-                    width: 365
+                    borderColor: 'orange'
                 }}>
-                    <p style={{
-                        fontWeight: 300,
-                        fontSize: 15,
-                        margin: 0,
-                        marginRight: 7,
-                        display: 'inline'
-                    }}>{calculateAge(info.dateOfBirth)}</p>
-                    <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
-                    <p style={{
-                        fontWeight: 300,
-                        fontSize: 15,
-                        margin: 0,
-                        paddingRight: 7
-                    }}>{info.degree}</p>
-                    <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
-                    <p style={{
-                        paddingRight: 7,
-                        fontWeight: 300,
-                        fontSize: 15,
-                        margin: 0,
-                    }}>{info.country}</p>
-                    <div style={{width: 1, height: 14, backgroundColor: '#FFFFFF50', marginRight: 7}}/>
+                    <p className={'info-style'}>{calculateAge(info.dateOfBirth)}</p>
+                    <div className={'info-bar'}/>
+                    <p className={'info-style'}>{info.degree}</p>
+                    <div className={'info-bar'}/>
+                    <p className={'info-style'}>{info.country}</p>
+                    <div className={'info-bar'}/>
                     {
                         info.languages.map((el) => {
                             return (

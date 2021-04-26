@@ -9,7 +9,7 @@ const Projects = () => {
     return (
         <div id={'projects'} className={'carousel-style'}>
             <p className={'header-text'}>Projects</p>
-            <Carousel>
+            <Carousel interval={100000000}>
                 {renderElements(projects, 'projects')}
             </Carousel>
         </div>

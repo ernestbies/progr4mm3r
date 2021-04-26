@@ -31,7 +31,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
             view.push(
                 <code key={numOfTechnologies} style={{
                     fontSize: 12,
-                    fontStyle: 'normal'
+                    fontStyle: 'normal',
                 }}>{renderTechnologies(technologies[Object.keys(technologies)])}</code>
             )
         } else {
@@ -43,7 +43,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         marginBottom: 5
                     }}>{technology.charAt(0).toUpperCase() + technology.slice(1) + ':'} <code style={{
                         fontSize: 12,
-                        fontStyle: 'normal'
+                        fontStyle: 'normal',
                     }}>{renderTechnologies(technologies[technology])}</code></p>
                 )
             )
@@ -77,8 +77,10 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
             />
             <div style={{margin: 40, textAlign: 'left', flex: 1}}>
                 <div style={{display: 'flex', alignItems: 'center'}}>
-                    <div style={{width: 5, height: 30, backgroundColor: color}}/>
                     <p style={{
+                        borderLeftWidth: 5,
+                        borderLeftStyle: 'solid',
+                        borderLeftColor: color,
                         paddingLeft: 7,
                         fontFamily: 'Open Sans',
                         margin: 0
@@ -183,37 +185,36 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                     {
                         links.github &&
                         <a style={{
-                            display: 'inline',
+                            display: 'inline-block',
                             textDecoration: 'none',
                             textAlign: 'center',
                         }} href={links.github}>
                             <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
-                            <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
+                            <p style={{fontSize: 10, marginRight: 5, color: 'white', display: 'inline'}}>
                                 Check out project page</p>
                         </a>
                     }
                     {
                         links.bitbucket &&
                         <a style={{
-                            display: 'inline',
+                            display: 'inline-block',
                             textDecoration: 'none',
                             textAlign: 'center',
                         }} href={links.bitbucket}>
                             <FaBitbucket size={20} style={{marginRight: 5}}/>
-                            <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
+                            <p style={{fontSize: 10, marginRight: 5, color: 'white', display: 'inline'}}>
                                 Check out project page</p>
                         </a>
                     }
                     {
                         links.youtube &&
                         <a style={{
-                            display: 'inline',
+                            display: 'inline-block',
                             textDecoration: 'none',
-                            textAlign: 'center',
-                            marginLeft: 5
+                            textAlign: 'center'
                         }}
                            href={links.youtube}>
-                            <FaYoutube color={'red'} size={20} style={{marginLeft: 5, marginRight: 5}}/>
+                            <FaYoutube color={'red'} size={20} style={{marginRight: 5}}/>
                             <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
                                 Check out the presentation video</p>
                         </a>

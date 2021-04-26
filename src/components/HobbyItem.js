@@ -34,7 +34,7 @@ const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
                                 <IoGameController size={20} color={color} style={{marginRight: 10}}/> :
                                 <IoTvOutline size={20} color={color} style={{marginRight: 10}}/>
                     }
-                    <span style={{fontFamily: 'Press Start', fontSize: 8}}>{keywords.join(", ").toUpperCase()}</span>
+                    <span style={{fontFamily: 'Press Start', fontSize: 8}}>{keywords.map(e => e.toUpperCase() + '. ')}</span>
                 </div>
             </div>
         </div>

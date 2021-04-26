@@ -13,15 +13,18 @@
     background-color: #00000090;
 }
 
-.avatar-container {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: #00000050;
-    padding-top: 30px;
-    padding-bottom: 30px;
+.info-style {
+    font-size: 15px;
+    font-weight: 300;
+    padding-right: 7px;
+    margin: 0;
+}
+
+.info-bar {
+    width: 1px;
+    height: 14px;
+    background-color: #FFFFFF50;
+    margin-right: 7px;
 }
 
 .info-text {
@@ -33,6 +36,17 @@
     max-width: 600px;
     font-size: 14px;
     font-weight: 300;
+}
+
+.avatar-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #00000050;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .name-bar {

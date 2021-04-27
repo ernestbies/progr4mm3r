@@ -22,14 +22,7 @@ const Hobby = () => {
             </div>
             <div className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper2.jpg)",}}>
                 <div style={{backgroundColor: '#00000090', textAlign: 'center'}}>
-                    <p style={{
-                        color: 'white',
-                        display: 'inline-block',
-                        fontFamily: 'Open Sans',
-                        fontWeight: 300,
-                        marginTop: 20,
-                        fontSize: 22,
-                    }}>My timeline</p>
+                    <p className={'header-text-small'}>My timeline</p>
                 </div>
                 <div style={{backgroundColor: '#00000090', display: 'flex', flexDirection: 'column'}}>
                     <MyTimeline/>

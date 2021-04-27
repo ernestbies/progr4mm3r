@@ -1,5 +1,5 @@
 import React from "react";
-import {FaLaptopCode, IoGameController, IoTvOutline} from "react-icons/all";
+import {BsMusicNoteBeamed, FaLaptopCode, IoGameController, IoTvOutline} from "react-icons/all";
 
 const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
     return (
@@ -30,9 +30,9 @@ const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
                 <div>
                     {
                         name.includes('Program') ? <FaLaptopCode size={20} color={color} style={{marginRight: 10}}/> :
-                            name.includes('Esports') ?
-                                <IoGameController size={20} color={color} style={{marginRight: 10}}/> :
-                                <IoTvOutline size={20} color={color} style={{marginRight: 10}}/>
+                            name.includes('Esports') ? <IoGameController size={20} color={color} style={{marginRight: 10}}/> :
+                                name.includes('Music') ? <BsMusicNoteBeamed size={20} color={color} style={{marginRight: 10}}/> :
+                                    name.includes('Cinema') ? <IoTvOutline size={20} color={color} style={{marginRight: 10}}/> : <div/>
                     }
                     <span style={{fontFamily: 'Press Start', fontSize: 8}}>{keywords.map(e => e.toUpperCase() + '. ')}</span>
                 </div>

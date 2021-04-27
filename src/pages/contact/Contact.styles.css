@@ -1,11 +1,11 @@
 .contact-list {
-    background-color: #282c34;
+    background-color: #29003b;
     text-align: center;
-    height: 300px;
     color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 80px;
 }
 
 .contact-icons {
@@ -35,7 +35,7 @@
 }
 
 .icon[type = 'github']:hover {
-    color: dimgrey;
+    color: black;
 }
 
 .icon[type = 'bitbucket']:hover {

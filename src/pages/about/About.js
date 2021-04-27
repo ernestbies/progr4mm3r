@@ -13,7 +13,7 @@ const About = () => {
                         src={'images/me.jpg'}/>
                 {
                     info.achievements.map(el =>
-                        <code style={{fontSize: 12}}>
+                        <code key={el} style={{fontSize: 12}}>
                             <span style={{color: 'orange'}}>{'//'}</span> {el}
                         </code>
                     )

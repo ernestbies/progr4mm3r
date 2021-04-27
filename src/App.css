@@ -133,6 +133,125 @@ body {
   visibility: visible;
 }
 
+.input-field {
+  font-family: "Open Sans", serif;
+  font-weight: 300;
+  border-bottom-width: 1px;
+  padding-bottom: 5px;
+  background-color: transparent;
+  color: white;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+
+.input-icon {
+  margin-right: 15px;
+  color: white;
+}
+
+.input-field:focus {
+  border-bottom-color: #9932CC;
+  outline: none;
+}
+
+.input-field:focus + .input-icon {
+  color: #9932CC;
+}
+
+.input-field:valid {
+  border-bottom-color: #9932CC;
+  outline: none;
+}
+
+.input-field:valid + .input-icon {
+  color: #9932CC;
+}
+
+.input-field:invalid + .input-icon {
+  color: red;
+}
+
+.input-field:invalid {
+  border-bottom-color: red;
+}
+
+.input-field:placeholder-shown {
+  border-bottom-color: white;
+}
+
+.input-field:placeholder-shown + .input-icon{
+  color: white;
+}
+
+.contact-textarea {
+  background-color: transparent;
+  margin-top: 30px;
+  width: 630px;
+  height: 200px;
+  border-width: 1px;
+  resize: none;
+  outline: none;
+  color: white;
+  font-family: 'Open Sans', serif;
+  font-weight: 300;
+  font-size: 12px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.contact-textarea:focus {
+  border-color: #9932CC;
+}
+
+.confirm-btn {
+  margin-top: 30px;
+  width: 120px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 13px;
+  font-family: "Open Sans", serif;
+  height: 30px;
+  display: block;
+  background: linear-gradient(to right, #29003b 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  color: white;
+}
+
+.confirm-btn:disabled {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.confirm-btn:hover {
+  background-position: left bottom;
+}
+
+.confirm-alert {
+  width: 300px;
+  bottom: 1px;
+  right: 1px;
+  animation-name: show-button;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes show-button {
+  from {
+    right: 0;
+    bottom: 10px;
+  }
+
+  to {
+    right: 35px;
+    bottom: 10px;
+  }
+}
+
+
 @media only screen and (max-width: 992px) {
   .carousel-item {
     flex-direction: column;

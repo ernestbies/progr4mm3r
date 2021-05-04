@@ -1,53 +1,91 @@
 import React, {useState} from "react";
 import {CgMail, RiMessage3Line} from "react-icons/all";
 import ConfirmAlert from "./ConfirmAlert";
+import ReCAPTCHA from "react-google-recaptcha/lib/esm/recaptcha-wrapper";
+import GOOGLE_RECAPTCHA_SITE_KEY from "../config";
 
 const ContactForm = () => {
 
+    const recaptchaRef = React.createRef();
     const [email, setEmail] = useState('');
     const [topic, setTopic] = useState('');
-    const [message, setMessage] = useState('');
+    const [text, setText] = useState('');
     const [showAlert, setShowAlert] = useState(false);
+    const [alertVariant, setAlertVariant] = useState('info');
+    const [recaptcha, setRecaptchaValue] = useState('');
 
     const confirmDm = () => {
-        const data = {email, topic, message};
-        console.log(data);
+        const data = {email, topic, text, recaptcha};
+        sendData(data).then((res) => {
+            if (res.ok) {
+                setAlertVariant('info');
+            } else {
+                setAlertVariant('danger');
+            }
+            setShowAlert(true);
+        }).catch(() => {
+            setAlertVariant('danger');
+            setShowAlert(true);
+        });
+
+        recaptchaRef.current.reset();
+        setRecaptchaValue('');
         clearData();
-        setShowAlert(true);
     }
+
+    const sendData = (data) => {
+        return fetch(`http://localhost:4200/api/contact`, {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            },
+            body: JSON.stringify(data)
+        })
+    }
+
+    const isEmptyOrSpaces = (str) => str === null || str.match(/^ *$/) !== null;
 
     const clearData = () => {
         setEmail('');
         setTopic('');
-        setMessage('');
+        setText('');
     }
 
     return (
         <form id={'dm'} style={{
-            width: 700, height: 450, backgroundColor: 'red', margin: '0 auto', borderRadius: 25,
+            width: 700, height: 550, backgroundColor: 'red', margin: '0 auto', borderRadius: 25,
             border: '1px solid #FFFFFF90', background: '#00000090'
         }}>
             <div style={{display: 'flex', marginLeft: 30, marginTop: 50, alignItems: 'center'}}>
                 <input value={email} className={'input-field'} style={{order: 1}} type={'email'}
-                       placeholder={'E-mail address'} onChange={(event) => setEmail(event.target.value)} required={true}/>
+                       placeholder={'E-mail address'} onChange={(event) => setEmail(event.target.value)}
+                       required={true}/>
                 <CgMail className={'input-icon'} size={30}/>
             </div>
 
             <div style={{display: 'flex', marginLeft: 30, marginTop: 30, alignItems: 'center'}}>
                 <input value={topic} style={{order: 1, width: 400}} className={'input-field'} type={'text'}
-                       placeholder={'Topic'}
+                       placeholder={'Topic'} pattern="\s*(\S\s*){1,}"
                        onChange={(event) => setTopic(event.target.value)} required={true}/>
                 <RiMessage3Line className={'input-icon'} size={30}/>
             </div>
 
-            <textarea value={message} className={'contact-textarea'} placeholder={'Type here...'}
-                      onChange={(event) => setMessage(event.target.value)} required={true}/>
+            <textarea value={text} className={'contact-textarea'} placeholder={'Type here...'}
+                      onChange={(event) => setText(event.target.value)} required={true}/>
 
-            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <button disabled={!email || !topic || !message} form={'dm'} onClick={() => confirmDm()} type={'button'} className={'confirm-btn'}>Send</button>
+            <div style={{display: 'flex', marginTop: 30, justifyContent: 'center', alignItems: 'center'}}>
+                <ReCAPTCHA ref={recaptchaRef} theme={'dark'} onChange={(value) => setRecaptchaValue(value)}
+                           sitekey={GOOGLE_RECAPTCHA_SITE_KEY} hl={'en-GB'}/>
             </div>
 
-            <ConfirmAlert showAlert={showAlert} setShowAlert={setShowAlert}/>
+            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                <button disabled={!email || isEmptyOrSpaces(topic) || !text || !recaptcha} form={'dm'} onClick={() => confirmDm()}
+                        type={'button'}
+                        className={'confirm-btn'}>Send
+                </button>
+            </div>
+
+            <ConfirmAlert showAlert={showAlert} setShowAlert={setShowAlert} variant={alertVariant}/>
         </form>
     );
 }

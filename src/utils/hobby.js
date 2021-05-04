@@ -21,7 +21,7 @@ export const hobby = [
         id: 2,
         name: 'Cinematography',
         quote: 'Watching movies is a chance to live many lifetimes...',
-        text: 'I have been interested in the world of cinema since childhood. In my opinion, watching movies is a chance to get to know many cultures and customs from around the world. Watching movies allows you to develop your imagination and the desire to get to know the world. I mainly like watching action movies, dramas and thrillers. Mind-blowing psychological thrillers are my favorites. While watching, the viewer must focus on the plot, think and try to find a solution to a specific puzzle. My favorite movies of this type are Prisoners, The Game, Inception and Split. But sometimes I like to laugh, break up and watch a good comedy! :-)',
+        text: 'I have been interested in the world of cinema since childhood. In my opinion, watching movies is a chance to get to know many cultures and customs from around the world. Watching movies allows you to develop your imagination and the desire to get to know the world. I mainly like watching action movies, dramas and thrillers. Mind-blowing psychological thrillers are my favorites. While watching, the viewer must focus on the plot, think and try to find a solution to a specific puzzle. My favorite movies of this type are Prisoners, The Game, Inception and Split. Sometimes I also like to laugh, have fun and watch a good comedy! :-)',
         image: '/images/hobby/cinematography.jpg',
         color: 'yellow',
         keywords: ['watch', 'discover', 'experience']

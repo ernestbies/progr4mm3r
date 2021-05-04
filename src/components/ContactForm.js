@@ -53,18 +53,18 @@ const ContactForm = () => {
 
     return (
         <form id={'dm'} style={{
-            width: 700, height: 550, backgroundColor: 'red', margin: '0 auto', borderRadius: 25,
-            border: '1px solid #FFFFFF90', background: '#00000090'
+            maxWidth: 700, width: '95%', backgroundColor: 'red', margin: 10, borderRadius: 25,
+            border: '1px solid #FFFFFF90', background: '#00000090',
         }}>
             <div style={{display: 'flex', marginLeft: 30, marginTop: 50, alignItems: 'center'}}>
-                <input value={email} className={'input-field'} style={{order: 1}} type={'email'}
+                <input value={email} className={'input-field'} style={{order: 1, width: '50%'}} type={'email'}
                        placeholder={'E-mail address'} onChange={(event) => setEmail(event.target.value)}
                        required={true}/>
                 <CgMail className={'input-icon'} size={30}/>
             </div>
 
             <div style={{display: 'flex', marginLeft: 30, marginTop: 30, alignItems: 'center'}}>
-                <input value={topic} style={{order: 1, width: 400}} className={'input-field'} type={'text'}
+                <input value={topic} style={{order: 1, width: '70%'}} className={'input-field'} type={'text'}
                        placeholder={'Topic'} pattern="\s*(\S\s*){1,}"
                        onChange={(event) => setTopic(event.target.value)} required={true}/>
                 <RiMessage3Line className={'input-icon'} size={30}/>
@@ -74,11 +74,11 @@ const ContactForm = () => {
                       onChange={(event) => setText(event.target.value)} required={true}/>
 
             <div style={{display: 'flex', marginTop: 30, justifyContent: 'center', alignItems: 'center'}}>
-                <ReCAPTCHA ref={recaptchaRef} theme={'dark'} onChange={(value) => setRecaptchaValue(value)}
+                <ReCAPTCHA ref={recaptchaRef}  theme={'dark'} onChange={(value) => setRecaptchaValue(value)}
                            sitekey={GOOGLE_RECAPTCHA_SITE_KEY} hl={'en-GB'}/>
             </div>
 
-            <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <div style={{display: 'flex', justifyContent: 'center', marginBottom: 20, alignItems: 'center'}}>
                 <button disabled={!email || isEmptyOrSpaces(topic) || !text || !recaptcha} form={'dm'} onClick={() => confirmDm()}
                         type={'button'}
                         className={'confirm-btn'}>Send

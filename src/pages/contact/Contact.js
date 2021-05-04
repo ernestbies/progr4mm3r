@@ -57,7 +57,14 @@ const Contact = () => {
                 </div>
             </div>
             <div className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper4.jpg)"}}>
-                <div style={{backgroundColor: '#00000099', textAlign: 'center', height: 750}}>
+                <div style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    backgroundColor: '#00000099',
+                    textAlign: 'center',
+                    height: 750
+                }}>
                     <p className={'header-text-small'}>DM</p>
                     <ContactForm/>
                     <span style={{

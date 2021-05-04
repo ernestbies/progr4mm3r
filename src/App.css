@@ -187,7 +187,7 @@ body {
 .contact-textarea {
   background-color: transparent;
   margin-top: 30px;
-  width: 630px;
+  width: 90%;
   height: 200px;
   border-width: 1px;
   resize: none;
@@ -205,7 +205,7 @@ body {
 }
 
 .confirm-btn {
-  margin-top: 10px;
+  margin-top: 15px;
   width: 120px;
   border: 1px solid white;
   border-radius: 5px;

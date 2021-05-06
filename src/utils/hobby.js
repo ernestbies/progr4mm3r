@@ -30,7 +30,7 @@ export const hobby = [
         id: 3,
         name: 'Music',
         quote: 'Music is the shorthand of emotion...',
-        text: 'I really like listening to music in my spare time. Music relaxes me and puts me in a good mood. I really appreciate songs that have a message in them. I don\'t have my favorite genre of music, I listen to everything I can catch my ear (except disco polo ofc).',
+        text: 'I really like listening to music in my spare time. Sometimes I also listen while working. Music relaxes me and puts me in a good mood. I really appreciate songs that have a message in them. I don\'t have my favorite genre of music, I listen to everything I can catch my ear (except disco polo ofc). I listen to different kinds of music depending on my mood. I have created my own playlists suitable for various occasions.',
         image: '/images/hobby/music.jpg',
         color: 'green',
         keywords: ['listen', 'feel', 'thrill']

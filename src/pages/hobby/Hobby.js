@@ -22,7 +22,7 @@ const Hobby = () => {
             </div>
             <div className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper2.jpg)",}}>
                 <div style={{backgroundColor: '#00000090', textAlign: 'center'}}>
-                    <p className={'header-text-small'}>My daily schedule</p>
+                    <p className={'header-text-small'}>My timeline</p>
                 </div>
                 <div style={{backgroundColor: '#00000090', display: 'flex', flexDirection: 'column'}}>
                     <MyTimeline/>

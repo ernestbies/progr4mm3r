@@ -290,7 +290,7 @@ body {
   .carousel-project-item {
     flex-direction: column;
     align-items: center;
-    height: 810px;
+    height: 850px;
   }
 
   .carousel-hobby-item {

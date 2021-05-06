@@ -8,25 +8,26 @@ const Skills = () => {
 
     return (
         <div id={'skills'} className={'item-dashboard'} style={{backgroundColor: '#1d2026'}}>
-            <p className={'header-text'}>Skills</p>
-            <p style={{fontSize: 15, margin: 15, fontFamily: 'Open Sans'}}>I am constantly trying to gain knowledge
-                and improve my programming skills.<br/>I had contact with the following <code style={{fontSize: 14}}>programming
-                    languages</code> and <code style={{fontSize: 14}}>IT technologies</code> while studying Computer
-                Science.</p>
+            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <p className={'header-text'}>Skills</p>
+                <p style={{fontSize: 15, margin: 15, fontFamily: 'Open Sans'}}>I am constantly trying to gain knowledge
+                    and improve my programming skills.<br/>I had contact with the following <code style={{fontSize: 14}}>programming
+                        languages</code> and <code style={{fontSize: 14}}>IT technologies</code> while studying Computer
+                    Science.</p>
+                <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
+            </div>
 
-            <div className={'language-icons'}>
+            <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', flexWrap: 'wrap', margin: 10}}>
                 <div style={{flex: 1, display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
                     <p style={{marginTop: 10, fontSize: 14, fontFamily: 'Open Sans'}}>Programming languages</p>
-                    <div className={'skills-container col-9'}>
+                    <div className={'skills-container'}>
                         {renderElements(skills.filter(el => el.type === 'language'), 'skills')}
                     </div>
                 </div>
 
-                <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
-
                 <div style={{flex: 1, display: 'flex', alignItems: 'center', flexDirection: 'column'}}>
                     <p style={{marginTop: 10, fontSize: 14, fontFamily: 'Open Sans'}}>Tools and technologies</p>
-                    <div className={'skills-container col-9'}>
+                    <div className={'skills-container'}>
                         {renderElements(skills.filter(el => el.type === 'technology'), 'skills')}
                     </div>
                 </div>

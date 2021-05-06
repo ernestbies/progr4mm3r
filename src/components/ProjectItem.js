@@ -69,13 +69,13 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
     };
 
     return (
-        <div className={'carousel-item'} style={{display: 'flex'}} key={id}>
+        <div className={'carousel-project-item'} key={id}>
             <img
                 alt={name}
                 src={image}
-                style={{opacity: 0.8, flex: 1, width: '100%', objectFit: 'contain'}}
+                className={'carousel-project-img'}
             />
-            <div style={{margin: 40, textAlign: 'left', flex: 1}}>
+            <div className={'carousel-content'}>
                 <div style={{display: 'flex', alignItems: 'center'}}>
                     <p style={{
                         borderLeftWidth: 5,

@@ -15,12 +15,14 @@ function App() {
       <Router>
           <div className={'App'}>
               <Navbar/>
-              <About/>
-              <Projects/>
-              <Skills/>
-              <Hobby/>
-              <Contact/>
-              <Footer/>
+              <div className={'page'}>
+                  <About/>
+                  <Projects/>
+                  <Skills/>
+                  <Hobby/>
+                  <Contact/>
+                  <Footer/>
+              </div>
           </div>
           <Redirect from="/*" to="/"/>
       </Router>

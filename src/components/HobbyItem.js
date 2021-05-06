@@ -3,13 +3,13 @@ import {BsMusicNoteBeamed, FaLaptopCode, IoGameController, IoTvOutline} from "re
 
 const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
     return (
-        <div className={'carousel-item'} style={{display: 'flex'}} key={id}>
+        <div className={'carousel-hobby-item'} key={id}>
             <img
                 alt={name}
                 src={image}
-                style={{opacity: 0.5, flex: 1, width: '100%', objectFit: 'contain'}}
+                className={'carousel-hobby-img'}
             />
-            <div style={{margin: 40, textAlign: 'left', flex: 1}}>
+            <div className={'carousel-content'}>
                 <div style={{display: 'flex', textAlign: 'center', alignItems: 'center'}}>
                     <div style={{width: 5, height: 30, backgroundColor: color}}/>
                     <p style={{paddingLeft: 7, fontFamily: 'Open Sans', margin: 0}}>{name}</p>

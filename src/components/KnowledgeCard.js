@@ -74,8 +74,8 @@ const KnowledgeCard = ({type}) => {
                     type === 'backend'
                     && <a target={'_blank'} rel={'noreferrer'}
                           href={'http://mediabrowser-server.herokuapp.com/documentation'}
-                          style={{fontSize: 11, color: 'orange'}}>Click here to see my API server docs created with
-                        Hapi.js
+                          style={{fontSize: 11, color: 'orange'}}>Click here to see the docs for my API server
+                        built with Hapi.js
                     </a>
                 }
                 </p>

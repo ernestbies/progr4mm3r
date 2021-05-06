@@ -1,21 +1,9 @@
-.language-icons {
-    display: flex;
-    margin: 0 auto;
-}
-
-.skills-icon {
-    width: 50px;
-    height: 50px;
-}
-
 .skills-container {
-    margin-bottom: 25px;
-    margin-top: 25px;
-    display: flex;
-    width: 80%;
-    height: 150px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
 }
 
 .knowledge-card-container {
@@ -23,3 +11,16 @@
     justify-content: center;
     min-height: 650px;
 }
+
+@media only screen and (max-width: 992px) {
+    .skills-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

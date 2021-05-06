@@ -5,6 +5,12 @@
 
 .App {
   overflow-x: hidden;
+  background-color: black;
+}
+
+.page {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 body {
@@ -46,8 +52,14 @@ body {
   color: white;
 }
 
-.carousel-item {
-  height: 440px;
+.carousel-hobby-item {
+  display: flex;
+  height: 400px;
+}
+
+.carousel-project-item {
+  display: flex;
+  height: 450px;
 }
 
 .carousel-style {
@@ -230,6 +242,28 @@ body {
   background-position: left bottom;
 }
 
+.carousel-content {
+  margin: 40px;
+  text-align: left;
+  flex: 1;
+}
+
+.carousel-hobby-img {
+  opacity: 0.5;
+  flex: 1;
+  width: 50%;
+  object-fit: contain;
+}
+
+.carousel-project-img {
+  opacity: 0.8;
+  flex: 1;
+  width: 50%;
+  object-fit: contain;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
 .confirm-alert {
   width: 300px;
   bottom: 1px;
@@ -251,11 +285,33 @@ body {
   }
 }
 
-
 @media only screen and (max-width: 992px) {
-  .carousel-item {
+
+  .carousel-project-item {
     flex-direction: column;
     align-items: center;
-    height: 100%;
+    height: 810px;
   }
+
+  .carousel-hobby-item {
+    flex-direction: column;
+    align-items: center;
+    height: 710px;
+  }
+
+  .carousel-hobby-img {
+    width: 90%;
+  }
+
+  .carousel-project-img {
+    width: 90%;
+    margin: 0;
+  }
+
+  .carousel-content {
+    margin: 40px;
+    text-align: left;
+    flex: 3;
+  }
+
 }

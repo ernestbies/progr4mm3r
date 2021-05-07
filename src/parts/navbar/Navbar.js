@@ -1,25 +1,51 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Scrollspy from 'react-scrollspy'
 import "./Navbar.styles.css";
 
 const Navbar = () => {
 
+    useEffect(() => {
+        window.addEventListener('scroll', changeNavbar);
+    }, []);
+
     const WEBSITE_NAME = 'ernestbies.com';
+    const scrollSpy = React.useRef();
     const scrollTo = (id) => window.scrollTo(0, document.getElementById(id).offsetTop);
 
     const toggleMobileMenu = () => {
         const hamburgerMenu = document.getElementById('hamburger');
-        const navbarContent = document.getElementsByClassName('navbarContent')[0]
         const navMenu = document.getElementsByClassName('navMenu')[0];
+        const navbarContent = document.getElementsByClassName('navbarContent')[0];
         hamburgerMenu.classList.toggle('active');
         navMenu.classList.toggle('active');
         navbarContent.classList.toggle('active');
     }
 
+    const changeNavbar = () => {
+        const navbarContent = document.getElementsByClassName('navbarContent')[0];
+        const websiteName = document.getElementById('websiteName');
+        const bars = document.getElementsByClassName('bar');
+
+        if (scrollSpy.current.valueOf().state.inViewState[4]) {
+            websiteName.style.color = '#9932CC'
+            navbarContent.style.backgroundColor = 'white';
+            const navbarLinks = document.getElementsByClassName('navbarLink');
+            Array.prototype.slice.call(navbarLinks).slice(0, 4).map(navLink => navLink.className = 'navbarLinkSecondTheme');
+            Array.prototype.slice.call(bars).map(bar => bar.style.backgroundColor = '#9932CC');
+        } else {
+            websiteName.style.color = 'orange'
+            navbarContent.style.backgroundColor = 'black';
+            const navbarLinks = document.getElementsByClassName('navbarLinkSecondTheme');
+            Array.prototype.slice.call(navbarLinks).map(navLink => navLink.className = 'navbarLink');
+            Array.prototype.slice.call(bars).map(bar => bar.style.backgroundColor = 'orange');
+        }
+    }
+
     return (
         <nav className={'navbarContent'}>
-            <div onClick={() => window.scrollTo(0,0)} className={'websiteName'}>{WEBSITE_NAME}</div>
+            <div id={'websiteName'} onClick={() => window.scrollTo(0, 0)} className={'websiteName'}>{WEBSITE_NAME}</div>
             <Scrollspy className={'navMenu'}
+                       ref={scrollSpy}
                        offset={-10}
                        items={['about', 'projects', 'skills', 'hobby', 'contact']}
                        currentClassName={'navbarLinkCurrent'}
@@ -28,7 +54,7 @@ const Navbar = () => {
                 <div onClick={() => scrollTo('projects')} className={'navbarLink'}>{'Projects'}</div>
                 <div onClick={() => scrollTo('skills')} className={'navbarLink'}>{'Skills'}</div>
                 <div onClick={() => scrollTo('hobby')} className={'navbarLink'}>{'Hobby'}</div>
-                <div onClick={() => scrollTo('contact')} className={'navbarLink'}>{'Contact'}</div>
+                <div onClick={() => scrollTo('contact')} id={'contactLink'} className={'navbarLink'}>{'Contact'}</div>
             </Scrollspy>
             <div id={'hamburger'} className={'hamburger'} onClick={() => toggleMobileMenu()}>
                 <span className={'bar'}/>

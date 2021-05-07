@@ -46,6 +46,33 @@
     text-decoration: none;
 }
 
+.navbarLinkSecondTheme {
+    cursor: pointer;
+    font-family: 'Open Sans', serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: black;
+    width: 6rem;
+}
+
+.navbarLinkSecondTheme[id="contactLink"] {
+    cursor: pointer;
+    font-family: 'Open Sans', serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #9932CC;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    padding-bottom: 15px;
+    margin-bottom: -15px;
+    width: 6rem;
+}
+
+.navbarLinkSecondTheme:hover {
+    color: #9932CC;
+    text-decoration: none;
+}
+
 .navbarLinkCurrent {
     color: orange;
     border-bottom-style: solid;

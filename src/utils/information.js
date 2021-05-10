@@ -1,3 +1,5 @@
+export const WEBSITE_NAME = 'ernestbies.com';
+
 export const info = {
     name: 'Ernest',
     surname: 'Bieś',

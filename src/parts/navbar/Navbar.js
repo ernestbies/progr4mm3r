@@ -1,15 +1,16 @@
 import React, {useEffect} from 'react';
 import Scrollspy from 'react-scrollspy'
 import "./Navbar.styles.css";
+import {WEBSITE_NAME} from "../../utils/information";
 
 const Navbar = () => {
+
+    const scrollSpy = React.useRef();
 
     useEffect(() => {
         window.addEventListener('scroll', changeNavbar);
     }, []);
 
-    const WEBSITE_NAME = 'ernestbies.com';
-    const scrollSpy = React.useRef();
     const scrollTo = (id) => window.scrollTo(0, document.getElementById(id).offsetTop);
 
     const toggleMobileMenu = () => {

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal / portfolio website.",
   "scripts": {
-	"heroku-prebuild": "cd backend && npm install && cd .. && cd frontend && npm install && npm run build && mv build ../backend/public",
+	"heroku-prebuild": "cd frontend && npm install && npm run build && mv build ../backend/public && cd .. && cd backend && npm install && npm run build",
     "start": "cd backend && npm start"
   },
   "repository": {

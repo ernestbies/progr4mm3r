@@ -34,11 +34,13 @@ const Navbar = () => {
             Array.prototype.slice.call(navbarLinks).slice(0, 4).map(navLink => navLink.className = 'navbarLinkSecondTheme');
             Array.prototype.slice.call(bars).map(bar => bar.style.backgroundColor = '#9932CC');
         } else {
-            websiteName.style.color = 'orange'
-            navbarContent.style.backgroundColor = 'black';
-            const navbarLinks = document.getElementsByClassName('navbarLinkSecondTheme');
-            Array.prototype.slice.call(navbarLinks).map(navLink => navLink.className = 'navbarLink');
-            Array.prototype.slice.call(bars).map(bar => bar.style.backgroundColor = 'orange');
+            if(navbarContent.style.backgroundColor !== 'black') {
+                websiteName.style.color = 'orange'
+                navbarContent.style.backgroundColor = 'black';
+                const navbarLinks = document.getElementsByClassName('navbarLinkSecondTheme');
+                Array.prototype.slice.call(navbarLinks).map(navLink => navLink.className = 'navbarLink');
+                Array.prototype.slice.call(bars).map(bar => bar.style.backgroundColor = 'orange');
+            }
         }
     }
 

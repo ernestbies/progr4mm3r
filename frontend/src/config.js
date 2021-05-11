@@ -1,3 +1,0 @@
-const GOOGLE_RECAPTCHA_SITE_KEY = '';
-
-export default GOOGLE_RECAPTCHA_SITE_KEY;

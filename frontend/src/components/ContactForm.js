@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import {CgMail, RiMessage3Line} from "react-icons/all";
 import ConfirmAlert from "./ConfirmAlert";
 import ReCAPTCHA from "react-google-recaptcha/lib/esm/recaptcha-wrapper";
-import GOOGLE_RECAPTCHA_SITE_KEY from "../config";
 
 const ContactForm = () => {
 
@@ -75,7 +74,7 @@ const ContactForm = () => {
 
             <div style={{display: 'flex', marginTop: 30, justifyContent: 'center', alignItems: 'center'}}>
                 <ReCAPTCHA ref={recaptchaRef}  theme={'dark'} onChange={(value) => setRecaptchaValue(value)}
-                           sitekey={GOOGLE_RECAPTCHA_SITE_KEY} hl={'en-GB'}/>
+                           sitekey={process.env.RECAPTCHA_SITE_KEY || 'recaptcha_site_key'} hl={'en-GB'}/>
             </div>
 
             <div style={{display: 'flex', justifyContent: 'center', marginBottom: 20, alignItems: 'center'}}>

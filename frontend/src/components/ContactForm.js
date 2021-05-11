@@ -74,7 +74,7 @@ const ContactForm = () => {
 
             <div style={{display: 'flex', marginTop: 30, justifyContent: 'center', alignItems: 'center'}}>
                 <ReCAPTCHA ref={recaptchaRef}  theme={'dark'} onChange={(value) => setRecaptchaValue(value)}
-                           sitekey={process.env.RECAPTCHA_SITE_KEY || 'recaptcha_site_key'} hl={'en-GB'}/>
+                           sitekey={'6LdCr7saAAAAAMgbDCtCl4u6GQ_WAba9ZkZgrFd1'} hl={'en-GB'}/>
             </div>
 
             <div style={{display: 'flex', justifyContent: 'center', marginBottom: 20, alignItems: 'center'}}>

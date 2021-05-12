@@ -72,7 +72,7 @@ const Contact = () => {
                         marginTop: 40,
                         display: 'inline-block',
                         fontFamily: 'Press Start',
-                        fontSize: 11
+                        fontSize: 10
                     }}><span style={{color: '#9932CC', fontWeight: 'bold'}}>{'//'}</span> thanks for visit, hope u <span
                         style={{color: '#9932CC'}}>enjoy</span></span>
                 </div>

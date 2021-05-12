@@ -25,13 +25,13 @@ const About = () => {
                     <p style={{
                         paddingLeft: 7,
                         fontWeight: 300,
-                        fontSize: 30,
+                        fontSize: 26,
                         margin: 0,
                     }}>{info.name + ' ' + info.surname}</p>
                 </div>
                 <div style={{
                     display: 'inline-flex',
-                    maxWidth: 365,
+                    maxWidth: 350,
                     alignItems: 'center',
                     marginLeft: 20,
                     marginRight: 20,
@@ -62,7 +62,12 @@ const About = () => {
                         })
                     }
                 </div>
-                <p className={'info-text'}>{info.text}</p>
+                <p className={'info-text'}><span style={{color: 'orange'}}>{'//'}</span> {info.text}</p>
+                <span className={'info-text'} style={{marginTop: 0}}>
+                    <span style={{color: 'orange'}}>{'//'}</span> Take a look at my website to get to know <span
+                    style={{color: 'orange', fontWeight: 'bold'}}>my person</span> better & see <span
+                    style={{color: 'orange', fontWeight: 'bold'}}>my projects</span>
+                </span>
             </div>
         </div>
     );

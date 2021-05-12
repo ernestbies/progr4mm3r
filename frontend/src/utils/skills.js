@@ -17,7 +17,7 @@ export const skills = [
         id: 2,
         name: 'TypeScript',
         image: '/images/languages/language-ts.png',
-        color: 'blue',
+        color: '#1E90FF',
         type: 'language'
     },
     {
@@ -129,14 +129,14 @@ export const skills = [
         id: 18,
         name: 'Spring',
         image: '/images/technologies/spring.png',
-        color: 'green',
+        color: '#32CD32',
         type: 'technology'
     },
     {
         id: 19,
         name: 'SQLite',
         image: '/images/technologies/sqlite.png',
-        color: 'blue',
+        color: '#87CEFA',
         type: 'technology',
     },
     {
@@ -192,7 +192,7 @@ export const skills = [
         id: 27,
         name: 'Spock',
         image: '/images/technologies/spock.png',
-        color: '#0000CD',
+        color: '#6495ED',
         type: 'technology'
     }
 ];

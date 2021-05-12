@@ -27,7 +27,7 @@ const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
                     maxWidth: 500,
                     wordBreak: 'break-word'
                 }}>{text}</p>
-                <div>
+                <div style={{marginBottom: 15}}>
                     {
                         name.includes('Program') ? <FaLaptopCode size={20} color={color} style={{marginRight: 10}}/> :
                             name.includes('Esports') ? <IoGameController size={20} color={color} style={{marginRight: 10}}/> :

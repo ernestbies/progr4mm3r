@@ -73,7 +73,7 @@ export const projects = [
     {
         id: 4,
         name: 'Quiz app',
-        description: 'Mobile application that allows you to solve on-line tests. Tests are downloaded from an external server. The user has the option of solving a specific test, has a specific time to answer a specific question. In addition, user can choose a random test and view results. The application has a drawer menu that makes it easy to access all screens. The application is designed for Android and iOS.',
+        description: 'Mobile application that allows you to solve on-line tests. Tests are downloaded from an external server. The user has the option of solving a specific test and has a specific time to answer a specific question. In addition, user can choose a random test and view results. The application has a drawer menu that makes it easy to access all screens. The application is designed for Android and iOS.',
         technologies: {
             mobile: ['JavaScript', 'React Native', 'RN Navigation', 'Async Storage', 'NetInfo', 'Vector icons', 'SQLite']
         },
@@ -87,7 +87,7 @@ export const projects = [
     {
         id: 5,
         name: 'Image binarizer',
-        description: 'The application allows you to binarize images. The application supports the basic types of binarization - low-level, high-level, two-threshold, conditional. It allows you to load any image (color or black and white), and then select a specific operation. The application works in a distributed environment using Remote Method Invocation (RMI) - a mechanism that enables remote methods of objects invocation. These objects can reside in other Java virtual machines that can be on other computers. In RMI technology, it is necessary to run three processes: client, server and register of objects.',
+        description: 'The application allows you to binarize images. The application supports the basic types of binarization - low-level, high-level, two-threshold and conditional. It allows you to load any image (color or black and white), and then select a specific operation. The application works in a distributed environment using Remote Method Invocation (RMI) - a mechanism that enables remote methods of objects invocation. These objects can reside in other Java virtual machines that can be on other computers. In RMI technology, it is necessary to run three processes: client, server and register of objects.',
         technologies: {
             desktop: ['Java', 'Apache NetBeans IDE', 'Swing', 'Remote Method Invocation (RMI)']
         },

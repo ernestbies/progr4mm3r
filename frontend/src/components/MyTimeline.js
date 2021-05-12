@@ -176,7 +176,7 @@ export default function MyTimeline() {
                     <TimelineDot color="primary">
                         <HotelIcon/>
                     </TimelineDot>
-                    <TimelineConnector className={classes.secondaryTail} />
+                    <TimelineConnector className={classes.secondaryTail}/>
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>

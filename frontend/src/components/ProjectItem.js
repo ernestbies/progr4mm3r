@@ -113,7 +113,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         margin: 0
                     }}>{'Technical information'}</p>
                 </div>
-                <div>
+                <div style={{marginBottom: 15}}>
                     {
                         os.includes('Windows') && <AiFillWindows size={20} style={{marginRight: 3}}/>
                     }

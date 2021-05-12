@@ -73,7 +73,7 @@ const ContactForm = () => {
                       onChange={(event) => setText(event.target.value)} required={true}/>
 
             <div style={{display: 'flex', marginTop: 30, justifyContent: 'center', alignItems: 'center'}}>
-                <ReCAPTCHA ref={recaptchaRef}  theme={'dark'} onChange={(value) => setRecaptchaValue(value)}
+                <ReCAPTCHA ref={recaptchaRef} theme={'dark'} onChange={(value) => setRecaptchaValue(value)}
                            sitekey={'6LdCr7saAAAAAMgbDCtCl4u6GQ_WAba9ZkZgrFd1'} hl={'en-GB'}/>
             </div>
 

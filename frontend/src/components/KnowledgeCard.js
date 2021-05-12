@@ -115,6 +115,7 @@ const KnowledgeCard = ({type}) => {
                         <img alt={'jwt'} style={{width: 25, height: 25}} src={'images/technologies/jwt.png'}/>
                         <img alt={'java'} style={{width: 25, height: 25}} src={'images/languages/language-java.png'}/>
                         <img alt={'spring'} style={{width: 25, height: 25}} src={'images/technologies/spring.png'}/>
+                        <img alt={'uml'} style={{width: 25, height: 25}} src={'images/technologies/uml.png'}/>
                     </div>
                 }
                 {
@@ -132,6 +133,7 @@ const KnowledgeCard = ({type}) => {
                         <img alt={'mongodb'} style={{width: 25, height: 25}} src={'images/technologies/mongodb.png'}/>
                         <img alt={'mongoose'} style={{width: 25, height: 25}} src={'images/technologies/mongoose.png'}/>
                         <img alt={'sqlite'} style={{width: 25, height: 25}} src={'images/technologies/sqlite.png'}/>
+                        <img alt={'tdm'} style={{width: 25, height: 25}} src={'images/technologies/tdm.png'}/>
                     </div>
                 }
                 {

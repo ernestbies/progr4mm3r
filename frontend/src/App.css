@@ -290,13 +290,13 @@ body {
   .carousel-project-item {
     flex-direction: column;
     align-items: center;
-    height: 850px;
+    height: 100%;
   }
 
   .carousel-hobby-item {
     flex-direction: column;
     align-items: center;
-    height: 710px;
+    height: 100%;
   }
 
   .carousel-hobby-img {
@@ -314,4 +314,8 @@ body {
     flex: 3;
   }
 
+  iframe {
+    transform: scale(0.77);
+    transform-origin: 0 0;
+  }
 }

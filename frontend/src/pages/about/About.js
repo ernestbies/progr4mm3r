@@ -63,7 +63,7 @@ const About = () => {
                     }
                 </div>
                 <p className={'info-text'}><span style={{color: 'orange'}}>{'//'}</span> {info.text}</p>
-                <span className={'info-text'} style={{marginTop: 0}}>
+                <span className={'info-text'} style={{marginTop: 0, marginBottom: 15}}>
                     <span style={{color: 'orange'}}>{'//'}</span> Take a look at my website to get to know <span
                     style={{color: 'orange', fontWeight: 'bold'}}>my person</span> better & see <span
                     style={{color: 'orange', fontWeight: 'bold'}}>my projects</span>

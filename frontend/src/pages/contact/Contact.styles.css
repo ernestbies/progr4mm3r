@@ -11,6 +11,7 @@
 .contact-icons {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding-top: 40px;
 }
 

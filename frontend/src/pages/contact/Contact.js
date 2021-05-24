@@ -1,11 +1,16 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {FaGithub, FaBitbucket, FaDiscord} from 'react-icons/fa';
 import {CgMail} from "react-icons/cg";
 import contact from "../../utils/contact";
 import "./Contact.styles.css";
 import ContactForm from "../../components/ContactForm";
+import {useTranslation} from "react-i18next";
+import {HIDDEN_URL} from "../../utils/information";
 
 const Contact = () => {
+
+    const [showEasterEgg, setShowEasterEgg] = useState(false);
+    const {t} = useTranslation('common');
 
     const copyName = () => {
         let input = document.createElement('input');
@@ -16,18 +21,18 @@ const Contact = () => {
         input.remove();
 
         let tooltipText = document.getElementById('discordName');
-        tooltipText.innerHTML = '<p style="color: orange; display: inline;">' + contact.discord + '</p> has been copied to clipboard!';
+        tooltipText.innerHTML = '<p style="color: orange; display: inline;">' + contact.discord + ' <span style="color: white">' + t('copied_text') + '</span></p>';
     };
 
     const outCopyName = () => {
         let tooltipText = document.getElementById('discordName');
-        tooltipText.innerHTML = '<p>Click here to copy the username</p>';
+        tooltipText.innerHTML = '<p>' + t('copy_text') + '</p>';
     }
 
     return (
         <div id={'contact'} style={{display: 'flex', flexDirection: 'column'}}>
             <div className={'contact-list'}>
-                <p className={'header-text'}>Contact with me</p>
+                <p className={'header-text'}>{t('contact_with_me')}</p>
                 <div className={'contact-icons'}>
                     <div className={'icon-item'}>
                         <a color={'white'} target={'_blank'} rel={'noreferrer'} style={{outline: 'none'}}
@@ -65,16 +70,33 @@ const Contact = () => {
                     textAlign: 'center',
                     height: 750
                 }}>
-                    <p className={'header-text-small'}>DM</p>
+                    <p className={'header-text-small'}>{t('dm')}</p>
                     <ContactForm/>
-                    <span style={{
+                    <span onClick={() => setShowEasterEgg(!showEasterEgg)} style={{
                         color: 'white',
-                        marginTop: 40,
+                        marginTop: 20,
                         display: 'inline-block',
                         fontFamily: 'Press Start',
-                        fontSize: 10
-                    }}><span style={{color: '#9932CC', fontWeight: 'bold'}}>{'//'}</span> thanks for visit, hope u <span
-                        style={{color: '#9932CC'}}>enjoy</span></span>
+                        fontSize: 10,
+                        cursor: 'pointer',
+                    }}><span style={{color: '#9932CC', fontWeight: 'bold'}}>{'//'}</span> WE <span
+                        style={{
+                            fontSize: 16,
+                            animationName: 'color-changes',
+                            animationDuration: '8s',
+                            animationIterationCount: 'infinite'
+                        }}>&#10084;</span><span
+                        style={{color: 'white'}}> JAVASCRIPT</span>
+                        {
+                            showEasterEgg && <span> & EASTER EGGS :-)</span>
+                        }
+                    </span>
+                    {
+                        showEasterEgg &&
+                        <span style={{marginTop: 10, fontSize: 10, color: 'white', backgroundColor: 'black'}}>
+                            {HIDDEN_URL}
+                        </span>
+                    }
                 </div>
             </div>
         </div>

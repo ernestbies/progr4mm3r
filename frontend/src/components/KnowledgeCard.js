@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import knowledge from "../utils/knowledge";
+import {useTranslation} from "react-i18next";
 
 const KnowledgeCard = ({type}) => {
 
     const [item] = useState(knowledge[type]);
+    const { t, i18n } = useTranslation('common');
 
     return (
         <div style={{
@@ -35,9 +37,9 @@ const KnowledgeCard = ({type}) => {
                     left: 0,
                     right: 0,
                     bottom: -5,
-                    fontSize: 20,
+                    fontSize: 18,
                     color: 'black'
-                }}>{item.name}</p>
+                }}>{t(item.name)}</p>
             </div>
             <div style={{
                 marginLeft: -20,
@@ -62,7 +64,8 @@ const KnowledgeCard = ({type}) => {
                 marginRight: -20,
                 marginLeft: -20,
                 marginBottom: -20,
-                backgroundColor: 'rgba(0,0,0,0.7)'
+                backgroundColor: 'rgba(0,0,0,0.7)',
+                position: 'relative'
             }}>
                 <p style={{
                     fontSize: 11,
@@ -70,25 +73,25 @@ const KnowledgeCard = ({type}) => {
                     textAlign: 'justify',
                     fontFamily: 'Open Sans',
                     margin: 10
-                }}>{item.text} {
+                }}>{item.text[i18n.language]} {
                     type === 'backend'
                     && <a target={'_blank'} rel={'noreferrer'}
                           href={'http://mediabrowser-server.herokuapp.com/documentation'}
-                          style={{fontSize: 11, color: 'orange'}}>Click here to see the docs for my API server
-                        built with Hapi.js
+                          style={{fontSize: 11, color: 'orange'}}>{t('server_api_info')}
                     </a>
                 }
                 </p>
-
                 {
                     type === 'frontend' &&
                     <div style={{
-                        flex: 1,
-                        paddingTop: 35,
                         height: 30,
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'space-evenly'
+                        justifyContent: 'space-evenly',
+                        position: 'absolute',
+                        bottom: 20,
+                        left: 0,
+                        right: 0
                     }}>
                         <img alt={'js'} style={{width: 25, height: 25}} src={'images/languages/language-js.png'}/>
                         <img alt={'html'} style={{width: 25, height: 25}} src={'images/languages/html.png'}/>
@@ -104,10 +107,13 @@ const KnowledgeCard = ({type}) => {
                     type === 'backend' &&
                     <div style={{
                         height: 30,
-                        paddingTop: 35,
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'space-evenly'
+                        justifyContent: 'space-evenly',
+                        position: 'absolute',
+                        bottom: 20,
+                        left: 0,
+                        right: 0
                     }}>
                         <img alt={'js'} style={{width: 25, height: 25}} src={'images/languages/language-js.png'}/>
                         <img alt={'node'} style={{width: 25, height: 25}} src={'images/technologies/nodejs.png'}/>
@@ -122,10 +128,13 @@ const KnowledgeCard = ({type}) => {
                     type === 'databases' &&
                     <div style={{
                         height: 30,
-                        paddingTop: 35,
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'space-evenly'
+                        justifyContent: 'space-evenly',
+                        position: 'absolute',
+                        bottom: 20,
+                        left: 0,
+                        right: 0
                     }}>
                         <img alt={'sql'} style={{width: 25, height: 25}} src={'images/languages/language-sql.png'}/>
                         <img alt={'postgresql'} style={{width: 25, height: 25}}
@@ -140,17 +149,19 @@ const KnowledgeCard = ({type}) => {
                     type === 'testing' &&
                     <div style={{
                         height: 30,
-                        paddingTop: 35,
                         display: 'flex',
                         alignItems: 'center',
-                        justifyContent: 'space-evenly'
+                        justifyContent: 'space-evenly',
+                        position: 'absolute',
+                        bottom: 20,
+                        left: 0,
+                        right: 0
                     }}>
                         <img alt={'js'} style={{width: 25, height: 25}} src={'images/languages/language-js.png'}/>
                         <img alt={'jest'} style={{width: 25, height: 25}} src={'images/technologies/jest.png'}/>
                         <img alt={'java'} style={{width: 25, height: 25}} src={'images/languages/language-java.png'}/>
                         <img alt={'junit'} style={{width: 25, height: 25}} src={'images/technologies/junit.png'}/>
-                        <img alt={'groovy'} style={{width: 25, height: 25}}
-                             src={'images/languages/language-groovy.png'}/>
+                        <img alt={'groovy'} style={{width: 25, height: 25}} src={'images/languages/language-groovy.png'}/>
                         <img alt={'spock'} style={{width: 25, height: 25}} src={'images/technologies/spock.png'}/>
                         <img alt={'git'} style={{width: 25, height: 25}} src={'images/technologies/git.png'}/>
                     </div>

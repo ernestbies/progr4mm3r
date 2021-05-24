@@ -15,6 +15,7 @@ import LaptopMacIcon from '@material-ui/icons/LaptopMac';
 import HotelIcon from '@material-ui/icons/Hotel';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import WatchIcon from '@material-ui/icons/LiveTv';
+import {useTranslation} from "react-i18next";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MyTimeline() {
     const classes = useStyles();
+    const { t } = useTranslation('common');
 
     return (
         <Timeline align="alternate" style={{marginBottom: 0}}>
@@ -50,15 +52,16 @@ export default function MyTimeline() {
                             fontFamily: 'Open Sans',
                             fontWeight: 'bold',
                             fontSize: 14
-                        }}>eat</Typography>
+                        }}>{t('eat')}</Typography>
                         <Typography style={{
                             color: 'orange',
                             display: 'inline',
                             fontFamily: 'Open Sans',
                             fontSize: 14
                         }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
-                            I need strength</Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
+                            {t('eat_text')}
+                        </Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -77,15 +80,16 @@ export default function MyTimeline() {
                             fontFamily: 'Open Sans',
                             fontWeight: 'bold',
                             fontSize: 14
-                        }}>code</Typography>
+                        }}>{t('code')}</Typography>
                         <Typography style={{
                             color: 'orange',
                             display: 'inline',
                             fontFamily: 'Open Sans',
                             fontSize: 14
                         }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
-                            I want to develop myself</Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
+                            {t('code_text')}
+                        </Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -104,15 +108,16 @@ export default function MyTimeline() {
                             fontFamily: 'Open Sans',
                             fontWeight: 'bold',
                             fontSize: 14
-                        }}>play</Typography>
+                        }}>{t('play')}</Typography>
                         <Typography style={{
                             color: 'orange',
                             display: 'inline',
                             fontFamily: 'Open Sans',
                             fontSize: 14
                         }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
-                            I want to compete with the best</Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
+                            {t('play_text')}
+                        </Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -131,16 +136,16 @@ export default function MyTimeline() {
                             fontFamily: 'Open Sans',
                             fontWeight: 'bold',
                             fontSize: 14
-                        }}>meet
-                            friends</Typography>
+                        }}>{t('friends')}</Typography>
                         <Typography style={{
                             color: 'orange',
                             display: 'inline',
                             fontFamily: 'Open Sans',
                             fontSize: 14
                         }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
-                            I want to develop socially</Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
+                            {t('friends_text')}
+                        </Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -159,15 +164,16 @@ export default function MyTimeline() {
                             fontFamily: 'Open Sans',
                             fontWeight: 'bold',
                             fontSize: 14
-                        }}>watch movies</Typography>
+                        }}>{t('movies')}</Typography>
                         <Typography style={{
                             color: 'orange',
                             display: 'inline',
                             fontFamily: 'Open Sans',
                             fontSize: 14
                         }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
-                            I want to know the world</Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
+                            {t('movies_text')}
+                        </Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -186,15 +192,16 @@ export default function MyTimeline() {
                             fontFamily: 'Open Sans',
                             fontWeight: 'bold',
                             fontSize: 14
-                        }}>sleep</Typography>
+                        }}>{t('sleep')}</Typography>
                         <Typography style={{
                             color: 'orange',
                             display: 'inline',
                             fontFamily: 'Open Sans',
                             fontSize: 14
                         }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
-                            I need a rest</Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
+                            {t('sleep_text')}
+                        </Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -212,15 +219,16 @@ export default function MyTimeline() {
                             fontFamily: 'Open Sans',
                             fontWeight: 'bold',
                             fontSize: 14
-                        }}>repeat</Typography>
+                        }}>{t('repeat')}</Typography>
                         <Typography style={{
                             color: 'orange',
                             display: 'inline',
                             fontFamily: 'Open Sans',
                             fontSize: 14
                         }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>because
-                            this is the life I love</Typography>
+                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
+                            {t('repeat_text')}
+                        </Typography>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>

@@ -9,8 +9,11 @@ import {
     IoLogoApple
 } from "react-icons/all";
 import React from "react";
+import {useTranslation} from "react-i18next";
 
 const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData}) => {
+
+    const { t } = useTranslation('common');
 
     const renderTechnologies = (technologies) => {
         const len = technologies.length;
@@ -41,7 +44,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         fontSize: 12,
                         fontFamily: 'Open Sans',
                         marginBottom: 5
-                    }}>{technology.charAt(0).toUpperCase() + technology.slice(1) + ':'} <code style={{
+                    }}>{t(technology) + ':'} <code style={{
                         fontSize: 12,
                         fontStyle: 'normal',
                     }}>{renderTechnologies(technologies[technology])}</code></p>
@@ -97,7 +100,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         fontSize: 14,
                         fontFamily: 'Open Sans',
                         margin: 0
-                    }}>{'Technologies used in project'}</p>
+                    }}>{t('technologies_text')}</p>
                 </div>
                 <div>
                     {
@@ -111,9 +114,9 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         fontSize: 14,
                         fontFamily: 'Open Sans',
                         margin: 0
-                    }}>{'Technical information'}</p>
+                    }}>{t('technical_info')}</p>
                 </div>
-                <div style={{marginBottom: 15}}>
+                <div style={{marginBottom: 30}}>
                     {
                         os.includes('Windows') && <AiFillWindows size={20} style={{marginRight: 3}}/>
                     }
@@ -171,7 +174,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                                 margin: 0,
                                 color: 'white',
                                 display: 'inline'
-                            }}>{additionalData.text}</p>
+                            }}>{t(additionalData.text)}</p>
                         </a>
                     }
                     <div style={{
@@ -191,7 +194,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         }} href={links.github}>
                             <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
                             <p style={{fontSize: 10, marginRight: 5, color: 'white', display: 'inline'}}>
-                                Check out project page</p>
+                                {t('check_out_project_page')}</p>
                         </a>
                     }
                     {
@@ -203,7 +206,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         }} href={links.bitbucket}>
                             <FaBitbucket size={20} style={{marginRight: 5}}/>
                             <p style={{fontSize: 10, marginRight: 5, color: 'white', display: 'inline'}}>
-                                Check out project page</p>
+                                {t('check_out_project_page')}</p>
                         </a>
                     }
                     {
@@ -216,7 +219,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                            href={links.youtube}>
                             <FaYoutube color={'red'} size={20} style={{marginRight: 5}}/>
                             <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
-                                Check out the presentation video</p>
+                                {t('check_out_presentation_video')}</p>
                         </a>
                     }
                 </div>

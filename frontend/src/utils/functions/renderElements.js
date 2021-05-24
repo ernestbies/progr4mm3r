@@ -10,7 +10,7 @@ export const renderElements = (elements, type) => {
         case 'hobby':
             elements.map((el) => view.push(
                 <Carousel.Item key={el.id}>
-                    <HobbyItem image={el.image} quote={el.quote} name={el.name} text={el.text} color={el.color}
+                    <HobbyItem id={el.id} image={el.image} quote={el.quote} name={el.name} text={el.text} color={el.color}
                                keywords={el.keywords}/>
                 </Carousel.Item>
             ));

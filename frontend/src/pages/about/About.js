@@ -2,8 +2,11 @@ import React from 'react';
 import {Avatar} from '@material-ui/core';
 import {info, calculateAge} from "../../utils/information";
 import './About.styles.css';
+import {useTranslation} from "react-i18next";
 
 const About = () => {
+
+    const { t, i18n }  = useTranslation('common');
 
     return (
         <div id={'about'} className={'item-dashboard about-container row'}
@@ -12,7 +15,7 @@ const About = () => {
                 <Avatar style={{marginTop: 15, marginBottom: 15, width: 200, height: 200}}
                         src={'images/me.jpg'}/>
                 {
-                    info.achievements.map(el =>
+                    info[i18n.language].achievements.map(el =>
                         <code key={el} style={{fontSize: 12}}>
                             <span style={{color: 'orange'}}>{'//'}</span> {el}
                         </code>
@@ -27,7 +30,7 @@ const About = () => {
                         fontWeight: 300,
                         fontSize: 26,
                         margin: 0,
-                    }}>{info.name + ' ' + info.surname}</p>
+                    }}>{info[i18n.language].name + ' ' +  info[i18n.language].surname}</p>
                 </div>
                 <div style={{
                     display: 'inline-flex',
@@ -41,14 +44,14 @@ const About = () => {
                     paddingBottom: 10,
                     borderColor: 'orange'
                 }}>
-                    <p className={'info-style'}>{calculateAge(info.dateOfBirth)}</p>
+                    <p className={'info-style'}>{calculateAge(info[i18n.language].dateOfBirth)}</p>
                     <div className={'info-bar'}/>
-                    <p className={'info-style'}>{info.degree}</p>
+                    <p className={'info-style'}>{info[i18n.language].degree}</p>
                     <div className={'info-bar'}/>
-                    <p className={'info-style'}>{info.country}</p>
+                    <p className={'info-style'}>{info[i18n.language].country}</p>
                     <div className={'info-bar'}/>
                     {
-                        info.languages.map((el) => {
+                        info[i18n.language].languages.map((el) => {
                             return (
                                 <img
                                     key={el}
@@ -62,11 +65,11 @@ const About = () => {
                         })
                     }
                 </div>
-                <p className={'info-text'}><span style={{color: 'orange'}}>{'//'}</span> {info.text}</p>
+                <p className={'info-text'}><span style={{color: 'orange'}}>{'//'}</span> {info[i18n.language].text}</p>
                 <span className={'info-text'} style={{marginTop: 0, marginBottom: 15}}>
-                    <span style={{color: 'orange'}}>{'//'}</span> Take a look at my website to get to know <span
-                    style={{color: 'orange', fontWeight: 'bold'}}>my person</span> better & see <span
-                    style={{color: 'orange', fontWeight: 'bold'}}>my projects</span>
+                    <span style={{color: 'orange'}}>{'//'}</span> {t('web_info_text')} <span
+                    style={{color: 'orange', fontWeight: 'bold'}}>{t('my_person')}</span> {t('and2')} {t('see')} <span
+                    style={{color: 'orange', fontWeight: 'bold'}}>{t('my_projects')}</span>
                 </span>
             </div>
         </div>

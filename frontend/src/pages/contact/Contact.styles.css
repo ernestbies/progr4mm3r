@@ -16,8 +16,8 @@
 }
 
 .icon-item {
-    width: 6rem;
-    height: 6rem;
+    width: 5.5rem;
+    height: 5.5rem;
 }
 
 .icon {
@@ -51,3 +51,10 @@
     color: #7289da;
 }
 
+@keyframes color-changes {
+    0%   {color: white;}
+    25%  {color: yellow;}
+    50%  {color: red;}
+    75%  {color: blue;}
+    100% {color: #9932CC;}
+}

@@ -273,6 +273,25 @@ body {
   animation-fill-mode: forwards;
 }
 
+.orange-button {
+  font-family: 'Open Sans', serif;
+  background-color: black;
+  border-color: orange;
+  color: white;
+  font-size: 12px;
+  font-weight: 300;
+  border-width: 1px;
+  padding: 10px 20px;
+  margin: 50px;
+  border-radius: 8px;
+}
+
+.orange-button:hover {
+  animation-name: 'color-button';
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
 @keyframes show-button {
   from {
     right: 0;
@@ -282,6 +301,44 @@ body {
   to {
     right: 35px;
     bottom: 10px;
+  }
+}
+
+@keyframes show-hide {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes appear-text {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes color-button {
+  0% {
+    border-color: orange;
+    background-color: black;
+    color: white;
+  }
+
+  100% {
+    border-color: white;
+    background-color: orange;
+    color: black;
   }
 }
 

@@ -39,3 +39,21 @@ code {
   font-weight: 400;
   src: url("./assets/fonts/PressStart2P-Regular.ttf") format('truetype');
 }
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-weight: 300;
+  src: url("./assets/fonts/SourceCodePro-Light.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-weight: 400;
+  src: url("./assets/fonts/SourceCodePro-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Code Pro';
+  font-weight: 700;
+  src: url("./assets/fonts/SourceCodePro-Bold.ttf") format('truetype');
+}

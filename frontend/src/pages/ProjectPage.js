@@ -1,13 +1,29 @@
 import React from "react";
 import Navbar from "../parts/navbar/Navbar";
 import Footer from "../parts/footer/Footer";
-import {useTranslation} from "react-i18next";
+import MessageBox from "../components/MessageBox";
+import MessageFaq from "../components/MessageFaq";
+import {Link} from "react-router-dom";
 
 
 const ProjectPage = () => {
 
     const links = ['hall-of-fame'];
-    const {t} = useTranslation('common');
+
+    const msg = [
+        {
+            id: 0,
+            username: 'tsl',
+            message: 'first test message in hall of fame',
+            date: 1621850137351
+        },
+        {
+            id: 1,
+            username: 'john789',
+            message: 'Greetings :D',
+            date: 1621850154120
+        },
+    ]
 
     return (
         <div className={'App'}>
@@ -26,22 +42,52 @@ const ProjectPage = () => {
                         color: 'white',
                         fontFamily: 'Open Sans',
                         fontWeight: 300,
-                        marginTop: 50,
-                        fontSize: 18,
-                        marginBottom: 15
-                    }}>{'Congratulations on solving the puzzle and welcome to the '}
+                        marginTop: 75,
+                        fontSize: 20,
+                        marginBottom: 40
+                    }}>{'Welcome to the '}
                         <span style={{color: 'orange'}}>{'Hall of Fame'}</span></p>
                     <p style={{
                         color: 'orange',
-                        fontFamily: 'Open Sans',
+                        fontFamily: 'Source Code Pro',
                         fontWeight: 300,
-                        fontSize: 14
+                        fontSize: 13
                     }}>{'// '}<span style={{color: 'white'}}>{'Enter your '}</span><span
                         style={{color: 'orange'}}>{'username'}
                     </span><span style={{color: 'white'}}>{' and leave your '}</span><span
                         style={{color: 'orange'}}>{'message'}</span>
-                        <span style={{color: 'white'}}>{' visible to everyone who lands here!'}</span>
+                        <span style={{color: 'white'}}>{' visible to everyone who lands here.'}</span>
                     </p>
+                    <p style={{
+                        color: 'orange',
+                        fontFamily: 'Source Code Pro',
+                        fontWeight: 300,
+                        marginTop: -10,
+                        fontSize: 13
+                    }}>{'// '}<span style={{color: 'white'}}>
+                        {'If you want to read the detailed information please see the '}
+                    </span>
+                        <a href={"#faq"} style={{color: 'orange', fontWeight: 'bold'}}>{'FAQ'}</a>
+                        <span style={{color: 'white', fontWeight: 300}}>{' section.'}</span>
+                    </p>
+                    <p style={{
+                        color: 'orange',
+                        fontFamily: 'Source Code Pro',
+                        fontWeight: 300,
+                        fontSize: 13,
+                        marginTop: -10,
+                        marginBottom: 40
+                    }}>{'// '}<span style={{color: 'white'}}>{'This page has been visited '}</span><span
+                        style={{color: 'orange', fontWeight: 'bold'}}>{0}</span>
+                        <span style={{color: 'white'}}>{' times. Thank you.'}</span>
+                    </p>
+                    <MessageBox messages={msg}/>
+                    <Link to={'/'}>
+                        <button className={'orange-button'}>
+                            {'Back to the main page'}
+                        </button>
+                    </Link>
+                    <MessageFaq/>
                 </div>
             </div>
             <Footer/>

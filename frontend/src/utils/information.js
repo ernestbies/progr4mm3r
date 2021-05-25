@@ -34,4 +34,32 @@ export const quote = {
     author: 'Henry Ford'
 }
 
+export const hallOfFameFaq = [
+    {
+        id: 0,
+        q: 'What is it?',
+        a: 'Hall of Fame is a place where each user visiting my website can leave one unique message.'
+    },
+    {
+        id: 1,
+        q: 'What does it mean unique?',
+        a: 'The user has the option to send only one message from a given IP address. It will not be possible to resend the message.'
+    },
+    {
+        id: 2,
+        q: 'Are messages editable or deletable?',
+        a: 'No, messages are not editable nor deletable.'
+    },
+    {
+        id: 3,
+        q: 'What tools were used to create this page?',
+        a: 'This page was created using the React framework and JavaScript, HTML and CSS languages. Hall of Fame Console was created using HTML and CSS only. The website visit counter was implemented using the React Redux library.'
+    }
+];
+
 export const calculateAge = birthDate => Math.floor((new Date() - new Date(birthDate).getTime()) / 3.15576e+10);
+
+export const formatData = (date) => {
+    const timezoneOffSet = new Date(date).getTimezoneOffset() * 60000;
+    return new Date(date - timezoneOffSet).toISOString().slice(0, 19).replace("T", " ");
+};

@@ -1,15 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {FaGithub, FaBitbucket, FaDiscord} from 'react-icons/fa';
 import {CgMail} from "react-icons/cg";
 import contact from "../../utils/contact";
 import "./Contact.styles.css";
 import ContactForm from "../../components/ContactForm";
 import {useTranslation} from "react-i18next";
-import {HIDDEN_URL} from "../../utils/information";
 
 const Contact = () => {
 
-    const [showEasterEgg, setShowEasterEgg] = useState(false);
     const {t} = useTranslation('common');
 
     const copyName = () => {
@@ -72,13 +70,12 @@ const Contact = () => {
                 }}>
                     <p className={'header-text-small'}>{t('dm')}</p>
                     <ContactForm/>
-                    <span onClick={() => setShowEasterEgg(!showEasterEgg)} style={{
+                    <span style={{
                         color: 'white',
                         marginTop: 20,
                         display: 'inline-block',
                         fontFamily: 'Press Start',
                         fontSize: 10,
-                        cursor: 'pointer',
                     }}><span style={{color: '#9932CC', fontWeight: 'bold'}}>{'//'}</span> WE <span
                         style={{
                             fontSize: 16,
@@ -87,16 +84,7 @@ const Contact = () => {
                             animationIterationCount: 'infinite'
                         }}>&#10084;</span><span
                         style={{color: 'white'}}> JAVASCRIPT</span>
-                        {
-                            showEasterEgg && <span> & EASTER EGGS :-)</span>
-                        }
                     </span>
-                    {
-                        showEasterEgg &&
-                        <span style={{marginTop: 10, fontSize: 10, color: 'white', backgroundColor: 'black'}}>
-                            {HIDDEN_URL}
-                        </span>
-                    }
                 </div>
             </div>
         </div>

@@ -15,6 +15,10 @@ const Navbar = ({links}) => {
 
     useEffect(() => {
         window.addEventListener('scroll', changeNavbar, {passive: true});
+
+        return () => {
+            window.removeEventListener('scroll', changeNavbar);
+        }
     }, []);
 
     const scrollTo = (id) => window.scrollTo(0, document.getElementById(id).offsetTop);
@@ -29,7 +33,7 @@ const Navbar = ({links}) => {
     }
 
     const changeNavbar = () => {
-        setCurrentTheme(scrollSpy.current.valueOf().state.inViewState[4] ? 'light' : 'dark');
+        setCurrentTheme(scrollSpy?.current.valueOf().state.inViewState[4] ? 'light' : 'dark');
     }
 
     const renderNavbarLinks = () => {

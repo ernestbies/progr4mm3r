@@ -59,7 +59,7 @@ const MessageFaq = () => {
                 marginTop: -15,
                 color: 'orange',
                 fontSize: 13
-            }}>~/project_h_01/<span style={{color: 'white'}}>$ cat hall_of_fame_faq.txt</span></p>
+            }}>~/project_h_01<span style={{color: 'white'}}>$ cat hall_of_fame_faq.txt</span></p>
             <p style={{
                 fontFamily: 'Source Code Pro',
                 fontWeight: 300,
@@ -82,7 +82,7 @@ const MessageFaq = () => {
                 marginTop: -15,
                 color: 'orange',
                 fontSize: 13
-            }}>~/project_h_01/<span style={{color: 'white'}}>$ <CustomCaret width={6} height={8}/></span>
+            }}>~/project_h_01<span style={{color: 'white'}}>$ <CustomCaret width={6} height={8}/></span>
             </p>
         </div>
     )

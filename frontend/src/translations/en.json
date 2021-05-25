@@ -60,5 +60,8 @@
   "alert_success_text": "Your message has been sent successfully. I will reply as soon as possible!",
   "alert_error_topic": "Error",
   "alert_error_text": "There was a problem sending your message. Please try again later!",
-  "hall-of-fame": "Hall of fame"
+  "hall-of-fame": "Hall of fame",
+  "click_here_to": "click here to",
+  "we": "we",
+  "contact_info": "I will respond on all messages as soon as it is possible. Thank you for your interest."
 }

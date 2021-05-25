@@ -60,5 +60,8 @@
   "alert_success_text": "Twoja wiadomość została wysłana. Odpowiem najszybciej jak to możliwe!",
   "alert_error_topic": "Błąd",
   "alert_error_text": "Wystąpił problem z wysłaniem Twojej wiadomości. Spróbuj ponownie później!",
-  "hall-of-fame": "Sala sławy"
+  "hall-of-fame": "Sala sławy",
+  "click_here_to": "kliknij aby wykonać",
+  "we": "my",
+  "contact_info": "Odpowiadam na wszystkie wiadomości tak szybko, jak to tylko możliwe. Dziękuję za zainteresowanie."
 }

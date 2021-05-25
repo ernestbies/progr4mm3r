@@ -5,6 +5,7 @@ import contact from "../../utils/contact";
 import "./Contact.styles.css";
 import ContactForm from "../../components/ContactForm";
 import {useTranslation} from "react-i18next";
+import NotReleasedProject from "../../components/NotReleasedProject";
 
 const Contact = () => {
 
@@ -66,27 +67,15 @@ const Contact = () => {
                     alignItems: 'center',
                     backgroundColor: '#00000099',
                     textAlign: 'center',
-                    height: 750
+                    height: 710
                 }}>
                     <p className={'header-text-small'}>{t('dm')}</p>
                     <ContactForm/>
-                    <span style={{
-                        color: 'white',
-                        marginTop: 20,
-                        display: 'inline-block',
-                        fontFamily: 'Press Start',
-                        fontSize: 10,
-                    }}><span style={{color: '#9932CC', fontWeight: 'bold'}}>{'//'}</span> WE <span
-                        style={{
-                            fontSize: 16,
-                            animationName: 'color-changes',
-                            animationDuration: '8s',
-                            animationIterationCount: 'infinite'
-                        }}>&#10084;</span><span
-                        style={{color: 'white'}}> JAVASCRIPT</span>
-                    </span>
+                    <p style={{color: 'white', marginTop: 10, fontFamily: 'Open Sans', fontWeight: 300, fontSize: 10}}>
+                        <span style={{color: 'red'}}>*</span> {t('contact_info')}</p>
                 </div>
             </div>
+            <NotReleasedProject projectName={'project_h_01'}/>
         </div>
     );
 }

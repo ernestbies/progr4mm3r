@@ -284,12 +284,38 @@ body {
   padding: 10px 20px;
   margin: 50px;
   border-radius: 8px;
+  transition: color 2s ease-in-out, border-color 2s ease-in-out, background-color 2s ease-in-out;
 }
 
 .orange-button:hover {
-  animation-name: 'color-button';
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
+  border-color: white;
+  background-color: orange;
+  color: black;
+}
+
+.redirect-text {
+  color: orange;
+  font-weight: 300;
+  font-family: 'Source Code Pro', serif;
+  font-size: 20px;
+  animation-name: orange-to-purple;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes orange-to-purple {
+  0% {
+    color: orange;
+  }
+
+  50% {
+    color: #9932CC;
+  }
+
+  100% {
+    color: orange;
+  }
 }
 
 @keyframes show-button {
@@ -325,20 +351,6 @@ body {
 
   100% {
     opacity: 1;
-  }
-}
-
-@keyframes color-button {
-  0% {
-    border-color: orange;
-    background-color: black;
-    color: white;
-  }
-
-  100% {
-    border-color: white;
-    background-color: orange;
-    color: black;
   }
 }
 

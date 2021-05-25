@@ -10,7 +10,7 @@ export const MessageItem = ({date, username, message, isAdmin = false}) => {
             {isAdmin && <span>&#128081; </span>}
             <span style={{fontWeight: 700, color: isAdmin ? 'red' : '#00FF00'}}>{username}</span>
             <span style={{fontWeight: 300, color: 'white'}}>:</span>
-            <span style={{fontWeight: 700, color: 'orange'}}>~/project_h_01/msg</span>
+            <span style={{fontWeight: 700, color: 'orange'}}>~/project_h_01</span>
             <span style={{fontWeight: 300, color: 'white'}}>$ {message}</span>
         </div>
     )

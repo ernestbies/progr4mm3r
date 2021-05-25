@@ -1,12 +1,15 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Navbar from "../parts/navbar/Navbar";
 import Footer from "../parts/footer/Footer";
 import MessageBox from "../components/MessageBox";
 import MessageFaq from "../components/MessageFaq";
 import {Link} from "react-router-dom";
 
-
 const ProjectPage = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     const links = ['hall-of-fame'];
 

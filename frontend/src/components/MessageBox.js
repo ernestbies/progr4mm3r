@@ -83,7 +83,7 @@ const MessageBox = ({messages}) => {
                 </p>
                 <MessageItem date={0}
                              username={'ernestbies'}
-                             message={'sudo ./project_h_01_messages '}
+                             message={'sudo ./hall_of_fame '}
                              isAdmin
                 />
                 <p style={{

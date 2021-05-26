@@ -275,7 +275,7 @@ body {
 
 .orange-button {
   font-family: 'Open Sans', serif;
-  background-color: black;
+  background-color: #00000090;
   border-color: orange;
   color: white;
   font-size: 12px;
@@ -289,7 +289,7 @@ body {
 
 .orange-button:hover {
   border-color: white;
-  background-color: orange;
+  background-color: #FFA500;
   color: black;
 }
 

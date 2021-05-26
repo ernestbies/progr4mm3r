@@ -1,5 +1,7 @@
 export const WEBSITE_NAME = 'ernestbies.com';
+export const BACKEND_URL = 'http://localhost:4200';
 export const HIDDEN_URL = 'aHR0cHM6Ly9lcm5lc3RiaWVzLmNvbS9oYWxsLW9mLWZhbWU=';
+export const NOT_RELEASED_PROJECT = 'project_h_01';
 
 export const languages = {
     pl: 'pl',

@@ -19,7 +19,7 @@ const NotReleasedProject = ({projectName}) => {
         }}>
             <Link style={{textDecoration: 'none'}} to={'/hall-of-fame'}>
                 <p className={'redirect-text'}>
-                    <span style={{fontWeight: 'bold'}}>// </span>
+                    <span style={{fontWeight: 'bold'}}>{'//'} </span>
                     <span style={{color: 'white'}}>{t('we')} </span>
                     &#10084; <span style={{color: 'white'}}>javascript</span><br/>
                     <span style={{fontWeight: 'bold'}}>~ </span>

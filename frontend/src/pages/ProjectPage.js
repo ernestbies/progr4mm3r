@@ -11,26 +11,9 @@ const ProjectPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const links = ['hall-of-fame'];
-
-    const msg = [
-        {
-            id: 0,
-            username: 'tsl',
-            message: 'first test message in hall of fame',
-            date: 1621850137351
-        },
-        {
-            id: 1,
-            username: 'john789',
-            message: 'Greetings :D',
-            date: 1621850154120
-        },
-    ]
-
     return (
         <div className={'App'}>
-            <Navbar links={links}/>
+            <Navbar links={['hall-of-fame']}/>
             <div id={'hall-of-fame'} className={'wallpaper-container'}
                  style={{backgroundImage: "url(images/wallpaper5.jpg)"}}>
                 <div style={{
@@ -84,7 +67,7 @@ const ProjectPage = () => {
                         style={{color: 'orange', fontWeight: 'bold'}}>{0}</span>
                         <span style={{color: 'white'}}>{' times. Thank you.'}</span>
                     </p>
-                    <MessageBox messages={msg}/>
+                    <MessageBox/>
                     <Link to={'/'}>
                         <button className={'orange-button'}>
                             {'Back to the main page'}

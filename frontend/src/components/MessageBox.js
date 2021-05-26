@@ -1,46 +1,56 @@
 import React, {useEffect, useState} from "react";
 import {formatData, WEBSITE_NAME} from "../utils/information";
 import MessageItem from "./MessageItem";
+import {fetchPosts, sendPost} from "../utils/helpers/FetchData";
 
-const MessageBox = ({messages}) => {
+const MessageBox = () => {
 
     const statusList = {
-        load: {
+        fetch: {
             statusNo: 0,
-            statusCode: 'LOAD',
+            statusCode: 'FETCHING',
+            statusMessage: 'Fetching data',
+            statusColor: 'grey'
+        },
+        load: {
+            statusNo: 1,
+            statusCode: 'LOADED',
             statusMessage: 'Console loaded',
             statusColor: 'white'
         },
         success: {
-            statusNo: 1,
+            statusNo: 2,
             statusCode: 'SUCCESS',
             statusMessage: 'Message sent',
             statusColor: 'green'
         },
-        error: {
-            statusNo: 2,
+        error_fetch: {
+            statusNo: 3,
+            statusCode: 'ERROR',
+            statusMessage: 'Error. Try again.',
+            statusColor: 'red'
+        },
+        error_send: {
+            statusNo: 4,
             statusCode: 'ERROR',
             statusMessage: 'Error. Try again.',
             statusColor: 'red'
         }
     }
 
+    const [messages, setMessages] = useState([]);
     const [username, setUsername] = useState('');
     const [message, setMessage] = useState('');
-    const [currentStatus, setCurrentStatus] = useState(statusList.load);
-    const [loading, setLoading] = useState(true);
+    const [status, setStatus] = useState(statusList.fetch);
+    const [isFetching, setIsFetching] = useState(true);
 
     useEffect(() => {
         let interval = setInterval(getCurrentDate, 1000);
-
-        setTimeout(() => {
-            setLoading(false)
-        }, 2000);
-
+        fetchMessages(true);
         return () => {
             clearInterval(interval);
         }
-    });
+    }, []);
 
     const renderMessages = () => {
         let view = [];
@@ -53,9 +63,36 @@ const MessageBox = ({messages}) => {
         return view;
     }
 
-    function getCurrentDate() {
-        document.getElementById('dateTimer').innerHTML = formatData(new Date());
+    const fetchMessages = (changeStatus) => {
+        fetchPosts().then((res) => {
+            setIsFetching(false);
+            changeStatus && setStatus(statusList.load);
+            setMessages(res);
+        }).catch((error) => {
+            setIsFetching(false);
+            setStatus(statusList.error_fetch);
+        });
     }
+
+    const confirmMessage = () => {
+        const post = {
+            username: username,
+            message: message
+        };
+
+        sendPost(post).then(res => {
+            if(res.status === 201 ) {
+                setStatus(statusList.success);
+                fetchMessages(false);
+                setUsername('');
+                setMessage('');
+            } else {
+                setStatus(statusList.error_send);
+            }
+        });
+    }
+
+    const getCurrentDate = () => document.getElementById('dateTimer').innerHTML = formatData(new Date());
 
     return (
         <div style={{
@@ -68,7 +105,7 @@ const MessageBox = ({messages}) => {
             display: 'flex',
             flexDirection: 'column',
         }}>
-            <div style={{flex: 3}}>
+            <div style={{flex: 3, height: 200, overflowY: 'scroll'}}>
                 <p style={{
                     fontFamily: 'Source Code Pro',
                     color: 'white',
@@ -89,16 +126,20 @@ const MessageBox = ({messages}) => {
                 <p style={{
                     fontFamily: 'Source Code Pro',
                     animationName: 'appear-text',
-                    animationDuration: '5s',
+                    animationDuration: '2s',
                     color: 'white',
                     fontSize: 11,
                     marginLeft: 5,
+                    whiteSpace: 'pre-wrap'
                 }}>
-                    {'Loading configuration...'}<br/>
-                    {'Initializing script...'}<br/>
-                    {'Messages loaded successfully!'}<br/>
+                    {'Initializing script...\n'}
+                    {'Fetching all messages from external server...\n'}
+                    {status.statusNo === 1 && 'Messages loaded successfully!\n'}
+                    {status.statusNo === 3 && 'There was an error loading the messages. Please refresh the page and try again.\n'}
                 </p>
-                {!loading && renderMessages()}
+                <div style={{marginBottom: 10}}>
+                    {!isFetching && renderMessages()}
+                </div>
             </div>
             <div style={{display: 'flex', flexDirection: 'row', backgroundColor: 'black', flex: 1}}>
                 <div style={{flex: 4}}>
@@ -117,7 +158,7 @@ const MessageBox = ({messages}) => {
                         marginLeft: 5,
                         marginTop: -15,
                     }}>> Info<span style={{color: 'white', fontWeight: 400}}>
-                    {': The maximum length of a username is 20 and messages are 100 characters.'}</span>
+                    {': The maximum length of a username is 20 and messages are 300 characters.'}</span>
                     </p>
                     <p style={{
                         fontFamily: 'Source Code Pro',
@@ -149,6 +190,7 @@ const MessageBox = ({messages}) => {
                         <input placeholder={'Enter your username...'}
                                onChange={(event) => setUsername(event.target.value)}
                                maxLength={20}
+                               value={username}
                                style={{
                                    color: 'white',
                                    fontFamily: 'Source Code Pro',
@@ -167,9 +209,10 @@ const MessageBox = ({messages}) => {
                             color: 'white',
                             fontSize: 11,
                             marginLeft: 5,
-                        }}>{'> Message (' + (100 - message.length) + ' characters left): '}</p>
+                        }}>{'> Message (' + (300 - message.length) + ' characters left): '}</p>
                         <input placeholder={'Enter your message...'}
-                               maxLength={100}
+                               maxLength={300}
+                               value={message}
                                onChange={(event) => setMessage(event.target.value)}
                                style={{
                                    color: 'white',
@@ -184,7 +227,9 @@ const MessageBox = ({messages}) => {
                 </div>
                 <div style={{display: 'flex', flexDirection: 'column', flex: 1, backgroundColor: '#696969'}}>
                     <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        <button style={{width: 80, fontFamily: 'Source Code Pro', fontSize: 12}}>SEND</button>
+                        <button onClick={() => confirmMessage()}
+                                style={{width: 80, fontFamily: 'Source Code Pro', fontSize: 12}}>SEND
+                        </button>
                     </div>
                     <div style={{flex: 1, backgroundColor: '#A9A9A9', textAlign: 'center'}}>
                         <p style={{fontFamily: 'Source Code Pro', fontSize: 12, marginBottom: 10}}>:: Status ::</p>
@@ -193,13 +238,13 @@ const MessageBox = ({messages}) => {
                             fontWeight: 700,
                             fontSize: 10,
                             margin: 0,
-                            color: currentStatus.statusColor
-                        }}>{currentStatus.statusCode} {'//'} {currentStatus.statusNo || 0}</p>
+                            color: status.statusColor
+                        }}>{status.statusCode} {'//'} {status.statusNo || 0}</p>
                         <p style={{
                             fontFamily: 'Source Code Pro',
                             fontSize: 9,
                             margin: 0
-                        }}>{currentStatus.statusMessage}</p>
+                        }}>{status.statusMessage}</p>
                     </div>
                 </div>
             </div>

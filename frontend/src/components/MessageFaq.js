@@ -1,6 +1,6 @@
 import React from "react";
 import CustomCaret from "./CustomCaret";
-import {hallOfFameFaq, WEBSITE_NAME} from "../utils/information";
+import {hallOfFameFaq, NOT_RELEASED_PROJECT, WEBSITE_NAME} from "../utils/information";
 
 const MessageFaq = () => {
 
@@ -50,7 +50,7 @@ const MessageFaq = () => {
                 marginLeft: 10,
                 color: 'orange',
                 fontSize: 13
-            }}>~<span style={{color: 'white'}}>$ cd project_h_01</span></p>
+            }}>~/{NOT_RELEASED_PROJECT}<span style={{color: 'white'}}>$ cd {'introduction'}</span></p>
             <p style={{
                 fontFamily: 'Source Code Pro',
                 fontWeight: 300,
@@ -59,7 +59,8 @@ const MessageFaq = () => {
                 marginTop: -15,
                 color: 'orange',
                 fontSize: 13
-            }}>~/project_h_01<span style={{color: 'white'}}>$ cat hall_of_fame_faq.txt</span></p>
+            }}>~/{NOT_RELEASED_PROJECT}/{'introduction'}<span style={{color: 'white'}}>$ cat hall_of_fame_faq.txt</span>
+            </p>
             <p style={{
                 fontFamily: 'Source Code Pro',
                 fontWeight: 300,
@@ -82,7 +83,7 @@ const MessageFaq = () => {
                 marginTop: -15,
                 color: 'orange',
                 fontSize: 13
-            }}>~/project_h_01<span style={{color: 'white'}}>$ <CustomCaret width={6} height={8}/></span>
+            }}>~/{NOT_RELEASED_PROJECT}/{'introduction'}<span style={{color: 'white'}}>$ <CustomCaret width={6} height={8}/></span>
             </p>
         </div>
     )

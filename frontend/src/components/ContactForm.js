@@ -3,6 +3,7 @@ import {CgMail, RiMessage3Line} from "react-icons/all";
 import ConfirmAlert from "./ConfirmAlert";
 import ReCAPTCHA from "react-google-recaptcha/lib/esm/recaptcha-wrapper";
 import {useTranslation} from "react-i18next";
+import {sendMessage} from "../utils/helpers/FetchData";
 
 const ContactForm = () => {
 
@@ -17,7 +18,7 @@ const ContactForm = () => {
 
     const confirmDm = () => {
         const data = {email, topic, text, recaptcha};
-        sendData(data).then((res) => {
+        sendMessage(data).then((res) => {
             if (res.ok) {
                 setAlertVariant('info');
             } else {
@@ -32,16 +33,6 @@ const ContactForm = () => {
         recaptchaRef.current.reset();
         setRecaptchaValue('');
         clearData();
-    }
-
-    const sendData = (data) => {
-        return fetch(`http://localhost:4200/api/contact`, {
-            method: 'post',
-            headers: {
-                'Content-Type': 'application/json;charset=utf-8'
-            },
-            body: JSON.stringify(data)
-        })
     }
 
     const isEmptyOrSpaces = (str) => str === null || str.match(/^ *$/) !== null;

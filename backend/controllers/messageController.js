@@ -11,26 +11,26 @@ const messageController = {
 
         if (error) {
             res.status(401).send({errorCode: 401, errorMessage: error.details[0].message});
-        }
+        } else {
+            const newMessage = new Message(body);
 
-        const newMessage = new Message(body);
+            try {
+                const recaptchaStatus = await validateRecaptcha(body.recaptcha);
 
-        try {
-            const recaptchaStatus = await validateRecaptcha(body.recaptcha);
+                if (recaptchaStatus) {
+                    const transporter = createMailTransporter();
+                    const options = createMailOptions('[Personal website] ' + body.topic + ' (from: ' + body.email + ')', body.text);
 
-            if (recaptchaStatus) {
-                const transporter = createMailTransporter();
-                const options = createMailOptions('[Personal website] ' + body.topic + ' (from: ' + body.email + ')', body.text);
+                    await transporter.sendMail(options);
+                    await newMessage.save();
 
-                await transporter.sendMail(options);
-                await newMessage.save();
-
-                res.status(200).send(convert(newMessage));
-            } else {
-                res.status(401).send('Recaptcha verification error');
+                    res.status(200).send(convert(newMessage));
+                } else {
+                    res.status(401).send('Recaptcha verification error');
+                }
+            } catch (error) {
+                res.status(500).send('Cannot create new message. ' + error);
             }
-        } catch (e) {
-            res.status(500).send('Cannot create new message');
         }
     }
 }

@@ -3,7 +3,8 @@ import bodyParser from 'body-parser';
 import config from './config';
 import morgan from 'morgan';
 import mongoose from 'mongoose';
-import router from './routes/message';
+import messageRoutes from './routes/message';
+import postRoutes from './routes/post';
 import path from 'path';
 
 const app = express();
@@ -31,7 +32,8 @@ mongoose.connect(config.databaseUrl, {
     }
 });
 
-app.use('/api', router);
+app.use('/api', messageRoutes);
+app.use('/api', postRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));

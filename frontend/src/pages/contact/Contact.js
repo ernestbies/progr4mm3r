@@ -6,6 +6,7 @@ import "./Contact.styles.css";
 import ContactForm from "../../components/ContactForm";
 import {useTranslation} from "react-i18next";
 import NotReleasedProject from "../../components/NotReleasedProject";
+import {NOT_RELEASED_PROJECT} from "../../utils/information";
 
 const Contact = () => {
 
@@ -72,10 +73,10 @@ const Contact = () => {
                     <p className={'header-text-small'}>{t('dm')}</p>
                     <ContactForm/>
                     <p style={{color: 'white', marginTop: 10, fontFamily: 'Open Sans', fontWeight: 300, fontSize: 10}}>
-                        <span style={{color: 'red'}}>*</span> {t('contact_info')}</p>
+                        <span style={{color: 'red'}}>*</span> {t('contact_info')} {':)'}</p>
                 </div>
             </div>
-            <NotReleasedProject projectName={'project_h_01'}/>
+            <NotReleasedProject projectName={NOT_RELEASED_PROJECT}/>
         </div>
     );
 }

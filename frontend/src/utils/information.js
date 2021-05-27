@@ -1,6 +1,6 @@
 export const WEBSITE_NAME = 'ernestbies.com';
 export const BACKEND_URL = 'http://localhost:4200';
-export const HIDDEN_URL = 'aHR0cHM6Ly9lcm5lc3RiaWVzLmNvbS9oYWxsLW9mLWZhbWU=';
+export const HALL_OF_FAME_MYSTERY = 'aHR0cHM6Ly9lcm5lc3RiaWVzLmNvbS9oYWxsLW9mLWZhbWU=';
 export const NOT_RELEASED_PROJECT = 'project_h_01';
 
 export const languages = {
@@ -40,7 +40,7 @@ export const hallOfFameFaq = [
     {
         id: 0,
         q: 'What is it?',
-        a: 'Hall of Fame is a place where each user visiting my website can leave one unique message.'
+        a: 'Hall of Fame is a place where each user visiting my website can leave one unique message. Leaving a message is only possible after solving the puzzle.'
     },
     {
         id: 1,
@@ -56,6 +56,11 @@ export const hallOfFameFaq = [
         id: 3,
         q: 'What tools were used to create this page?',
         a: 'This page was created using the React framework and JavaScript, HTML and CSS languages. Hall of Fame Console was created using HTML and CSS only. The website visit counter was implemented using the React Redux library.'
+    },
+    {
+        id: 4,
+        q: 'What do the console statuses mean?',
+        a: 'The console status informs the user about the successful or negative course of the actions performed. Full list of statuses: \n\nLOADED // 0 - messages were successfully retrieved from the external server.\nSOLVED // 1 - the puzzle was solved correctly.\nFETCHING // 2 - data is retrieved from an external server.\nCONNECTED // 3 - connection to an external server has been established.\nSUCCESS // 4 - the message was sent successfully and posted on the Hall of Fame board.\nERROR // 5 - incorrect answer was given while solving the puzzle.\nERROR // 6 - there was a problem connecting with server (problem with internet connection).\nERROR // 7 - there was a problem sending the message (data validation problem).'
     }
 ];
 

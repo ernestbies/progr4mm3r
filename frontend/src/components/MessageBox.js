@@ -1,39 +1,59 @@
 import React, {useEffect, useState} from "react";
-import {formatData, WEBSITE_NAME} from "../utils/information";
+import {formatData, HALL_OF_FAME_MYSTERY, WEBSITE_NAME} from "../utils/information";
 import MessageItem from "./MessageItem";
 import {fetchPosts, sendPost} from "../utils/helpers/FetchData";
+import {AiFillLock, AiFillUnlock} from "react-icons/ai";
+import CustomInput from "./CustomInput";
 
 const MessageBox = () => {
 
     const statusList = {
-        fetch: {
+        init: {
             statusNo: 0,
-            statusCode: 'FETCHING',
-            statusMessage: 'Fetching data',
-            statusColor: 'grey'
-        },
-        load: {
-            statusNo: 1,
             statusCode: 'LOADED',
-            statusMessage: 'Console loaded',
+            statusMessage: 'Console loaded.',
             statusColor: 'white'
         },
-        success: {
-            statusNo: 2,
-            statusCode: 'SUCCESS',
-            statusMessage: 'Message sent',
+        correct: {
+            statusNo: 1,
+            statusCode: 'SOLVED',
+            statusMessage: 'Correctly answered.',
             statusColor: 'green'
         },
-        error_fetch: {
+        fetch: {
+            statusNo: 2,
+            statusCode: 'FETCHING',
+            statusMessage: 'Fetching data.',
+            statusColor: 'grey'
+        },
+        connect: {
             statusNo: 3,
+            statusCode: 'CONNECTED',
+            statusMessage: 'Connected with server.',
+            statusColor: 'grey'
+        },
+        success: {
+            statusNo: 4,
+            statusCode: 'SUCCESS',
+            statusMessage: 'Message sent.',
+            statusColor: 'green'
+        },
+        error_solve: {
+            statusNo: 5,
             statusCode: 'ERROR',
-            statusMessage: 'Error. Try again.',
+            statusMessage: 'Wrong answer.',
+            statusColor: 'red'
+        },
+        error_fetch: {
+            statusNo: 6,
+            statusCode: 'ERROR',
+            statusMessage: 'Fetching error.',
             statusColor: 'red'
         },
         error_send: {
-            statusNo: 4,
+            statusNo: 7,
             statusCode: 'ERROR',
-            statusMessage: 'Error. Try again.',
+            statusMessage: 'Sending error.',
             statusColor: 'red'
         }
     }
@@ -41,16 +61,24 @@ const MessageBox = () => {
     const [messages, setMessages] = useState([]);
     const [username, setUsername] = useState('');
     const [message, setMessage] = useState('');
-    const [status, setStatus] = useState(statusList.fetch);
+    const [status, setStatus] = useState(statusList.init);
     const [isFetching, setIsFetching] = useState(true);
+    const [answer, setAnswer] = useState('');
+
+    // Hall of Fame phases: 0 - initial phase, 1 - correct answer, 2 - unlocked.
+    const [phase, setPhase] = useState(0);
 
     useEffect(() => {
         let interval = setInterval(getCurrentDate, 1000);
-        fetchMessages(true);
+
         return () => {
             clearInterval(interval);
         }
     }, []);
+
+    useEffect(() => {
+        phase === 2 && fetchMessages(true);
+    }, [phase])
 
     const renderMessages = () => {
         let view = [];
@@ -66,7 +94,7 @@ const MessageBox = () => {
     const fetchMessages = (changeStatus) => {
         fetchPosts().then((res) => {
             setIsFetching(false);
-            changeStatus && setStatus(statusList.load);
+            changeStatus && setStatus(statusList.connect);
             setMessages(res);
         }).catch((error) => {
             setIsFetching(false);
@@ -74,25 +102,46 @@ const MessageBox = () => {
         });
     }
 
-    const confirmMessage = () => {
-        const post = {
-            username: username,
-            message: message
-        };
-
-        sendPost(post).then(res => {
-            if(res.status === 201 ) {
-                setStatus(statusList.success);
-                fetchMessages(false);
-                setUsername('');
-                setMessage('');
+    const confirmChanges = () => {
+        if (!phase) {
+            const correctAnswer = atob(HALL_OF_FAME_MYSTERY);
+            console.log(correctAnswer, answer);
+            if (correctAnswer === answer) {
+                setPhase(1);
+                setStatus(statusList.correct);
             } else {
-                setStatus(statusList.error_send);
+                setStatus(statusList.error_solve);
+                setAnswer('');
             }
-        });
+        } else if(phase === 1) {
+            setPhase(2);
+            setStatus(statusList.fetch);
+        } else {
+            const post = {
+                username: username,
+                message: message
+            };
+
+            sendPost(post).then(res => {
+                if (res.status === 201) {
+                    setStatus(statusList.success);
+                    fetchMessages(false);
+                    setUsername('');
+                    setMessage('');
+                } else {
+                    setStatus(statusList.error_send);
+                }
+            });
+        }
     }
 
     const getCurrentDate = () => document.getElementById('dateTimer').innerHTML = formatData(new Date());
+
+    const copyText = () => {
+        let mysteryInput = document.getElementById('mysteryInput');
+        mysteryInput.select();
+        document.execCommand('copy', false);
+    }
 
     return (
         <div style={{
@@ -106,40 +155,142 @@ const MessageBox = () => {
             flexDirection: 'column',
         }}>
             <div style={{flex: 3, height: 200, overflowY: 'scroll'}}>
-                <p style={{
-                    fontFamily: 'Source Code Pro',
-                    color: 'white',
-                    fontSize: 11,
-                    marginLeft: 5,
-                    marginTop: 5,
-                }}>
-                    {'> Hall of Fame Console powered by '}&copy; {WEBSITE_NAME} 2021. All rights reserved.
-                </p>
-                <p style={{fontFamily: 'Source Code Pro', color: 'white', fontSize: 11, marginLeft: 5, marginTop: -15}}>
-                    {'> Welcome to the Hall of Fame Console. Leave your message here.'}
-                </p>
-                <MessageItem date={0}
-                             username={'ernestbies'}
-                             message={'sudo ./hall_of_fame '}
-                             isAdmin
-                />
-                <p style={{
-                    fontFamily: 'Source Code Pro',
-                    animationName: 'appear-text',
-                    animationDuration: '2s',
-                    color: 'white',
-                    fontSize: 11,
-                    marginLeft: 5,
-                    whiteSpace: 'pre-wrap'
-                }}>
-                    {'Initializing script...\n'}
-                    {'Fetching all messages from external server...\n'}
-                    {status.statusNo === 1 && 'Messages loaded successfully!\n'}
-                    {status.statusNo === 3 && 'There was an error loading the messages. Please refresh the page and try again.\n'}
-                </p>
-                <div style={{marginBottom: 10}}>
-                    {!isFetching && renderMessages()}
-                </div>
+                {
+                    (!phase || phase === 1) ?
+                        <div style={{position: 'relative', width: '100%', height: '100%'}}>
+                            <div style={{
+                                height: '100%',
+                                width: '100%',
+                                position: 'absolute',
+                                backgroundColor: '#00000099',
+                                zIndex: 1,
+                                display: 'flex',
+                                alignItems: 'center',
+                                flexDirection: 'column'
+                            }}>
+                                <p style={{
+                                    marginTop: 80,
+                                    fontFamily: 'Source Code Pro',
+                                    fontWeight: 300,
+                                    color: 'white',
+                                    textAlign: 'center'
+                                }}>
+                                    {'resolve the mystery to enter '} <span
+                                    style={{color: 'goldenrod'}}>{'hall of fame'}</span>
+                                </p>
+                                {
+                                    !phase ?
+                                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                                            <AiFillLock size={100} color={'goldenrod'}/>
+                                            <CustomInput readOnly
+                                                         id={'mysteryInput'}
+                                                         onClick={() => copyText()}
+                                                         value={HALL_OF_FAME_MYSTERY}/>
+
+                                            <CustomInput readOnly={false}
+                                                         onChange={(e) => setAnswer(e.target.value)}
+                                                         value={answer}
+                                                         placeholder={'enter your answer here'}/>
+                                        </div> :
+                                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                                            <AiFillUnlock size={100} color={'goldenrod'}/>
+                                            <p style={{
+                                                marginTop: 20,
+                                                fontFamily: 'Source Code Pro',
+                                                fontWeight: 300,
+                                                color: 'white',
+                                                textAlign: 'center',
+                                                fontSize: 14
+                                            }}>
+                                                {'congratulations on solving the '} <span
+                                                style={{color: 'goldenrod'}}>{'mystery'}</span>
+                                            </p>
+                                            <p style={{
+                                                fontFamily: 'Source Code Pro',
+                                                fontWeight: 300,
+                                                color: 'white',
+                                                textAlign: 'center',
+                                                marginTop: -10,
+                                                fontSize: 14
+                                            }}>
+                                                {'navigate to the '} <span
+                                                style={{color: 'goldenrod'}}>{'hall of fame'}</span>
+                                                <span style={{color: 'white'}}>{' by clicking '}</span>
+                                                <span style={{color: 'goldenrod'}}>{'ENTER'}</span>{' button'}
+                                            </p>
+                                        </div>
+                                }
+                            </div>
+                            <div style={{height: '100%'}}>
+                                <p style={{
+                                    fontFamily: 'Source Code Pro',
+                                    color: 'white',
+                                    fontSize: 11,
+                                    marginLeft: 5,
+                                    marginTop: 5,
+                                }}>
+                                    {'> Hall of Fame Console powered by '}&copy; {WEBSITE_NAME} 2021. All rights
+                                    reserved.
+                                </p>
+                                <p style={{
+                                    fontFamily: 'Source Code Pro',
+                                    color: 'white',
+                                    fontSize: 11,
+                                    marginLeft: 5,
+                                    marginTop: -15
+                                }}>
+                                    {'> Welcome to the Hall of Fame Console.'}
+                                </p>
+                                <MessageItem date={0}
+                                             username={'ernestbies'}
+                                             message={'sudo ./h_01_mystery_base64'}
+                                             isAdmin
+                                />
+                            </div>
+                        </div> :
+                        <div>
+                            <p style={{
+                                fontFamily: 'Source Code Pro',
+                                color: 'white',
+                                fontSize: 11,
+                                marginLeft: 5,
+                                marginTop: 5,
+                            }}>
+                                {'> Hall of Fame Console powered by '}&copy; {WEBSITE_NAME} 2021. All rights reserved.
+                            </p>
+                            <p style={{
+                                fontFamily: 'Source Code Pro',
+                                color: 'white',
+                                fontSize: 11,
+                                marginLeft: 5,
+                                marginTop: -15
+                            }}>
+                                {'> Welcome to the Hall of Fame Console. Leave your message here.'}
+                            </p>
+                            <MessageItem date={0}
+                                         username={'ernestbies'}
+                                         message={'sudo ./hall_of_fame '}
+                                         isAdmin
+                            />
+                            <p style={{
+                                fontFamily: 'Source Code Pro',
+                                animationName: 'appear-text',
+                                animationDuration: '2s',
+                                color: 'white',
+                                fontSize: 11,
+                                marginLeft: 5,
+                                whiteSpace: 'pre-wrap'
+                            }}>
+                                {'Initializing script...\n'}
+                                {'Fetching all messages from external server...\n'}
+                                {status.statusNo !== 6  && 'Messages loaded successfully!\n'}
+                                {status.statusNo === 6 && 'There was an error connecting with server. Please refresh the page and try again.\n'}
+                            </p>
+                            <div style={{marginBottom: 10}}>
+                                {!isFetching && renderMessages()}
+                            </div>
+                        </div>
+                }
             </div>
             <div style={{display: 'flex', flexDirection: 'row', backgroundColor: 'black', flex: 1}}>
                 <div style={{flex: 4}}>
@@ -186,20 +337,22 @@ const MessageBox = () => {
                             color: 'white',
                             fontSize: 11,
                             marginLeft: 5,
-                        }}>{'> Username (' + (20 - username.length) + ' characters left): '}</p>
-                        <input placeholder={'Enter your username...'}
-                               onChange={(event) => setUsername(event.target.value)}
-                               maxLength={20}
-                               value={username}
-                               style={{
-                                   color: 'white',
-                                   fontFamily: 'Source Code Pro',
-                                   fontWeight: 400,
-                                   fontSize: 11,
-                                   backgroundColor: 'transparent',
-                                   borderWidth: 0,
-                                   width: 150
-                               }}/>
+                        }}>{!phase ? '> You cannot send message until you did not solve mystery.' :
+                            phase === 1 ? '> Congratulations on solving the mystery.'
+                            : '> Username (' + (20 - username.length) + ' characters left): '}</p>
+                        {phase === 2 && <input placeholder={'Enter your username...'}
+                                               onChange={(event) => setUsername(event.target.value)}
+                                               maxLength={20}
+                                               value={username}
+                                               style={{
+                                                   color: 'white',
+                                                   fontFamily: 'Source Code Pro',
+                                                   fontWeight: 400,
+                                                   fontSize: 11,
+                                                   backgroundColor: 'transparent',
+                                                   borderWidth: 0,
+                                                   width: 150
+                                               }}/>}
                     </div>
                     <div style={{marginTop: -8}}>
                         <p style={{
@@ -209,26 +362,31 @@ const MessageBox = () => {
                             color: 'white',
                             fontSize: 11,
                             marginLeft: 5,
-                        }}>{'> Message (' + (300 - message.length) + ' characters left): '}</p>
-                        <input placeholder={'Enter your message...'}
-                               maxLength={300}
-                               value={message}
-                               onChange={(event) => setMessage(event.target.value)}
-                               style={{
-                                   color: 'white',
-                                   fontFamily: 'Source Code Pro',
-                                   fontWeight: 400,
-                                   fontSize: 11,
-                                   backgroundColor: 'transparent',
-                                   borderWidth: 0,
-                                   width: 300
-                               }}/>
+                        }}>{!phase ? '> If you are sure of your answer, click the CHECK button. ' :
+                            phase === 1 ? '> If you want to enter Hall of Fame, click the ENTER button.'
+                            : '> Message (' + (300 - message.length) + ' characters left): '}</p>
+                        {phase === 2 && <input placeholder={'Enter your message...'}
+                                               maxLength={300}
+                                               value={message}
+                                               onChange={(event) => setMessage(event.target.value)}
+                                               style={{
+                                                   color: 'white',
+                                                   fontFamily: 'Source Code Pro',
+                                                   fontWeight: 400,
+                                                   fontSize: 11,
+                                                   backgroundColor: 'transparent',
+                                                   borderWidth: 0,
+                                                   width: 300
+                                               }}/>}
                     </div>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'column', flex: 1, backgroundColor: '#696969'}}>
                     <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-                        <button onClick={() => confirmMessage()}
-                                style={{width: 80, fontFamily: 'Source Code Pro', fontSize: 12}}>SEND
+                        <button onClick={() => confirmChanges()}
+                                style={{width: 80, fontFamily: 'Source Code Pro', fontSize: 12}}>
+                            {
+                                !phase ? 'CHECK' : phase === 1 ? 'ENTER' : 'SEND'
+                            }
                         </button>
                     </div>
                     <div style={{flex: 1, backgroundColor: '#A9A9A9', textAlign: 'center'}}>

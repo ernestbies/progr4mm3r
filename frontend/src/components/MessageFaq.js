@@ -7,7 +7,7 @@ const MessageFaq = () => {
     const renderQaA = (faq) => {
         let view = [];
         faq.map(el => view.push(
-            <div key={el.id} style={{marginBottom: 30}}>
+            <div key={el.id} style={{marginBottom: 30, whiteSpace: 'pre-wrap'}}>
                 <p style={{
                     fontFamily: 'Source Code Pro',
                     fontWeight: 300,
@@ -35,7 +35,7 @@ const MessageFaq = () => {
     };
 
     return (
-        <div id={'faq'} style={{backgroundColor: '#00000099', width: 700, height: 420, marginBottom: 30}}>
+        <div id={'faq'} style={{backgroundColor: '#00000099', width: 700, marginBottom: 30}}>
             <p style={{
                 marginTop: 10,
                 fontSize: 16,
@@ -75,6 +75,16 @@ const MessageFaq = () => {
             {
                 renderQaA(hallOfFameFaq)
             }
+            <p style={{
+                fontFamily: 'Source Code Pro',
+                fontWeight: 300,
+                textAlign: 'left',
+                marginLeft: 10,
+                marginRight: 10,
+                marginBottom: 25,
+                color: 'white',
+                fontSize: 12
+            }}>This page is only available in <span style={{color: 'yellow'}}>English</span>. Someday I will add a translation.</p>
             <p style={{
                 fontFamily: 'Source Code Pro',
                 fontWeight: 300,

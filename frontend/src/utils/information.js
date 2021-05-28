@@ -60,7 +60,7 @@ export const hallOfFameFaq = [
     {
         id: 4,
         q: 'What do the console statuses mean?',
-        a: 'The console status informs the user about the successful or negative course of the actions performed. Full list of statuses: \n\nLOADED // 0 - messages were successfully retrieved from the external server.\nSOLVED // 1 - the puzzle was solved correctly.\nFETCHING // 2 - data is retrieved from an external server.\nCONNECTED // 3 - connection to an external server has been established.\nSUCCESS // 4 - the message was sent successfully and posted on the Hall of Fame board.\nERROR // 5 - incorrect answer was given while solving the puzzle.\nERROR // 6 - there was a problem connecting with server (problem with internet connection).\nERROR // 7 - there was a problem sending the message (data validation problem).'
+        a: 'The console status informs the user about the successful or negative course of the actions performed. Full list of statuses: \n\nLOADED // 0 - initial state after starting the console.\nSOLVED // 1 - the puzzle was solved correctly.\nFETCHING // 2 - data is retrieved from an external server.\nCONNECTED // 3 - connection to an external server has been established.\nSUCCESS // 4 - the message was sent successfully and posted on the Hall of Fame board.\nERROR // 5 - incorrect answer was given while solving the puzzle.\nERROR // 6 - there was a problem connecting with server (problem with internet connection).\nERROR // 7 - there was a problem sending the message (data validation problem).'
     }
 ];
 

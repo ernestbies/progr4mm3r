@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import knowledge from "../utils/knowledge";
 import {useTranslation} from "react-i18next";
+import PropTypes from 'prop-types';
 
 const KnowledgeCard = ({type}) => {
 
@@ -169,6 +170,10 @@ const KnowledgeCard = ({type}) => {
             </div>
         </div>
     );
+}
+
+KnowledgeCard.propTypes = {
+    type: PropTypes.oneOf(['frontend', 'backend', 'databases', 'testing'])
 }
 
 export default KnowledgeCard;

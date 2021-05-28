@@ -1,6 +1,7 @@
 import React from "react";
 import {Alert} from "react-bootstrap";
 import {useTranslation} from "react-i18next";
+import PropTypes from 'prop-types';
 
 const ConfirmAlert = ({showAlert, setShowAlert, variant}) => {
 
@@ -26,6 +27,12 @@ const ConfirmAlert = ({showAlert, setShowAlert, variant}) => {
     }
 
     return (<div/>);
+}
+
+ConfirmAlert.propTypes = {
+    showAlert: PropTypes.bool.isRequired,
+    setShowAlert: PropTypes.func.isRequired,
+    variant: PropTypes.oneOf(['info', 'danger']).isRequired
 }
 
 export default ConfirmAlert;

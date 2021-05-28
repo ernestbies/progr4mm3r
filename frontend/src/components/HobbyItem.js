@@ -1,5 +1,6 @@
 import React from "react";
 import {BsMusicNoteBeamed, FaLaptopCode, IoGameController, IoTvOutline} from "react-icons/all";
+import PropTypes from 'prop-types';
 
 const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
     return (
@@ -39,6 +40,16 @@ const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
             </div>
         </div>
     )
+}
+
+HobbyItem.propTypes = {
+    id: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    quote: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+    keywords: PropTypes.array.isRequired
 }
 
 export default HobbyItem;

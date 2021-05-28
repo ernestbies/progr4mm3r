@@ -13,7 +13,7 @@ const ProjectPage = () => {
 
     return (
         <div className={'App'}>
-            <Navbar links={['hall-of-fame']}/>
+            <Navbar links={['hall-of-fame']} languageSelector={false}/>
             <div id={'hall-of-fame'} className={'wallpaper-container'}
                  style={{backgroundImage: "url(images/wallpaper5.jpg)"}}>
                 <div style={{

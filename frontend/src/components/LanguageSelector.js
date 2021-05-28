@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import {languages} from "../utils/information";
 import {useTranslation} from "react-i18next";
+import PropTypes from 'prop-types';
 
 const StyledDiv = styled.div`
     display: inline;
@@ -33,7 +34,7 @@ const LanguageDivider = styled.span`
     font-family: Open Sans, serif;
 `;
 
-const LanguageSelector = ({currentTheme, mobileMenu}) => {
+const LanguageSelector = ({currentTheme = 'dark', mobileMenu = false}) => {
 
     const {i18n} = useTranslation('common');
 
@@ -50,6 +51,11 @@ const LanguageSelector = ({currentTheme, mobileMenu}) => {
             </LanguageButton>
         </StyledDiv>
     )
+}
+
+LanguageSelector.propTypes = {
+    currentTheme: PropTypes.oneOf(['dark', 'light']),
+    mobileMenu: PropTypes.bool
 }
 
 export default LanguageSelector;

@@ -71,7 +71,7 @@ const MessageFaq = () => {
                 marginTop: -15,
                 color: 'white',
                 fontSize: 12
-            }}>&copy; {WEBSITE_NAME} Hall Of Fame FAQ</p>
+            }}>&copy; {WEBSITE_NAME} Hall of Fame FAQ</p>
             {
                 renderQaA(hallOfFameFaq)
             }

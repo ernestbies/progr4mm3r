@@ -5,8 +5,9 @@ import {WEBSITE_NAME} from "../../utils/information";
 import {useTranslation} from "react-i18next";
 import LanguageSelector from "../../components/LanguageSelector";
 import {NavbarLink, StyledNav, WebsiteName} from "./Navbar.styles";
+import PropTypes from 'prop-types';
 
-const Navbar = ({links}) => {
+const Navbar = ({links, languageSelector = true}) => {
 
     const scrollSpy = useRef();
     const {t} = useTranslation('common');
@@ -59,7 +60,7 @@ const Navbar = ({links}) => {
                     renderNavbarLinks()
                 }
             </Scrollspy>
-            <LanguageSelector currentTheme={currentTheme} mobileMenu={isMobileMenuActive}/>
+            {languageSelector && <LanguageSelector currentTheme={currentTheme} mobileMenu={isMobileMenuActive}/>}
             <div id={'hamburger'} className={'hamburger'} onClick={() => toggleMobileMenu()}>
                 <span className={currentTheme === 'dark' ? 'bar dark' : 'bar light'}/>
                 <span className={currentTheme === 'dark' ? 'bar dark' : 'bar light'}
@@ -68,6 +69,11 @@ const Navbar = ({links}) => {
             </div>
         </StyledNav>
     );
+}
+
+Navbar.propTypes = {
+    links: PropTypes.array.isRequired,
+    languageSelector: PropTypes.bool
 }
 
 export default Navbar;

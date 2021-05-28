@@ -10,6 +10,7 @@ import {
 } from "react-icons/all";
 import React from "react";
 import {useTranslation} from "react-i18next";
+import PropTypes from 'prop-types';
 
 const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData}) => {
 
@@ -226,6 +227,19 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
             </div>
         </div>
     )
+}
+
+ProjectItem.propTypes = {
+    id: PropTypes.number.isRequired,
+    image: PropTypes.string.isRequired,
+    color: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    technologies: PropTypes.object.isRequired,
+    os: PropTypes.arrayOf(PropTypes.string).isRequired,
+    languages: PropTypes.array,
+    links: PropTypes.object.isRequired,
+    additionalData: PropTypes.object
 }
 
 export default ProjectItem;

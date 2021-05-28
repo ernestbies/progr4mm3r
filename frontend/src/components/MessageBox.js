@@ -78,7 +78,20 @@ const MessageBox = () => {
 
     useEffect(() => {
         phase === 2 && fetchMessages(true);
-    }, [phase])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [phase]);
+
+    const fetchMessages = (changeStatus) => {
+        fetchPosts().then((res) => {
+            setIsFetching(false);
+            changeStatus && setStatus(statusList.connect);
+            setMessages(res);
+        }).catch((error) => {
+            setIsFetching(false);
+            setStatus(statusList.error_fetch);
+            console.error(error);
+        });
+    }
 
     const renderMessages = () => {
         let view = [];
@@ -89,17 +102,6 @@ const MessageBox = () => {
         );
 
         return view;
-    }
-
-    const fetchMessages = (changeStatus) => {
-        fetchPosts().then((res) => {
-            setIsFetching(false);
-            changeStatus && setStatus(statusList.connect);
-            setMessages(res);
-        }).catch((error) => {
-            setIsFetching(false);
-            setStatus(statusList.error_fetch);
-        });
     }
 
     const confirmChanges = () => {
@@ -183,6 +185,7 @@ const MessageBox = () => {
                                         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                                             <AiFillLock size={100} color={'goldenrod'}/>
                                             <CustomInput readOnly
+                                                         cursorPointer
                                                          id={'mysteryInput'}
                                                          onClick={() => copyText()}
                                                          value={HALL_OF_FAME_MYSTERY}/>

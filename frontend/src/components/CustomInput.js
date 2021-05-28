@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from 'prop-types';
 
-const CustomInput = ({id, value, placeholder, readOnly = false, onClick, onChange}) => {
+const CustomInput = ({id, value, placeholder, cursorPointer = false, readOnly = false, onClick, onChange}) => {
     return (
         <input readOnly={readOnly} id={id} onClick={onClick} style={{
-            cursor: 'pointer',
+            cursor: cursorPointer ? 'pointer' : 'auto',
             backgroundColor: 'transparent',
             borderRadius: 6,
             borderWidth: 1,
@@ -30,6 +30,7 @@ CustomInput.propTypes = {
     onClick: PropTypes.func,
     onChange: PropTypes.func,
     readOnly: PropTypes.bool,
+    cursorPointer: PropTypes.bool
 }
 
 export default CustomInput;

@@ -1,25 +1,36 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
+
+const StyledInput = styled.input`
+    width: 100%;
+    max-width: 400px;
+    cursor: ${({cursorPointer}) => (cursorPointer ? 'pointer' : 'auto')};
+    background-color: transparent;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: goldenrod;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    font-family: Source Code Pro, serif;
+    font-weight: 300;
+    font-size: 12px;
+    padding: 5px;
+    text-align: center;
+    outline: none;
+    
+    @media (max-width: 480px) {
+        max-width: 300px;
+        font-size: 9px;
+    }
+`;
 
 const CustomInput = ({id, value, placeholder, cursorPointer = false, readOnly = false, onClick, onChange}) => {
     return (
-        <input readOnly={readOnly} id={id} onClick={onClick} style={{
-            cursor: cursorPointer ? 'pointer' : 'auto',
-            backgroundColor: 'transparent',
-            borderRadius: 6,
-            borderWidth: 1,
-            borderColor: 'goldenrod',
-            marginTop: 10,
-            marginBottom: 20,
-            color: 'white',
-            fontFamily: 'Source Code Pro',
-            fontWeight: 300,
-            fontSize: 12,
-            padding: 5,
-            width: 400,
-            textAlign: 'center',
-            outline: 'none'
-        }} placeholder={placeholder} onChange={onChange} value={value}/>
+        <StyledInput cursorPointer={cursorPointer} readOnly={readOnly} id={id} onClick={onClick}
+                     placeholder={placeholder} onChange={onChange}
+                     value={value}/>
     )
 }
 

@@ -40,12 +40,12 @@ export const hallOfFameFaq = [
     {
         id: 0,
         q: 'What is it?',
-        a: 'Hall of Fame is a place where each user visiting my website can leave one unique message. Leaving a message is only possible after solving the puzzle.'
+        a: 'Hall of Fame is a place where each user visiting my website can leave one unique message. Leaving a message is only possible after solving the puzzle. After solving the puzzle, your answer will be saved in local storage (you don\'t need to solve it again).'
     },
     {
         id: 1,
         q: 'What does it mean unique?',
-        a: 'The user has the option to send only one message from a given IP address. It will not be possible to resend the message.'
+        a: 'The message is unique for the given username (after sending the message, the username is taken and cannot be used again).'
     },
     {
         id: 2,
@@ -60,7 +60,7 @@ export const hallOfFameFaq = [
     {
         id: 4,
         q: 'What do the console statuses mean?',
-        a: 'The console status informs the user about the successful or negative course of the actions performed. Full list of statuses: \n\nLOADED // 0 - initial state after starting the console.\nSOLVED // 1 - the puzzle was solved correctly.\nFETCHING // 2 - data is retrieved from an external server.\nCONNECTED // 3 - connection to an external server has been established.\nSUCCESS // 4 - the message was sent successfully and posted on the Hall of Fame board.\nERROR // 5 - incorrect answer was given while solving the puzzle.\nERROR // 6 - there was a problem connecting with server (problem with internet connection).\nERROR // 7 - there was a problem sending the message (data validation problem).'
+        a: 'The console status informs the user about the successful or negative course of the actions performed. Full list of statuses: \n\nFETCHING // 0 - data is retrieved from an external server.\nCONNECTED // 1 - connection to an external server has been established.\nSOLVED // 2 - the puzzle was solved correctly.\nLOADED // 3 - the messages have been loaded successfully.\nSUCCESS // 4 - the message was sent successfully and posted on the Hall of Fame board.\nERROR // 5 - incorrect answer was given while solving the puzzle.\nERROR // 6 - there was a problem connecting with server (problem with internet connection).\nERROR // 7 - there was a problem sending the message (data validation problem).'
     }
 ];
 

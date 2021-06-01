@@ -35,7 +35,7 @@ const MessageFaq = () => {
     };
 
     return (
-        <div id={'faq'} style={{backgroundColor: '#00000099', width: 700, marginBottom: 30}}>
+        <div id={'faq'} style={{backgroundColor: '#00000099', maxWidth: 700, marginBottom: 30, marginLeft: 5, marginRight: 5}}>
             <p style={{
                 marginTop: 10,
                 fontSize: 16,
@@ -84,7 +84,7 @@ const MessageFaq = () => {
                 marginBottom: 25,
                 color: 'white',
                 fontSize: 12
-            }}>This page is only available in <span style={{color: 'yellow'}}>English</span>. Someday I will add a translation.</p>
+            }}>This page is only available in <span style={{color: 'yellow'}}>English</span>.</p>
             <p style={{
                 fontFamily: 'Source Code Pro',
                 fontWeight: 300,

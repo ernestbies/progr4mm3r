@@ -5,32 +5,33 @@ import {fetchPosts, sendPost} from "../utils/helpers/FetchData";
 import {AiFillLock, AiFillUnlock} from "react-icons/ai";
 import CustomInput from "./CustomInput";
 
-const MessageBox = () => {
+const MessageBox = ({passToParent}) => {
 
+    // Console statuses. Full explanation available at FAQ :: information.js
     const statusList = {
-        init: {
-            statusNo: 0,
-            statusCode: 'LOADED',
-            statusMessage: 'Console loaded.',
-            statusColor: 'white'
-        },
-        correct: {
-            statusNo: 1,
-            statusCode: 'SOLVED',
-            statusMessage: 'Correctly answered.',
-            statusColor: 'green'
-        },
         fetch: {
-            statusNo: 2,
+            statusNo: 0,
             statusCode: 'FETCHING',
             statusMessage: 'Fetching data.',
             statusColor: 'grey'
         },
         connect: {
-            statusNo: 3,
+            statusNo: 1,
             statusCode: 'CONNECTED',
             statusMessage: 'Connected with server.',
             statusColor: 'grey'
+        },
+        correct: {
+            statusNo: 2,
+            statusCode: 'SOLVED',
+            statusMessage: 'Correctly answered.',
+            statusColor: 'green'
+        },
+        load: {
+            statusNo: 3,
+            statusCode: 'LOADED',
+            statusMessage: 'Messages loaded.',
+            statusColor: 'white',
         },
         success: {
             statusNo: 4,
@@ -61,7 +62,7 @@ const MessageBox = () => {
     const [messages, setMessages] = useState([]);
     const [username, setUsername] = useState('');
     const [message, setMessage] = useState('');
-    const [status, setStatus] = useState(statusList.init);
+    const [status, setStatus] = useState(statusList.fetch);
     const [isFetching, setIsFetching] = useState(true);
     const [answer, setAnswer] = useState('');
 
@@ -71,27 +72,34 @@ const MessageBox = () => {
     useEffect(() => {
         let interval = setInterval(getCurrentDate, 1000);
 
-        return () => {
-            clearInterval(interval);
-        }
-    }, []);
-
-    useEffect(() => {
-        phase === 2 && fetchMessages(true);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [phase]);
-
-    const fetchMessages = (changeStatus) => {
         fetchPosts().then((res) => {
             setIsFetching(false);
-            changeStatus && setStatus(statusList.connect);
             setMessages(res);
+            passToParent(res.length);
+            setStatus(statusList.connect);
         }).catch((error) => {
             setIsFetching(false);
             setStatus(statusList.error_fetch);
             console.error(error);
         });
-    }
+
+        localStorage.getItem('token') && setPhase(2);
+
+        return () => {
+            clearInterval(interval);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    useEffect(() => {
+        if (phase === 2) {
+            if (!localStorage.getItem('token')) {
+                localStorage.setItem('token', 'TOKEN_ACTIVE');
+            }
+            setStatus(statusList.load);
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [phase]);
 
     const renderMessages = () => {
         let view = [];
@@ -107,7 +115,6 @@ const MessageBox = () => {
     const confirmChanges = () => {
         if (!phase) {
             const correctAnswer = atob(HALL_OF_FAME_MYSTERY);
-            console.log(correctAnswer, answer);
             if (correctAnswer === answer) {
                 setPhase(1);
                 setStatus(statusList.correct);
@@ -115,19 +122,20 @@ const MessageBox = () => {
                 setStatus(statusList.error_solve);
                 setAnswer('');
             }
-        } else if(phase === 1) {
+        } else if (phase === 1) {
             setPhase(2);
-            setStatus(statusList.fetch);
         } else {
             const post = {
                 username: username,
-                message: message
+                message: message,
+                date: Date.now()
             };
 
             sendPost(post).then(res => {
                 if (res.status === 201) {
+                    messages.push(post);
+                    passToParent(messages.length);
                     setStatus(statusList.success);
-                    fetchMessages(false);
                     setUsername('');
                     setMessage('');
                 } else {
@@ -148,15 +156,17 @@ const MessageBox = () => {
     return (
         <div style={{
             userSelect: 'none',
-            width: 700,
-            height: 500,
+            width: '95%',
+            maxWidth: 700,
+            height: 550,
             backgroundColor: '#300A24',
             border: '1px solid #FFFFFF',
             textAlign: 'left',
             display: 'flex',
             flexDirection: 'column',
+            marginTop: 40
         }}>
-            <div style={{flex: 3, height: 200, overflowY: 'scroll'}}>
+            <div style={{flex: 4, borderBottomStyle: 'solid', borderBottomWidth: 1, overflowY: 'scroll'}}>
                 {
                     (!phase || phase === 1) ?
                         <div style={{position: 'relative', width: '100%', height: '100%'}}>
@@ -168,21 +178,25 @@ const MessageBox = () => {
                                 zIndex: 1,
                                 display: 'flex',
                                 alignItems: 'center',
+                                justifyContent: 'center',
                                 flexDirection: 'column'
                             }}>
                                 <p style={{
-                                    marginTop: 80,
                                     fontFamily: 'Source Code Pro',
                                     fontWeight: 300,
                                     color: 'white',
-                                    textAlign: 'center'
+                                    textAlign: 'center',
+                                    marginTop: 60,
+                                    marginLeft: 10,
+                                    marginRight: 10,
+                                    fontSize: 14
                                 }}>
                                     {'resolve the mystery to enter '} <span
                                     style={{color: 'goldenrod'}}>{'hall of fame'}</span>
                                 </p>
                                 {
                                     !phase ?
-                                        <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                                        <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                                             <AiFillLock size={100} color={'goldenrod'}/>
                                             <CustomInput readOnly
                                                          cursorPointer
@@ -286,7 +300,7 @@ const MessageBox = () => {
                             }}>
                                 {'Initializing script...\n'}
                                 {'Fetching all messages from external server...\n'}
-                                {status.statusNo !== 6  && 'Messages loaded successfully!\n'}
+                                {status.statusNo !== 6 && 'Messages loaded successfully!\n'}
                                 {status.statusNo === 6 && 'There was an error connecting with server. Please refresh the page and try again.\n'}
                             </p>
                             <div style={{marginBottom: 10}}>
@@ -300,7 +314,7 @@ const MessageBox = () => {
                     <p style={{
                         fontFamily: 'Source Code Pro',
                         color: 'white',
-                        fontSize: 11,
+                        fontSize: 10,
                         marginLeft: 5,
                         marginTop: 5
                     }}>> Message creator for &copy; {WEBSITE_NAME} Hall of Fame Console.</p>
@@ -308,7 +322,7 @@ const MessageBox = () => {
                         fontFamily: 'Source Code Pro',
                         fontWeight: 700,
                         color: 'yellow',
-                        fontSize: 11,
+                        fontSize: 10,
                         marginLeft: 5,
                         marginTop: -15,
                     }}>> Info<span style={{color: 'white', fontWeight: 400}}>
@@ -318,7 +332,7 @@ const MessageBox = () => {
                         fontFamily: 'Source Code Pro',
                         fontWeight: 700,
                         color: 'red',
-                        fontSize: 11,
+                        fontSize: 10,
                         marginLeft: 5,
                         marginTop: -15,
                     }}>> Warning<span style={{color: 'white', fontWeight: 400}}>
@@ -328,21 +342,21 @@ const MessageBox = () => {
                         fontFamily: 'Source Code Pro',
                         fontWeight: 400,
                         color: 'white',
-                        fontSize: 11,
+                        fontSize: 10,
                         marginLeft: 5,
                         marginTop: -15,
                     }}>{'> Date: '} <span id={'dateTimer'}/></p>
                     <div style={{marginTop: -10}}>
                         <p style={{
-                            display: 'inline',
+                            display: phase === 2 ? 'inline' : '',
                             fontFamily: 'Source Code Pro',
                             fontWeight: 400,
                             color: 'white',
-                            fontSize: 11,
+                            fontSize: 10,
                             marginLeft: 5,
                         }}>{!phase ? '> You cannot send message until you did not solve mystery.' :
                             phase === 1 ? '> Congratulations on solving the mystery.'
-                            : '> Username (' + (20 - username.length) + ' characters left): '}</p>
+                                : '> Username (' + (20 - username.length) + ' characters left): '}</p>
                         {phase === 2 && <input placeholder={'Enter your username...'}
                                                onChange={(event) => setUsername(event.target.value)}
                                                maxLength={20}
@@ -351,23 +365,23 @@ const MessageBox = () => {
                                                    color: 'white',
                                                    fontFamily: 'Source Code Pro',
                                                    fontWeight: 400,
-                                                   fontSize: 11,
+                                                   fontSize: 10,
                                                    backgroundColor: 'transparent',
                                                    borderWidth: 0,
                                                    width: 150
                                                }}/>}
                     </div>
-                    <div style={{marginTop: -8}}>
+                    <div style={phase === 2 ? {marginTop: -8} : {marginTop: -16}}>
                         <p style={{
-                            display: 'inline',
+                            display: phase === 2 ? 'inline' : '',
                             fontFamily: 'Source Code Pro',
                             fontWeight: 400,
                             color: 'white',
-                            fontSize: 11,
+                            fontSize: 10,
                             marginLeft: 5,
                         }}>{!phase ? '> If you are sure of your answer, click the CHECK button. ' :
                             phase === 1 ? '> If you want to enter Hall of Fame, click the ENTER button.'
-                            : '> Message (' + (300 - message.length) + ' characters left): '}</p>
+                                : '> Message (' + (300 - message.length) + ' characters left): '}</p>
                         {phase === 2 && <input placeholder={'Enter your message...'}
                                                maxLength={300}
                                                value={message}
@@ -376,36 +390,51 @@ const MessageBox = () => {
                                                    color: 'white',
                                                    fontFamily: 'Source Code Pro',
                                                    fontWeight: 400,
-                                                   fontSize: 11,
+                                                   fontSize: 10,
                                                    backgroundColor: 'transparent',
                                                    borderWidth: 0,
-                                                   width: 300
+                                                   width: 300,
+                                                   marginBottom: 5
                                                }}/>}
                     </div>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'column', flex: 1, backgroundColor: '#696969'}}>
                     <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                         <button onClick={() => confirmChanges()}
-                                style={{width: 80, fontFamily: 'Source Code Pro', fontSize: 12}}>
+                                style={{
+                                    width: 80,
+                                    marginLeft: 10,
+                                    marginRight: 10,
+                                    fontFamily: 'Source Code Pro',
+                                    fontSize: 11
+                                }}>
                             {
                                 !phase ? 'CHECK' : phase === 1 ? 'ENTER' : 'SEND'
                             }
                         </button>
                     </div>
-                    <div style={{flex: 1, backgroundColor: '#A9A9A9', textAlign: 'center'}}>
-                        <p style={{fontFamily: 'Source Code Pro', fontSize: 12, marginBottom: 10}}>:: Status ::</p>
-                        <p style={{
+                    <div style={{
+                        flex: 2,
+                        backgroundColor: '#A9A9A9',
+                        textAlign: 'center',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                    }}>
+                        <span style={{fontFamily: 'Source Code Pro', fontSize: 11, marginBottom: 10}}>:: Status ::</span>
+                        <span style={{
                             fontFamily: 'Source Code Pro',
                             fontWeight: 700,
                             fontSize: 10,
                             margin: 0,
                             color: status.statusColor
-                        }}>{status.statusCode} {'//'} {status.statusNo || 0}</p>
-                        <p style={{
+                        }}>{status.statusCode} {'//'} {status.statusNo || 0}</span>
+                        <span style={{
                             fontFamily: 'Source Code Pro',
                             fontSize: 9,
-                            margin: 0
-                        }}>{status.statusMessage}</p>
+                            margin: 0,
+                        }}>{status.statusMessage}</span>
                     </div>
                 </div>
             </div>

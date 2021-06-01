@@ -13,20 +13,23 @@ const postController = {
     },
     createPost: async (req, res) => {
         const {body} = req;
-        body.date = Date.now();
-        const {error} = postValidation(body);
-
-        if (error) {
-            res.status(401).send({errorCode: 401, errorMessage: error.details[0].message});
+        const users = await Post.find({username: body.username});
+        if(users.length) {
+            res.status(401).send({errorCode: 401, errorMessage: 'Username already taken.'});
         } else {
-            const newPost = new Post(body);
-            try {
-                await newPost.save();
-            } catch (error) {
-                res.status(500).send('Cannot create new post. ' + error);
-            }
+            const {error} = postValidation(body);
+            if (error) {
+                res.status(401).send({errorCode: 401, errorMessage: error.details[0].message});
+            } else {
+                const newPost = new Post(body);
+                try {
+                    await newPost.save();
+                } catch (error) {
+                    res.status(500).send('Cannot create new post. ' + error);
+                }
 
-            res.status(201).send(convert(newPost));
+                res.status(201).send(convert(newPost));
+            }
         }
     }
 };

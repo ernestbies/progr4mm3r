@@ -9,6 +9,8 @@ import i18next from "i18next";
 import common_en from "./translations/en.json";
 import common_pl from "./translations/pl.json";
 import {BrowserRouter as Router} from 'react-router-dom';
+import {Provider} from "react-redux";
+import store from "./store/store";
 
 i18next.init({
     interpolation: { escapeValue: false },
@@ -24,11 +26,13 @@ i18next.init({
 });
 
 ReactDOM.render(
+    <Provider store={store}>
         <I18nextProvider i18n={i18next}>
             <Router>
                 <App/>
             </Router>
-        </I18nextProvider>,
+        </I18nextProvider>
+    </Provider>,
     document.getElementById('root')
 );
 

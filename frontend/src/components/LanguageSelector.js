@@ -34,7 +34,7 @@ const LanguageDivider = styled.span`
     font-family: Open Sans, serif;
 `;
 
-const LanguageSelector = ({currentTheme = 'dark', mobileMenu = false}) => {
+const LanguageSelector = ({currentTheme, mobileMenu = false}) => {
 
     const {i18n} = useTranslation('common');
 
@@ -56,6 +56,10 @@ const LanguageSelector = ({currentTheme = 'dark', mobileMenu = false}) => {
 LanguageSelector.propTypes = {
     currentTheme: PropTypes.oneOf(['dark', 'light']),
     mobileMenu: PropTypes.bool
+}
+
+LanguageSelector.defaultProps = {
+    currentTheme: 'dark'
 }
 
 export default LanguageSelector;

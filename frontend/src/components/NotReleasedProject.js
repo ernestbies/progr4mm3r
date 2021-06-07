@@ -18,10 +18,7 @@ const NotReleasedProject = ({projectName}) => {
             textAlign: 'center',
         }}>
             <Link style={{textDecoration: 'none'}} to={'/hall-of-fame'}>
-                <p className={'redirect-text'}>
-                    <span style={{fontWeight: 'bold'}}>{'//'} </span>
-                    <span style={{color: 'white'}}>{t('we')} </span>
-                    &#10084; <span style={{color: 'white'}}>javascript</span><br/>
+                <p className={'colored-text'}>
                     <span style={{fontWeight: 'bold'}}>~ </span>
                     <span style={{color: 'white'}}>{t('click_here_to')} </span>
                     cd {projectName}

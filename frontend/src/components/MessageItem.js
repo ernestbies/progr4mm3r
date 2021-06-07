@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 import {formatData, NOT_RELEASED_PROJECT} from "../utils/information";
 
-export const MessageItem = ({date, username, message, isAdmin = false}) => {
+export const MessageItem = ({date, username, message, isAdmin}) => {
 
     return (
         <div style={{fontFamily: 'Source Code Pro', color: 'white', wordBreak: 'break-all', fontSize: 11, marginLeft: 5}}>
@@ -23,6 +23,10 @@ MessageItem.propTypes = {
     username: PropTypes.string.isRequired,
     message: PropTypes.string.isRequired,
     isAdmin: PropTypes.bool
+}
+
+MessageItem.defaultProps = {
+    isAdmin: false
 }
 
 export default MessageItem;

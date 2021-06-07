@@ -12,6 +12,9 @@
     padding: 1rem 1.2rem;
     width: 80%;
     color: white;
+    font-weight: 300;
+    font-family: "Open Sans", serif;
+    font-size: 14px;
     margin: 1rem auto 2rem;
 }
 
@@ -21,18 +24,20 @@
     linear-gradient(to bottom, orange 4px, transparent 4px) 100% 0,
     linear-gradient(to top, orange 4px, transparent 4px) 0 100%;
     background-repeat: no-repeat;
-    background-size: 20px 20px;
+    background-size: 15px 15px;
 }
 
 .quote-component blockquote.quote:before,
 
 .quote-component blockquote.quote:after{
+    font-family: Cambria, serif;
     position: absolute;
     color: orange;
-    font-size: 60px;
+    font-size: 50px;
 }
 
 .quote-component blockquote.EN:before{
+    font-family: Cambria, serif;
     content: '“';
     top: -30px;
     margin-right: -20px;

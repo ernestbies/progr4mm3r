@@ -1,7 +1,6 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
 import TimelineSeparator from '@material-ui/lab/TimelineSeparator';
@@ -16,6 +15,7 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import WatchIcon from '@material-ui/icons/LiveTv';
 import {useTranslation} from "react-i18next";
+import {TimelineText} from "./TimelineText";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -46,22 +46,7 @@ export default function MyTimeline() {
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper}>
-                        <Typography style={{
-                            color: 'gray',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontWeight: 'bold',
-                            fontSize: 14
-                        }}>{t('eat')}</Typography>
-                        <Typography style={{
-                            color: 'orange',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontSize: 14
-                        }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
-                            {t('eat_text')}
-                        </Typography>
+                        <TimelineText type={t('eat')} text={t('eat_text')}/>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -74,22 +59,7 @@ export default function MyTimeline() {
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
-                        <Typography style={{
-                            color: 'gray',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontWeight: 'bold',
-                            fontSize: 14
-                        }}>{t('code')}</Typography>
-                        <Typography style={{
-                            color: 'orange',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontSize: 14
-                        }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
-                            {t('code_text')}
-                        </Typography>
+                        <TimelineText type={t('code')} text={t('code_text')}/>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -102,22 +72,7 @@ export default function MyTimeline() {
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper}>
-                        <Typography style={{
-                            color: 'gray',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontWeight: 'bold',
-                            fontSize: 14
-                        }}>{t('play')}</Typography>
-                        <Typography style={{
-                            color: 'orange',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontSize: 14
-                        }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
-                            {t('play_text')}
-                        </Typography>
+                        <TimelineText type={t('play')} text={t('play_text')}/>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -130,22 +85,7 @@ export default function MyTimeline() {
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
-                        <Typography style={{
-                            color: 'gray',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontWeight: 'bold',
-                            fontSize: 14
-                        }}>{t('friends')}</Typography>
-                        <Typography style={{
-                            color: 'orange',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontSize: 14
-                        }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
-                            {t('friends_text')}
-                        </Typography>
+                        <TimelineText type={t('friends')} text={t('friends_text')}/>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -158,22 +98,7 @@ export default function MyTimeline() {
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper}>
-                        <Typography style={{
-                            color: 'gray',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontWeight: 'bold',
-                            fontSize: 14
-                        }}>{t('movies')}</Typography>
-                        <Typography style={{
-                            color: 'orange',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontSize: 14
-                        }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
-                            {t('movies_text')}
-                        </Typography>
+                        <TimelineText type={t('movies')} text={t('movies_text')}/>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -186,22 +111,7 @@ export default function MyTimeline() {
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
-                        <Typography style={{
-                            color: 'gray',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontWeight: 'bold',
-                            fontSize: 14
-                        }}>{t('sleep')}</Typography>
-                        <Typography style={{
-                            color: 'orange',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontSize: 14
-                        }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
-                            {t('sleep_text')}
-                        </Typography>
+                        <TimelineText type={t('sleep')} text={t('sleep_text')}/>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
@@ -213,22 +123,7 @@ export default function MyTimeline() {
                 </TimelineSeparator>
                 <TimelineContent>
                     <Paper elevation={3} className={classes.paper}>
-                        <Typography style={{
-                            color: 'gray',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontWeight: 'bold',
-                            fontSize: 14
-                        }}>{t('repeat')}</Typography>
-                        <Typography style={{
-                            color: 'orange',
-                            display: 'inline',
-                            fontFamily: 'Open Sans',
-                            fontSize: 14
-                        }}> {'//'} </Typography>
-                        <Typography style={{color: 'gray', display: 'inline', fontFamily: 'Open Sans', fontSize: 14}}>
-                            {t('repeat_text')}
-                        </Typography>
+                        <TimelineText type={t('repeat')} text={t('repeat_text')}/>
                     </Paper>
                 </TimelineContent>
             </TimelineItem>

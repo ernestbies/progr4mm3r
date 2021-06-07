@@ -19,15 +19,18 @@ const Hobby = () => {
                     {renderElements(hobby[i18n.language], 'hobby')}
                 </Carousel>
             </div>
-            <div className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper2.jpg)",}}>
-                <div style={{backgroundColor: '#00000090', textAlign: 'center'}}>
+            <div className={'video-container'}>
+                <div style={{textAlign: 'center'}}>
                     <p className={'header-text-small'}>{t('timeline')}</p>
                 </div>
-                <div style={{backgroundColor: '#00000090', display: 'flex', flexDirection: 'column'}}>
+                <video className={'video'} autoPlay muted loop>
+                    <source src={'/videos/background.mp4'} type={'video/mp4'}/>
+                </video>npm
+                <div style={{display: 'flex', flexDirection: 'column'}}>
                     <MyTimeline/>
-                    <section className={'quote-component row col-sm-12 col-md-6'}>
-                        <blockquote className={'callout quote EN'}>{quote.text}
-                        <cite> – </cite>{quote.author}</blockquote>
+                    <section className={'quote-component row col-sm col-md-4'}>
+                        <blockquote className={'quote EN'}>{quote.text}
+                            <cite> – </cite>{quote.author}</blockquote>
                     </section>
                 </div>
             </div>

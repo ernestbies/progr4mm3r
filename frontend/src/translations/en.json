@@ -10,7 +10,7 @@
   "and2": "&",
   "see": "see",
   "my_projects": "my projects",
-  "technologies_text": "Technologies used in project",
+  "technologies_text": "Technology stack",
   "technical_info": "Technical information",
   "check_out_project_page": "Check out project page",
   "check_out_presentation_video": "Check out the presentation video",
@@ -62,6 +62,5 @@
   "alert_error_text": "There was a problem sending your message. Please try again later!",
   "hall-of-fame": "Hall of Fame",
   "click_here_to": "click here to",
-  "we": "we",
   "contact_info": "I will respond on all messages as soon as it is possible. Thank you for your interest."
 }

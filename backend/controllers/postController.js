@@ -1,4 +1,5 @@
 import Post from '../models/post';
+import Stat from '../models/stat';
 import postValidation from "../utils/postValidationSchema";
 import convert from "../services/mongoConverter";
 
@@ -6,7 +7,16 @@ const postController = {
     getAllPosts: async (req, res) => {
         try {
             const posts = await Post.find();
-            res.status(200).send(convert(posts));
+            const stats = await Stat.find();
+            let newStats = {};
+
+            if(!stats.length) {
+                await new Stat({visitors: 0}).save();
+            } else {
+                newStats = await Stat.findByIdAndUpdate(stats[0]._id, {$inc: {visitors : 1}});
+            }
+
+            res.status(200).send({visitors: newStats.visitors, posts: convert(posts)});
         } catch (error) {
             res.status(500).send(error)
         }

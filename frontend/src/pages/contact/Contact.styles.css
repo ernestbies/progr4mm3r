@@ -24,6 +24,7 @@
     color: white;
     margin-top: 10px;
     font-size: 65px;
+    transition: color 0.8s ease-in-out;
 }
 
 .icon[type = 'email'] {

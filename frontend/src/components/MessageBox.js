@@ -74,8 +74,8 @@ const MessageBox = ({passToParent}) => {
 
         fetchPosts().then((res) => {
             setIsFetching(false);
-            setMessages(res);
-            passToParent(res.length);
+            setMessages(res.posts);
+            passToParent({visitors: res.visitors, numberOfMessages: res.posts.length});
             setStatus(statusList.connect);
         }).catch((error) => {
             setIsFetching(false);
@@ -103,11 +103,14 @@ const MessageBox = ({passToParent}) => {
 
     const renderMessages = () => {
         let view = [];
-        messages.map((el) =>
-            view.push(
-                <MessageItem key={el.id} date={el.date} username={el.username} message={el.message}/>
-            )
-        );
+
+        if(messages.length) {
+            messages.map((el, index) =>
+                view.push(
+                    <MessageItem key={el.id + index.toString()} date={el.date} username={el.username} message={el.message}/>
+                )
+            );
+        }
 
         return view;
     }
@@ -134,7 +137,7 @@ const MessageBox = ({passToParent}) => {
             sendPost(post).then(res => {
                 if (res.status === 201) {
                     messages.push(post);
-                    passToParent(messages.length);
+                    passToParent({numberOfMessages: messages.length});
                     setStatus(statusList.success);
                     setUsername('');
                     setMessage('');
@@ -189,7 +192,7 @@ const MessageBox = ({passToParent}) => {
                                     marginTop: 60,
                                     marginLeft: 10,
                                     marginRight: 10,
-                                    fontSize: 14
+                                    fontSize: 15
                                 }}>
                                     {'resolve the mystery to enter '} <span
                                     style={{color: 'goldenrod'}}>{'hall of fame'}</span>
@@ -204,8 +207,7 @@ const MessageBox = ({passToParent}) => {
                                                          onClick={() => copyText()}
                                                          value={HALL_OF_FAME_MYSTERY}/>
 
-                                            <CustomInput readOnly={false}
-                                                         onChange={(e) => setAnswer(e.target.value)}
+                                            <CustomInput onChange={(e) => setAnswer(e.target.value)}
                                                          value={answer}
                                                          placeholder={'enter your answer here'}/>
                                         </div> :

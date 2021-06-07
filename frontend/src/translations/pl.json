@@ -10,7 +10,7 @@
   "and2": "i",
   "see": "zobaczyć",
   "my_projects": "moje projekty",
-  "technologies_text": "Technologie użyte w projekcie",
+  "technologies_text": "Stos technologiczny",
   "technical_info": "Informacje techniczne",
   "check_out_project_page": "Sprawdź stronę projektu",
   "check_out_presentation_video": "Sprawdź prezentację projektu",
@@ -62,6 +62,5 @@
   "alert_error_text": "Wystąpił problem z wysłaniem Twojej wiadomości. Spróbuj ponownie później!",
   "hall-of-fame": "Sala sławy",
   "click_here_to": "kliknij aby wykonać",
-  "we": "my",
   "contact_info": "Odpowiadam na wszystkie wiadomości tak szybko, jak to tylko możliwe. Dziękuję za zainteresowanie."
 }

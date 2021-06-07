@@ -72,7 +72,8 @@ const Contact = () => {
                 }}>
                     <p className={'header-text-small'}>{t('dm')}</p>
                     <ContactForm/>
-                    <p style={{color: 'white', marginTop: 10, fontFamily: 'Open Sans', fontWeight: 300, fontSize: 10}}>
+                    <p style={{color: 'white', marginTop: 10, fontFamily: 'Open Sans',
+                        fontWeight: 300, fontSize: 10}}>
                         <span style={{color: 'red'}}>*</span> {t('contact_info')} {':)'}</p>
                 </div>
             </div>

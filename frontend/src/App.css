@@ -46,6 +46,28 @@ body {
   width: 100%;
 }
 
+.video-container {
+  position: relative;
+  border-top: 1px solid #FFFFFF90;
+  background-color: black;
+  z-index: 0;
+}
+
+.video {
+  z-index: -1;
+  max-width: 80%;
+  position: absolute;
+  border-style: solid;
+  border-radius: 250px;
+  border-width: 0;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
 .item-dashboard {
   background-color: #282c34;
   text-align: center;
@@ -293,7 +315,7 @@ body {
   color: black;
 }
 
-.redirect-text {
+.colored-text {
   color: orange;
   font-weight: 300;
   font-family: 'Source Code Pro', serif;

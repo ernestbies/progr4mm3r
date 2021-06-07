@@ -26,7 +26,7 @@ const StyledInput = styled.input`
     }
 `;
 
-const CustomInput = ({id, value, placeholder, cursorPointer = false, readOnly = false, onClick, onChange}) => {
+const CustomInput = ({id, value, placeholder, cursorPointer, readOnly, onClick, onChange}) => {
     return (
         <StyledInput cursorPointer={cursorPointer} readOnly={readOnly} id={id} onClick={onClick}
                      placeholder={placeholder} onChange={onChange}
@@ -42,6 +42,11 @@ CustomInput.propTypes = {
     onChange: PropTypes.func,
     readOnly: PropTypes.bool,
     cursorPointer: PropTypes.bool
+}
+
+CustomInput.defaultProps = {
+    cursorPointer: false,
+    readOnly: false
 }
 
 export default CustomInput;

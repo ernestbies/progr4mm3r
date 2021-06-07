@@ -4,17 +4,20 @@ import Footer from "../parts/footer/Footer";
 import MessageBox from "../components/MessageBox";
 import MessageFaq from "../components/MessageFaq";
 import {AiOutlineInfoCircle, BiStats} from "react-icons/all";
+import CounterSection from "../components/CounterSection";
 
-const ProjectPage = ({history}) => {
+const ProjectPage = ({counter, history}) => {
 
     const [numberOfMessages, setNumberOfMessages] = useState(0);
+    const [numberOfVisitors, setNumberOfVisitors] = useState(0);
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const getNumberOfMessages = (value) => {
-        setNumberOfMessages(value);
+    const getStats = (stats) => {
+        stats?.numberOfMessages && setNumberOfMessages(stats.numberOfMessages);
+        stats?.visitors && setNumberOfVisitors(stats.visitors);
     }
 
     return (
@@ -43,7 +46,7 @@ const ProjectPage = ({history}) => {
                         width: '95%',
                         maxWidth: 700,
                         backgroundColor: '#00000090',
-                        paddingTop: 5
+                        paddingTop: 10
                     }}>
                         <div style={{display: 'flex', justifyContent: 'center'}}>
                             <AiOutlineInfoCircle style={{marginTop: 4, marginRight: 10}} size={16} color={'orange'}/>
@@ -91,7 +94,7 @@ const ProjectPage = ({history}) => {
                             fontSize: 13,
                             marginTop: -10,
                         }}>{'> '}<span style={{color: 'white'}}>{'This page has been visited '}</span><span
-                            style={{color: 'orange', fontWeight: 'bold'}}>{0}</span>
+                            style={{color: 'orange', fontWeight: 'bold'}}>{numberOfVisitors}</span>
                             <span style={{color: 'white'}}>{' times.'}</span>
                         </p>
                         <p style={{
@@ -105,11 +108,12 @@ const ProjectPage = ({history}) => {
                             <span style={{color: 'white'}}>{' messages on the Hall of Fame board.'}</span>
                         </p>
                     </div>
-                    <MessageBox passToParent={getNumberOfMessages}/>
+                    <MessageBox passToParent={getStats}/>
                     <button className={'orange-button'} onClick={() => history.push('/')}>
                         {'Back to the main page'}
                     </button>
                     <MessageFaq/>
+                    <CounterSection/>
                 </div>
             </div>
             <Footer/>

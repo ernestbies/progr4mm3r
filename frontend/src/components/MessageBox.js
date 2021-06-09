@@ -4,89 +4,46 @@ import MessageItem from "./MessageItem";
 import {fetchPosts, sendPost} from "../utils/helpers/FetchData";
 import {AiFillLock, AiFillUnlock} from "react-icons/ai";
 import CustomInput from "./CustomInput";
+import {connect} from "react-redux";
+import {setStatus} from "../actions/statusActions";
 
-const MessageBox = ({passToParent}) => {
+const MessageBox = ({passToParent, status, setStatus}) => {
 
-    // Console statuses. Full explanation available at FAQ :: information.js
-    const statusList = {
-        fetch: {
-            statusNo: 0,
-            statusCode: 'FETCHING',
-            statusMessage: 'Fetching data.',
-            statusColor: 'grey'
-        },
-        connect: {
-            statusNo: 1,
-            statusCode: 'CONNECTED',
-            statusMessage: 'Connected with server.',
-            statusColor: 'grey'
-        },
-        correct: {
-            statusNo: 2,
-            statusCode: 'SOLVED',
-            statusMessage: 'Correctly answered.',
-            statusColor: 'green'
-        },
-        load: {
-            statusNo: 3,
-            statusCode: 'LOADED',
-            statusMessage: 'Messages loaded.',
-            statusColor: 'white',
-        },
-        success: {
-            statusNo: 4,
-            statusCode: 'SUCCESS',
-            statusMessage: 'Message sent.',
-            statusColor: 'green'
-        },
-        error_solve: {
-            statusNo: 5,
-            statusCode: 'ERROR',
-            statusMessage: 'Wrong answer.',
-            statusColor: 'red'
-        },
-        error_fetch: {
-            statusNo: 6,
-            statusCode: 'ERROR',
-            statusMessage: 'Fetching error.',
-            statusColor: 'red'
-        },
-        error_send: {
-            statusNo: 7,
-            statusCode: 'ERROR',
-            statusMessage: 'Sending error.',
-            statusColor: 'red'
-        }
-    }
-
+    // Component state with messages & statuses
     const [messages, setMessages] = useState([]);
     const [username, setUsername] = useState('');
     const [message, setMessage] = useState('');
-    const [status, setStatus] = useState(statusList.fetch);
     const [isFetching, setIsFetching] = useState(true);
     const [answer, setAnswer] = useState('');
 
-    // Hall of Fame phases: 0 - initial phase, 1 - correct answer, 2 - unlocked.
+    // Controller to abort a fetch on component unmount
+    const controller = new AbortController();
+    const signal = controller.signal;
+
+    // Hall of Fame phases: 0 - initial phase, 1 - correct answer, 2 - unlocked
     const [phase, setPhase] = useState(0);
 
     useEffect(() => {
         let interval = setInterval(getCurrentDate, 1000);
 
-        fetchPosts().then((res) => {
+        fetchPosts(signal).then((res) => {
             setIsFetching(false);
             setMessages(res.posts);
             passToParent({visitors: res.visitors, numberOfMessages: res.posts.length});
-            setStatus(statusList.connect);
+            setStatus('connect');
         }).catch((error) => {
-            setIsFetching(false);
-            setStatus(statusList.error_fetch);
-            console.error(error);
+            if (error.name !== 'AbortError') {
+                setIsFetching(false);
+                setStatus('connect', true);
+                console.error('Error while fetching messages: ' + error);
+            }
         });
 
         localStorage.getItem('token') && setPhase(2);
 
         return () => {
             clearInterval(interval);
+            controller.abort();
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -96,23 +53,21 @@ const MessageBox = ({passToParent}) => {
             if (!localStorage.getItem('token')) {
                 localStorage.setItem('token', 'TOKEN_ACTIVE');
             }
-            setStatus(statusList.load);
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [phase]);
 
     const renderMessages = () => {
-        let view = [];
-
-        if(messages.length) {
-            messages.map((el, index) =>
-                view.push(
-                    <MessageItem key={el.id + index.toString()} date={el.date} username={el.username} message={el.message}/>
+        if (messages.length) {
+            return (
+                messages.map((el, index) =>
+                    (
+                        <MessageItem key={el.id + index.toString()} date={el.date} username={el.username}
+                                     message={el.message}/>
+                    )
                 )
-            );
+            )
         }
-
-        return view;
     }
 
     const confirmChanges = () => {
@@ -120,9 +75,9 @@ const MessageBox = ({passToParent}) => {
             const correctAnswer = atob(HALL_OF_FAME_MYSTERY);
             if (correctAnswer === answer) {
                 setPhase(1);
-                setStatus(statusList.correct);
+                setStatus('solve');
             } else {
-                setStatus(statusList.error_solve);
+                setStatus('solve', true);
                 setAnswer('');
             }
         } else if (phase === 1) {
@@ -138,11 +93,11 @@ const MessageBox = ({passToParent}) => {
                 if (res.status === 201) {
                     messages.push(post);
                     passToParent({numberOfMessages: messages.length});
-                    setStatus(statusList.success);
+                    setStatus('send');
                     setUsername('');
                     setMessage('');
                 } else {
-                    setStatus(statusList.error_send);
+                    setStatus('send', true);
                 }
             });
         }
@@ -199,7 +154,12 @@ const MessageBox = ({passToParent}) => {
                                 </p>
                                 {
                                     !phase ?
-                                        <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                                        <div style={{
+                                            width: '100%',
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'center'
+                                        }}>
                                             <AiFillLock size={100} color={'goldenrod'}/>
                                             <CustomInput readOnly
                                                          cursorPointer
@@ -302,12 +262,19 @@ const MessageBox = ({passToParent}) => {
                             }}>
                                 {'Initializing script...\n'}
                                 {'Fetching all messages from external server...\n'}
-                                {status.statusNo !== 6 && 'Messages loaded successfully!\n'}
-                                {status.statusNo === 6 && 'There was an error connecting with server. Please refresh the page and try again.\n'}
+                                {status.no === 1 && messages.length ? 'Messages loaded successfully!\n' : ''}
+                                {status.no === 1 && !messages.length ? 'There are no messages on the board. Be the first to leave a message!\n': ''}
+                                {status.no === 4 && 'There was an error connecting with server. Please refresh the page and try again.\n'}
                             </p>
                             <div style={{marginBottom: 10}}>
                                 {!isFetching && renderMessages()}
                             </div>
+                            {status.no === 5 && <MessageItem date={0}
+                                                                   username={'ernestbies'}
+                                                                   message={''}
+                                                                   isAdmin
+                                                                   caret
+                            />}
                         </div>
                 }
             </div>
@@ -424,19 +391,20 @@ const MessageBox = ({passToParent}) => {
                         alignItems: 'center',
                         justifyContent: 'center',
                     }}>
-                        <span style={{fontFamily: 'Source Code Pro', fontSize: 11, marginBottom: 10}}>:: Status ::</span>
+                        <span
+                            style={{fontFamily: 'Source Code Pro', fontSize: 11, marginBottom: 10}}>:: Status ::</span>
                         <span style={{
                             fontFamily: 'Source Code Pro',
                             fontWeight: 700,
                             fontSize: 10,
                             margin: 0,
-                            color: status.statusColor
-                        }}>{status.statusCode} {'//'} {status.statusNo || 0}</span>
+                            color: status.color
+                        }}>{status.code} {'//'} {status.no || 0}</span>
                         <span style={{
                             fontFamily: 'Source Code Pro',
                             fontSize: 9,
                             margin: 0,
-                        }}>{status.statusMessage}</span>
+                        }}>{status.message}</span>
                     </div>
                 </div>
             </div>
@@ -444,4 +412,8 @@ const MessageBox = ({passToParent}) => {
     )
 };
 
-export default MessageBox;
+const mapStateToProps = ({statusReducer}) => ({status: statusReducer});
+
+const mapDispatchToProps = {setStatus};
+
+export default connect(mapStateToProps, mapDispatchToProps)(MessageBox);

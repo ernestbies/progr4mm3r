@@ -21,4 +21,9 @@ CustomCaret.propTypes = {
     height: PropTypes.number.isRequired
 }
 
+CustomCaret.defaultProps = {
+    width: 6,
+    height: 8
+}
+
 export default CustomCaret;

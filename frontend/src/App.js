@@ -1,6 +1,6 @@
 import './App.css';
 import React from "react";
-import {Switch, Redirect, Route, withRouter} from 'react-router';
+import {Switch, Redirect, Route} from 'react-router';
 import MainPage from "./pages/MainPage";
 import ProjectPage from "./pages/ProjectPage";
 
@@ -15,4 +15,4 @@ const App = () => {
     );
 }
 
-export default withRouter(App);
+export default App;

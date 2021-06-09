@@ -1,4 +1,4 @@
-import React from "react";
+import React, {Fragment} from "react";
 import {Alert} from "react-bootstrap";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
@@ -13,14 +13,14 @@ const ConfirmAlert = ({showAlert, setShowAlert, variant}) => {
                    onClose={() => setShowAlert(false)} dismissible>
                 {
                     variant === 'info' ?
-                        <div>
+                        <Fragment>
                             <p style={{fontSize: 15, fontFamily: 'Open Sans'}}>{t('alert_success_topic')}</p>
                             <p style={{fontSize: 11, fontFamily: 'Open Sans'}}>{t('alert_success_text')}</p>
-                        </div> :
-                        <div>
+                        </Fragment> :
+                        <Fragment>
                             <p style={{fontSize: 15, fontFamily: 'Open Sans'}}>{t('alert_error_topic')}</p>
                             <p style={{fontSize: 11, fontFamily: 'Open Sans'}}>{t('alert_error_text')}</p>
-                        </div>
+                        </Fragment>
                 }
             </Alert>
         );

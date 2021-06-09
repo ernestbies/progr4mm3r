@@ -60,7 +60,7 @@ export const hallOfFameFaq = [
     {
         id: 4,
         q: 'What do the console statuses mean?',
-        a: 'The console status informs the user about the successful or negative course of the actions performed. Full list of statuses: \n\nFETCHING // 0 - data is retrieved from an external server.\nCONNECTED // 1 - connection to an external server has been established.\nSOLVED // 2 - the puzzle was solved correctly.\nLOADED // 3 - the messages have been loaded successfully.\nSUCCESS // 4 - the message was sent successfully and posted on the Hall of Fame board.\nERROR // 5 - incorrect answer was given while solving the puzzle.\nERROR // 6 - there was a problem connecting with server (problem with internet connection).\nERROR // 7 - there was a problem sending the message (data validation problem).'
+        a: 'The console status informs the user about the successful or negative course of the actions performed. Full list of statuses: \n\nSTATUSES_LIST'
     }
 ];
 
@@ -70,3 +70,55 @@ export const formatData = (date) => {
     const timezoneOffSet = new Date(date).getTimezoneOffset() * 60000;
     return new Date(date - timezoneOffSet).toISOString().slice(0, 19).replace("T", " ");
 };
+
+export const statusList = {
+    fetch: {
+        no: 0,
+        code: 'FETCHING',
+        message: 'Fetching data.',
+        color: 'gray',
+        description: 'Data is retrieved from an external server.'
+    },
+    connect: {
+        no: 1,
+        code: 'CONNECTED',
+        message: 'Connected with server.',
+        color: '#F8F8FF',
+        description: 'Connection to an external server has been established.'
+    },
+    solve: {
+        no: 2,
+        code: 'SOLVED',
+        message: 'Correctly answered.',
+        color: '#32CD32',
+        description: 'Puzzle was solved correctly.'
+    },
+    send: {
+        no: 3,
+        code: 'SENT',
+        message: 'Message sent.',
+        color: '#00FF00',
+        description: 'Message was sent successfully and posted on the Hall of Fame board.'
+    },
+    error_connect: {
+        no: 4,
+        code: 'ERROR',
+        message: 'Fetching error.',
+        color: 'red',
+        description: 'There was a problem connecting with server.'
+    },
+    error_solve: {
+        no: 5,
+        code: 'ERROR',
+        message: 'Wrong answer.',
+        color: 'red',
+        description: 'Incorrect answer was given while solving the puzzle.'
+    },
+    error_send: {
+        no: 6,
+        code: 'ERROR',
+        message: 'Sending error.',
+        color: 'red',
+        description: 'There was a problem sending the message (data validation problem).'
+    }
+}

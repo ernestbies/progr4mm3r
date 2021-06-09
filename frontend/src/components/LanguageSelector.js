@@ -27,6 +27,10 @@ const LanguageButton = styled.button`
     color: ${({active, theme}) => (active && theme === 'dark' ? 'orange' : !active && theme === 'dark' ? 'white' : active && theme === 'light' ? '#9932CC' : 'black')};
     cursor: pointer;
     display: inline-block;
+    
+    &:hover {
+        color: ${({currentTheme}) => (currentTheme === 'dark' ? 'white' : 'orange')};
+    }
 `;
 
 const LanguageDivider = styled.span`
@@ -38,15 +42,19 @@ const LanguageSelector = ({currentTheme, mobileMenu = false}) => {
 
     const {i18n} = useTranslation('common');
 
+    const changeLanguageFunction = (language) => {
+        i18n.changeLanguage(language).then(() => localStorage.setItem('language', language));
+    }
+
     return (
         <StyledDiv mobileMenu={mobileMenu}>
             <LanguageButton theme={currentTheme} active={i18n.language === languages.pl}
-                            onClick={() => i18n.changeLanguage(languages.pl)}>
+                            onClick={() => changeLanguageFunction(languages.pl)}>
                 {languages.pl.toUpperCase()}
             </LanguageButton>
             <LanguageDivider theme={currentTheme}>{'/'}</LanguageDivider>
             <LanguageButton theme={currentTheme} active={i18n.language === languages.en}
-                            onClick={() => i18n.changeLanguage(languages.en)}>
+                            onClick={() => changeLanguageFunction(languages.en)}>
                 {languages.en.toUpperCase()}
             </LanguageButton>
         </StyledDiv>

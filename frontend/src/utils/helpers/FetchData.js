@@ -1,7 +1,7 @@
 import {BACKEND_URL} from "../information";
 
-export const fetchPosts = () => {
-    return fetch(`${BACKEND_URL}/api/posts`).then(response => response.json());
+export const fetchPosts = (signal) => {
+    return fetch(`${BACKEND_URL}/api/posts`, {signal}).then(response => response.json());
 }
 
 export const sendMessage = (data) => {

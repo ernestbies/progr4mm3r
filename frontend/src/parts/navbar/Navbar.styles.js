@@ -28,7 +28,7 @@ const WebsiteName = styled.div`
     left: 50px;
     
     &:hover {
-        color: white;
+        color: ${({currentTheme}) => (currentTheme === 'dark' ? 'white' : 'orange')};
     }
     
     @media (max-width: 992px) {
@@ -43,7 +43,7 @@ const NavbarLink = styled.div`
     font-size: 16px;
     margin-bottom: -15px;
     color: ${({currentTheme}) => (currentTheme === 'dark' ? 'white' : 'black')};
-    width: 7rem; 
+    width: 7.5rem; 
     
     &:hover {
         color: orange;

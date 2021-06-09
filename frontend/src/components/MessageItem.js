@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import {formatData, NOT_RELEASED_PROJECT} from "../utils/information";
+import CustomCaret from "./CustomCaret";
 
-export const MessageItem = ({date, username, message, isAdmin}) => {
+export const MessageItem = ({date, username, message, isAdmin, caret}) => {
 
     return (
         <div style={{fontFamily: 'Source Code Pro', color: 'white', wordBreak: 'break-all', fontSize: 11, marginLeft: 5}}>
@@ -14,6 +15,7 @@ export const MessageItem = ({date, username, message, isAdmin}) => {
             {isAdmin && <span style={{fontWeight: 700, color: 'orange'}}>~/{NOT_RELEASED_PROJECT}<span
                 style={{fontWeight: 300, color: 'white'}}>$</span></span>}
             <span style={{fontWeight: 300, color: 'white'}}> {message}</span>
+            {caret && <CustomCaret/>}
         </div>
     )
 }
@@ -22,11 +24,13 @@ MessageItem.propTypes = {
     date: PropTypes.number.isRequired,
     username: PropTypes.string.isRequired,
     message: PropTypes.string.isRequired,
-    isAdmin: PropTypes.bool
+    isAdmin: PropTypes.bool,
+    caret: PropTypes.bool
 }
 
 MessageItem.defaultProps = {
-    isAdmin: false
+    isAdmin: false,
+    caret: false
 }
 
 export default MessageItem;

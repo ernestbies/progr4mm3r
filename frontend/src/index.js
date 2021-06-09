@@ -4,17 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {I18nextProvider} from "react-i18next";
-import i18next from "i18next";
-import common_en from "./translations/en.json";
-import common_pl from "./translations/pl.json";
+import {I18nextProvider} from 'react-i18next';
+import i18next from 'i18next';
+import common_en from './translations/en.json';
+import common_pl from './translations/pl.json';
 import {BrowserRouter as Router} from 'react-router-dom';
-import {Provider} from "react-redux";
-import store from "./store/store";
+import {Provider} from 'react-redux';
+import store from './store/store';
 
 i18next.init({
-    interpolation: { escapeValue: false },
-    lng: 'en',
+    interpolation: {escapeValue: false},
+    lng: localStorage.getItem('language') ?? 'en',
     resources: {
         en: {
             common: common_en

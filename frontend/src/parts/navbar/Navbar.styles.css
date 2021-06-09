@@ -39,6 +39,10 @@
     color: #9932CC !important;
 }
 
+.light-color:hover {
+    color: orange !important;
+}
+
 @media only screen and (max-width: 992px) {
 
     .navMenu {

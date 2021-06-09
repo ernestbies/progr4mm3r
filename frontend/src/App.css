@@ -326,6 +326,36 @@ body {
   animation-timing-function: ease-in-out;
 }
 
+.with-dots {
+  color: white;
+}
+
+.with-dots:after {
+  content: '.';
+  animation: loading-dots 1s steps(5, end) infinite;
+}
+
+@keyframes loading-dots  {
+  0%, 20% {
+    color: rgba(0,0,0,0);
+    text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);}
+  40% {
+    color: white;
+    text-shadow:
+            .25em 0 0 rgba(0,0,0,0),
+            .5em 0 0 rgba(0,0,0,0);}
+  60% {
+    text-shadow:
+            .25em 0 0 white,
+            .5em 0 0 rgba(0,0,0,0);}
+  80%, 100% {
+    text-shadow:
+            .25em 0 0 white,
+            .5em 0 0 white;}
+}
+
 @keyframes orange-to-purple {
   0% {
     color: orange;

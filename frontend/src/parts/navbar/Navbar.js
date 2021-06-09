@@ -6,8 +6,9 @@ import {useTranslation} from "react-i18next";
 import LanguageSelector from "../../components/LanguageSelector";
 import {NavbarLink, StyledNav, WebsiteName} from "./Navbar.styles";
 import PropTypes from 'prop-types';
+import {withRouter} from "react-router";
 
-const Navbar = ({links, languageSelector = true}) => {
+const Navbar = ({history, links, languageSelector = true}) => {
 
     const scrollSpy = useRef();
     const {t} = useTranslation('common');
@@ -46,9 +47,17 @@ const Navbar = ({links, languageSelector = true}) => {
         return view;
     }
 
+    const redirect = () => {
+        if(history.location.pathname !== '/') {
+            history.push('/');
+        } else {
+            window.scrollTo(0, 0);
+        }
+    };
+
     return (
         <StyledNav currentTheme={currentTheme} mobileMenu={isMobileMenuActive}>
-            <WebsiteName currentTheme={currentTheme} onClick={() => window.scrollTo(0, 0)}>{WEBSITE_NAME}</WebsiteName>
+            <WebsiteName currentTheme={currentTheme} onClick={() => redirect()}>{WEBSITE_NAME}</WebsiteName>
             <Scrollspy className={'navMenu'}
                        ref={scrollSpy}
                        offset={-10}
@@ -76,4 +85,4 @@ Navbar.propTypes = {
     languageSelector: PropTypes.bool
 }
 
-export default Navbar;
+export default withRouter(Navbar);

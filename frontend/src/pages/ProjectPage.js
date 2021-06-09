@@ -1,12 +1,14 @@
-import React, {useEffect, useState} from "react";
+import React, {Fragment, useEffect, useState} from "react";
 import Navbar from "../parts/navbar/Navbar";
 import Footer from "../parts/footer/Footer";
 import MessageBox from "../components/MessageBox";
 import MessageFaq from "../components/MessageFaq";
 import {AiOutlineInfoCircle, BiStats} from "react-icons/all";
 import CounterSection from "../components/CounterSection";
+import {setStatus} from "../actions/statusActions";
+import {connect} from "react-redux";
 
-const ProjectPage = ({counter, history}) => {
+const ProjectPage = ({history, status}) => {
 
     const [numberOfMessages, setNumberOfMessages] = useState(0);
     const [numberOfVisitors, setNumberOfVisitors] = useState(0);
@@ -87,26 +89,61 @@ const ProjectPage = ({counter, history}) => {
                                 fontWeight: 300,
                             }}>{'Statistics'}</p>
                         </div>
-                        <p style={{
-                            color: 'orange',
-                            fontFamily: 'Source Code Pro',
-                            fontWeight: 300,
-                            fontSize: 13,
-                            marginTop: -10,
-                        }}>{'> '}<span style={{color: 'white'}}>{'This page has been visited '}</span><span
-                            style={{color: 'orange', fontWeight: 'bold'}}>{numberOfVisitors}</span>
-                            <span style={{color: 'white'}}>{' times.'}</span>
-                        </p>
-                        <p style={{
-                            color: 'orange',
-                            fontFamily: 'Source Code Pro',
-                            fontWeight: 300,
-                            fontSize: 13,
-                            marginTop: -10,
-                        }}>{'> '}<span style={{color: 'white'}}>{'There are '}</span><span
-                            style={{color: 'orange', fontWeight: 'bold'}}>{numberOfMessages}</span>
-                            <span style={{color: 'white'}}>{' messages on the Hall of Fame board.'}</span>
-                        </p>
+                        {
+                            status.no === 0 ?
+                                <Fragment>
+                                    <p style={{
+                                        color: 'orange',
+                                        fontFamily: 'Source Code Pro',
+                                        fontWeight: 300,
+                                        fontSize: 13,
+                                        marginTop: -10,
+                                        whiteSpace: 'pre-wrap'
+                                    }}>{'> '}<span
+                                        style={{color: 'white'}}>{'Please wait, retrieving data from '}</span>
+                                        <span style={{color: 'orange'}}>{'server'}</span><span className={'with-dots'}/>
+                                    </p>
+                                </Fragment> :
+                                status.no === 4 ?
+                                    <Fragment>
+                                        <p style={{
+                                            color: 'orange',
+                                            fontFamily: 'Source Code Pro',
+                                            fontWeight: 300,
+                                            fontSize: 13,
+                                            marginTop: -10,
+                                            whiteSpace: 'pre-wrap'
+                                        }}>{'> '}<span style={{
+                                            color: '#DC143C',
+                                            fontWeight: 'bold'
+                                        }}>{'An error occurred while getting data from the server.\nPlease refresh the page and try again.'}</span>
+                                        </p>
+                                    </Fragment> :
+                                    <Fragment>
+                                        <p style={{
+                                            color: 'orange',
+                                            fontFamily: 'Source Code Pro',
+                                            fontWeight: 300,
+                                            fontSize: 13,
+                                            marginTop: -10,
+                                        }}>{'> '}<span
+                                            style={{color: 'white'}}>{'This page has been visited '}</span><span
+                                            style={{color: 'orange', fontWeight: 'bold'}}>{numberOfVisitors}</span>
+                                            <span style={{color: 'white'}}>{' times.'}</span>
+                                        </p>
+                                        <p style={{
+                                            color: 'orange',
+                                            fontFamily: 'Source Code Pro',
+                                            fontWeight: 300,
+                                            fontSize: 13,
+                                            marginTop: -10,
+                                        }}>{'> '}<span style={{color: 'white'}}>{'There are '}</span><span
+                                            style={{color: 'orange', fontWeight: 'bold'}}>{numberOfMessages}</span>
+                                            <span
+                                                style={{color: 'white'}}>{' messages on the Hall of Fame board.'}</span>
+                                        </p>
+                                    </Fragment>
+                        }
                     </div>
                     <MessageBox passToParent={getStats}/>
                     <button className={'orange-button'} onClick={() => history.push('/')}>
@@ -121,4 +158,6 @@ const ProjectPage = ({counter, history}) => {
     )
 }
 
-export default ProjectPage;
+const mapStateToProps = ({statusReducer}) => ({status: statusReducer});
+
+export default connect(mapStateToProps)(ProjectPage);

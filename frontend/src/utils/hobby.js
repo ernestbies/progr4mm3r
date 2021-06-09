@@ -31,7 +31,7 @@ export const hobby = {
             id: 3,
             name: 'Music',
             quote: 'Music is the shorthand of emotion...',
-            text: 'I really like listening to music in my spare time. Sometimes I also listen while working. Music relaxes me and puts me in a good mood. I really appreciate songs that have a message in them. I don\'t have my favorite genre of music, I listen to everything I can catch my ear (except disco polo ofc). I listen to different kinds of music depending on my mood. I have created my own playlists suitable for various occasions.',
+            text: 'I really like listening to music in my spare time. Sometimes I also listen while working. Music relaxes me and puts me in a good mood. I really appreciate songs that have a message in them. I don\'t have my favorite genre of music, I listen to different kinds of music depending on my mood. I have created my own playlists suitable for various occasions.',
             image: '/images/hobby/music.jpg',
             color: 'green',
             keywords: ['listen', 'feel', 'thrill']
@@ -69,7 +69,7 @@ export const hobby = {
             id: 3,
             name: 'Muzyka',
             quote: 'Muzyka jest skrótem emocji...',
-            text: 'W wolnym czasie bardzo lubię słuchać muzyki. Czasami słucham też podczas pracy. Muzyka relaksuje i wprawia w dobry nastrój. Naprawdę doceniam piosenki, które mają w sobie przesłanie. Nie mam swojego ulubionego gatunku muzycznego, słucham wszystkiego, co mogę złapać za ucho (oprócz disco polo oczywiście). Słucham różnych rodzajów muzyki w zależności od nastroju. Stworzyłem własne playlisty odpowiednie na różne okazje.',
+            text: 'W wolnym czasie bardzo lubię słuchać muzyki. Czasami słucham też podczas pracy. Muzyka relaksuje i wprawia w dobry nastrój. Naprawdę doceniam piosenki, które mają w sobie przesłanie. Nie mam swojego ulubionego gatunku muzycznego, słucham różnych gatunków muzyki w zależności od nastroju. Stworzyłem własne playlisty odpowiednie na różne okazje.',
             image: '/images/hobby/music.jpg',
             color: 'green',
             keywords: ['słuchaj', 'przeżywaj', 'czuj']

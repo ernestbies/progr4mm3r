@@ -1,6 +1,7 @@
 .navMenu {
     display: flex;
     justify-content: center;
+    margin-right: 40px;
 }
 
 .navbarLinkCurrent {

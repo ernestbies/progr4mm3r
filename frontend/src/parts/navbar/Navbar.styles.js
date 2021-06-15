@@ -7,9 +7,8 @@ const StyledNav = styled.nav`
     flex-wrap: wrap;
     position: fixed;
     justify-content: center;
-    box-sizing: border-box;
-    background-color: ${({currentTheme}) => (currentTheme === 'dark' ? 'black' : 'white')};
     text-align: center;
+    background-color: ${({currentTheme}) => (currentTheme === 'dark' ? 'black' : 'white')};
     padding-top: 15px;
     z-index: 2;
     

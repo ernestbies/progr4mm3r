@@ -62,5 +62,8 @@
   "alert_error_text": "There was a problem sending your message. Please try again later!",
   "hall-of-fame": "Hall of Fame",
   "click_here_to": "click here to",
-  "contact_info": "I will respond on all messages as soon as it is possible. Thank you for your interest."
+  "contact_info": "I will respond on all messages as soon as it is possible. Thank you for your interest.",
+  "page_not_found": "Page not found",
+  "page_not_found_desc": "Sorry, the page you're looking for cannot be accessed.",
+  "back_to_main_page": "Back to the main page"
 }

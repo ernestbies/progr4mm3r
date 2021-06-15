@@ -8,7 +8,7 @@ import {NavbarLink, StyledNav, WebsiteName} from "./Navbar.styles";
 import PropTypes from 'prop-types';
 import {withRouter} from "react-router";
 
-const Navbar = ({history, links, languageSelector = true}) => {
+const Navbar = ({history, links, languageSelector}) => {
 
     const scrollSpy = useRef();
     const {t} = useTranslation('common');
@@ -81,8 +81,13 @@ const Navbar = ({history, links, languageSelector = true}) => {
 }
 
 Navbar.propTypes = {
-    links: PropTypes.array.isRequired,
+    links: PropTypes.array,
     languageSelector: PropTypes.bool
+}
+
+Navbar.defaultProps = {
+    links: [],
+    languageSelector: false
 }
 
 export default withRouter(Navbar);

@@ -23,7 +23,7 @@ const ProjectPage = ({history, status}) => {
 
     return (
         <div className={'App'}>
-            <Navbar links={['hall-of-fame']} languageSelector={false}/>
+            <Navbar links={['hall-of-fame']}/>
             <div id={'hall-of-fame'} className={'wallpaper-container'}
                  style={{backgroundImage: "url(images/wallpaper5.jpg)"}}>
                 <div style={{
@@ -145,7 +145,7 @@ const ProjectPage = ({history, status}) => {
                         }
                     </div>
                     <MessageBox passToParent={getStats}/>
-                    <button className={'orange-button'} onClick={() => history.push('/')}>
+                    <button style={{margin: 50}} className={'orange-button'} onClick={() => history.push('/')}>
                         {'Back to the main page'}
                     </button>
                     <MessageFaq/>

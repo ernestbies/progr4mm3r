@@ -1,8 +1,9 @@
 import './App.css';
 import React from "react";
-import {Switch, Redirect, Route} from 'react-router';
+import {Switch, Route, Redirect} from 'react-router';
 import MainPage from "./pages/MainPage";
 import ProjectPage from "./pages/ProjectPage";
+import NotFoundPage from "./pages/404";
 
 const App = () => {
 
@@ -10,7 +11,8 @@ const App = () => {
         <Switch>
             <Route exact path={'/'} component={MainPage}/>
             <Route exact path={'/hall-of-fame'} component={ProjectPage}/>
-            <Redirect from={'/*'} to={'/'}/>
+            <Route path={'/not-found'} component={NotFoundPage}/>
+            <Redirect from={'/*'} to={'/not-found'}/>
         </Switch>
     );
 }

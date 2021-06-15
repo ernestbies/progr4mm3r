@@ -62,5 +62,8 @@
   "alert_error_text": "Wystąpił problem z wysłaniem Twojej wiadomości. Spróbuj ponownie później!",
   "hall-of-fame": "Sala sławy",
   "click_here_to": "kliknij aby wykonać",
-  "contact_info": "Odpowiadam na wszystkie wiadomości tak szybko, jak to tylko możliwe. Dziękuję za zainteresowanie."
+  "contact_info": "Odpowiadam na wszystkie wiadomości tak szybko, jak to tylko możliwe. Dziękuję za zainteresowanie.",
+  "page_not_found": "Zasób nieznaleziony",
+  "page_not_found_desc": "Przepraszam, strona której szukasz jest niedostępna. ",
+  "back_to_main_page": "Powróć do strony głównej"
 }

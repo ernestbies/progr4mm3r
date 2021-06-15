@@ -1,4 +1,8 @@
 * {
+  box-sizing: border-box;
+}
+
+body, html {
   margin: 0;
   padding: 0;
 }
@@ -249,7 +253,6 @@ body {
   font-weight: 300;
   border-width: 1px;
   padding: 10px 20px;
-  margin: 50px;
   border-radius: 8px;
   transition: color 2s ease-in-out, border-color 2s ease-in-out, background-color 2s ease-in-out;
 }

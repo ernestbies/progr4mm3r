@@ -13,7 +13,7 @@ const MainPage = () => {
 
     return (
         <div className={'App'}>
-            <Navbar links={links}/>
+            <Navbar links={links} languageSelector/>
             <div className={'page'}>
                 <About/>
                 <Projects/>

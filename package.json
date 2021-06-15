@@ -1,5 +1,6 @@
 {
   "name": "personal-website",
+  "author": "Ernest Bieś <ernestbies@gmail.com>",
   "version": "1.0.0",
   "description": "Personal / portfolio website.",
   "scripts": {
@@ -10,7 +11,6 @@
     "type": "git",
     "url": "git+https://github.com/ernestbies/personal-website.git"
   },
-  "author": "Ernest Bieś",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ernestbies/personal-website/issues"

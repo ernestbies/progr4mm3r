@@ -1,12 +1,12 @@
-const knowledge = {
+export const knowledge = {
     frontend: {
         name: 'frontend',
         color: '#00ACEE',
         image: 'images/knowledge/frontend.png',
         technology_stack: ['JavaScript', 'HTML', 'CSS', 'React', 'React Native', 'Java', 'NetBeans IDE', 'IntelliJ IDEA'],
         text: {
-            en: 'I started my adventure with JavaScript in university. I learned the basics of the language, issues related to asynchronicity and functional programming. The first framework I started using that uses JavaScript was React Native (I also wrote my engineering thesis using this framework). I learned how to create my own components and design a user interface for mobile applications. I have used various libraries such as React Native Navigation, React Native Elements, React Native Paper and React Native SVG. I am familiar with the MobX data storage mechanism. Currently I am focusing on getting to know React.js (this page was also created using this framework). Getting to know this programming environment allows me to improve my JavaScript, HTML and CSS skills. My first contact with HTML and CSS was while studying the UI Design at the university. Then I also learned the basics of the Angular framework. I also can create applications with a graphical interface using NetBeans IDE and Java programming language. I use IntelliJ IDEA environment on a daily basis during development.',
-            pl: 'Swoją przygodę z JavaScriptem zacząłem na studiach. Poznałem podstawy języka, zagadnienia związane z asynchronicznością i programowaniem funkcjonalnym. Pierwszym frameworkiem, którego zacząłem używać, który używa JavaScript, był React Native (napisałem również swoją pracę inżynierską przy użyciu tego frameworka). Nauczyłem się tworzyć własne komponenty i projektować interfejs użytkownika dla aplikacji mobilnych. Korzystałem z różnych bibliotek, takich jak React Native Navigation, React Native Elements, React Native Paper i React Native SVG. Znam mechanizm przechowywania danych MobX. Obecnie skupiam się na poznaniu React.js (ta strona również została stworzona z wykorzystaniem tego frameworka). Poznanie tego środowiska programistycznego pozwala mi doskonalić umiejętności w zakresie JavaScript, HTML i CSS. Pierwszy kontakt z HTML i CSS miałem na studiach na zajęciach z programowania UI. Wtedy też poznałem podstawy frameworka Angular. Potrafię również tworzyć aplikacje z interfejsem graficznym przy użyciu NetBeans IDE i języka programowania Java. Podczas programowania na co dzień korzystam ze środowiska IntelliJ IDEA.'
+            en: 'I started my adventure with JavaScript in university. I learned the basics of the language, issues related to asynchronicity and functional programming. The first framework I started using that uses JavaScript was React Native (I also wrote my engineering thesis using this framework). I learned how to create my own components and design a user interface for mobile applications. I have used various libraries such as React Native Navigation, React Native Elements, React Native Paper and React Native SVG. I am familiar with the Redux & MobX data storage mechanism. Currently I am focusing on getting to know React.js (this page was also created using this framework). Getting to know this programming environment allows me to improve my JavaScript, HTML and CSS skills. My first contact with HTML and CSS was while studying the UI Design at the university. Then I also learned the basics of the Angular framework. I also can create applications with a graphical interface using NetBeans IDE and Java programming language. I use IntelliJ IDEA environment on a daily basis during development.',
+            pl: 'Swoją przygodę z JavaScriptem zacząłem na studiach. Poznałem podstawy języka, zagadnienia związane z asynchronicznością i programowaniem funkcjonalnym. Pierwszym frameworkiem, którego zacząłem używać, który używa JavaScript, był React Native (napisałem również swoją pracę inżynierską przy użyciu tego frameworka). Nauczyłem się tworzyć własne komponenty i projektować interfejs użytkownika dla aplikacji mobilnych. Korzystałem z różnych bibliotek, takich jak React Native Navigation, React Native Elements, React Native Paper i React Native SVG. Znam mechanizm przechowywania danych Redux oraz MobX. Obecnie skupiam się na poznaniu React.js (ta strona również została stworzona z wykorzystaniem tego frameworka). Poznanie tego środowiska programistycznego pozwala mi doskonalić umiejętności w zakresie JavaScript, HTML i CSS. Pierwszy kontakt z HTML i CSS miałem na studiach na zajęciach z programowania UI. Wtedy też poznałem podstawy frameworka Angular. Potrafię również tworzyć aplikacje z interfejsem graficznym przy użyciu NetBeans IDE i języka programowania Java. Podczas programowania na co dzień korzystam ze środowiska IntelliJ IDEA.'
         }
     },
     backend: {
@@ -41,4 +41,125 @@ const knowledge = {
     }
 }
 
-export default knowledge;
+export const knowledgeCodes = {
+    frontend: [
+        {
+            type: 'languages',
+            name: 'language-js'
+        },
+        {
+            type: 'languages',
+            name: 'html'
+        },
+        {
+            type: 'languages',
+            name: 'css'
+        },
+        {
+            type: 'technologies',
+            name: 'reactjs'
+        },
+        {
+            type: 'technologies',
+            name: 'reactnative'
+        },
+        {
+            type: 'languages',
+            name: 'language-java'
+        },
+        {
+            type: 'platforms',
+            name: 'netbeans'
+        },
+        {
+            type: 'platforms',
+            name: 'intellij'
+        }
+    ],
+    backend: [
+        {
+            type: 'languages',
+            name: 'language-js'
+        },
+        {
+            type: 'technologies',
+            name: 'nodejs'
+        },
+        {
+            type: 'technologies',
+            name: 'hapijs'
+        },
+        {
+            type: 'technologies',
+            name: 'jwt'
+        },
+        {
+            type: 'languages',
+            name: 'language-java'
+        },
+        {
+            type: 'technologies',
+            name: 'spring'
+        },
+        {
+            type: 'technologies',
+            name: 'uml'
+        }
+    ],
+    databases: [
+        {
+            type: 'languages',
+            name: 'language-sql'
+        },
+        {
+            type: 'languages',
+            name: 'language-plpgsql'
+        },
+        {
+            type: 'technologies',
+            name: 'mongodb'
+        },
+        {
+            type: 'technologies',
+            name: 'mongoose'
+        },
+        {
+            type: 'technologies',
+            name: 'sqlite'
+        },
+        {
+            type: 'technologies',
+            name: 'tdm'
+        }
+    ],
+    testing: [
+        {
+            type: 'languages',
+            name: 'language-js'
+        },
+        {
+            type: 'technologies',
+            name: 'jest'
+        },
+        {
+            type: 'languages',
+            name: 'language-java'
+        },
+        {
+            type: 'technologies',
+            name: 'junit'
+        },
+        {
+            type: 'languages',
+            name: 'language-groovy'
+        },
+        {
+            type: 'technologies',
+            name: 'spock'
+        },
+        {
+            type: 'technologies',
+            name: 'git'
+        }
+    ]
+}

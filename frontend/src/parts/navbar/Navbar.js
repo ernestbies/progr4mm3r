@@ -3,7 +3,7 @@ import Scrollspy from 'react-scrollspy'
 import "./Navbar.styles.css";
 import {WEBSITE_NAME} from "../../utils/information";
 import {useTranslation} from "react-i18next";
-import LanguageSelector from "../../components/LanguageSelector";
+import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
 import {NavbarLink, StyledNav, WebsiteName} from "./Navbar.styles";
 import PropTypes from 'prop-types';
 import {withRouter} from "react-router";

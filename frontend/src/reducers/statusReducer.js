@@ -28,6 +28,6 @@ export const statusReducer = (state = initialState, action) => {
         case STATUS_ERROR_SEND:
             return statusList.error_send;
         default:
-            return statusList.fetch;
+            return state;
     }
 };

@@ -1,11 +1,10 @@
 import React, {Fragment, useEffect, useState} from "react";
 import Navbar from "../parts/navbar/Navbar";
 import Footer from "../parts/footer/Footer";
-import MessageBox from "../components/MessageBox";
-import MessageFaq from "../components/MessageFaq";
+import MessageBox from "../components/MessageBox/MessageBox";
+import MessageFaq from "../components/MessageFaq/MessageFaq";
 import {AiOutlineInfoCircle, BiStats} from "react-icons/all";
-import CounterSection from "../components/CounterSection";
-import {setStatus} from "../actions/statusActions";
+import CounterSection from "../components/CounterSection/CounterSection";
 import {connect} from "react-redux";
 
 const ProjectPage = ({history, status}) => {

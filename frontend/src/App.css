@@ -218,52 +218,6 @@ body {
   color: white;
 }
 
-.contact-textarea {
-  background-color: transparent;
-  margin-top: 30px;
-  width: 90%;
-  height: 200px;
-  border-width: 1px;
-  resize: none;
-  outline: none;
-  color: white;
-  font-family: 'Open Sans', serif;
-  font-weight: 300;
-  font-size: 12px;
-  border-radius: 5px;
-  padding: 5px;
-}
-
-.contact-textarea:focus {
-  border-color: #9932CC;
-}
-
-.confirm-btn {
-  margin-top: 15px;
-  width: 120px;
-  border: 1px solid white;
-  border-radius: 5px;
-  font-size: 13px;
-  font-family: "Open Sans", serif;
-  height: 30px;
-  display: block;
-  background: linear-gradient(to right, #29003b 50%, transparent 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
-  color: white;
-}
-
-.confirm-btn:disabled {
-  border: 1px solid #999999;
-  background-color: #cccccc;
-  color: #666666;
-}
-
-.confirm-btn:hover {
-  background-position: left bottom;
-}
-
 .carousel-content {
   margin: 40px;
   text-align: left;
@@ -284,15 +238,6 @@ body {
   object-fit: contain;
   margin-left: 20px;
   margin-bottom: 20px;
-}
-
-.confirm-alert {
-  width: 300px;
-  bottom: 1px;
-  right: 1px;
-  animation-name: show-button;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
 }
 
 .orange-button {

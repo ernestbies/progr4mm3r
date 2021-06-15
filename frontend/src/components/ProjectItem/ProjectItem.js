@@ -1,6 +1,7 @@
 import {
     AiFillInfoCircle,
-    AiFillWindows, FaBitbucket,
+    AiFillWindows,
+    FaBitbucket,
     FaGithub,
     FaWrench,
     FaYoutube,
@@ -8,7 +9,7 @@ import {
     FcLinux,
     IoLogoApple
 } from "react-icons/all";
-import React, {Fragment} from "react";
+import React from "react";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 
@@ -103,11 +104,11 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         margin: 0
                     }}>{t('technologies_text')}</p>
                 </div>
-                <Fragment>
+                <>
                     {
                         renderTechnologiesBlock(technologies)
                     }
-                </Fragment>
+                </>
 
                 <div style={{display: 'flex', marginTop: 30, alignItems: 'center'}}>
                     <AiFillInfoCircle color={color} size={14} style={{marginRight: 5}}/>

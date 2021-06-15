@@ -1,5 +1,4 @@
 import React from 'react';
-import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Timeline from '@material-ui/lab/Timeline';
 import TimelineItem from '@material-ui/lab/TimelineItem';
@@ -15,21 +14,8 @@ import HotelIcon from '@material-ui/icons/Hotel';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import WatchIcon from '@material-ui/icons/LiveTv';
 import {useTranslation} from "react-i18next";
-import {TimelineText} from "./TimelineText";
-
-const useStyles = makeStyles((theme) => ({
-    paper: {
-        padding: '6px 16px',
-        width: '55%',
-        backgroundColor: '#00000095',
-        '@media (max-width:992px)': {
-            width: '100%'
-        }
-    },
-    secondaryTail: {
-        backgroundColor: theme.palette.secondary.main,
-    },
-}));
+import {TimelineText} from "../TimelineText/TimelineText";
+import {useStyles} from "./MyTimeline.styles";
 
 export default function MyTimeline() {
     const classes = useStyles();

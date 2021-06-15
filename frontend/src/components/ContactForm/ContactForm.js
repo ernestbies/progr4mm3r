@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import {CgMail, RiMessage3Line} from "react-icons/all";
-import ConfirmAlert from "./ConfirmAlert";
+import ConfirmAlert from "../ConfirmAlert/ConfirmAlert";
 import ReCAPTCHA from "react-google-recaptcha/lib/esm/recaptcha-wrapper";
 import {useTranslation} from "react-i18next";
-import {sendMessage} from "../utils/helpers/FetchData";
+import {sendMessage} from "../../utils/helpers/FetchData";
+import {CaptchaDiv, FormButton, FormButtonWrapper, FormDiv, FormTextArea, StyledForm} from "./ContactForm.styles";
 
 const ContactForm = () => {
 
@@ -44,53 +45,58 @@ const ContactForm = () => {
     }
 
     const generateRecaptcha = () => {
-        if(i18n.language === 'en') {
+        if (i18n.language === 'en') {
             return <ReCAPTCHA ref={recaptchaRef} theme={'dark'} onChange={(value) => setRecaptchaValue(value)}
                               sitekey={'6LdCr7saAAAAAMgbDCtCl4u6GQ_WAba9ZkZgrFd1'} hl={'en-GB'}/>
         } else {
             return <div><ReCAPTCHA ref={recaptchaRef} theme={'dark'} onChange={(value) => setRecaptchaValue(value)}
-                              sitekey={'6LdCr7saAAAAAMgbDCtCl4u6GQ_WAba9ZkZgrFd1'} hl={i18n.language}/></div>
+                                   sitekey={'6LdCr7saAAAAAMgbDCtCl4u6GQ_WAba9ZkZgrFd1'} hl={i18n.language}/></div>
         }
     }
 
     return (
-        <form id={'dm'} style={{
-            maxWidth: 700, width: '95%', backgroundColor: 'red', margin: 10, borderRadius: 25,
-            border: '1px solid #FFFFFF90', background: '#00000090',
-        }}>
-            <div style={{display: 'flex', marginLeft: 30, marginTop: 50, alignItems: 'center'}}>
-                <input value={email} className={'input-field'} style={{order: 1, width: '50%'}} type={'email'}
-                       placeholder={t('email')} onChange={(event) => setEmail(event.target.value)}
-                       required={true}/>
+        <StyledForm id={'dm'}>
+            <FormDiv marginTop={'50px'}>
+                <input value={email} className={'input-field'} style={{order: 1, width: '50%'}}
+                       type={'email'}
+                       placeholder={t('email')}
+                       onChange={(event) => setEmail(event.target.value)}
+                       required
+                />
                 <CgMail className={'input-icon'} size={30}/>
-            </div>
+            </FormDiv>
 
-            <div style={{display: 'flex', marginLeft: 30, marginTop: 30, alignItems: 'center'}}>
-                <input value={topic} style={{order: 1, width: '70%'}} className={'input-field'} type={'text'}
-                       placeholder={t('topic')} pattern="\s*(\S\s*){1,}"
-                       onChange={(event) => setTopic(event.target.value)} required={true}/>
+            <FormDiv marginTop={'30px'}>
+                <input value={topic} className={'input-field'} style={{order: 1, width: '70%'}}
+                       type={'text'}
+                       placeholder={t('topic')}
+                       pattern="\s*(\S\s*){1,}"
+                       onChange={(event) => setTopic(event.target.value)}
+                       required
+                />
                 <RiMessage3Line className={'input-icon'} size={30}/>
-            </div>
+            </FormDiv>
 
-            <textarea value={text} className={'contact-textarea'} placeholder={t('type_here') + '...'}
-                      onChange={(event) => setText(event.target.value)} required={true}/>
+            <FormTextArea value={text}
+                          placeholder={t('type_here') + '...'}
+                          onChange={(event) => setText(event.target.value)}
+                          required
+            />
 
-            <div style={{display: 'flex', marginTop: 30, justifyContent: 'center', alignItems: 'center'}}>
-                {generateRecaptcha()}
-            </div>
+            <CaptchaDiv>{generateRecaptcha()}</CaptchaDiv>
 
-            <div style={{display: 'flex', justifyContent: 'center', marginBottom: 20, alignItems: 'center'}}>
-                <button disabled={!email || isEmptyOrSpaces(topic) || !text || !recaptcha}
-                        form={'dm'}
-                        onClick={() => confirmDm()}
-                        type={'button'}
-                        className={'confirm-btn'}>
+            <FormButtonWrapper>
+                <FormButton disabled={!email || isEmptyOrSpaces(topic) || !text || !recaptcha}
+                            form={'dm'}
+                            onClick={() => confirmDm()}
+                            type={'button'}
+                >
                     {t('send')}
-                </button>
-            </div>
+                </FormButton>
+            </FormButtonWrapper>
 
             <ConfirmAlert showAlert={showAlert} setShowAlert={setShowAlert} variant={alertVariant}/>
-        </form>
+        </StyledForm>
     );
 }
 

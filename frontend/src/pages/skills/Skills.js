@@ -1,7 +1,7 @@
 import React from 'react';
 import {skills} from "../../utils/skills";
 import {renderElements} from "../../utils/functions/renderElements";
-import KnowledgeCard from "../../components/KnowledgeCard";
+import KnowledgeCard from "../../components/KnowledgeCard/KnowledgeCard";
 import "./Skills.styles.css";
 import {useTranslation} from "react-i18next";
 

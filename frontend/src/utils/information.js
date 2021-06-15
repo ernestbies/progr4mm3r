@@ -27,7 +27,7 @@ export const info = {
         degree: 'Inżynier informatyki',
         dateOfBirth: '1998-03-25',
         text: 'Witam na mojej oficjalnej stronie! Nazywam się Ernest i pochodzę z Polski. Jestem absolwentem Państwowej Wyższej Szkoły Zawodowej w Tarnowie na kierunku Informatyka (z wynikiem 5,0 na dyplomie). Od najmłodszych lat interesowałem się informatyką. W młodości prowadziłem popularne w całym kraju serwery gier online. Byłem też moderatorem i mentorem na największym w tym czasie forum w Polsce - MPCforum, o nowinkach technicznych, programowaniu i tworzeniu wtyczek do serwerów gier online. Nieustannie staram się rozwijać swoje umiejętności i poszerzać wiedzę. Szybko się uczę, jestem komunikatywny i gotowy do pracy w zespole. Jestem też osobą życzliwą, rzetelną i pomocną. Oprócz informatyki interesuje mnie wiele innych rzeczy, głównie e-sport i kinematografia. Brałem udział w wielu turniejach e-sportowych i grałem z wieloma sławnymi graczami ze świata e-sportu. Zawsze wykonuję swoją pracę z pełnym zaangażowaniem. ',
-        achievements: ['przyszły developer', 'właściciel serwerów gier on-line', 'były moderator MPCforum']
+        achievements: ['aspirujący developer', 'właściciel serwerów gier on-line', 'były moderator MPCforum']
     }
 };
 
@@ -90,14 +90,14 @@ export const statusList = {
         no: 2,
         code: 'SOLVED',
         message: 'Correctly answered.',
-        color: '#32CD32',
+        color: '#228B22',
         description: 'Puzzle was solved correctly.'
     },
     send: {
         no: 3,
         code: 'SENT',
         message: 'Message sent.',
-        color: '#00FF00',
+        color: 'green',
         description: 'Message was sent successfully and posted on the Hall of Fame board.'
     },
     error_connect: {

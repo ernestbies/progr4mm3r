@@ -27,19 +27,21 @@ const NotFoundPage = ({history}) => {
                         maxWidth: 700,
                         backgroundColor: '#00000090',
                         paddingTop: 30,
-                        paddingBottom: 30
+                        paddingBottom: 30,
                     }}>
-                        <NotFoundElement text={t('page_not_found')}/>
-                        <p style={{
-                            color: '#A9A9A9',
-                            fontFamily: 'Source Code Pro',
-                            fontWeight: 300
-                        }}>
-                            {t('page_not_found_desc')}
-                        </p>
-                        <button style={{margin: 15}} className={'orange-button'} onClick={() => history.push('/')}>
-                            {t('back_to_main_page')}
-                        </button>
+                        <div>
+                            <NotFoundElement text={t('page_not_found')}/>
+                            <p style={{
+                                color: '#A9A9A9',
+                                fontFamily: 'Source Code Pro',
+                                fontWeight: 300
+                            }}>
+                                {t('page_not_found_desc')}
+                            </p>
+                            <button style={{margin: 15}} className={'orange-button'} onClick={() => history.push('/')}>
+                                {t('back_to_main_page')}
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,6 @@
 export const WEBSITE_NAME = 'ernestbies.com';
+export const WEBSITE_TITLE = 'Ernest Bieś - portfolio website';
+export const WEBSITE_URL = 'http://localhost:3000/';
 export const BACKEND_URL = 'http://localhost:4200';
 export const HALL_OF_FAME_MYSTERY = 'aHR0cHM6Ly9lcm5lc3RiaWVzLmNvbS9oYWxsLW9mLWZhbWU=';
 export const NOT_RELEASED_PROJECT = 'project_h_01';
@@ -13,7 +15,23 @@ export const info = {
         name: 'Ernest',
         surname: 'Bieś',
         country: 'Poland',
-        languages: ['PL', 'GB', 'DE'],
+        languages: [
+            {
+                name: 'Polish',
+                shortcut: 'PL',
+                level: 'native'
+            },
+            {
+                name: 'English',
+                shortcut: 'GB',
+                level: 'upper-intermediate'
+            },
+            {
+                name: 'German',
+                shortcut: 'DE',
+                level: 'basic'
+            }
+        ],
         degree: 'Bachelor\'s in Computer Science',
         dateOfBirth: '1998-03-25',
         text: 'Welcome on my official website! My name is Ernest and I come from Poland. I am a graduate of the State Higher Vocational School in Tarnów in the field of Computer Science (with a grade of 5.0 on the diploma). From an early age, I was interested in many things related to Information Technology. In my youth, I ran on-line gaming servers that were popular all over the country. I was also a moderator and mentor at the largest forum in Poland at that time - MPCforum about technical news, programming and creating plugins for online game servers. I am constantly trying to develop my skills and broaden my knowledge. I learn fast, I am communicative and ready to work in a team. I am also a kind, reliable and helpful person. In addition to Computer Science, I am interested in many other things, mainly e-sports and cinematography. I have participated in many esports tournaments and played with many players who are famous in the esports world. I always do everything with full commitment.',
@@ -23,7 +41,23 @@ export const info = {
         name: 'Ernest',
         surname: 'Bieś',
         country: 'Polska',
-        languages: ['PL', 'GB', 'DE'],
+        languages: [
+            {
+                name: 'Język polski',
+                shortcut: 'PL',
+                level: 'ojczysty'
+            },
+            {
+                name: 'Język angielski',
+                shortcut: 'GB',
+                level: 'wyższy średniozaawansowany'
+            },
+            {
+                name: 'Język niemiecki',
+                shortcut: 'DE',
+                level: 'podstawowy'
+            }
+        ],
         degree: 'Inżynier informatyki',
         dateOfBirth: '1998-03-25',
         text: 'Witam na mojej oficjalnej stronie! Nazywam się Ernest i pochodzę z Polski. Jestem absolwentem Państwowej Wyższej Szkoły Zawodowej w Tarnowie na kierunku Informatyka (z wynikiem 5,0 na dyplomie). Od najmłodszych lat interesowałem się informatyką. W młodości prowadziłem popularne w całym kraju serwery gier online. Byłem też moderatorem i mentorem na największym w tym czasie forum w Polsce - MPCforum, o nowinkach technicznych, programowaniu i tworzeniu wtyczek do serwerów gier online. Nieustannie staram się rozwijać swoje umiejętności i poszerzać wiedzę. Szybko się uczę, jestem komunikatywny i gotowy do pracy w zespole. Jestem też osobą życzliwą, rzetelną i pomocną. Oprócz informatyki interesuje mnie wiele innych rzeczy, głównie e-sport i kinematografia. Brałem udział w wielu turniejach e-sportowych i grałem z wieloma sławnymi graczami ze świata e-sportu. Zawsze wykonuję swoją pracę z pełnym zaangażowaniem. ',
@@ -122,3 +156,5 @@ export const statusList = {
         description: 'There was a problem sending the message (data validation problem).'
     }
 }
+
+export const mystery = ['神', '秘', '元', '素'];

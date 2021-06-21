@@ -4,7 +4,6 @@ import Footer from "../parts/footer/Footer";
 import MessageBox from "../components/MessageBox/MessageBox";
 import MessageFaq from "../components/MessageFaq/MessageFaq";
 import {AiOutlineInfoCircle, BiStats} from "react-icons/all";
-import CounterSection from "../components/CounterSection/CounterSection";
 import {connect} from "react-redux";
 
 const ProjectPage = ({history, status}) => {
@@ -115,7 +114,7 @@ const ProjectPage = ({history, status}) => {
                                         }}>{'> '}<span style={{
                                             color: '#DC143C',
                                             fontWeight: 'bold'
-                                        }}>{'An error occurred while getting data from the server.\nPlease refresh the page and try again.'}</span>
+                                        }}>{'An error occurred while getting data from the server.\nPlease refresh this page and try again.'}</span>
                                         </p>
                                     </Fragment> :
                                     <Fragment>
@@ -149,7 +148,6 @@ const ProjectPage = ({history, status}) => {
                         {'Back to the main page'}
                     </button>
                     <MessageFaq/>
-                    <CounterSection/>
                 </div>
             </div>
             <Footer/>

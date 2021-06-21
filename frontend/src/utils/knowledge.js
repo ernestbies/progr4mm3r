@@ -45,121 +45,149 @@ export const knowledgeCodes = {
     frontend: [
         {
             type: 'languages',
-            name: 'language-js'
+            code: 'language-js',
+            name: 'JavaScript'
         },
         {
             type: 'languages',
-            name: 'html'
+            code: 'html',
+            name: 'HTML'
         },
         {
             type: 'languages',
-            name: 'css'
+            code: 'css',
+            name: 'CSS'
         },
         {
             type: 'technologies',
-            name: 'reactjs'
+            code: 'reactjs',
+            name: 'React.js'
         },
         {
             type: 'technologies',
-            name: 'reactnative'
+            code: 'reactnative',
+            name: 'React Native'
         },
         {
             type: 'languages',
-            name: 'language-java'
+            code: 'language-java',
+            name: 'Java'
         },
         {
             type: 'platforms',
-            name: 'netbeans'
+            code: 'netbeans',
+            name: 'NetBeans IDE'
         },
         {
             type: 'platforms',
-            name: 'intellij'
+            code: 'intellij',
+            name: 'IntelliJ IDEA'
         }
     ],
     backend: [
         {
             type: 'languages',
-            name: 'language-js'
+            code: 'language-js',
+            name: 'JavaScript'
         },
         {
             type: 'technologies',
-            name: 'nodejs'
+            code: 'nodejs',
+            name: 'Node.js'
         },
         {
             type: 'technologies',
-            name: 'hapijs'
+            code: 'hapijs',
+            name: 'Hapi.js'
         },
         {
             type: 'technologies',
-            name: 'jwt'
+            code: 'jwt',
+            name: 'JSON Web Token'
         },
         {
             type: 'languages',
-            name: 'language-java'
+            code: 'language-java',
+            name: 'Java'
         },
         {
             type: 'technologies',
-            name: 'spring'
+            code: 'spring',
+            name: 'Spring'
         },
         {
             type: 'technologies',
-            name: 'uml'
+            code: 'uml',
+            name: 'Unified Modeling Language'
         }
     ],
     databases: [
         {
             type: 'languages',
-            name: 'language-sql'
+            code: 'language-sql',
+            name: 'SQL'
         },
         {
             type: 'languages',
-            name: 'language-plpgsql'
+            code: 'language-plpgsql',
+            name: 'PL/pg SQL'
         },
         {
             type: 'technologies',
-            name: 'mongodb'
+            code: 'mongodb',
+            name: 'MongoDB'
         },
         {
             type: 'technologies',
+            code: 'mongoose',
             name: 'mongoose'
         },
         {
             type: 'technologies',
-            name: 'sqlite'
+            code: 'sqlite',
+            name: 'SQLite'
         },
         {
             type: 'technologies',
-            name: 'tdm'
+            code: 'tdm',
+            name: 'Toad Data Modeler'
         }
     ],
     testing: [
         {
             type: 'languages',
-            name: 'language-js'
+            code: 'language-js',
+            name: 'JavaScript'
         },
         {
             type: 'technologies',
-            name: 'jest'
+            code: 'jest',
+            name: 'Jest'
         },
         {
             type: 'languages',
-            name: 'language-java'
+            code: 'language-java',
+            name: 'Java'
         },
         {
             type: 'technologies',
-            name: 'junit'
+            code: 'junit',
+            name: 'JUnit'
         },
         {
             type: 'languages',
-            name: 'language-groovy'
+            code: 'language-groovy',
+            name: 'Groovy'
         },
         {
             type: 'technologies',
-            name: 'spock'
+            code: 'spock',
+            name: 'Spock'
         },
         {
             type: 'technologies',
-            name: 'git'
+            code: 'git',
+            name: 'GIT'
         }
     ]
 }

@@ -54,12 +54,13 @@ const About = () => {
                         info[i18n.language].languages.map((el) => {
                             return (
                                 <img
-                                    key={el}
-                                    alt={el}
+                                    key={el.name}
+                                    alt={el.name}
                                     width={20}
                                     height={12}
+                                    title={el.name + ' (' + el.level + ')'}
                                     style={{marginRight: 5, width: 16, height: 14, borderRadius: '50%'}}
-                                    src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + el + '.svg'}
+                                    src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + el.shortcut + '.svg'}
                                 />
                             )
                         })

@@ -264,7 +264,7 @@ const MessageBox = ({passToParent, status, setStatus}) => {
                                 {'Fetching all messages from external server...\n'}
                                 {status.no === 1 && messages.length ? 'Messages loaded successfully!\n' : ''}
                                 {status.no === 1 && !messages.length ? 'There are no messages on the board. Be the first to leave a message!\n': ''}
-                                {status.no === 4 && 'There was an error connecting with server. Please refresh the page and try again.\n'}
+                                {status.no === 4 && 'There was an error connecting with server. Please refresh this page and try again.\n'}
                             </p>
                             <div style={{marginBottom: 10}}>
                                 {!isFetching && renderMessages()}

@@ -23,7 +23,7 @@ const Hobby = () => {
                 <div style={{textAlign: 'center'}}>
                     <p className={'header-text-small'}>{t('timeline')}</p>
                 </div>
-                <video className={'video'} autoPlay muted loop>
+                <video className={'video'} poster={'/images/wallpaper2.jpg'} autoPlay muted loop>
                     <source src={'/videos/background.mp4'} type={'video/mp4'}/>
                 </video>npm
                 <div style={{display: 'flex', flexDirection: 'column'}}>

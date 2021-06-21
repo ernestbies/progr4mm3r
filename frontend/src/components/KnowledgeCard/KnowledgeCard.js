@@ -26,7 +26,9 @@ const KnowledgeCard = ({type}) => {
             <ImagesContainer>
                 {
                     knowledgeCodes[type].map(knowledge =>
-                        <CardIcon alt={knowledge.name} src={'images/' + knowledge.type + '/' + knowledge.name + '.png'}/>)
+                        <CardIcon title={knowledge.name}
+                                  alt={knowledge.name}
+                                  src={'images/' + knowledge.type + '/' + knowledge.code + '.png'}/>)
                 }
             </ImagesContainer>
         )

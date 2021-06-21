@@ -3,14 +3,14 @@ export const skills = [
         id: 0,
         name: 'Java',
         image: '/images/languages/language-java.png',
-        color: '#FFA500',
+        color: '#FF8C00',
         type: 'language'
     },
     {
         id: 1,
         name: 'JavaScript',
         image: '/images/languages/language-js.png',
-        color: 'yellow',
+        color: '#FFD700',
         type: 'language'
     },
     {
@@ -80,21 +80,21 @@ export const skills = [
         id: 11,
         name: 'C#',
         image: '/images/languages/language-c-sharp.png',
-        color: 'violet',
+        color: '#8B008B',
         type: 'language'
     },
     {
         id: 12,
         name: 'R',
         image: '/images/languages/language-r.png',
-        color: 'blue',
+        color: '#0000FF',
         type: 'language'
     },
     {
         id: 13,
         name: 'Haskell',
         image: '/images/languages/language-haskell.png',
-        color: 'white',
+        color: 'black',
         type: 'language'
     },
     {
@@ -143,7 +143,7 @@ export const skills = [
         id: 20,
         name: 'Unity',
         image: '/images/technologies/unity.png',
-        color: 'white',
+        color: 'black',
         type: 'technology'
     },
     {

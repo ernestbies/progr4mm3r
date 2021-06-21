@@ -144,10 +144,10 @@ body {
   visibility: hidden;
   width: 70px;
   height: 20px;
-  background-color: black;
+  background-color: white;
   color: #fff;
   text-align: center;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   margin-top: -28px;
   margin-left: -8px;
   padding: 3px 0;
@@ -164,7 +164,7 @@ body {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: black transparent transparent transparent;
+  border-color: white transparent transparent transparent;
 }
 
 .tooltipClassSmall:hover .tooltipText {
@@ -266,7 +266,7 @@ body {
 .colored-text {
   color: orange;
   font-weight: 300;
-  font-family: 'Source Code Pro', serif;
+  font-family: Source Code Pro, serif;
   font-size: 20px;
   animation-name: orange-to-purple;
   animation-duration: 5s;

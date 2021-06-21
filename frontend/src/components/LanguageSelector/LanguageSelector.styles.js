@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, {css, keyframes} from "styled-components";
 
 export const SelectorSection = styled.div`
     display: inline;
@@ -29,7 +29,28 @@ export const LanguageButton = styled.button`
     }
 `;
 
+
+const changeDivider = keyframes`
+    0% {
+        content: '/';
+    }
+    
+    100% {
+        content: '\\005C';
+    }
+`;
+
 export const LanguageDivider = styled.span`
     color: ${({theme}) => (theme === 'dark' ? 'white' : 'black')};
     font-family: Open Sans, serif;
+    
+    &:after {
+        content: "${({content}) => content}";
+    }
+    
+    ${({animations}) => animations && css`
+        &:after {
+           animation: ${changeDivider} 2s infinite;
+        }
+    `}
 `;

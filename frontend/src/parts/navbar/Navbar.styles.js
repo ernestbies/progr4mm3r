@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import {mystery} from "../../utils/information";
 
 const StyledNav = styled.nav`
     top: 0;
@@ -17,7 +18,7 @@ const StyledNav = styled.nav`
     }
 `;
 
-const WebsiteName = styled.div`
+const WebsiteHeader = styled.div`
     font-family: 'Open Sans', serif;
     font-size: 16px;
     font-weight: 300;
@@ -25,6 +26,7 @@ const WebsiteName = styled.div`
     display: inline;
     position: absolute;
     left: 50px;
+    cursor: pointer;
     
     &:hover {
         color: ${({currentTheme}) => (currentTheme === 'dark' ? 'white' : 'orange')};
@@ -55,8 +57,91 @@ const NavbarLink = styled.div`
     }
 `;
 
+const mixColors = keyframes`
+    0% {
+        color: orange;
+        border-bottom-color: orange;
+    }
+
+    50% {
+        color: #9932CC;
+        border-bottom-color: #9932CC;
+    }
+
+    100% {
+        color: orange;
+        border-bottom-color: orange;
+    }
+`
+
+const changeLetters = keyframes`
+    0% {
+        content: ""
+    }
+
+    25% {
+        content: "_${mystery[0]}"
+    }
+    
+    50% {
+        content: "_${mystery[0] + mystery[1]}"
+    }
+    
+    75% {
+        content: "_${mystery[0] + mystery[1] + mystery[2]}"
+    }
+
+    100% {
+        content: "_${mystery[0] + mystery[1] + mystery[2] + mystery[3]}"
+    }
+`
+
+const showHide = keyframes`
+    0% {
+        content: "> "
+    }
+
+    25% {
+        content: ""
+    }
+    
+    50% {
+        content: "< "
+    }
+    
+    75% {
+        content: ""
+    }
+
+    100% {
+        content: "> "
+    }
+`
+
+const SpecialNavbarLink = styled(NavbarLink)`
+    padding-bottom: 15px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: orange;
+    color: orange;
+    width: 18rem;
+    animation: ${mixColors} 5s infinite ease-in-out; 
+    font-family: Source Code Pro, serif;
+    
+    &:after {
+        content: "";
+        animation: ${changeLetters} 8s infinite ease-in-out;
+    }
+    
+    &:before {
+        content: "";
+        animation: ${showHide} 8s infinite ease-in-out;
+    }
+`
+
 export  {
     StyledNav,
-    WebsiteName,
-    NavbarLink
+    WebsiteHeader,
+    NavbarLink,
+    SpecialNavbarLink
 }

@@ -5,8 +5,6 @@ import contact from "../../utils/contact";
 import "./Contact.styles.css";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import {useTranslation} from "react-i18next";
-import NotReleasedProject from "../../components/NotReleasedProject/NotReleasedProject";
-import {NOT_RELEASED_PROJECT} from "../../utils/information";
 
 const Contact = () => {
 
@@ -77,7 +75,6 @@ const Contact = () => {
                         <span style={{color: 'red'}}>*</span> {t('contact_info')} {':)'}</p>
                 </div>
             </div>
-            <NotReleasedProject projectName={NOT_RELEASED_PROJECT}/>
         </div>
     );
 }

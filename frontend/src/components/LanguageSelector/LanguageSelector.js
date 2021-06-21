@@ -24,7 +24,7 @@ class LanguageSelector extends Component {
     }
 
     render () {
-        const { i18n, mobileMenu, currentTheme } = this.props;
+        const { i18n, mobileMenu, currentTheme, animations } = this.props;
 
         return (
             <SelectorSection mobileMenu={mobileMenu}>
@@ -32,7 +32,7 @@ class LanguageSelector extends Component {
                                 onClick={() => this.changeLanguageFunction(languages.pl)}>
                     {languages.pl.toUpperCase()}
                 </LanguageButton>
-                <LanguageDivider theme={currentTheme}>{this.state.divider}</LanguageDivider>
+                <LanguageDivider content={this.state.divider} animations={animations} theme={currentTheme}/>
                 <LanguageButton theme={currentTheme} active={i18n.language === languages.en}
                                 onClick={() => this.changeLanguageFunction(languages.en)}>
                     {languages.en.toUpperCase()}
@@ -44,11 +44,13 @@ class LanguageSelector extends Component {
 
 LanguageSelector.propTypes = {
     currentTheme: PropTypes.oneOf(['dark', 'light']),
-    mobileMenu: PropTypes.bool
+    mobileMenu: PropTypes.bool,
+    animations: PropTypes.bool
 }
 
 LanguageSelector.defaultProps = {
-    currentTheme: 'dark'
+    currentTheme: 'dark',
+    animations: false
 }
 
 export default withTranslation()(LanguageSelector);

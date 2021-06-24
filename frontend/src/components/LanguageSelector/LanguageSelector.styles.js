@@ -1,4 +1,5 @@
 import styled, {css, keyframes} from "styled-components";
+import {navbarThemes} from "../../parts/navbar/Navbar.styles";
 
 export const SelectorSection = styled.div`
     display: inline;
@@ -20,12 +21,12 @@ export const LanguageButton = styled.button`
     font-family: 'Open Sans', serif;
     font-weight: 300;
     font-size: 16px;
-    color: ${({active, theme}) => (active && theme === 'dark' ? 'orange' : !active && theme === 'dark' ? 'white' : active && theme === 'light' ? '#9932CC' : 'black')};
+    color: ${({active, theme}) => (active ? navbarThemes[theme].color : navbarThemes[theme].additionalColor)};
     cursor: pointer;
     display: inline-block;
     
     &:hover {
-        color: ${({currentTheme}) => (currentTheme === 'dark' ? 'white' : 'orange')};
+        color: ${({theme}) => navbarThemes[theme].color};
     }
 `;
 
@@ -41,7 +42,7 @@ const changeDivider = keyframes`
 `;
 
 export const LanguageDivider = styled.span`
-    color: ${({theme}) => (theme === 'dark' ? 'white' : 'black')};
+    color: ${({theme}) => navbarThemes[theme].additionalColor};
     font-family: Open Sans, serif;
     
     &:after {

@@ -3,6 +3,7 @@ import {languages} from "../../utils/information";
 import {withTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import {LanguageButton, LanguageDivider, SelectorSection} from "./LanguageSelector.styles";
+import {navbarThemesTypes} from "../../parts/navbar/Navbar.styles";
 
 // Class component - language selector {available languages: PL, EN}
 class LanguageSelector extends Component {
@@ -43,7 +44,7 @@ class LanguageSelector extends Component {
 }
 
 LanguageSelector.propTypes = {
-    currentTheme: PropTypes.oneOf(['dark', 'light']),
+    currentTheme: PropTypes.oneOf(Object.keys(navbarThemesTypes)),
     mobileMenu: PropTypes.bool,
     animations: PropTypes.bool
 }

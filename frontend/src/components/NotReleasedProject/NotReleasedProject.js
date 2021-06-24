@@ -11,10 +11,20 @@ const NotReleasedProject = ({projectName}) => {
     return (
         <UnreleasedProjectDiv>
             <Link style={{textDecoration: 'none'}} to={'/hall-of-fame'}>
-                <p className={'colored-text'}>
-                    <span style={{fontWeight: 'bold'}}>~ </span>
-                    <span style={{color: 'white'}}>{t('click_here_to')} </span>cd {projectName}
-                </p>
+                <div className={'colored-text glitch'}>
+                    <p className={'colored-text glitch-text'}>
+                        <span style={{fontWeight: 'bold'}}>~ </span>
+                        <span style={{color: 'white'}}>{t('click_here_to')} </span>cd {projectName}
+                    </p>
+                    <p className={'colored-text'}>
+                        <span style={{fontWeight: 'bold'}}>~ </span>
+                        <span style={{color: 'white'}}>{t('click_here_to')} </span>cd {projectName}
+                    </p>
+                    <p className={'colored-text glitch-text'}>
+                        <span style={{fontWeight: 'bold'}}>~ </span>
+                        <span style={{color: 'white'}}>{t('click_here_to')} </span>cd {projectName}
+                    </p>
+                </div>
             </Link>
         </UnreleasedProjectDiv>
     )

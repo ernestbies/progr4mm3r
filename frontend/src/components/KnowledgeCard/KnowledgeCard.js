@@ -23,10 +23,11 @@ const KnowledgeCard = ({type}) => {
 
     const renderIcons = (type) => {
         return (
-            <ImagesContainer>
+            <ImagesContainer key={type}>
                 {
                     knowledgeCodes[type].map(knowledge =>
-                        <CardIcon title={knowledge.name}
+                        <CardIcon key={knowledge.name}
+                                  title={knowledge.name}
                                   alt={knowledge.name}
                                   src={'images/' + knowledge.type + '/' + knowledge.code + '.png'}/>)
                 }

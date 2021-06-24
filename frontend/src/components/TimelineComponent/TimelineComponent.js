@@ -15,9 +15,9 @@ import RepeatIcon from '@material-ui/icons/Repeat';
 import WatchIcon from '@material-ui/icons/LiveTv';
 import {useTranslation} from "react-i18next";
 import {TimelineText} from "../TimelineText/TimelineText";
-import {useStyles} from "./MyTimeline.styles";
+import {useStyles} from "./TimelineComponent.styles";
 
-export default function MyTimeline() {
+export default function TimelineComponent() {
     const classes = useStyles();
     const { t } = useTranslation('common');
 

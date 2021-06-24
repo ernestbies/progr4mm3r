@@ -56,6 +56,7 @@ export const CardSubtitle = styled.p`
 `;
 
 export const CardContent = styled.div`
+    color: white;
     flex: 6;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;

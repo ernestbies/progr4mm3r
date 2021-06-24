@@ -2,10 +2,9 @@ import React from 'react';
 import {Carousel} from 'react-bootstrap';
 import {hobby} from "../../utils/hobby";
 import {renderElements} from "../../utils/functions/renderElements";
-import MyTimeline from "../../components/MyTimeline/MyTimeline";
 import "./Hobby.styles.css";
 import {useTranslation} from "react-i18next";
-import {quote} from "../../utils/information";
+import TimelineSection from "../../components/TimelineSection/TimelineSection";
 
 const Hobby = () => {
 
@@ -25,14 +24,8 @@ const Hobby = () => {
                 </div>
                 <video className={'video'} poster={'/images/wallpaper2.jpg'} autoPlay muted loop>
                     <source src={'/videos/background.mp4'} type={'video/mp4'}/>
-                </video>npm
-                <div style={{display: 'flex', flexDirection: 'column'}}>
-                    <MyTimeline/>
-                    <section className={'quote-component row col-sm col-md-4'}>
-                        <blockquote className={'quote EN'}>{quote.text}
-                            <cite> – </cite>{quote.author}</blockquote>
-                    </section>
-                </div>
+                </video>
+                <TimelineSection/>
             </div>
         </div>
     );

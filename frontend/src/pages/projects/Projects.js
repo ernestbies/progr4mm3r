@@ -2,7 +2,6 @@ import React, {useEffect, useState} from 'react';
 import {Carousel} from "react-bootstrap";
 import {projects} from "../../utils/projects";
 import {renderElements} from "../../utils/functions/renderElements";
-import "./Projects.styles.css";
 import {useTranslation} from "react-i18next";
 
 const Projects = () => {

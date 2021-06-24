@@ -1,11 +1,9 @@
 import styled, {keyframes} from "styled-components";
-import PropTypes from 'prop-types';
 
 export const CounterSectionDiv = styled.div`
     display: flex;
     height: 400px;
     background-color: black;
-    border-bottom: 1px solid #FFFFFF90;
     align-items: center;
     justify-content: center;
     text-align: center;

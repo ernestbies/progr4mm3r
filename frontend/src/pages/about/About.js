@@ -12,8 +12,7 @@ const About = () => {
         <div id={'about'} className={'item-dashboard about-container row'}
              style={{width: '100%', height: '100%', margin: 0, backgroundImage: 'url(images/wallpaper1.jpg)'}}>
             <div className={'avatar-container col'} style={{flex: 2}}>
-                <Avatar style={{marginTop: 15, marginBottom: 15, width: 200, height: 200}}
-                        src={'images/me.jpg'}/>
+                <Avatar className={'avatar'} style={{width: 200, height: 200}} src={'images/me.jpg'}/>
                 {
                     info[i18n.language].achievements.map(el =>
                         <code key={el} style={{fontSize: 12}}>

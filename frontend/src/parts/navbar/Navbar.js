@@ -8,6 +8,7 @@ import {NavbarLink, navbarThemesTypes, SpecialNavbarLink, StyledNav, WebsiteHead
 import PropTypes from 'prop-types';
 import {withRouter} from "react-router";
 import {Logo} from "../../components/Logo/Logo";
+import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 
 const Navbar = ({history, links, languageSelector}) => {
 
@@ -18,9 +19,8 @@ const Navbar = ({history, links, languageSelector}) => {
     const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
     const [isLastSection, setIsLastSection] = useState(false);
     const prevThemeRef = useRef('dark');
-    useEffect(() => {
-        prevThemeRef.current = currentTheme;
-    });
+
+    useEffect(() => {prevThemeRef.current = currentTheme;});
     const prevTheme = prevThemeRef.current;
 
     useEffect(() => {
@@ -31,28 +31,34 @@ const Navbar = ({history, links, languageSelector}) => {
         }
     }, []);
 
+    useEffect(() => {
+        navbar.current.style.animation = 'change-theme-to-' + currentTheme + '-from-' + prevTheme + ' 4s';
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [currentTheme])
+
     const scrollTo = (id) => window.scrollTo(0, document.getElementById(id).offsetTop);
+
+    const redirect = () => {
+        if (history.location.pathname !== '/') {
+            window.location.replace(WEBSITE_URL);
+        } else {
+            window.scrollTo(0, 0);
+        }
+    };
 
     const toggleMobileMenu = () => {
         const navMenu = document.getElementsByClassName('nav-menu')[0];
         const hamburgerMenu = document.getElementById('hamburger');
         navMenu.classList.toggle('active');
         hamburgerMenu.classList.toggle('active');
-
         setIsMobileMenuActive(!isMobileMenuActive);
     }
 
     const changeNavbar = () => {
         const viewState = scrollSpy?.current?.valueOf().state.inViewState;
-        setCurrentTheme(viewState[4] ? navbarThemesTypes.light :
-            viewState[5] ? navbarThemesTypes.special: navbarThemesTypes.dark);
+        setCurrentTheme(viewState[4] ? navbarThemesTypes.light : viewState[5] ? navbarThemesTypes.special: navbarThemesTypes.dark);
         setIsLastSection(viewState[5]);
     }
-
-    useEffect(() => {
-        navbar.current.style.animation = 'change-theme-to-' + currentTheme + '-from-' + prevTheme + ' 4s';
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentTheme])
 
     const renderNavbarLinks = () => {
         let view = [];
@@ -71,14 +77,6 @@ const Navbar = ({history, links, languageSelector}) => {
         return view;
     }
 
-    const redirect = () => {
-        if (history.location.pathname !== '/') {
-            window.location.replace(WEBSITE_URL);
-        } else {
-            window.scrollTo(0, 0);
-        }
-    };
-
     return (
         <StyledNav ref={navbar} currentTheme={currentTheme} mobileMenu={isMobileMenuActive}>
             <WebsiteHeader title={WEBSITE_TITLE} currentTheme={currentTheme} onClick={() => redirect()}>
@@ -95,12 +93,7 @@ const Navbar = ({history, links, languageSelector}) => {
                 }
             </Scrollspy>
             {languageSelector && <LanguageSelector animations={isLastSection} currentTheme={currentTheme} mobileMenu={isMobileMenuActive}/>}
-            <div id={'hamburger'} className={'hamburger'} onClick={() => toggleMobileMenu()}>
-                <span className={currentTheme === navbarThemesTypes.dark ? 'bar dark' : 'bar light'}/>
-                <span className={currentTheme === navbarThemesTypes.dark ? 'bar dark' : 'bar light'}
-                      style={{marginTop: 5, marginBottom: 5}}/>
-                <span className={currentTheme === navbarThemesTypes.dark ? 'bar dark' : 'bar light'}/>
-            </div>
+            <HamburgerMenu theme={currentTheme} onClick={() => toggleMobileMenu()}/>
         </StyledNav>
     );
 }

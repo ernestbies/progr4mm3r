@@ -259,7 +259,7 @@ body {
 
 .orange-button:hover {
     border-color: white;
-    background-color: #FFA500;
+    background-color: #FFA50090;
     color: black;
 }
 
@@ -309,6 +309,18 @@ body {
     clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
     transform: translate(0.0125em, 0.025em);
     opacity: 0.8;
+}
+
+.avatar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 200px;
+    -webkit-transition: .2s all;
+}
+
+.avatar:hover {
+    -webkit-filter: brightness(60%);
 }
 
 @keyframes reveal {

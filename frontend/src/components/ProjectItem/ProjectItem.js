@@ -94,7 +94,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                 <p style={{
                     fontSize: 12,
                     fontFamily: 'Open Sans',
-                    marginTop: 30,
+                    marginTop: 30
                 }}>{description}</p>
                 <div style={{display: 'flex', marginTop: 30, marginBottom: 10, alignItems: 'center'}}>
                     <FaWrench color={color} size={14} style={{marginRight: 5}}/>

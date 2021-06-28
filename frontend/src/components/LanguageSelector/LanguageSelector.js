@@ -25,10 +25,10 @@ class LanguageSelector extends Component {
     }
 
     render () {
-        const { i18n, mobileMenu, currentTheme, animations } = this.props;
+        const { i18n, mobileDisplayStyle, currentTheme, animations } = this.props;
 
         return (
-            <SelectorSection mobileMenu={mobileMenu}>
+            <SelectorSection mobileDisplayStyle={mobileDisplayStyle}>
                 <LanguageButton theme={currentTheme} active={i18n.language === languages.pl}
                                 onClick={() => this.changeLanguageFunction(languages.pl)}>
                     {languages.pl.toUpperCase()}
@@ -45,7 +45,7 @@ class LanguageSelector extends Component {
 
 LanguageSelector.propTypes = {
     currentTheme: PropTypes.oneOf(Object.keys(navbarThemesTypes)),
-    mobileMenu: PropTypes.bool,
+    mobileDisplayStyle: PropTypes.oneOf(['inline', 'none']),
     animations: PropTypes.bool
 }
 

@@ -87,7 +87,7 @@ const StyledNav = styled.nav`
     z-index: 2;
     
     @media (max-width: 992px) {
-        padding-bottom: ${({mobileMenu}) => (mobileMenu ? 0 : '15px')};
+        padding-bottom: 15px;
     }
 `;
 

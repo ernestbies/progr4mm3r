@@ -15,9 +15,9 @@ const Navbar = ({history, links, languageSelector}) => {
     const scrollSpy = useRef();
     const navbar = useRef();
     const {t} = useTranslation('common');
+    const [activeSection, setActiveSection] = useState([]);
     const [currentTheme, setCurrentTheme] = useState('dark');
     const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
-    const [isLastSection, setIsLastSection] = useState(false);
     const prevThemeRef = useRef('dark');
 
     useEffect(() => {prevThemeRef.current = currentTheme;});
@@ -25,7 +25,6 @@ const Navbar = ({history, links, languageSelector}) => {
 
     useEffect(() => {
         window.addEventListener('scroll', changeNavbar, {passive: true});
-
         return () => {
             window.removeEventListener('scroll', changeNavbar);
         }
@@ -56,14 +55,15 @@ const Navbar = ({history, links, languageSelector}) => {
 
     const changeNavbar = () => {
         const viewState = scrollSpy?.current?.valueOf().state.inViewState;
-        setCurrentTheme(viewState[4] ? navbarThemesTypes.light : viewState[5] ? navbarThemesTypes.special: navbarThemesTypes.dark);
-        setIsLastSection(viewState[5]);
+        setActiveSection(viewState);
+        setCurrentTheme(viewState[4] ? navbarThemesTypes.light :
+                viewState[5] ? navbarThemesTypes.special : navbarThemesTypes.dark);
     }
 
     const renderNavbarLinks = () => {
         let view = [];
 
-        if (isLastSection) {
+        if (activeSection[5]) {
             view.push(<SpecialNavbarLink key={links[5]} currentTheme={navbarThemesTypes.dark}
                                   onClick={() => scrollTo(links[5])}>
                 {'UNKNOWN_SECTION_01'}
@@ -78,7 +78,7 @@ const Navbar = ({history, links, languageSelector}) => {
     }
 
     return (
-        <StyledNav ref={navbar} currentTheme={currentTheme} mobileMenu={isMobileMenuActive}>
+        <StyledNav ref={navbar} currentTheme={currentTheme}>
             <WebsiteHeader title={WEBSITE_TITLE} currentTheme={currentTheme} onClick={() => redirect()}>
                 <Logo lightMode={currentTheme === navbarThemesTypes.light}/>{WEBSITE_NAME}
             </WebsiteHeader>
@@ -92,7 +92,10 @@ const Navbar = ({history, links, languageSelector}) => {
                     renderNavbarLinks()
                 }
             </Scrollspy>
-            {languageSelector && <LanguageSelector animations={isLastSection} currentTheme={currentTheme} mobileMenu={isMobileMenuActive}/>}
+            {languageSelector && <LanguageSelector
+                mobileDisplayStyle={isMobileMenuActive ? 'inline' : 'none'}
+                animations={activeSection[5]}
+                currentTheme={currentTheme}/>}
             <HamburgerMenu theme={currentTheme} onClick={() => toggleMobileMenu()}/>
         </StyledNav>
     );

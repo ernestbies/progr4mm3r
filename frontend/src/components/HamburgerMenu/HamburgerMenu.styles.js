@@ -5,6 +5,7 @@ export const Hamburger = styled.div`
     display: none;
     position: absolute;
     right: 20px;
+    top: 18px;
    
     @media (max-width: 992px) {
         display: block;

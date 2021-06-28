@@ -14,6 +14,7 @@ const changeBorder = keyframes`
         border-color: orange;
     }
 `;
+
 export const CounterElement = styled.div`
     width: 300px;
     height: 300px;
@@ -35,5 +36,9 @@ export const CounterElement = styled.div`
     
     &:active {
         animation: ${changeBorder} 5s infinite;
+    }
+       
+    @media (max-width: 480px) {
+        scale: 0.8;
     }
 `;

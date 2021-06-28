@@ -8,7 +8,7 @@ export const SelectorSection = styled.div`
     right: 50px;
     
     @media (max-width: 992px) {
-        display: ${({mobileMenu}) => (mobileMenu ? 'inline' : 'none')};
+        display: ${({mobileDisplayStyle}) => mobileDisplayStyle};    
         position: static;
         padding-bottom: 10px;
     }

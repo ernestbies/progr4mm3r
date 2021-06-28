@@ -65,5 +65,11 @@
   "contact_info": "Odpowiadam na wszystkie wiadomości tak szybko, jak to tylko możliwe. Dziękuję za zainteresowanie.",
   "page_not_found": "Zasób nieznaleziony",
   "page_not_found_desc": "Przepraszam, strona której szukasz jest niedostępna. ",
-  "back_to_main_page": "Powróć do strony głównej"
+  "back_to_main_page": "Powróć do strony głównej",
+  "counter_section_0": "K L I K N I J   T O",
+  "counter_section_1": "D L A",
+  "counter_section_2": "Uwaga",
+  "counter_section_3": "Kliknąłeś łącznie",
+  "counter_section_4": "razy",
+  "counter_section_5": "Dostęp do tej statystyki jest możliwy\npoprzez wykorzystanie React Redux.\nMiłego klikania."
 }

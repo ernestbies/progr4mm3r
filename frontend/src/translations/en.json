@@ -65,5 +65,11 @@
   "contact_info": "I will respond on all messages as soon as it is possible. Thank you for your interest.",
   "page_not_found": "Page not found",
   "page_not_found_desc": "Sorry, the page you're looking for cannot be accessed.",
-  "back_to_main_page": "Back to the main page"
+  "back_to_main_page": "Back to the main page",
+  "counter_section_0": "C L I C K   T H I S",
+  "counter_section_1": "F O R",
+  "counter_section_2": "Note",
+  "counter_section_3": "You clicked a total of",
+  "counter_section_4": "times",
+  "counter_section_5": "Access to this statistic is possible\nthrough the use of React Redux.\nHave fun clicking."
 }

@@ -85,9 +85,6 @@ const StyledNav = styled.nav`
     background-color: ${({currentTheme}) => navbarThemes[currentTheme].background};
     padding-top: 15px;
     z-index: 2;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #FFFFFF99;
     
     @media (max-width: 992px) {
         padding-bottom: ${({mobileMenu}) => (mobileMenu ? 0 : '15px')};

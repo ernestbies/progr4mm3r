@@ -6,11 +6,10 @@ import Skills from "./skills/Skills";
 import Hobby from "./hobby/Hobby";
 import Contact from "./contact/Contact";
 import Footer from "../parts/footer/Footer";
-import Other from "./other/Other";
 
 const MainPage = () => {
 
-    const links = ['about', 'projects', 'skills', 'hobby', 'contact', 'other'];
+    const links = ['about', 'projects', 'skills', 'hobby', 'contact'];
 
     return (
         <div className={'App'}>
@@ -21,7 +20,6 @@ const MainPage = () => {
                 <Skills/>
                 <Hobby/>
                 <Contact/>
-                <Other/>
                 <Footer/>
             </div>
         </div>

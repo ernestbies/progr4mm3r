@@ -16,16 +16,16 @@ class LanguageSelector extends Component {
         }
     }
 
-    componentDidMount() {
+    /* componentDidMount() {
         console.log('Current language:', this.props.i18n.language);
-    }
+    } */
 
     changeLanguageFunction = (language) => {
         this.props.i18n.changeLanguage(language).then(() => localStorage.setItem('language', language));
     }
 
     render () {
-        const { i18n, mobileDisplayStyle, currentTheme, animations } = this.props;
+        const { i18n, mobileDisplayStyle, currentTheme } = this.props;
 
         return (
             <SelectorSection mobileDisplayStyle={mobileDisplayStyle}>
@@ -33,7 +33,7 @@ class LanguageSelector extends Component {
                                 onClick={() => this.changeLanguageFunction(languages.pl)}>
                     {languages.pl.toUpperCase()}
                 </LanguageButton>
-                <LanguageDivider content={this.state.divider} animations={animations} theme={currentTheme}/>
+                <LanguageDivider content={this.state.divider} theme={currentTheme}/>
                 <LanguageButton theme={currentTheme} active={i18n.language === languages.en}
                                 onClick={() => this.changeLanguageFunction(languages.en)}>
                     {languages.en.toUpperCase()}
@@ -46,12 +46,11 @@ class LanguageSelector extends Component {
 LanguageSelector.propTypes = {
     currentTheme: PropTypes.oneOf(Object.keys(navbarThemesTypes)),
     mobileDisplayStyle: PropTypes.oneOf(['inline', 'none']),
-    animations: PropTypes.bool
 }
 
 LanguageSelector.defaultProps = {
     currentTheme: 'dark',
-    animations: false
+    mobileDisplayStyle: 'inline'
 }
 
 export default withTranslation()(LanguageSelector);

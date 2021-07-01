@@ -4,6 +4,7 @@ import {renderElements} from "../../utils/functions/renderElements";
 import "./Skills.styles.css";
 import {useTranslation} from "react-i18next";
 import KnowledgeSection from "../../components/KnowledgeSection/KnowledgeSection";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 const Skills = () => {
 
@@ -11,8 +12,8 @@ const Skills = () => {
 
     return (
         <div id={'skills'} className={'item-dashboard'} style={{backgroundColor: '#1d2026'}}>
+            <SectionTitle position={'end'} content={t('skills')} signColor={'#1d2026'} specialNumber={3}/>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <p className={'header-text'}>{t('skills')}</p>
                 <p style={{fontWeight: 300, fontSize: 15, margin: 15, fontFamily: 'Open Sans'}}>{t('skills_text1')}<br/>
                     {t('skills_text2')} <code style={{fontSize: 14}}>{t('programming_languages2')}</code> {t('and')}
                     <code style={{fontSize: 14}}> {t('it_technologies2')}</code> {t('skills_text3')}</p>

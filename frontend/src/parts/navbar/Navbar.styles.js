@@ -131,12 +131,11 @@ const NavbarLink = styled.div`
 `;
 
 const SpecialNavbarLink = styled(NavbarLink)`
+    width: 18rem;
     padding-bottom: 15px;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: orange;
-    color: orange;
-    width: 18rem;
     font-family: Source Code Pro, serif;
     text-transform: uppercase;
     animation: orange-to-purple-with-border 5s infinite;

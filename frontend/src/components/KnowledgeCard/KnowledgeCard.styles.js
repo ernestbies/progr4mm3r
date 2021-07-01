@@ -1,4 +1,16 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+const revealCard = keyframes`
+    0% {
+        opacity: 0.2;
+        transform: rotateY(-180deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotateY(0deg);
+    }
+`;
 
 export const Card = styled.div`
     display: flex;
@@ -10,6 +22,19 @@ export const Card = styled.div`
     width: 330px;
     height: 600px;
     margin: 20px;
+    opacity: 0.2;
+    perspective: 100px;
+    user-select: none;
+    scale: 0.95;
+    
+    &.animated {
+        animation: ${revealCard} 8s forwards;
+    }
+    
+    &:hover {
+        border: 1px solid ${({color}) => color};
+        scale: 1;
+    }
 `;
 
 export const CardHeader = styled.div`
@@ -21,12 +46,20 @@ export const CardHeader = styled.div`
     border-top-right-radius: 25px;
     background-color: #FFFFFF90;
     position: relative;    
+    
+    ${Card}:hover > & {
+        background-color: #00000090;
+    }
 `;
 
 export const CardImage = styled.img`
     width: 90px;
     height: 75px;
     margin-top: 20px;
+    
+    ${Card}:hover & {
+        filter: invert(100%);
+    }
 `;
 
 export const CardTitle = styled.p`
@@ -38,6 +71,10 @@ export const CardTitle = styled.p`
    bottom: -5px;
    font-size: 18px;
    color: black;    
+   
+   ${Card}:hover & {
+       color: white; 
+   }
 `;
 
 export const DivWrapper = styled.div`

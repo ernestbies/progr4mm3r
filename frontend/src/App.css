@@ -21,25 +21,6 @@ body {
     padding-top: 50px;
 }
 
-.header-text {
-    color: white;
-    display: inline-block;
-    font-family: 'Open Sans', serif;
-    font-weight: 300;
-    margin-top: 20px;
-    font-size: 23px;
-}
-
-.header-text-small {
-    color: white;
-    display: inline-block;
-    font-family: 'Open Sans', serif;
-    font-weight: 300;
-    margin-top: 20px;
-    font-size: 22px;
-    margin-bottom: 50px;
-}
-
 .wallpaper-container {
     background-position: center;
     background-size: cover;

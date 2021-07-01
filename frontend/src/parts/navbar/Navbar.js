@@ -4,18 +4,19 @@ import "./Navbar.styles.css";
 import {WEBSITE_NAME, WEBSITE_TITLE, WEBSITE_URL} from "../../utils/information";
 import {useTranslation} from "react-i18next";
 import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
-import {NavbarLink, navbarThemesTypes, SpecialNavbarLink, StyledNav, WebsiteHeader} from "./Navbar.styles";
+import {navbarThemesTypes, NavbarLink, SpecialNavbarLink, StyledNav, WebsiteHeader} from "./Navbar.styles";
 import PropTypes from 'prop-types';
 import {withRouter} from "react-router";
 import {Logo} from "../../components/Logo/Logo";
 import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
+import AnimationsHandler from "../../components/AnimationsHandler/AnimationsHandler";
 
 const Navbar = ({history, links, languageSelector}) => {
 
     const scrollSpy = useRef();
     const navbar = useRef();
     const {t} = useTranslation('common');
-    const [activeSection, setActiveSection] = useState([]);
+    const [viewState, setViewState] = useState({});
     const [currentTheme, setCurrentTheme] = useState('dark');
     const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
     const prevThemeRef = useRef('dark');
@@ -28,6 +29,7 @@ const Navbar = ({history, links, languageSelector}) => {
         return () => {
             window.removeEventListener('scroll', changeNavbar);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
@@ -55,21 +57,22 @@ const Navbar = ({history, links, languageSelector}) => {
 
     const changeNavbar = () => {
         const viewState = scrollSpy?.current?.valueOf().state.inViewState;
-        setActiveSection(viewState);
-        setCurrentTheme(viewState[4] ? navbarThemesTypes.light :
-                viewState[5] ? navbarThemesTypes.special : navbarThemesTypes.dark);
+        const sections = Object.fromEntries(links.map((_, i) => [links[i], viewState[i]]));
+        setViewState(sections);
+        setCurrentTheme(sections?.contact ? navbarThemesTypes.light :
+                sections?.unknown ? navbarThemesTypes.special : navbarThemesTypes.dark);
     }
 
     const renderNavbarLinks = () => {
         let view = [];
 
-        if (activeSection[5]) {
-            view.push(<SpecialNavbarLink key={links[5]} currentTheme={navbarThemesTypes.dark}
-                                  onClick={() => scrollTo(links[5])}>
+        if (viewState?.unknown) {
+            view.push(<SpecialNavbarLink key={'unknown'} currentTheme={navbarThemesTypes.dark}
+                                         onClick={() => scrollTo('unknown')}>
                 {'UNKNOWN_SECTION_01'}
             </SpecialNavbarLink>)
         } else {
-            links.filter(e => e !== 'other').map(e => view.push(
+            links.filter(e => e !== 'unknown').map(e => view.push(
                 <NavbarLink key={e} currentTheme={currentTheme} onClick={() => scrollTo(e)}>{t(e)}</NavbarLink>
             ))
         }
@@ -77,8 +80,13 @@ const Navbar = ({history, links, languageSelector}) => {
         return view;
     }
 
+    const findActiveSection = (obj) => {
+        return Object.keys(obj).find(key => obj[key] === true);
+    }
+
     return (
         <StyledNav ref={navbar} currentTheme={currentTheme}>
+            <AnimationsHandler activeSection={findActiveSection(viewState)}/>
             <WebsiteHeader title={WEBSITE_TITLE} currentTheme={currentTheme} onClick={() => redirect()}>
                 <Logo lightMode={currentTheme === navbarThemesTypes.light}/>{WEBSITE_NAME}
             </WebsiteHeader>
@@ -94,7 +102,6 @@ const Navbar = ({history, links, languageSelector}) => {
             </Scrollspy>
             {languageSelector && <LanguageSelector
                 mobileDisplayStyle={isMobileMenuActive ? 'inline' : 'none'}
-                animations={activeSection[5]}
                 currentTheme={currentTheme}/>}
             <HamburgerMenu theme={currentTheme} onClick={() => toggleMobileMenu()}/>
         </StyledNav>

@@ -30,7 +30,7 @@ export const DiscordIcon = () => {
                     color={'white'}
                     style={{backgroundColor: 'transparent', borderWidth: 0, cursor: 'pointer'}}>
                                 <span id={'discordName'}
-                                      className={'tooltipText'}>Click here to copy the username</span>
+                                      className={'tooltipText'}>{t('copy_text')}</span>
                 <FaDiscord type={'discord'} className={'icon'}/></button>
         </div>
     )

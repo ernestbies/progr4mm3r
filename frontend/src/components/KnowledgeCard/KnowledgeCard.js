@@ -19,7 +19,7 @@ import {
 const KnowledgeCard = ({type}) => {
 
     const [item] = useState(knowledge[type]);
-    const { t, i18n } = useTranslation('common');
+    const {t, i18n} = useTranslation('common');
 
     const renderIcons = (type) => {
         return (
@@ -36,7 +36,7 @@ const KnowledgeCard = ({type}) => {
     }
 
     return (
-        <Card>
+        <Card name={'knowledge-card'} color={item.color}>
             <CardHeader>
                 <CardImage alt={'technology'} src={item.image}/>
                 <CardTitle>{t(item.name)}</CardTitle>
@@ -51,7 +51,7 @@ const KnowledgeCard = ({type}) => {
                         target={'_blank'}
                         rel={'noreferrer'}
                         href={'http://mediabrowser-server.herokuapp.com/documentation'}
-                       >{t('server_api_info')}
+                    >{t('server_api_info')}
                     </ColoredLink>
                 }
                 </ColoredLinkWrapper>

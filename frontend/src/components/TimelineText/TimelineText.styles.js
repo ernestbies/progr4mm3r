@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+
+export const revealText = keyframes`
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+`;
 
 export const StyledP = styled.p`
     color: gray;
@@ -9,6 +19,10 @@ export const StyledP = styled.p`
     
     @media (max-width: 480px) {
         font-size: 10px;
+    }
+    
+    &.animated {
+        animation: ${revealText} 6s forwards;
     }
 `;
 

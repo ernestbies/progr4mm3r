@@ -1,4 +1,4 @@
-import styled, {css, keyframes} from "styled-components";
+import styled from "styled-components";
 import {navbarThemes} from "../../parts/navbar/Navbar.styles";
 
 export const SelectorSection = styled.div`
@@ -30,17 +30,6 @@ export const LanguageButton = styled.button`
     }
 `;
 
-
-const changeDivider = keyframes`
-    0% {
-        content: '/';
-    }
-    
-    100% {
-        content: '\\005C';
-    }
-`;
-
 export const LanguageDivider = styled.span`
     color: ${({theme}) => navbarThemes[theme].additionalColor};
     font-family: Open Sans, serif;
@@ -48,10 +37,4 @@ export const LanguageDivider = styled.span`
     &:after {
         content: "${({content}) => content}";
     }
-    
-    ${({animations}) => animations && css`
-        &:after {
-           animation: ${changeDivider} 2s infinite;
-        }
-    `}
 `;

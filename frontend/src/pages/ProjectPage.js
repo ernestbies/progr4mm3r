@@ -5,11 +5,13 @@ import MessageBox from "../components/MessageBox/MessageBox";
 import MessageFaq from "../components/MessageFaq/MessageFaq";
 import {AiOutlineInfoCircle, BiStats} from "react-icons/all";
 import {connect} from "react-redux";
+import UnknownSection from "../components/UnknownSection/UnknownSection";
 
 const ProjectPage = ({history, status}) => {
 
     const [numberOfMessages, setNumberOfMessages] = useState(0);
     const [numberOfVisitors, setNumberOfVisitors] = useState(0);
+    const links = ['hall-of-fame', 'unknown'];
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -22,7 +24,7 @@ const ProjectPage = ({history, status}) => {
 
     return (
         <div className={'App'}>
-            <Navbar links={['hall-of-fame']}/>
+            <Navbar links={links}/>
             <div id={'hall-of-fame'} className={'wallpaper-container'}
                  style={{backgroundImage: "url(images/wallpaper5.jpg)"}}>
                 <div style={{
@@ -150,6 +152,7 @@ const ProjectPage = ({history, status}) => {
                     <MessageFaq/>
                 </div>
             </div>
+            <UnknownSection/>
             <Footer/>
         </div>
     )

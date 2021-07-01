@@ -6,15 +6,27 @@ import "./Contact.styles.css";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import {useTranslation} from "react-i18next";
 import {DiscordIcon} from "../../components/DiscordIcon/DiscordIcon";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
+import SectionSubtitle from "../../components/SectionSubtitle/SectionSubtitle";
+import NotReleasedProject from "../../components/NotReleasedProject/NotReleasedProject";
+import {NOT_RELEASED_PROJECT} from "../../utils/information";
 
 const Contact = () => {
 
     const {t} = useTranslation('common');
 
     return (
-        <div id={'contact'} style={{display: 'flex', flexDirection: 'column'}}>
+        <div id={'contact'}>
             <div className={'contact-list'}>
-                <p className={'header-text'}>{t('contact_with_me')}</p>
+                <SectionTitle
+                              content={t('contact_with_me')}
+                              signColor={'#29003b'}
+                              signFontColor={'white'}
+                              backgroundColor={'white'}
+                              fontColor={'black'}
+                              specialNumber={5}
+                              lightMode
+                />
                 <div className={'contact-icons'}>
                     <div className={'icon-item'}>
                         <a color={'white'} target={'_blank'} rel={'noreferrer'} style={{outline: 'none'}}
@@ -34,7 +46,8 @@ const Contact = () => {
                     <div className={'icon-item'}><DiscordIcon/></div>
                 </div>
             </div>
-            <div className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper4.jpg)"}}>
+            <div className={'wallpaper-container'}
+                 style={{backgroundImage: "url(images/wallpaper4.jpg)", marginBottom: -25}}>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -43,13 +56,20 @@ const Contact = () => {
                     textAlign: 'center',
                     height: 710
                 }}>
-                    <p className={'header-text-small'}>{t('dm')}</p>
+                    <SectionSubtitle content={t('dm')}/>
                     <ContactForm/>
-                    <p style={{color: 'white', marginTop: 10, fontFamily: 'Open Sans',
-                        fontWeight: 300, fontSize: 10}}>
+                    <p style={{
+                        color: 'white', marginTop: 10, fontFamily: 'Open Sans',
+                        fontWeight: 300, fontSize: 10
+                    }}>
                         <span style={{color: 'red'}}>*</span> {t('contact_info')} {':)'}</p>
                 </div>
             </div>
+            <NotReleasedProject specialCharacter={'~'}
+                                whiteText={'click_here_to'}
+                                coloredText={'cd ' + NOT_RELEASED_PROJECT}
+                                link={'/hall-of-fame'}
+            />
         </div>
     );
 }

@@ -3,6 +3,7 @@ import {Carousel} from "react-bootstrap";
 import {projects} from "../../utils/projects";
 import {renderElements} from "../../utils/functions/renderElements";
 import {useTranslation} from "react-i18next";
+import SectionTitle from "../../components/SectionTitle/SectionTitle";
 
 const Projects = () => {
 
@@ -13,13 +14,10 @@ const Projects = () => {
         setProjectsList(projects.map(el => Object.assign({}, el, {description: el.description[i18n.language]})));
     }, [i18n.language])
 
-
     return (
         <div id={'projects'} className={'carousel-style'}>
-            <p className={'header-text'}>{t('projects')}</p>
-            <Carousel>
-                {renderElements(projectsList, 'projects')}
-            </Carousel>
+            <SectionTitle position={'start'} content={t('projects')} specialNumber={2}/>
+            <Carousel>{renderElements(projectsList, 'projects')}</Carousel>
         </div>
     );
 }

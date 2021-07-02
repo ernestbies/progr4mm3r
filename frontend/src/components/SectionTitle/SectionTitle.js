@@ -1,9 +1,9 @@
 import React from "react";
-import {Sign, StyledDiv, StyledText, TextWrapper} from "./SectionTitle.styles";
+import {Sign, StyledDiv, StyledText, Subtitle, TextWrapper} from "./SectionTitle.styles";
 import PropTypes from 'prop-types';
 import {Logo} from "../Logo/Logo";
 
-const SectionTitle = ({content, specialNumber, backgroundColor, fontColor, signFontColor, signColor, position, lightMode}) => {
+const SectionTitle = ({content, subtitle, specialNumber, backgroundColor, fontColor, signFontColor, signColor, position, lightMode}) => {
     return (
         <TextWrapper position={position}>
             <StyledDiv position={position} backgroundColor={backgroundColor} width={content.length}>
@@ -14,11 +14,12 @@ const SectionTitle = ({content, specialNumber, backgroundColor, fontColor, signF
                 <StyledText fontColor={fontColor}>{content}</StyledText>
                 <Sign signColor={signColor}
                       signFontColor={signFontColor}
-                      width={25}
+                      width={28}
                       position={{right: 12, bottom: -2}}
                 >
                     {'EB_0' + specialNumber}
                 </Sign>
+                <Subtitle subtitle={subtitle}>{subtitle}</Subtitle>
             </StyledDiv>
         </TextWrapper>
     );
@@ -26,6 +27,7 @@ const SectionTitle = ({content, specialNumber, backgroundColor, fontColor, signF
 
 SectionTitle.propTypes = {
     content: PropTypes.string.isRequired,
+    subtitle: PropTypes.string,
     specialNumber: PropTypes.number,
     backgroundColor: PropTypes.string,
     fontColor: PropTypes.string,

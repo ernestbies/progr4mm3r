@@ -7,7 +7,6 @@ import ContactForm from "../../components/ContactForm/ContactForm";
 import {useTranslation} from "react-i18next";
 import {DiscordIcon} from "../../components/DiscordIcon/DiscordIcon";
 import SectionTitle from "../../components/SectionTitle/SectionTitle";
-import SectionSubtitle from "../../components/SectionSubtitle/SectionSubtitle";
 import NotReleasedProject from "../../components/NotReleasedProject/NotReleasedProject";
 import {NOT_RELEASED_PROJECT} from "../../utils/information";
 
@@ -19,14 +18,21 @@ const Contact = () => {
         <div id={'contact'}>
             <div className={'contact-list'}>
                 <SectionTitle
-                              content={t('contact_with_me')}
-                              signColor={'#29003b'}
-                              signFontColor={'white'}
-                              backgroundColor={'white'}
-                              fontColor={'black'}
-                              specialNumber={5}
-                              lightMode
+                    content={t('contact_with_me')}
+                    position={'end'}
+                    signColor={'#29003b'}
+                    signFontColor={'white'}
+                    backgroundColor={'white'}
+                    fontColor={'black'}
+                    specialNumber={5}
+                    lightMode
                 />
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    <p style={{color: 'white', fontWeight: 300, fontSize: 15, fontFamily: 'Open Sans'}}>{t('contact_text1')}<br/>
+                        {t('contact_text2')} ({t('most_preferred')} <code style={{fontSize: 14}}>e-mail</code>, <code style={{fontSize: 14}}>Discord</code> {t('or')} <code style={{fontSize: 14}}>{t('contact_form')} </code>
+                        {t('on')} {t('my_website')}).</p>
+                    <div style={{width: 100, height: 1, backgroundColor: 'white'}}/>
+                </div>
                 <div className={'contact-icons'}>
                     <div className={'icon-item'}>
                         <a color={'white'} target={'_blank'} rel={'noreferrer'} style={{outline: 'none'}}
@@ -49,20 +55,27 @@ const Contact = () => {
             <div className={'wallpaper-container'}
                  style={{backgroundImage: "url(images/wallpaper4.jpg)", marginBottom: -25}}>
                 <div style={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
                     backgroundColor: '#00000099',
                     textAlign: 'center',
                     height: 710
                 }}>
-                    <SectionSubtitle content={t('dm')}/>
-                    <ContactForm/>
-                    <p style={{
-                        color: 'white', marginTop: 10, fontFamily: 'Open Sans',
-                        fontWeight: 300, fontSize: 10
-                    }}>
-                        <span style={{color: 'red'}}>*</span> {t('contact_info')} {':)'}</p>
+                    <SectionTitle content={t('dm')}
+                                  subtitle={'contact'}
+                                  position={'start'}
+                                  specialNumber={51}
+                                  signColor={'#29003b'}
+                                  signFontColor={'white'}
+                                  backgroundColor={'white'}
+                                  fontColor={'black'}
+                                  lightMode/>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                        <ContactForm/>
+                        <p style={{
+                            color: 'white', marginTop: 10, fontFamily: 'Open Sans',
+                            fontWeight: 300, fontSize: 10
+                        }}>
+                            <span style={{color: 'red'}}>*</span> {t('contact_info')} {':)'}</p>
+                    </div>
                 </div>
             </div>
             <NotReleasedProject specialCharacter={'~'}

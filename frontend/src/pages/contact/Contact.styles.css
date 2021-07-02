@@ -1,22 +1,18 @@
 .contact-list {
     background-color: #29003b;
     text-align: center;
-    color: white;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: 80px;
+    height: 350px;
 }
 
 .contact-icons {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .icon-item {
-    width: 5.5rem;
+    width: 6.5rem;
     height: 5.5rem;
 }
 

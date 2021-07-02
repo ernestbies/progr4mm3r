@@ -8,6 +8,7 @@
   "my_person": "my person",
   "and": "and",
   "and2": "&",
+  "or": "or",
   "see": "see",
   "my_projects": "my projects",
   "technologies_text": "Technology stack",
@@ -71,5 +72,11 @@
   "counter_section_2": "Note",
   "counter_section_3": "You clicked a total of",
   "counter_section_4": "times",
-  "counter_section_5": "Access to this statistic is possible\nthrough the use of React Redux.\nHave fun clicking."
+  "counter_section_5": "Access to this statistic is possible\nthrough the use of React Redux.\nHave fun clicking.",
+  "contact_text1": "If you have any questions, please feel free to contact me.",
+  "contact_text2": "I answer all the forms of contact presented",
+  "most_preferred": "the most preferred",
+  "contact_form": "contact form",
+  "on": "on",
+  "my_website": "my website"
 }

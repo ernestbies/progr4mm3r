@@ -3,6 +3,14 @@
     background-attachment: fixed;
     background-size: cover;
     display: flex;
+    color: white;
+    position: relative;
+}
+
+.background-style {
+    background-position: center bottom;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .text-container {
@@ -56,8 +64,29 @@
     width: 600px;
 }
 
-@media only screen and (max-width: 992px) {
+.avatar {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 200px;
+    -webkit-transition: .2s all;
+}
 
+.avatar:hover {
+    -webkit-filter: brightness(60%);
+}
+
+@keyframes show-section {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 992px) {
     .name-bar {
         width: 100%;
     }

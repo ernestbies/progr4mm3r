@@ -3,8 +3,9 @@ import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import {UnreleasedProjectDiv} from "./NotReleasedProject.styles";
+import './NotReleasedProject.styles.css';
 
-const NotReleasedProject = ({specialCharacter, whiteText, coloredText, link}) => {
+const NotReleasedProject = ({specialCharacter, whiteText, coloredText, link, height, backgroundColor}) => {
 
     const {t} = useTranslation('common');
 
@@ -23,7 +24,7 @@ const NotReleasedProject = ({specialCharacter, whiteText, coloredText, link}) =>
     }
 
     return (
-        <UnreleasedProjectDiv>
+        <UnreleasedProjectDiv height={height} backgroundColor={backgroundColor}>
             {
                 link ?
                     <Link style={{textDecoration: 'none'}} to={link}>
@@ -40,10 +41,12 @@ const NotReleasedProject = ({specialCharacter, whiteText, coloredText, link}) =>
 };
 
 NotReleasedProject.propTypes = {
-    specialCharacter: PropTypes.string,
-    whiteText: PropTypes.string,
-    coloredText: PropTypes.string,
-    link: PropTypes.string
+    specialCharacter: PropTypes.string.isRequired,
+    whiteText: PropTypes.string.isRequired,
+    coloredText: PropTypes.string.isRequired,
+    link: PropTypes.string,
+    height: PropTypes.string,
+    backgroundColor: PropTypes.string
 }
 
 export default NotReleasedProject;

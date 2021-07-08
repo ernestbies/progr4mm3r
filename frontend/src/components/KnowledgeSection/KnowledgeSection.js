@@ -1,7 +1,7 @@
 import KnowledgeCard from "../KnowledgeCard/KnowledgeCard";
 import React from "react";
 import {useTranslation} from "react-i18next";
-import SectionTitle from "../SectionTitle/SectionTitle";
+import SectionBadge from "../SectionBadge/SectionBadge";
 
 const KnowledgeSection = () => {
 
@@ -10,7 +10,7 @@ const KnowledgeSection = () => {
     return (
         <div id={'knowledge'} className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper3.jpg)"}}>
             <div style={{textAlign: 'center', backgroundColor: '#00000090'}}>
-                <SectionTitle
+                <SectionBadge
                     position={'start'}
                     subtitle={'skills'}
                     content={t('practical_knowledge')}

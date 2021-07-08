@@ -12,14 +12,14 @@ const NotFoundPage = ({history}) => {
         <div className={'App'}>
             <Navbar links={['404']} languageSelector/>
             <div id={'404'} className={'wallpaper-container'}
-                 style={{height: '85vh', backgroundImage: "url(images/wallpaper5.jpg)"}}>
+                 style={{height: '100vh', backgroundImage: "url(images/wallpaper5.jpg)"}}>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
                     backgroundColor: '#00000099',
                     textAlign: 'center',
-                    height: '85vh',
+                    height: '100vh',
                     justifyContent: 'center'
                 }}>
                     <div style={{

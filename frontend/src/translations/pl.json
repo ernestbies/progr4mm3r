@@ -74,9 +74,10 @@
   "counter_section_4": "razy",
   "counter_section_5": "Dostęp do tej statystyki jest możliwy\npoprzez wykorzystanie React Redux.\nMiłego klikania.",
   "contact_text1": "W razie jakichkolwiek pytań proszę o kontakt.",
-  "contact_text2": "Odpowiadam na wszystkie przedstawione formy kontaktu",
+  "contact_text2": "W przypadku jakichkolwiek zapytań biznesowych proszę o kontakt poprzez ",
   "most_preferred": "najbardziej preferowany",
   "contact_form": "formularz kontaktowy",
   "on": "na",
-  "my_website": "mojej stronie"
+  "my_website": "mojej stronie",
+  "reveal_info": "pokaż informacje"
 }

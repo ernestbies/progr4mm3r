@@ -11,7 +11,7 @@ import {Logo} from "../../components/Logo/Logo";
 import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 import AnimationsHandler from "../../components/AnimationsHandler/AnimationsHandler";
 
-const Navbar = ({history, links, languageSelector}) => {
+const Navbar = ({history, links, languageSelector, enableContent}) => {
 
     const scrollSpy = useRef();
     const navbar = useRef();
@@ -35,9 +35,16 @@ const Navbar = ({history, links, languageSelector}) => {
     useEffect(() => {
         navbar.current.style.animation = 'change-theme-to-' + currentTheme + '-from-' + prevTheme + ' 4s';
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [currentTheme])
+    }, [currentTheme]);
 
-    const scrollTo = (id) => window.scrollTo(0, document.getElementById(id).offsetTop);
+    const scrollTo = (id) => {
+        const reveal = localStorage.getItem('reveal');
+        if(!reveal) {
+            enableContent(true);
+        }
+        const section = document.getElementById(id);
+        section && window.scrollTo(0, section.offsetTop);
+    }
 
     const redirect = () => {
         if (history.location.pathname !== '/') {
@@ -92,8 +99,8 @@ const Navbar = ({history, links, languageSelector}) => {
             </WebsiteHeader>
             <Scrollspy className={'nav-menu'}
                        ref={scrollSpy}
-                       offset={-10}
                        items={links}
+                       offset={-10}
                        currentClassName={'navbar-link-current ' + currentTheme + '-color'}
             >
                 {

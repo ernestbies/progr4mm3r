@@ -10,6 +10,8 @@ export const languages = {
     en: 'en'
 };
 
+export const shortInfo = ['programmer', 'semi-professional e-sports athlete', 'movies enthusiast'];
+
 export const info = {
     en: {
         name: 'Ernest',

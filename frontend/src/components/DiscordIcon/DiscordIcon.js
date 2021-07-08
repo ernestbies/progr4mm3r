@@ -25,12 +25,12 @@ export const DiscordIcon = () => {
     }
 
     return (
-        <div className={'tooltipClass'}>
+        <div className={'tooltip-class'}>
             <button id={'discordIcon'} onClick={() => copyName()} onMouseOut={() => outCopyName()}
                     color={'white'}
                     style={{backgroundColor: 'transparent', borderWidth: 0, cursor: 'pointer'}}>
                                 <span id={'discordName'}
-                                      className={'tooltipText'}>{t('copy_text')}</span>
+                                      className={'tooltip-text'}>{t('copy_text')}</span>
                 <FaDiscord type={'discord'} className={'icon'}/></button>
         </div>
     )

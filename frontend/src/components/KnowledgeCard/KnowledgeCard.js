@@ -11,9 +11,9 @@ import {
     CardSubtitle,
     CardTitle,
     ColoredLink,
-    ColoredLinkWrapper,
     DivWrapper,
-    ImagesContainer
+    ImagesContainer,
+    TextContent
 } from "./KnowledgeCard.styles";
 
 const KnowledgeCard = ({type}) => {
@@ -45,7 +45,7 @@ const KnowledgeCard = ({type}) => {
                 <CardSubtitle>{item.technology_stack.join(" · ")}</CardSubtitle>
             </DivWrapper>
             <CardContent>
-                <ColoredLinkWrapper>{item.text[i18n.language]} {
+                <TextContent>{item.text[i18n.language]} {
                     type === 'backend'
                     && <ColoredLink
                         target={'_blank'}
@@ -54,7 +54,7 @@ const KnowledgeCard = ({type}) => {
                     >{t('server_api_info')}
                     </ColoredLink>
                 }
-                </ColoredLinkWrapper>
+                </TextContent>
                 {
                     renderIcons(type)
                 }

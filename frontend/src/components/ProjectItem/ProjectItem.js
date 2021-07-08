@@ -12,6 +12,7 @@ import {
 import React from "react";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
+import './ProjectItem.styles.css';
 
 const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData}) => {
 
@@ -44,7 +45,8 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                 view.push(
                     <p key={technology} style={{
                         fontSize: 12,
-                        fontFamily: 'Open Sans',
+                        fontFamily: 'Roboto Condensed',
+                        fontWeight: 300,
                         marginBottom: 5
                     }}>{t(technology) + ':'} <code style={{
                         fontSize: 12,
@@ -87,20 +89,21 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         borderLeftStyle: 'solid',
                         borderLeftColor: color,
                         paddingLeft: 7,
-                        fontFamily: 'Open Sans',
+                        fontFamily: 'Roboto Condensed',
                         margin: 0
                     }}>{name}</p>
                 </div>
                 <p style={{
                     fontSize: 12,
-                    fontFamily: 'Open Sans',
-                    marginTop: 30
+                    fontFamily: 'Roboto Condensed',
+                    fontWeight: 300,
+                    marginTop: 30,
                 }}>{description}</p>
                 <div style={{display: 'flex', marginTop: 30, marginBottom: 10, alignItems: 'center'}}>
                     <FaWrench color={color} size={14} style={{marginRight: 5}}/>
                     <p style={{
                         fontSize: 14,
-                        fontFamily: 'Open Sans',
+                        fontFamily: 'Roboto Condensed',
                         margin: 0
                     }}>{t('technologies_text')}</p>
                 </div>
@@ -114,7 +117,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                     <AiFillInfoCircle color={color} size={14} style={{marginRight: 5}}/>
                     <p style={{
                         fontSize: 14,
-                        fontFamily: 'Open Sans',
+                        fontFamily: 'Roboto Condensed',
                         margin: 0
                     }}>{t('technical_info')}</p>
                 </div>

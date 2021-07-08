@@ -74,7 +74,25 @@ const showHide = keyframes`
     }
 `;
 
+const changeBorderTheme = keyframes`
+    0% {
+        color: orange;
+        border-bottom-color: orange;
+    }
+
+    50% {
+        color: #9932CC;
+        border-bottom-color: #9932CC;
+    }
+
+    100% {
+        color: orange;
+        border-bottom-color: orange;
+    }
+`;
+
 const StyledNav = styled.nav`
+    position: absolute;
     top: 0;
     width: 100%;
     display: flex;
@@ -117,7 +135,7 @@ const NavbarLink = styled.div`
     font-size: 16px;
     margin-bottom: -15px;
     color: ${({currentTheme}) => navbarThemes[currentTheme].fontColor};
-    width: 7.5rem; 
+    width: 7.5rem;
     
     &:hover {
         color: orange;
@@ -138,7 +156,7 @@ const SpecialNavbarLink = styled(NavbarLink)`
     border-bottom-color: orange;
     font-family: Source Code Pro, serif;
     text-transform: uppercase;
-    animation: orange-to-purple-with-border 5s infinite;
+    animation: ${changeBorderTheme} 5s infinite;
     
     &:after {
         content: "";

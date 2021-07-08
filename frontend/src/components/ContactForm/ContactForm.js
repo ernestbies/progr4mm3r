@@ -5,6 +5,7 @@ import ReCAPTCHA from "react-google-recaptcha/lib/esm/recaptcha-wrapper";
 import {useTranslation} from "react-i18next";
 import {sendMessage} from "../../utils/helpers/FetchData";
 import {CaptchaDiv, FormButton, FormButtonWrapper, FormDiv, FormTextArea, StyledForm} from "./ContactForm.styles";
+import './ContactForm.styles.css';
 
 const ContactForm = () => {
 

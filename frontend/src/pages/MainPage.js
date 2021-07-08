@@ -1,28 +1,31 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Navbar from "../parts/navbar/Navbar";
-import About from "./about/About";
-import Projects from "./projects/Projects";
-import Skills from "./skills/Skills";
-import Hobby from "./hobby/Hobby";
-import Contact from "./contact/Contact";
 import Footer from "../parts/footer/Footer";
+import Intro from "../components/Intro/Intro";
+import {SiteContent} from "../components/PageWrappers/PageWrappers";
+import PageContent from "../components/PageContent/PageContent";
 
 const MainPage = () => {
 
     const links = ['about', 'projects', 'skills', 'hobby', 'contact'];
+    const [showContent, setShowContent] = useState(false);
+
+    useEffect(() => {
+        const reveal = localStorage.getItem('reveal');
+        if(reveal) {
+            setShowContent(true);
+        }
+    }, []);
 
     return (
-        <div className={'App'}>
-            <Navbar links={links} languageSelector/>
-            <div className={'page'}>
-                <About/>
-                <Projects/>
-                <Skills/>
-                <Hobby/>
-                <Contact/>
-                <Footer/>
-            </div>
-        </div>
+        <>
+            <Navbar links={links} languageSelector enableContent={setShowContent}/>
+            <SiteContent>
+                <Intro/>
+                <PageContent showContent={showContent} setShowContent={setShowContent}/>
+            </SiteContent>
+            <Footer/>
+        </>
     );
 }
 

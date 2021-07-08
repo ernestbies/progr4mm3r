@@ -74,9 +74,10 @@
   "counter_section_4": "times",
   "counter_section_5": "Access to this statistic is possible\nthrough the use of React Redux.\nHave fun clicking.",
   "contact_text1": "If you have any questions, please feel free to contact me.",
-  "contact_text2": "I answer all the forms of contact presented",
+  "contact_text2": "For any business inquiries please contact me via",
   "most_preferred": "the most preferred",
   "contact_form": "contact form",
   "on": "on",
-  "my_website": "my website"
+  "my_website": "my website",
+  "reveal_info": "click to reveal info"
 }

@@ -104,7 +104,7 @@ export const CardContent = styled.div`
     position: relative;  
 `;
 
-export const ColoredLinkWrapper = styled.p`
+export const TextContent = styled.p`
     font-size: 11px;
     font-weight: 300;
     text-align: justify;

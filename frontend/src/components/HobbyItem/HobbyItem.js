@@ -1,6 +1,7 @@
 import React from "react";
 import {BsMusicNoteBeamed, FaLaptopCode, IoGameController, IoTvOutline} from "react-icons/all";
 import PropTypes from 'prop-types';
+import './HobbyItem.styles.css';
 
 const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
     return (
@@ -13,19 +14,20 @@ const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
             <div className={'carousel-content'}>
                 <div style={{display: 'flex', textAlign: 'center', alignItems: 'center'}}>
                     <div style={{width: 5, height: 30, backgroundColor: color}}/>
-                    <p style={{paddingLeft: 7, fontFamily: 'Open Sans', margin: 0}}>{name}</p>
+                    <p style={{paddingLeft: 7, fontFamily: 'Roboto Condensed', margin: 0}}>{name}</p>
                 </div>
                 <p style={{
                     fontSize: 14,
-                    fontFamily: 'Open Sans',
+                    fontFamily: 'Roboto Condensed',
                     fontStyle: 'italic',
                     paddingTop: 10
                 }}>{quote}</p>
                 <p style={{
                     fontSize: 12,
-                    fontFamily: 'Open Sans',
+                    fontFamily: 'Roboto Condensed',
                     marginTop: 20,
                     maxWidth: 500,
+                    fontWeight: 300,
                     wordBreak: 'break-word'
                 }}>{text}</p>
                 <div style={{marginBottom: 15}}>

@@ -253,7 +253,7 @@ const MessageBox = ({passToParent, status, setStatus}) => {
                             />
                             <p style={{
                                 fontFamily: 'Source Code Pro',
-                                animationName: 'appear-text',
+                                animationName: 'opacity-zero-to-one',
                                 animationDuration: '2s',
                                 color: 'white',
                                 fontSize: 11,

@@ -5,7 +5,7 @@ import {CounterSection} from "../CounterSection/CounterSection";
 const UnknownSection = () => {
     return (
         <div id={'unknown'}>
-            <NotReleasedProject specialCharacter={'~'} whiteText={'powered by'} coloredText={'tsl1337'}/>
+            <NotReleasedProject height={'200px'} specialCharacter={'~'} whiteText={'powered by'} coloredText={'tsl1337'}/>
             <CounterSection/>
         </div>
     )

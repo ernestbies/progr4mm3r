@@ -18,7 +18,7 @@ export const StyledP = styled.p`
     font-size: 14px;
     
     @media (max-width: 480px) {
-        font-size: 10px;
+        font-size: 11px;
     }
     
     &.animated {

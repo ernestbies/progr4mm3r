@@ -9,11 +9,14 @@ const MainPage = () => {
 
     const links = ['about', 'projects', 'skills', 'hobby', 'contact'];
     const [showContent, setShowContent] = useState(false);
+    const [playAnimations, setPlayAnimations] = useState(false);
 
     useEffect(() => {
         const reveal = localStorage.getItem('reveal');
         if(reveal) {
             setShowContent(true);
+        } else {
+            setPlayAnimations(true);
         }
     }, []);
 
@@ -22,7 +25,7 @@ const MainPage = () => {
             <Navbar links={links} languageSelector enableContent={setShowContent}/>
             <SiteContent>
                 <Intro/>
-                <PageContent showContent={showContent} setShowContent={setShowContent}/>
+                <PageContent showContent={showContent} setShowContent={setShowContent} withAnimations={playAnimations}/>
             </SiteContent>
             <Footer/>
         </>

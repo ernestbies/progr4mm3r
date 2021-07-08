@@ -8,7 +8,7 @@ import React from "react";
 import {SectionWrapper} from "../PageWrappers/PageWrappers";
 import PropTypes from 'prop-types';
 
-const PageContent = ({showContent, setShowContent}) => {
+const PageContent = ({showContent, setShowContent, withAnimations}) => {
 
     const revealInfo = () => {
         setShowContent(true);
@@ -17,7 +17,7 @@ const PageContent = ({showContent, setShowContent}) => {
 
     return (
         showContent ?
-        <SectionWrapper>
+        <SectionWrapper withAnimations={withAnimations}>
             <About/>
             <Projects/>
             <Skills/>
@@ -29,7 +29,12 @@ const PageContent = ({showContent, setShowContent}) => {
 
 PageContent.propTypes = {
     showContent: PropTypes.bool.isRequired,
-    setShowContent: PropTypes.func.isRequired
+    setShowContent: PropTypes.func.isRequired,
+    withAnimations: PropTypes.bool
+}
+
+PageContent.defaultProps = {
+    withAnimations: false
 }
 
 export default PageContent;

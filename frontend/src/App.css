@@ -27,7 +27,7 @@ html, body {
 
 .video {
     z-index: -1;
-    max-width: 80%;
+    width: 1300px;
     position: absolute;
     border-style: solid;
     border-radius: 250px;

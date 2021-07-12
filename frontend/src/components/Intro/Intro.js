@@ -9,16 +9,19 @@ import {
     Subtitle
 } from "./Intro.styles";
 import {Logo} from "../Logo/Logo";
-import {WEBSITE_NAME, shortInfo} from "../../utils/information";
+import {WEBSITE_NAME, shortInfo, introduction} from "../../utils/information";
+import {useTranslation} from "react-i18next";
 
 const Intro = () => {
 
     const QUOTE = 'DefyTheLimits';
+    const {i18n} = useTranslation('common');
 
     const renderSubheader = () => {
-        return shortInfo.map((e, i) =>
+        const subheader = shortInfo[i18n.language];
+        return subheader.map((e, i) =>
             <IntroSubtitle key={e} color={'white'}>{e}
-                {shortInfo[i + 1] ? <IntroSubtitle color={'orange'}> &middot; </IntroSubtitle> : ''}
+                {subheader[i + 1] ? <IntroSubtitle color={'orange'}> &middot; </IntroSubtitle> : ''}
             </IntroSubtitle>
         );
     };
@@ -35,7 +38,7 @@ const Intro = () => {
                         renderSubheader()
                     }
                 </IntroSubheader>
-                <Subtitle/>
+                <Subtitle subtitles={introduction[i18n.language]}/>
                 <Quote>{QUOTE}</Quote>
             </IntroWrapper>
         </IntroSection>

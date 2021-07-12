@@ -10,80 +10,97 @@ const reveal = keyframes`
     }
 `;
 
-const showSubtitles = keyframes`
+const showSubtitles = subtitles => keyframes`
     0% {
-        content: "GET TO KNOW ME BETTER...";
+        content: "${subtitles.about}";
         opacity: 0;
     }
 
     7% {
-        content: "GET TO KNOW ME BETTER...";
+        content: "${subtitles.about}";
         opacity: 1;
     }
 
     14% {
-        content: "GET TO KNOW ME BETTER...";
+        content: "${subtitles.about}";
         opacity: 0;
     }
 
     21% {
-        content: "BROWSE MY PROJECTS...";
+        content: "${subtitles.projects}";
         opacity: 0;
     }
 
     28% {
-        content: "BROWSE MY PROJECTS...";
+        content: "${subtitles.projects}";
         opacity: 1;
     }
 
     35% {
-        content: "BROWSE MY PROJECTS...";
+        content: "${subtitles.projects}";
         opacity: 0;
     }
 
     42% {
-        content: "GET TO KNOW MY SKILLS...";
+        content: "${subtitles.skills}";
         opacity: 0;
     }
 
     49% {
-        content: "GET TO KNOW MY SKILLS...";
+        content: "${subtitles.skills}";
         opacity: 1;
     }
 
     56% {
-        content: "GET TO KNOW MY SKILLS...";
+        content: "${subtitles.skills}";
         opacity: 0;
     }
 
     63% {
-        content: "FIND ABOUT MY INTERESTS...";
+        content: "${subtitles.hobby}";
         opacity: 0;
     }
 
     70% {
-        content: "FIND ABOUT MY INTERESTS...";
+        content: "${subtitles.hobby}";
         opacity: 1;
     }
 
     77% {
-        content: "FIND ABOUT MY INTERESTS...";
+        content: "${subtitles.hobby}";
         opacity: 0;
     }
 
     84% {
-        content: "... AND CONTACT WITH ME";
+        content: "${subtitles.contact}";
         opacity: 0;
     }
 
     91% {
-        content: "... AND CONTACT WITH ME";
+        content: "${subtitles.contact}";
         opacity: 1;
     }
 
     100% {
-        content: "... AND CONTACT WITH ME";
+        content: "${subtitles.contact}";
         opacity: 0;
+    }
+`;
+
+const changeColor = keyframes`
+    0% {
+        color: silver;
+        scale: 1;
+    }
+    
+    50% {
+        color: #4169E1;
+        scale: 1.05;
+    }
+    
+    100% {
+        color: silver;
+        scale: 1;
     }
 `;
 
@@ -149,25 +166,8 @@ export const Subtitle = styled.p`
     
     &:before {
         content: "";
-        animation: ${showSubtitles} 25s infinite ease-in-out;
+        animation: ${({subtitles}) => showSubtitles(subtitles)} 25s infinite ease-in-out;
         animation-delay: 3s;
-    }
-`;
-
-const changeColor = keyframes`
-    0% {
-        color: silver;
-        scale: 1;
-    }
-    
-    50% {
-        color: #4169E1;
-        scale: 1.05;
-    }
-    
-    100% {
-        color: silver;
-        scale: 1;
     }
 `;
 

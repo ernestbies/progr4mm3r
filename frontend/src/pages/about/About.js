@@ -4,6 +4,7 @@ import {info, calculateAge} from "../../utils/information";
 import './About.styles.css';
 import {useTranslation} from "react-i18next";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";
+import {GiGraduateCap} from "react-icons/all";
 
 const About = () => {
 
@@ -41,7 +42,7 @@ const About = () => {
                     </div>
                     <div style={{
                         display: 'inline-flex',
-                        maxWidth: 350,
+                        maxWidth: 560,
                         alignItems: 'center',
                         marginLeft: 20,
                         marginRight: 20,
@@ -51,18 +52,44 @@ const About = () => {
                         paddingBottom: 10,
                         borderColor: 'orange',
                     }}>
-                        <p className={'info-style'}>{calculateAge(info[i18n.language].dateOfBirth)}</p>
+                        <Avatar style={{
+                            backgroundColor: 'orange',
+                            color: 'black',
+                            width: 18,
+                            height: 18,
+                            fontSize: 11,
+                            fontFamily: 'Roboto Condensed',
+                            marginRight: 10
+                        }}>
+                            {calculateAge(info[i18n.language].dateOfBirth)}
+                        </Avatar>
                         <div className={'info-bar'}/>
-                        <p className={'info-style'}>{info[i18n.language].degree}</p>
+                        <div style={{display: 'flex', flexDirection: 'row'}}>
+                            <GiGraduateCap size={20} color={'orange'} style={{marginRight: 4}}/>
+                            <p className={'info-style'}>{info[i18n.language].degree}</p>
+                        </div>
                         <div className={'info-bar'}/>
-                        <p className={'info-style'}>{info[i18n.language].country}</p>
+                        <p className={'info-style'}><span style={{color: 'orange', marginRight: 5}}>Country:</span>
+                            <img
+                                key={info[i18n.language].country.short}
+                                alt={info[i18n.language].country.short}
+                                loading={'lazy'}
+                                width={20}
+                                height={12}
+                                style={{marginRight: 5}}
+                                src={'https://purecatamphetamine.github.io/country-flag-icons/3x2/' + info[i18n.language].country.short + '.svg'}
+                            />
+                            {info[i18n.language].country.name}
+                        </p>
                         <div className={'info-bar'}/>
+                        <span className={'info-style'} style={{color: 'orange'}}>Languages:</span>
                         {
                             info[i18n.language].languages.map((el) => {
                                 return (
                                     <img
                                         key={el.name}
                                         alt={el.name}
+                                        loading={'lazy'}
                                         width={20}
                                         height={12}
                                         title={el.name + ' (' + el.level + ')'}

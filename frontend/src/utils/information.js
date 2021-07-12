@@ -6,17 +6,38 @@ export const HALL_OF_FAME_MYSTERY = 'aHR0cHM6Ly9lcm5lc3RiaWVzLmNvbS9oYWxsLW9mLWZ
 export const NOT_RELEASED_PROJECT = 'project_h_01';
 
 export const languages = {
-    pl: 'pl',
-    en: 'en'
+    en: 'en',
+    pl: 'pl'
 };
 
-export const shortInfo = ['programmer', 'semi-professional e-sports athlete', 'movies enthusiast'];
+export const introduction = {
+    en: {
+        about: 'GET TO KNOW ME BETTER...',
+        projects: 'BROWSE MY PROJECTS...',
+        skills: 'GET TO KNOW MY SKILLS...',
+        contact: '... AND CONTACT WITH ME'
+    },
+    pl: {
+        about: 'DOWIEDZ SIĘ CZEGOŚ O MNIE...',
+        projects: 'ZOBACZ MOJE PROJEKTY...',
+        skills: 'POZNAJ MOJE UMIEJĘTNOŚCI...',
+        contact: '... SKONTAKTUJ SIĘ ZE MNĄ'
+    }
+};
+
+export const shortInfo = {
+    en: ['programmer', 'semi-professional e-sports athlete', 'movies enthusiast'],
+    pl: ['programista', 'półprofesjonalny e-sportowiec', 'entuzjasta filmowy']
+};
 
 export const info = {
     en: {
         name: 'Ernest',
         surname: 'Bieś',
-        country: 'Poland',
+        country: {
+            name: 'Poland',
+            short: 'PL'
+        },
         languages: [
             {
                 name: 'Polish',
@@ -42,7 +63,10 @@ export const info = {
     pl: {
         name: 'Ernest',
         surname: 'Bieś',
-        country: 'Polska',
+        country: {
+            name: 'Polska',
+            short: 'PL'
+        },
         languages: [
             {
                 name: 'Język polski',
@@ -60,7 +84,7 @@ export const info = {
                 level: 'podstawowy'
             }
         ],
-        degree: 'Inżynier informatyki',
+        degree: 'Inżynier Informatyki',
         dateOfBirth: '1998-03-25',
         text: 'Witam na mojej oficjalnej stronie! Nazywam się Ernest i pochodzę z Polski. Jestem absolwentem Państwowej Wyższej Szkoły Zawodowej w Tarnowie na kierunku Informatyka (z wynikiem 5,0 na dyplomie). Od najmłodszych lat interesowałem się informatyką. W młodości prowadziłem popularne w całym kraju serwery gier online. Byłem też moderatorem i mentorem na największym w tym czasie forum w Polsce - MPCforum, o nowinkach technicznych, programowaniu i tworzeniu wtyczek do serwerów gier online. Nieustannie staram się rozwijać swoje umiejętności i poszerzać wiedzę. Szybko się uczę, jestem komunikatywny i gotowy do pracy w zespole. Jestem też osobą życzliwą, rzetelną i pomocną. Oprócz informatyki interesuje mnie wiele innych rzeczy, głównie e-sport i kinematografia. Brałem udział w wielu turniejach e-sportowych i grałem z wieloma sławnymi graczami ze świata e-sportu. Zawsze wykonuję swoją pracę z pełnym zaangażowaniem. ',
         achievements: ['aspirujący developer', 'właściciel serwerów gier on-line', 'były moderator MPCforum']
@@ -70,7 +94,7 @@ export const info = {
 export const quote = {
     text: 'The whole secret of a successful life is to find out what is one’s destiny to do, and then do it.',
     author: 'Henry Ford'
-}
+};
 
 export const hallOfFameFaq = [
     {
@@ -157,6 +181,6 @@ export const statusList = {
         color: 'red',
         description: 'There was a problem sending the message (data validation problem).'
     }
-}
+};
 
 export const mystery = ['神', '秘', '元', '素'];

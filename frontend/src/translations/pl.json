@@ -5,6 +5,7 @@
   "hobby": "Hobby",
   "contact": "Kontakt",
   "web_info_text": "Zajrzyj na moją stronę internetową, aby poznać",
+  "web_info_text2": "Do każdego projektu został załączony link do repozytorium na Github/Bitbucket lub prezentacja.",
   "my_person": "moją osobę",
   "and": "i",
   "and2": "i",
@@ -79,5 +80,7 @@
   "contact_form": "formularz kontaktowy",
   "on": "na",
   "my_website": "mojej stronie",
-  "reveal_info": "pokaż informacje"
+  "reveal_info": "pokaż informacje",
+  "nationality": "Narodowość",
+  "languages": "Języki"
 }

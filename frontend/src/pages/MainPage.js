@@ -13,7 +13,7 @@ const MainPage = () => {
 
     useEffect(() => {
         const reveal = localStorage.getItem('reveal');
-        if(reveal) {
+        if (reveal) {
             setShowContent(true);
         } else {
             setPlayAnimations(true);

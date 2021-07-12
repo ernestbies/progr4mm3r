@@ -35,7 +35,10 @@ SectionBadge.propTypes = {
     signFontColor: PropTypes.string,
     signColor: PropTypes.string,
     position: PropTypes.oneOf(['start', 'center', 'end']),
-    lightMode: PropTypes.bool
+    lightMode: PropTypes.bool,
+    style: PropTypes.object,
+    absolute: PropTypes.bool,
+    onClick: PropTypes.func
 }
 
 SectionBadge.defaultProps = {

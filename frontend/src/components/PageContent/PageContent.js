@@ -7,6 +7,7 @@ import SpecialSection from "../SpecialSection/SpecialSection";
 import React from "react";
 import {SectionWrapper} from "../PageWrappers/PageWrappers";
 import PropTypes from 'prop-types';
+import FAB from "../FAB/FAB";
 
 const PageContent = ({showContent, setShowContent, withAnimations}) => {
 
@@ -23,6 +24,7 @@ const PageContent = ({showContent, setShowContent, withAnimations}) => {
             <Skills/>
             <Hobby/>
             <Contact/>
+            <FAB/>
         </SectionWrapper> : <SpecialSection revealInfo={revealInfo}/>
     )
 }

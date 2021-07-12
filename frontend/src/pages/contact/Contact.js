@@ -55,8 +55,10 @@ const Contact = () => {
                     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                         <ContactForm/>
                         <p style={{
-                            color: 'white', fontFamily: 'Roboto Condensed', fontStyle: 'italic',
-                            fontWeight: 300, fontSize: 10
+                            color: 'white',
+                            fontFamily: 'Roboto Condensed',
+                            fontStyle: 'italic',
+                            fontSize: 10,
                         }}>
                             <span style={{color: 'red'}}>*</span> {t('contact_info')} {':)'}</p>
                     </div>

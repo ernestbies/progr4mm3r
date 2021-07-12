@@ -40,6 +40,7 @@ const Navbar = ({history, links, languageSelector, enableContent}) => {
     const scrollTo = (id) => {
         const reveal = localStorage.getItem('reveal');
         if(!reveal) {
+            localStorage.setItem('reveal', 'PAGE_REVEALED');
             enableContent(true);
         }
         const section = document.getElementById(id);

@@ -5,6 +5,7 @@ import './About.styles.css';
 import {useTranslation} from "react-i18next";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";
 import {GiGraduateCap} from "react-icons/all";
+import AboutInfo from "../../components/AboutInfo/AboutInfo";
 
 const About = () => {
 
@@ -30,8 +31,8 @@ const About = () => {
                         )
                     }
                 </div>
-                <div className={'text-container col'} style={{flex: 5, padding: 0}}>
-                    <div className={'name-bar'} style={{marginTop: 40}}>
+                <div className={'text-container col'} style={{flex: 5, padding: 0, paddingTop: 40}}>
+                    <div className={'name-bar'}>
                         <div style={{width: 5, height: 30, marginLeft: 20, backgroundColor: 'orange'}}/>
                         <p style={{
                             paddingLeft: 7,
@@ -69,7 +70,7 @@ const About = () => {
                             <p className={'info-style'}>{info[i18n.language].degree}</p>
                         </div>
                         <div className={'info-bar'}/>
-                        <p className={'info-style'}><span style={{color: 'orange', marginRight: 5}}>Country:</span>
+                        <p className={'info-style'}><span style={{color: 'orange', marginRight: 5}}>{t('nationality')}:</span>
                             <img
                                 key={info[i18n.language].country.short}
                                 alt={info[i18n.language].country.short}
@@ -82,7 +83,7 @@ const About = () => {
                             {info[i18n.language].country.name}
                         </p>
                         <div className={'info-bar'}/>
-                        <span className={'info-style'} style={{color: 'orange'}}>Languages:</span>
+                        <span className={'info-style'} style={{color: 'orange'}}>{t('languages')}:</span>
                         {
                             info[i18n.language].languages.map((el) => {
                                 return (
@@ -100,16 +101,7 @@ const About = () => {
                             })
                         }
                     </div>
-                    <p className={'info-text'}><span
-                        style={{color: 'orange'}}>{'//'}</span> {info[i18n.language].text}</p>
-                    <span className={'info-text'} style={{marginTop: 0, marginBottom: 15}}>
-                        <span style={{color: 'orange'}}>{'//'}</span> {t('web_info_text')} <span
-                        style={{
-                            color: 'orange',
-                            fontWeight: 'bold'
-                        }}>{t('my_person')}</span> {t('and2')} {t('see')}
-                        <span style={{color: 'orange', fontWeight: 'bold'}}> {t('my_projects')}</span>
-                    </span>
+                    <AboutInfo/>
                 </div>
             </div>
         </div>

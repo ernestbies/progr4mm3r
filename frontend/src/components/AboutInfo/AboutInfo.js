@@ -1,7 +1,7 @@
 import {info} from "../../utils/information";
 import React from "react";
 import {useTranslation} from "react-i18next";
-import {ColoredText, InfoHeader, InfoSection, InfoText, StyledParagraph} from "./AboutInfo.styles";
+import {AboutInfoContent, ColoredText, InfoHeader, InfoSection, InfoText} from "./AboutInfo.styles";
 import CustomCaret from "../CustomCaret/CustomCaret";
 
 export const infoTypes = {
@@ -31,7 +31,7 @@ const AboutInfo = () => {
     }
 
     return (
-        <StyledParagraph>
+        <AboutInfoContent>
             <InfoSection consoleText>
                 <InfoHeader headerType={infoTypes.sections.sys}/>
                 <ColoredText fontWeight={'bold'} color={infoPhases.loading.color}>{infoPhases.loading.header}</ColoredText>
@@ -53,12 +53,12 @@ const AboutInfo = () => {
 
             <InfoSection consoleText>
                 <InfoHeader headerType={infoTypes.sections.sys}/>
-                <InfoText typingAnimation>
+                <InfoText>
                     <ColoredText fontWeight={'bold'} color={infoPhases.loaded.color}>{infoPhases.loaded.header}</ColoredText>
                     {infoPhases.loaded.text} <CustomCaret/>
                 </InfoText>
             </InfoSection>
-        </StyledParagraph>
+        </AboutInfoContent>
     )
 };
 

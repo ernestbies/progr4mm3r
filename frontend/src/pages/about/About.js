@@ -6,6 +6,7 @@ import {useTranslation} from "react-i18next";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";
 import {GiGraduateCap} from "react-icons/all";
 import AboutInfo from "../../components/AboutInfo/AboutInfo";
+import InfoBadge from "../../components/InfoBadge/InfoBadge";
 
 const About = () => {
 
@@ -48,11 +49,14 @@ const About = () => {
                         marginLeft: 20,
                         marginRight: 20,
                         marginTop: 10,
+                        marginBottom: 10,
                         borderBottomWidth: 1,
                         borderBottomStyle: 'solid',
                         paddingBottom: 10,
                         borderColor: 'orange',
+                        position: 'relative'
                     }}>
+                        <InfoBadge title={'console'}/>
                         <Avatar style={{
                             backgroundColor: 'orange',
                             color: 'black',
@@ -60,46 +64,49 @@ const About = () => {
                             height: 18,
                             fontSize: 11,
                             fontFamily: 'Roboto Condensed',
-                            marginRight: 10
+                            marginRight: 10,
                         }}>
                             {calculateAge(info[i18n.language].dateOfBirth)}
                         </Avatar>
                         <div className={'info-bar'}/>
-                        <div style={{display: 'flex', flexDirection: 'row'}}>
+                        <div className={'info-style'}>
                             <GiGraduateCap size={20} color={'orange'} style={{marginRight: 4}}/>
-                            <p className={'info-style'}>{info[i18n.language].degree}</p>
+                            <span style={{fontSize: 11}}>{info[i18n.language].degree}</span>
                         </div>
                         <div className={'info-bar'}/>
-                        <p className={'info-style'}><span style={{color: 'orange', marginRight: 5}}>{t('nationality')}:</span>
+                        <div className={'info-style'}>
+                            <span style={{color: 'orange', marginRight: 5, fontSize: 11}}>{t('nationality')}:</span>
                             <img
                                 key={info[i18n.language].country.short}
                                 alt={info[i18n.language].country.short}
                                 loading={'lazy'}
-                                width={20}
-                                height={12}
+                                width={18}
+                                height={10}
                                 style={{marginRight: 5}}
                                 src={'https://purecatamphetamine.github.io/country-flag-icons/3x2/' + info[i18n.language].country.short + '.svg'}
                             />
                             {info[i18n.language].country.name}
-                        </p>
+                        </div>
                         <div className={'info-bar'}/>
-                        <span className={'info-style'} style={{color: 'orange'}}>{t('languages')}:</span>
-                        {
-                            info[i18n.language].languages.map((el) => {
-                                return (
-                                    <img
-                                        key={el.name}
-                                        alt={el.name}
-                                        loading={'lazy'}
-                                        width={20}
-                                        height={12}
-                                        title={el.name + ' (' + el.level + ')'}
-                                        style={{marginRight: 5, width: 16, height: 14, borderRadius: '50%'}}
-                                        src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + el.shortcut + '.svg'}
-                                    />
-                                )
-                            })
-                        }
+                        <div className={'info-style'}>
+                            <span className={'info-style'} style={{color: 'orange'}}>{t('languages')}:</span>
+                            {
+                                info[i18n.language].languages.map((el) => {
+                                    return (
+                                        <img
+                                            key={el.name}
+                                            alt={el.name}
+                                            loading={'lazy'}
+                                            width={20}
+                                            height={12}
+                                            title={el.name + ' (' + el.level + ')'}
+                                            style={{marginRight: 5, width: 16, height: 14, borderRadius: '50%'}}
+                                            src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + el.shortcut + '.svg'}
+                                        />
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                     <AboutInfo/>
                 </div>

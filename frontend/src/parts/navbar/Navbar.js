@@ -96,7 +96,7 @@ const Navbar = ({history, links, languageSelector, enableContent}) => {
         <StyledNav ref={navbar} currentTheme={currentTheme}>
             <AnimationsHandler activeSection={findActiveSection(viewState)}/>
             <WebsiteHeader title={WEBSITE_TITLE} currentTheme={currentTheme} onClick={() => redirect()}>
-                <Logo lightMode={currentTheme === navbarThemesTypes.light}/>{WEBSITE_NAME}
+                <Logo style={{marginRight: 10}} lightMode={currentTheme === navbarThemesTypes.light}/>{WEBSITE_NAME}
             </WebsiteHeader>
             <Scrollspy className={'nav-menu'}
                        ref={scrollSpy}

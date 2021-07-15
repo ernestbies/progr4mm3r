@@ -1,5 +1,5 @@
 import {info} from "../../utils/information";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {AboutInfoContent, ColoredText, InfoHeader, InfoSection, InfoText} from "./AboutInfo.styles";
 import CustomCaret from "../CustomCaret/CustomCaret";
@@ -30,6 +30,28 @@ const AboutInfo = () => {
         }
     }
 
+    let textPosition = 0;
+
+    useEffect(() => {
+        typeWriter();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const [caretVisible, setCaretVisible] = useState(false);
+
+    const typeWriter = () => {
+        let consoleText = document.getElementById('console-info');
+        let information = infoPhases.loaded.text;
+        let typingSpeed = 100;
+        if (textPosition < information.length) {
+            consoleText.innerHTML += information.charAt(textPosition);
+            textPosition++;
+            setTimeout(typeWriter, typingSpeed);
+        } else if (textPosition === information.length) {
+            setCaretVisible(true);
+        }
+    }
+
     return (
         <AboutInfoContent>
             <InfoSection consoleText>
@@ -55,7 +77,7 @@ const AboutInfo = () => {
                 <InfoHeader headerType={infoTypes.sections.sys}/>
                 <InfoText>
                     <ColoredText fontWeight={'bold'} color={infoPhases.loaded.color}>{infoPhases.loaded.header}</ColoredText>
-                    {infoPhases.loaded.text} <CustomCaret/>
+                    <InfoText id={'console-info'}/> <CustomCaret visible={caretVisible}/>
                 </InfoText>
             </InfoSection>
         </AboutInfoContent>

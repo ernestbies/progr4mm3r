@@ -65,18 +65,6 @@
     width: 600px;
 }
 
-.avatar {
-    margin-top: 15px;
-    margin-bottom: 15px;
-    width: 200px;
-    height: 200px;
-    -webkit-transition: .2s all;
-}
-
-.avatar:hover {
-    -webkit-filter: brightness(60%);
-}
-
 @keyframes show-section {
     0% {
         opacity: 0;

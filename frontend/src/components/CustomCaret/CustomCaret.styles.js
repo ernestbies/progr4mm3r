@@ -15,7 +15,7 @@ const showHide = keyframes`
 `;
 
 export const Caret = styled.span`
-    display: inline-block;
+    display: ${({visible}) => visible ? 'inline-block' : 'none'};
     background-color: white;
     width: ${({width}) => width+'px'};
     height: ${({height}) => height+'px'};

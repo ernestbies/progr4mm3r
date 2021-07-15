@@ -13,7 +13,7 @@ export const hobby = {
             id: 1,
             name: 'Esports & gaming',
             quote: 'Practise until your idols become your rivals...',
-            text: 'I have been interested in e-sports and computer games since I was a child. E-sports games are associated with emotions, competition and the desire to constantly improve your skills. These things are not foreign to me. I competed with the best players from around the world in games such as Counter Strike, H1Z1, Apex Legends and VALORANT. E-sport has taught me the desire for continuous development, drawing conclusions and teamwork which is a key element of every e-sport game. During the online games, I also had the opportunity to meet many people from around the world with whom I have very good contact on a daily basis.',
+            text: 'I have been interested in e-sports and computer games since I was a child. E-sports games are associated with emotions, competition and the desire to constantly improve your skills. These things are not foreign to me. I competed with the best players from around the world in games such as Counter Strike, H1Z1, Fortnite, Apex Legends and VALORANT. E-sport has taught me the desire for continuous development, drawing conclusions and teamwork which is a key element of every e-sport game. During the online games, I also had the opportunity to meet many people from around the world with whom I have very good contact on a daily basis.',
             image: '/images/hobby/esports.jpg',
             color: 'red',
             keywords: ['learn', 'compete', 'win']
@@ -51,7 +51,7 @@ export const hobby = {
             id: 1,
             name: 'E-sport',
             quote: 'Ćwicz, aż twoi idole staną się twoimi rywalami...',
-            text: 'E-sportem i grami komputerowymi interesowałem się od dziecka. Gry e-sportowe związane są z emocjami, rywalizacją i chęcią ciągłego doskonalenia swoich umiejętności. Rzeczy te nie są mi obce. Rywalizowałem z najlepszymi graczami z całego świata w takich grach jak Counter Strike, H1Z1, Apex Legends czy VALORANT. E-sport nauczył mnie chęci ciągłego rozwoju, wyciągania wniosków i pracy zespołowej, która jest kluczowym elementem każdej gry e-sportowej. Podczas gier on-line miałam również okazję poznać wiele osób z całego świata, z którymi na co dzień mam bardzo dobry kontakt.',
+            text: 'E-sportem i grami komputerowymi interesowałem się od dziecka. Gry e-sportowe związane są z emocjami, rywalizacją i chęcią ciągłego doskonalenia swoich umiejętności. Rzeczy te nie są mi obce. Rywalizowałem z najlepszymi graczami z całego świata w takich grach jak Counter Strike, H1Z1, Fortnite, Apex Legends czy VALORANT. E-sport nauczył mnie chęci ciągłego rozwoju, wyciągania wniosków i pracy zespołowej, która jest kluczowym elementem każdej gry e-sportowej. Podczas gier on-line miałam również okazję poznać wiele osób z całego świata, z którymi na co dzień mam bardzo dobry kontakt.',
             image: '/images/hobby/esports.jpg',
             color: 'red',
             keywords: ['poznawaj', 'rywalizuj', 'zwyciężaj']

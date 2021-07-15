@@ -1,5 +1,4 @@
 import React from 'react';
-import {Avatar} from '@material-ui/core';
 import {info, calculateAge} from "../../utils/information";
 import './About.styles.css';
 import {useTranslation} from "react-i18next";
@@ -7,6 +6,9 @@ import SectionBadge from "../../components/SectionBadge/SectionBadge";
 import {GiGraduateCap} from "react-icons/all";
 import AboutInfo from "../../components/AboutInfo/AboutInfo";
 import InfoBadge from "../../components/InfoBadge/InfoBadge";
+import Avatar from "../../components/Avatar/Avatar";
+import {Avatar as AvatarBadge} from '@material-ui/core';
+import AchievementsBlock from "../../components/AchievementsBlock/AchievementsBlock";
 
 const About = () => {
 
@@ -24,13 +26,7 @@ const About = () => {
                  }}>
                 <div className={'avatar-container col'} style={{flex: 2}}>
                     <Avatar className={'avatar'} style={{width: 200, height: 200}} src={'images/me.jpg'}/>
-                    {
-                        info[i18n.language].achievements.map(el =>
-                            <code key={el} style={{fontSize: 12}}>
-                                <span style={{color: 'orange'}}>{'//'}</span> {el}
-                            </code>
-                        )
-                    }
+                    <AchievementsBlock items={info[i18n.language].achievements}/>
                 </div>
                 <div className={'text-container col'} style={{flex: 5, padding: 0, paddingTop: 40}}>
                     <div className={'name-bar'}>
@@ -57,7 +53,7 @@ const About = () => {
                         position: 'relative'
                     }}>
                         <InfoBadge title={'console'}/>
-                        <Avatar style={{
+                        <AvatarBadge style={{
                             backgroundColor: 'orange',
                             color: 'black',
                             width: 18,
@@ -67,7 +63,7 @@ const About = () => {
                             marginRight: 10,
                         }}>
                             {calculateAge(info[i18n.language].dateOfBirth)}
-                        </Avatar>
+                        </AvatarBadge>
                         <div className={'info-bar'}/>
                         <div className={'info-style'}>
                             <GiGraduateCap size={20} color={'orange'} style={{marginRight: 4}}/>

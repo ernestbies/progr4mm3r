@@ -26,8 +26,8 @@ const Avatar = ({width, height, src}) => {
 };
 
 Avatar.propTypes = {
-    width: PropTypes.string,
-    height: PropTypes.string,
+    width: PropTypes.number,
+    height: PropTypes.number,
     src: PropTypes.string.isRequired
 };
 

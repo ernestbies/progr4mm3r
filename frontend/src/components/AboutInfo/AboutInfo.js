@@ -42,7 +42,7 @@ const AboutInfo = () => {
     const typeWriter = () => {
         let consoleText = document.getElementById('console-info');
         let information = infoPhases.loaded.text;
-        let typingSpeed = 100;
+        let typingSpeed = 200;
         if (textPosition < information.length) {
             consoleText.innerHTML += information.charAt(textPosition);
             textPosition++;

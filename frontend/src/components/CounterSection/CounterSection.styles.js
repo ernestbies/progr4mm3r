@@ -110,7 +110,12 @@ export const SingleCharacter = styled.p`
     font-size: 30px;
     -webkit-text-stroke: 1px #000000;
     animation: ${({pos}) => moveLetters[pos]} 10s infinite;
+    
     &:after {
         content: "${({character}) => character}";
+    }
+    
+    @media (max-width: 480px) {
+        display: none;
     }
 `;

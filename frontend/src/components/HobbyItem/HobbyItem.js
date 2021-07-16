@@ -34,8 +34,8 @@ const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
                     {
                         id === 0 ? <FaLaptopCode size={20} color={color} style={{marginRight: 10}}/> :
                             id === 1 ? <IoGameController size={20} color={color} style={{marginRight: 10}}/> :
-                                id === 2 ? <BsMusicNoteBeamed size={20} color={color} style={{marginRight: 10}}/> :
-                                    id === 3 ? <IoTvOutline size={20} color={color} style={{marginRight: 10}}/> : <div/>
+                                id === 2 ? <IoTvOutline size={20} color={color} style={{marginRight: 10}}/> :
+                                    id === 3 ? <BsMusicNoteBeamed size={20} color={color} style={{marginRight: 10}}/> : <div/>
                     }
                     <span style={{fontFamily: 'Press Start', fontSize: 8}}>{keywords.map(e => e.toUpperCase() + '. ')}</span>
                 </div>

@@ -2,6 +2,7 @@ import {Carousel} from 'react-bootstrap';
 import HobbyItem from '../../components/HobbyItem/HobbyItem';
 import React from 'react';
 import ProjectItem from '../../components/ProjectItem/ProjectItem';
+import SkillItem from "../../components/SkillItem/SkillItem";
 
 export const renderElements = (elements, type) => {
     let view = [];
@@ -17,10 +18,7 @@ export const renderElements = (elements, type) => {
             break;
         case 'skills':
             elements.map((el) => view.push(
-                <div key={el.id} style={{border: 0, margin: 10}} className={'tooltip-class-small'}>
-                    <span className={'tooltip-text'} style={{color: el.color}}>{el.name}</span>
-                    <img alt={el.name} src={el.image} width={45} height={45}/>
-                </div>
+                <SkillItem id={el.id} name={el.name} color={el.color} image={el.image}/>
             ));
             break;
         case 'projects':

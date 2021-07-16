@@ -62,7 +62,7 @@ const ProjectPage = ({history, status}) => {
                             color: 'orange',
                             fontFamily: 'Source Code Pro',
                             fontWeight: 300,
-                            fontSize: 13
+                            fontSize: 12
                         }}>{'// '}<span style={{color: 'white'}}>{'Enter your '}</span><span
                             style={{color: 'orange'}}>{'username'}
                     </span><span style={{color: 'white'}}>{' and leave your '}</span><span
@@ -74,7 +74,7 @@ const ProjectPage = ({history, status}) => {
                             fontFamily: 'Source Code Pro',
                             fontWeight: 300,
                             marginTop: -10,
-                            fontSize: 13
+                            fontSize: 12
                         }}>{'// '}<span style={{color: 'white'}}>
                         {'If you want to read the detailed information please see the '}
                     </span>
@@ -96,7 +96,7 @@ const ProjectPage = ({history, status}) => {
                                         color: 'orange',
                                         fontFamily: 'Source Code Pro',
                                         fontWeight: 300,
-                                        fontSize: 13,
+                                        fontSize: 12,
                                         marginTop: -10,
                                         whiteSpace: 'pre-wrap'
                                     }}>{'> '}<span
@@ -110,7 +110,7 @@ const ProjectPage = ({history, status}) => {
                                             color: 'orange',
                                             fontFamily: 'Source Code Pro',
                                             fontWeight: 300,
-                                            fontSize: 13,
+                                            fontSize: 12,
                                             marginTop: -10,
                                             whiteSpace: 'pre-wrap'
                                         }}>{'> '}<span style={{
@@ -124,7 +124,7 @@ const ProjectPage = ({history, status}) => {
                                             color: 'orange',
                                             fontFamily: 'Source Code Pro',
                                             fontWeight: 300,
-                                            fontSize: 13,
+                                            fontSize: 12,
                                             marginTop: -10,
                                         }}>{'> '}<span
                                             style={{color: 'white'}}>{'This page has been visited '}</span><span
@@ -135,7 +135,7 @@ const ProjectPage = ({history, status}) => {
                                             color: 'orange',
                                             fontFamily: 'Source Code Pro',
                                             fontWeight: 300,
-                                            fontSize: 13,
+                                            fontSize: 12,
                                             marginTop: -10,
                                         }}>{'> '}<span style={{color: 'white'}}>{'There are '}</span><span
                                             style={{color: 'orange', fontWeight: 'bold'}}>{numberOfMessages}</span>

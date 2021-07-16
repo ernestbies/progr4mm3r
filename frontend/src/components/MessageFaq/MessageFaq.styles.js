@@ -11,7 +11,11 @@ export const TextQaA = styled.p`
     text-align: left;
     margin-top: -15px;
     color: white;
-    font-size: 12px;        
+    font-size: 12px;  
+    
+    @media (max-width: 480px) {
+        font-size: 10px;
+    }      
 `;
 
 export const ColoredText = styled.span`
@@ -45,4 +49,8 @@ export const CommandText = styled.p`
     margin-top: ${({marginTop}) => marginTop+'px'};
     margin-bottom: ${({marginBottom}) => marginBottom+'px'};
     font-size: ${({fontSize}) => fontSize === 'small' ? '12px' : '13px'};
+    
+    @media (max-width: 480px) {
+        font-size: ${({fontSize}) => fontSize === 'small' ? '10px' : '11px'};
+    }
 `;

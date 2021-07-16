@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import {infoTypes} from "./AboutInfo";
 import PropTypes from 'prop-types';
 
-
 export const AboutInfoContent = styled.div`
     display: inline-block;
     word-break: break-word;

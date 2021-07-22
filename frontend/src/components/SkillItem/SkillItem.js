@@ -12,7 +12,7 @@ const SkillItem = ({id, name, color, image}) => {
 };
 
 SkillItem.propTypes = {
-    id: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired

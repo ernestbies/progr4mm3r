@@ -18,7 +18,7 @@ export const renderElements = (elements, type) => {
             break;
         case 'skills':
             elements.map((el) => view.push(
-                <SkillItem id={el.id} name={el.name} color={el.color} image={el.image}/>
+                <SkillItem key={el.id} id={el.id} name={el.name} color={el.color} image={el.image}/>
             ));
             break;
         case 'projects':

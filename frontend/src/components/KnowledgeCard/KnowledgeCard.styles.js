@@ -115,6 +115,10 @@ export const TextContent = styled.p`
 export const ColoredLink = styled.a`
     font-size: 11px;
     color: orange;
+    
+    &:hover {
+        color: orange;
+    }
 `;
 
 export const ImagesContainer = styled.div`

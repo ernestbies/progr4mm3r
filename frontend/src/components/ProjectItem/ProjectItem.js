@@ -1,10 +1,7 @@
 import {
     AiFillInfoCircle,
     AiFillWindows,
-    FaBitbucket,
-    FaGithub,
     FaWrench,
-    FaYoutube,
     FcAndroidOs,
     FcLinux,
     IoLogoApple
@@ -13,6 +10,7 @@ import React from "react";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import './ProjectItem.styles.css';
+import Link from "../Link/Link";
 
 const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData}) => {
 
@@ -36,8 +34,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
         if (numOfTechnologies === 1) {
             view.push(
                 <code key={numOfTechnologies} style={{
-                    fontSize: 12,
-                    fontStyle: 'normal',
+                    fontSize: 11
                 }}>{renderTechnologies(technologies[Object.keys(technologies)])}</code>
             )
         } else {
@@ -121,7 +118,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         margin: 0
                     }}>{t('technical_info')}</p>
                 </div>
-                <div style={{marginBottom: 30}}>
+                <div style={{marginBottom: 30, marginTop: 10, display: 'flex', alignItems: 'center'}}>
                     {
                         os.includes('Windows') && <AiFillWindows size={20} style={{marginRight: 3}}/>
                     }
@@ -162,24 +159,23 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                     {
                         additionalData &&
                         <a style={{
-                            display: 'inline',
-                            textDecoration: 'none',
+                            display: 'inline-flex',
                             alignItems: 'center',
+                            textDecoration: 'none',
                             textAlign: 'center',
-                            marginRight: 3
+                            marginRight: 3,
                         }}
                            href={additionalData.link}>
                             <img
-                                width={65}
+                                width={60}
                                 height={16}
                                 alt={additionalData.name}
-                                src={additionalData.image}/>
-                            <p style={{
+                                src={additionalData.image}
+                            />
+                            <span style={{
                                 fontSize: 10,
-                                margin: 0,
-                                color: 'white',
-                                display: 'inline'
-                            }}>{t(additionalData.text)}</p>
+                                color: 'white'
+                            }}>{t(additionalData.text)}</span>
                         </a>
                     }
                     <div style={{
@@ -191,41 +187,13 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         display: 'inline-block',
                     }}/>
                     {
-                        links.github &&
-                        <a style={{
-                            display: 'inline-block',
-                            textDecoration: 'none',
-                            textAlign: 'center',
-                        }} href={links.github}>
-                            <FaGithub color={'white'} size={20} style={{marginRight: 5}}/>
-                            <p style={{fontSize: 10, marginRight: 5, color: 'white', display: 'inline'}}>
-                                {t('check_out_project_page')}</p>
-                        </a>
+                        links.github && <Link link={links.github} type={'github'}/>
                     }
                     {
-                        links.bitbucket &&
-                        <a style={{
-                            display: 'inline-block',
-                            textDecoration: 'none',
-                            textAlign: 'center',
-                        }} href={links.bitbucket}>
-                            <FaBitbucket size={20} style={{marginRight: 5}}/>
-                            <p style={{fontSize: 10, marginRight: 5, color: 'white', display: 'inline'}}>
-                                {t('check_out_project_page')}</p>
-                        </a>
+                        links.bitbucket && <Link link={links.bitbucket} type={'bitbucket'}/>
                     }
                     {
-                        links.youtube &&
-                        <a style={{
-                            display: 'inline-block',
-                            textDecoration: 'none',
-                            textAlign: 'center'
-                        }}
-                           href={links.youtube}>
-                            <FaYoutube color={'red'} size={20} style={{marginRight: 5}}/>
-                            <p style={{fontSize: 10, margin: 0, color: 'white', display: 'inline'}}>
-                                {t('check_out_presentation_video')}</p>
-                        </a>
+                        links.youtube && <Link link={links.youtube} type={'youtube'}/>
                     }
                 </div>
             </div>

@@ -35,5 +35,5 @@ export const StyledSpan = styled.span`
 
 export const StyledText = styled.span`
     color: gray;
-    font-weight: 300;    
+    font-weight: 300;
 `;

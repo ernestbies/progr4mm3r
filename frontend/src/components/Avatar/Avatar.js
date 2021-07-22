@@ -11,6 +11,7 @@ import PropTypes from 'prop-types';
 import {Logo} from "../Logo/Logo";
 
 const Avatar = ({width, height, src}) => {
+
     return (
         <StyledAvatar width={width} height={height}>
             <StyledAvatarInner>

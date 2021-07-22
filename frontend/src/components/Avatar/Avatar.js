@@ -9,8 +9,11 @@ import {
 import React from "react";
 import PropTypes from 'prop-types';
 import {Logo} from "../Logo/Logo";
+import {useTranslation} from "react-i18next";
 
 const Avatar = ({width, height, src}) => {
+
+    const {t} = useTranslation('common');
 
     return (
         <StyledAvatar width={width} height={height}>
@@ -18,8 +21,8 @@ const Avatar = ({width, height, src}) => {
                 <StyledAvatarFront src={src}/>
                 <StyledAvatarBack>
                     <Logo width={50} height={50} style={{marginTop: 50, marginBottom: 10}}/>
-                    <StyledText>Ernest Bieś</StyledText>
-                    <StyledSubtext>official website</StyledSubtext>
+                    <StyledText>{'Ernest Bieś'}</StyledText>
+                    <StyledSubtext>{t('official_website')}</StyledSubtext>
                 </StyledAvatarBack>
             </StyledAvatarInner>
         </StyledAvatar>

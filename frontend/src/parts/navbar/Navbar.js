@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Scrollspy from 'react-scrollspy'
 import "./Navbar.styles.css";
-import {WEBSITE_NAME, WEBSITE_TITLE, WEBSITE_URL} from "../../utils/information";
+import {WEBSITE_NAME, WEBSITE_URL} from "../../utils/information";
 import {useTranslation} from "react-i18next";
 import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
 import {navbarThemesTypes, NavbarLink, SpecialNavbarLink, StyledNav, WebsiteHeader} from "./Navbar.styles";
@@ -95,7 +95,7 @@ const Navbar = ({history, links, languageSelector, enableContent}) => {
     return (
         <StyledNav ref={navbar} currentTheme={currentTheme}>
             <AnimationsHandler activeSection={findActiveSection(viewState)}/>
-            <WebsiteHeader title={WEBSITE_TITLE} currentTheme={currentTheme} onClick={() => redirect()}>
+            <WebsiteHeader title={document.title} currentTheme={currentTheme} onClick={() => redirect()}>
                 <Logo style={{marginRight: 10}} lightMode={currentTheme === navbarThemesTypes.light}/>{WEBSITE_NAME}
             </WebsiteHeader>
             <Scrollspy className={'nav-menu'}

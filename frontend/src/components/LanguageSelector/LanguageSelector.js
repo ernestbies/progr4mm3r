@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {languages} from "../../utils/information";
+import {languages, WEBSITE_TITLE} from "../../utils/information";
 import {withTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import {LanguageButton, LanguageDivider, SelectorSection} from "./LanguageSelector.styles";
@@ -21,6 +21,7 @@ class LanguageSelector extends Component {
     } */
 
     changeLanguageFunction = (language) => {
+        document.title = WEBSITE_TITLE[language];
         this.props.i18n.changeLanguage(language).then(() => localStorage.setItem('language', language));
     }
 

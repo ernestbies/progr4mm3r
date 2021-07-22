@@ -17,25 +17,32 @@ export const infoTypes = {
 const AboutInfo = () => {
 
     const {t, i18n} = useTranslation('common');
+
     const infoPhases = {
         loading: {
             header: ' [LOADING INFO] ',
             color: '#4169E1',
-            text: 'Revealing information...'
+            text: t('revealing_info')
         },
         loaded: {
             header: ' [INFO LOADED] ',
             color: '#32CD32',
-            text: 'Information successfully revealed. '
+            text: t('revealing_info_success')
         }
     }
 
     let textPosition = 0;
+    let timeout;
 
     useEffect(() => {
+        let consoleText = document.getElementById('console-info');
+        consoleText.innerHTML = "";
         typeWriter();
+        return () => {
+            clearInterval(timeout);
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [i18n.language]);
 
     const [caretVisible, setCaretVisible] = useState(false);
 
@@ -46,7 +53,7 @@ const AboutInfo = () => {
         if (textPosition < information.length) {
             consoleText.innerHTML += information.charAt(textPosition);
             textPosition++;
-            setTimeout(typeWriter, typingSpeed);
+            timeout = setTimeout(typeWriter, typingSpeed);
         } else if (textPosition === information.length) {
             setCaretVisible(true);
         }

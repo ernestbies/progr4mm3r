@@ -60,7 +60,7 @@ const Contact = () => {
                             fontStyle: 'italic',
                             fontSize: 10,
                         }}>
-                            <span style={{color: 'red'}}>*</span> {t('contact_info')} {':)'}</p>
+                            <span style={{color: 'red'}}>*</span> {t('contact_info')}</p>
                     </div>
                 </div>
             </div>

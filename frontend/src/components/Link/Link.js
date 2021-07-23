@@ -1,6 +1,6 @@
 import React from "react";
 import {LinkText, StyledLink} from "./Link.styles";
-import {FaBitbucket, FaGithub, FaYoutube} from "react-icons/all";
+import {FaBitbucket, FaGithub, FaYoutube} from "react-icons/fa";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 

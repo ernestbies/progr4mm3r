@@ -3,7 +3,7 @@ import {info, calculateAge} from "../../utils/information";
 import './About.styles.css';
 import {useTranslation} from "react-i18next";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";
-import {GiGraduateCap} from "react-icons/all";
+import {GiGraduateCap} from "react-icons/gi";
 import AboutInfo from "../../components/AboutInfo/AboutInfo";
 import InfoBadge from "../../components/InfoBadge/InfoBadge";
 import Avatar from "../../components/Avatar/Avatar";
@@ -25,7 +25,7 @@ const About = () => {
                      backgroundImage: 'url(images/wallpaper1.jpg)'
                  }}>
                 <div className={'avatar-container col'} style={{flex: 2}}>
-                    <Avatar className={'avatar'} style={{width: 200, height: 200}} src={'images/me.jpg'}/>
+                    <Avatar className={'avatar'} width={200} height={200} src={'images/me.jpg'}/>
                     <AchievementsBlock items={info[i18n.language].achievements}/>
                 </div>
                 <div className={'text-container col'} style={{flex: 5, padding: 0, paddingTop: 40}}>
@@ -93,10 +93,10 @@ const About = () => {
                                             key={el.name}
                                             alt={el.name}
                                             loading={'lazy'}
-                                            width={20}
-                                            height={12}
+                                            width={16}
+                                            height={14}
                                             title={el.name + ' (' + el.level + ')'}
-                                            style={{marginRight: 5, width: 16, height: 14, borderRadius: '50%'}}
+                                            style={{marginRight: 5, borderRadius: '50%'}}
                                             src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + el.shortcut + '.svg'}
                                         />
                                     )

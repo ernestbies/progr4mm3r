@@ -18,8 +18,8 @@ const Intro = () => {
     const {i18n} = useTranslation('common');
 
     const renderSubheader = () => {
-        const subheader = shortInfo[i18n.language];
-        return subheader.map((e, i) =>
+        const subheader = shortInfo[i18n?.language];
+        return subheader?.map((e, i) =>
             <IntroSubtitle key={e} color={'white'}>{e}
                 {subheader[i + 1] ? <IntroSubtitle color={'orange'}> &middot; </IntroSubtitle> : ''}
             </IntroSubtitle>
@@ -38,7 +38,7 @@ const Intro = () => {
                         renderSubheader()
                     }
                 </IntroSubheader>
-                <Subtitle subtitles={introduction[i18n.language]}/>
+                <Subtitle subtitles={introduction[i18n?.language]}/>
                 <Quote>{QUOTE}</Quote>
             </IntroWrapper>
         </IntroSection>

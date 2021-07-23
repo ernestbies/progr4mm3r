@@ -1,6 +1,6 @@
 import React from "react";
 import {FabButton} from "./FAB.styles";
-import {GrContact} from "react-icons/all";
+import {GrContact} from "react-icons/gr";
 import {useTranslation} from "react-i18next";
 
 const FAB = () => {

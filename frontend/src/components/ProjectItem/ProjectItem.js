@@ -1,11 +1,7 @@
-import {
-    AiFillInfoCircle,
-    AiFillWindows,
-    FaWrench,
-    FcAndroidOs,
-    FcLinux,
-    IoLogoApple
-} from "react-icons/all";
+import {AiFillInfoCircle, AiFillWindows,} from "react-icons/ai";
+import {FaWrench} from "react-icons/fa";
+import {FcAndroidOs, FcLinux} from "react-icons/fc";
+import {IoLogoApple} from "react-icons/io";
 import React from "react";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
@@ -61,10 +57,10 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
         languages.map((country) => view.push(
             <img
                 key={country}
+                alt={country}
                 style={{marginRight: 3}}
                 width={20}
                 height={12}
-                alt={country}
                 src={'https://purecatamphetamine.github.io/country-flag-icons/1x1/' + country + '.svg'}
             />
         ))

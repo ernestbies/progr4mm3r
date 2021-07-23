@@ -30,12 +30,12 @@ class LanguageSelector extends Component {
 
         return (
             <SelectorSection mobileDisplayStyle={mobileDisplayStyle}>
-                <LanguageButton theme={currentTheme} active={i18n.language === languages.pl}
+                <LanguageButton theme={currentTheme} active={i18n?.language === languages.pl}
                                 onClick={() => this.changeLanguageFunction(languages.pl)}>
                     {languages.pl.toUpperCase()}
                 </LanguageButton>
                 <LanguageDivider content={this.state.divider} theme={currentTheme}/>
-                <LanguageButton theme={currentTheme} active={i18n.language === languages.en}
+                <LanguageButton theme={currentTheme} active={i18n?.language === languages.en}
                                 onClick={() => this.changeLanguageFunction(languages.en)}>
                     {languages.en.toUpperCase()}
                 </LanguageButton>

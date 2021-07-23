@@ -1,5 +1,7 @@
 import React from "react";
-import {BsMusicNoteBeamed, FaLaptopCode, IoGameController, IoTvOutline} from "react-icons/all";
+import {BsMusicNoteBeamed} from "react-icons/bs";
+import {FaLaptopCode} from "react-icons/fa";
+import {IoGameController, IoTvOutline} from "react-icons/io5";
 import PropTypes from 'prop-types';
 import './HobbyItem.styles.css';
 

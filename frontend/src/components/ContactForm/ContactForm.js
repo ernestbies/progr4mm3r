@@ -1,7 +1,8 @@
 import React, {useState} from "react";
-import {CgMail, RiMessage3Line} from "react-icons/all";
+import {CgMail} from "react-icons/cg";
+import {RiMessage3Line} from "react-icons/ri";
 import ConfirmAlert from "../ConfirmAlert/ConfirmAlert";
-import ReCAPTCHA from "react-google-recaptcha/lib/esm/recaptcha-wrapper";
+import ReCAPTCHA from "react-google-recaptcha";
 import {useTranslation} from "react-i18next";
 import {sendMessage} from "../../utils/helpers/FetchData";
 import {CaptchaDiv, FormButton, FormButtonWrapper, FormDiv, FormTextArea, StyledForm} from "./ContactForm.styles";

@@ -12,77 +12,77 @@ const reveal = keyframes`
 
 const showSubtitles = subtitles => keyframes`
     0% {
-        content: "${subtitles.about}";
+        content: "${subtitles?.about}";
         opacity: 0;
     }
 
     7% {
-        content: "${subtitles.about}";
+        content: "${subtitles?.about}";
         opacity: 1;
     }
 
     14% {
-        content: "${subtitles.about}";
+        content: "${subtitles?.about}";
         opacity: 0;
     }
 
     21% {
-        content: "${subtitles.projects}";
+        content: "${subtitles?.projects}";
         opacity: 0;
     }
 
     28% {
-        content: "${subtitles.projects}";
+        content: "${subtitles?.projects}";
         opacity: 1;
     }
 
     35% {
-        content: "${subtitles.projects}";
+        content: "${subtitles?.projects}";
         opacity: 0;
     }
 
     42% {
-        content: "${subtitles.skills}";
+        content: "${subtitles?.skills}";
         opacity: 0;
     }
 
     49% {
-        content: "${subtitles.skills}";
+        content: "${subtitles?.skills}";
         opacity: 1;
     }
 
     56% {
-        content: "${subtitles.skills}";
+        content: "${subtitles?.skills}";
         opacity: 0;
     }
 
     63% {
-        content: "${subtitles.hobby}";
+        content: "${subtitles?.hobby}";
         opacity: 0;
     }
 
     70% {
-        content: "${subtitles.hobby}";
+        content: "${subtitles?.hobby}";
         opacity: 1;
     }
 
     77% {
-        content: "${subtitles.hobby}";
+        content: "${subtitles?.hobby}";
         opacity: 0;
     }
 
     84% {
-        content: "${subtitles.contact}";
+        content: "${subtitles?.contact}";
         opacity: 0;
     }
 
     91% {
-        content: "${subtitles.contact}";
+        content: "${subtitles?.contact}";
         opacity: 1;
     }
 
     100% {
-        content: "${subtitles.contact}";
+        content: "${subtitles?.contact}";
         opacity: 0;
     }
 `;

@@ -3,7 +3,8 @@ import Navbar from "../parts/navbar/Navbar";
 import Footer from "../parts/footer/Footer";
 import MessageBox from "../components/MessageBox/MessageBox";
 import MessageFaq from "../components/MessageFaq/MessageFaq";
-import {AiOutlineInfoCircle, BiStats} from "react-icons/all";
+import {AiOutlineInfoCircle} from "react-icons/ai";
+import {BiStats} from "react-icons/bi";
 import {connect} from "react-redux";
 import UnknownSection from "../components/UnknownSection/UnknownSection";
 

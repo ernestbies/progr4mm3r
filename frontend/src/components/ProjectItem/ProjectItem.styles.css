@@ -12,6 +12,10 @@
     margin-bottom: 20px;
 }
 
+.text-info {
+    font-size: 10px;
+}
+
 @media only screen and (max-width: 992px) {
 
     .carousel-project-item {
@@ -25,4 +29,10 @@
         margin: 0;
     }
 
+}
+
+@media only screen and (max-width: 480px) {
+    .text-info {
+        font-size: 9px;
+    }
 }

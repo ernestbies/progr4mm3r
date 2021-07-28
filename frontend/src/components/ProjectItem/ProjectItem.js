@@ -10,7 +10,7 @@ import Link from "../Link/Link";
 
 const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData}) => {
 
-    const { t } = useTranslation('common');
+    const {t} = useTranslation('common');
 
     const renderTechnologies = (technologies) => {
         const len = technologies.length;
@@ -29,9 +29,9 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
 
         if (numOfTechnologies === 1) {
             view.push(
-                <code key={numOfTechnologies} style={{
-                    fontSize: 11
-                }}>{renderTechnologies(technologies[Object.keys(technologies)])}</code>
+                <code key={numOfTechnologies} style={{fontSize: 11}}>
+                    {renderTechnologies(technologies[Object.keys(technologies)])}
+                </code>
             )
         } else {
             Object.keys(technologies).map((technology) =>
@@ -139,7 +139,14 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         }}/>
                     }
                     {
-                        languages && renderLanguages(languages)
+                        languages &&
+                        <div style={{
+                            fontFamily: 'Open Sans',
+                            fontSize: 11,
+                            fontWeight: 300,
+                            display: 'inline-flex',
+                            flexDirection: 'row'
+                        }}>{renderLanguages(languages)}</div>
                     }
                     {
                         additionalData &&
@@ -168,10 +175,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                                 alt={additionalData.name}
                                 src={additionalData.image}
                             />
-                            <span style={{
-                                fontSize: 10,
-                                color: 'white'
-                            }}>{t(additionalData.text)}</span>
+                            <span className={'text-info'}>{t(additionalData.text)}</span>
                         </a>
                     }
                     <div style={{

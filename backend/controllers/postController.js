@@ -27,7 +27,7 @@ const postController = {
         if(users.length) {
             res.status(401).send({errorCode: 401, errorMessage: 'Username already taken.'});
         } else {
-            const {error} = postValidation(body);
+            const {error} = postValidation(body, 'post');
             if (error) {
                 res.status(401).send({errorCode: 401, errorMessage: error.details[0].message});
             } else {
@@ -40,6 +40,37 @@ const postController = {
 
                 res.status(201).send(convert(newPost));
             }
+        }
+    },
+    updatePost: async (req, res) => {
+        const { id } = req.params;
+        const { body } = req;
+        const post = await Post.exists({_id: id});
+        if(!post) {
+            res.status(401).send({errorCode: 401, errorMessage: 'Post not found'});
+        } else {
+            const {error} = postValidation(body, 'patch');
+            if (error) {
+                res.status(401).send({errorCode: 401, errorMessage: error.details[0].message});
+            } else {
+                const newPost = await Post.findOneAndUpdate({_id: id}, body, {new: true});
+                if(!newPost) {
+                    res.status(500).send('Cannot update post.');
+                } else {
+                    res.status(200).send(convert(newPost));
+                }
+            }
+        }
+    },
+    deletePost: async (req, res) => {
+        const { id } = req.params;
+
+        const removedPost = await Post.findByIdAndRemove(id);
+
+        if (!removedPost) {
+            res.status(400).send('Could not delete post');
+        } else {
+            res.status(204).send('Deleted post successfully');
         }
     }
 };

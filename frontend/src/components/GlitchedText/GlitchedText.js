@@ -44,7 +44,7 @@ const GlitchedText = ({specialCharacter, whiteText, coloredText, link, quote}) =
                     userSelect: 'none',
                     textAlign: 'center',
                     whiteSpace: 'pre-wrap'
-                }}>{quote}</p>
+                }}>{t(quote)}</p>
             }
         </div>
     )

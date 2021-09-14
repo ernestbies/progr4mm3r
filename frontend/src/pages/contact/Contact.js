@@ -3,8 +3,6 @@ import "./Contact.styles.css";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import {useTranslation} from "react-i18next";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";
-import GlitchedText from "../../components/GlitchedText/GlitchedText";
-import {NOT_RELEASED_PROJECT} from "../../utils/information";
 import ContactIcon from "../../components/ContactIcon/ContactIcon";
 import NotReleasedProject from "../../components/NotReleasedProject/NotReleasedProject";
 

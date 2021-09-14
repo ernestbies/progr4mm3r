@@ -23,13 +23,13 @@ export const BoxElement = styled.div`
 `;
 
 export const ClipPathElement = styled.div`
-    flex: 2;
+    flex: 1;
     background-color: #111111;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    clip-path: polygon(31% 0, 100% 0, 100% 0, 100% 100%, 0 100%, 23% 55%, 3% 56%);
+    clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 0 100%, 10% 55%, 3% 56%);
     
     @media (orientation: portrait) {
         flex: 1;

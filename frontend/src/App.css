@@ -151,7 +151,7 @@ html, body {
     color: orange;
     font-weight: 300;
     font-family: Source Code Pro, serif;
-    font-size: 20px;
+    font-size: 19px;
     animation-name: orange-to-purple;
     animation-duration: 5s;
     animation-iteration-count: infinite;

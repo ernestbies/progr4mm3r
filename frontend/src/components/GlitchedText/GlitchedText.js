@@ -23,7 +23,7 @@ const GlitchedText = ({specialCharacter, whiteText, coloredText, link, quote}) =
     }
 
     return (
-        <>
+        <div style={{height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
             {
                 link ?
                     <Link style={{textDecoration: 'none'}} to={link}>
@@ -42,10 +42,11 @@ const GlitchedText = ({specialCharacter, whiteText, coloredText, link, quote}) =
                     letterSpacing: 1.5,
                     color: 'grey',
                     userSelect: 'none',
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    whiteSpace: 'pre-wrap'
                 }}>{quote}</p>
             }
-        </>
+        </div>
     )
 };
 

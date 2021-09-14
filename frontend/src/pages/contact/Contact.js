@@ -3,9 +3,10 @@ import "./Contact.styles.css";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import {useTranslation} from "react-i18next";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";
-import NotReleasedProject from "../../components/NotReleasedProject/NotReleasedProject";
+import GlitchedText from "../../components/GlitchedText/GlitchedText";
 import {NOT_RELEASED_PROJECT} from "../../utils/information";
 import ContactIcon from "../../components/ContactIcon/ContactIcon";
+import NotReleasedProject from "../../components/NotReleasedProject/NotReleasedProject";
 
 const Contact = () => {
 
@@ -41,7 +42,7 @@ const Contact = () => {
                 <div style={{
                     backgroundColor: '#00000099',
                     textAlign: 'center',
-                    minHeight: 650
+                    minHeight: 700
                 }}>
                     <SectionBadge content={t('dm')}
                                   subtitle={'contact'}
@@ -59,16 +60,13 @@ const Contact = () => {
                             fontFamily: 'Roboto Condensed',
                             fontStyle: 'italic',
                             fontSize: 10,
+                            marginTop: 15
                         }}>
                             <span style={{color: 'red'}}>*</span> {t('contact_info')}</p>
                     </div>
                 </div>
             </div>
-            <NotReleasedProject specialCharacter={'~'}
-                                whiteText={'click_here_to'}
-                                coloredText={'cd ' + NOT_RELEASED_PROJECT}
-                                link={'/hall-of-fame'}
-            />
+            <NotReleasedProject/>
         </div>
     );
 }

@@ -11,13 +11,13 @@ import {Logo} from "../../components/Logo/Logo";
 import HamburgerMenu from "../../components/HamburgerMenu/HamburgerMenu";
 import AnimationsHandler from "../../components/AnimationsHandler/AnimationsHandler";
 
-const Navbar = ({history, links, languageSelector, enableContent}) => {
+const Navbar = ({history, links, languageSelector, enableContent, defaultTheme}) => {
 
     const scrollSpy = useRef();
     const navbar = useRef();
     const {t} = useTranslation('common');
     const [viewState, setViewState] = useState({});
-    const [currentTheme, setCurrentTheme] = useState('dark');
+    const [currentTheme, setCurrentTheme] = useState(defaultTheme ?? 'dark');
     const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
     const prevThemeRef = useRef('dark');
 
@@ -75,13 +75,15 @@ const Navbar = ({history, links, languageSelector, enableContent}) => {
         let view = [];
 
         if (viewState?.unknown) {
-            view.push(<SpecialNavbarLink key={'unknown'} currentTheme={navbarThemesTypes.dark}
+            view.push(<SpecialNavbarLink key={'unknown'} currentTheme={'special'}
                                          onClick={() => scrollTo('unknown')}>
                 {'UNKNOWN_SECTION_01'}
             </SpecialNavbarLink>)
         } else {
-            links.filter(e => e !== 'unknown').map(e => view.push(
-                <NavbarLink key={e} currentTheme={currentTheme} onClick={() => scrollTo(e)}>{t(e)}</NavbarLink>
+            links.map(e => view.push(
+                <NavbarLink key={e} currentTheme={currentTheme} onClick={() => scrollTo(e)}>
+                    {e === 'unknown' ? 404 : t(e)}
+                </NavbarLink>
             ))
         }
 

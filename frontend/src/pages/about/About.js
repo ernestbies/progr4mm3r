@@ -22,7 +22,7 @@ const About = () => {
                      width: '100%',
                      height: '100%',
                      margin: 0,
-                     backgroundImage: 'url(images/wallpaper1.jpg)'
+                     backgroundImage: 'url(images/wallpaper.jpg)',
                  }}>
                 <div className={'avatar-container col'} style={{flex: 2}}>
                     <Avatar className={'avatar'} width={200} height={200} src={'images/me.jpg'}/>

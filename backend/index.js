@@ -32,6 +32,7 @@ mongoose.connect(config.databaseUrl, {
 app.use('/api', messageRoutes);
 app.use('/api', postRoutes);
 app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });

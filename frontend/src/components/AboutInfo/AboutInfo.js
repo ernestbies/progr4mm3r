@@ -20,13 +20,13 @@ const AboutInfo = () => {
 
     const infoPhases = {
         loading: {
-            header: ' [LOADING INFO] ',
+            header: ' <info@LOADING> ',
             color: '#4169E1',
             text: t('revealing_info')
         },
         loaded: {
-            header: ' [INFO LOADED] ',
-            color: '#32CD32',
+            header: ' <info@LOADED> ',
+            color: '#4682B4',
             text: t('revealing_info_success')
         }
     }

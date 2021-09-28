@@ -25,7 +25,7 @@ const ProjectPage = ({history, status}) => {
         <div className={'App'}>
             <Navbar links={['hall-of-fame']}/>
             <div id={'hall-of-fame'} className={'wallpaper-container'}
-                 style={{backgroundImage: "url(images/wallpaper5.jpg)"}}>
+                 style={{backgroundImage: "url(images/wallpaper.jpg)"}}>
                 <div style={{
                     display: 'flex',
                     flexDirection: 'column',

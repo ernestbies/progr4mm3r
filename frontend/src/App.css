@@ -175,6 +175,7 @@ html, body {
 }
 
 .scale-text {
+    color: orange;
     font-size: 15px;
 }
 

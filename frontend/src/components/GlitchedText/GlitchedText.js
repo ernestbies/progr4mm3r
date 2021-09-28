@@ -58,8 +58,4 @@ GlitchedText.propTypes = {
     quote: PropTypes.string
 }
 
-GlitchedText.defaultProps = {
-    quote: false
-}
-
 export default GlitchedText;

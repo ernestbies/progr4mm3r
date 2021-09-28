@@ -13,15 +13,15 @@ const Hobby = () => {
 
     return (
         <div id={'hobby'} style={{display: 'flex', flexDirection: 'column', backgroundColor: 'black'}}>
-            <SectionBadge position={'end'} content={t('hobby')} specialNumber={4}/>
+            <SectionBadge position={'start'} content={t('hobby')} specialNumber={4}/>
 
             <Carousel className={'carousel-style'}>
                 {renderElements(hobby[i18n.language], 'hobby')}
             </Carousel>
 
             <div className={'video-container'}>
-                <SectionBadge position={'start'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
-                <video className={'video'} poster={'/images/wallpaper2.jpg'} autoPlay muted loop>
+                <SectionBadge position={'end'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
+                <video className={'video'} poster={'/images/wallpaper.jpg'} autoPlay muted loop>
                     <source src={'/videos/background.mp4'} type={'video/mp4'}/>
                 </video>
                 <TimelineSection/>

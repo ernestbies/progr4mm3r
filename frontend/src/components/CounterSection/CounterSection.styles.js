@@ -12,7 +12,7 @@ export const CounterSectionDiv = styled.div`
     background-attachment: fixed;
     background-repeat: no-repeat;
     width: 100%;
-    background-image: url(images/wallpaper6.jpg);
+    background-image: url(images/wallpaper.jpg);
 `;
 
 export const BackgroundWrapper = styled.div`

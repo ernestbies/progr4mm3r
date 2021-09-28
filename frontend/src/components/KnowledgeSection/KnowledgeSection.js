@@ -8,10 +8,10 @@ const KnowledgeSection = () => {
     const {t} = useTranslation('common');
 
     return (
-        <div id={'knowledge'} className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper3.jpg)"}}>
+        <div id={'knowledge'} className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper.jpg)"}}>
             <div style={{textAlign: 'center', backgroundColor: '#00000090'}}>
                 <SectionBadge
-                    position={'start'}
+                    position={'end'}
                     subtitle={'skills'}
                     content={t('practical_knowledge')}
                     specialNumber={31}

@@ -77,7 +77,7 @@ const Navbar = ({history, links, languageSelector, enableContent, defaultTheme})
         if (viewState?.unknown) {
             view.push(<SpecialNavbarLink key={'unknown'} currentTheme={'special'}
                                          onClick={() => scrollTo('unknown')}>
-                {'UNKNOWN_SECTION_01'}
+                {'not_found'}
             </SpecialNavbarLink>)
         } else {
             links.map(e => view.push(

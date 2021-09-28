@@ -29,7 +29,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
 
         if (numOfTechnologies === 1) {
             view.push(
-                <code key={numOfTechnologies} style={{fontSize: 11}}>
+                <code key={numOfTechnologies} style={{fontSize: 11, color: color}}>
                     {renderTechnologies(technologies[Object.keys(technologies)])}
                 </code>
             )
@@ -44,6 +44,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                     }}>{t(technology) + ':'} <code style={{
                         fontSize: 12,
                         fontStyle: 'normal',
+                        color: color
                     }}>{renderTechnologies(technologies[technology])}</code></p>
                 )
             )

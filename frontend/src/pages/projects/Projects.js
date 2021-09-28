@@ -4,6 +4,7 @@ import {projects} from "../../utils/projects";
 import {renderElements} from "../../utils/functions/renderElements";
 import {useTranslation} from "react-i18next";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";
+import WebsitesSection from "../../components/WebsitesSection/WebsitesSection";
 
 const Projects = () => {
 
@@ -16,7 +17,8 @@ const Projects = () => {
 
     return (
         <div id={'projects'} className={'carousel-style'}>
-            <SectionBadge position={'start'} content={t('projects')} specialNumber={2}/>
+            <WebsitesSection/>
+            <SectionBadge position={'end'} content={t('projects')} subtitle={'all'} specialNumber={2}/>
             <Carousel>{renderElements(projectsList, 'projects')}</Carousel>
         </div>
     );

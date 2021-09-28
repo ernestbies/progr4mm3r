@@ -1,5 +1,4 @@
 import styled, {keyframes} from 'styled-components';
-import {mystery} from "../../utils/information";
 
 // Available themes (navigation bar)
 export const navbarThemesTypes = {
@@ -36,19 +35,19 @@ const changeLetters = keyframes`
     }
 
     25% {
-        content: "_${mystery[0]}"
+        content: "_1010"
     }
     
     50% {
-        content: "_${mystery[0] + mystery[1]}"
+        content: "_10100011"
     }
     
     75% {
-        content: "_${mystery[0] + mystery[1] + mystery[2]}"
+        content: "_1010001110"
     }
 
     100% {
-        content: "_${mystery[0] + mystery[1] + mystery[2] + mystery[3]}"
+        content: "_101000111001"
     }
 `;
 

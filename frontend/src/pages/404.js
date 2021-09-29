@@ -3,9 +3,7 @@ import Navbar from "../parts/navbar/Navbar";
 import Footer from "../parts/footer/Footer";
 import {useTranslation} from "react-i18next";
 import NotFoundElement from "../components/NotFoundElement/NotFoundElement";
-import GlitchedText from "../components/GlitchedText/GlitchedText";
-import {mysteryName} from "../utils/information";
-import {CounterSection} from "../components/CounterSection/CounterSection";
+import MysteryCharacter from "../components/MysteryCharacter/MysteryCharacter";
 
 const NotFoundPage = ({history}) => {
 
@@ -16,19 +14,21 @@ const NotFoundPage = ({history}) => {
     }, []);
 
     return (
-        <div className={'App'}>
+        <div style={{overflow: 'hidden'}}>
             <Navbar links={['unknown']} defualtTheme={'special'} languageSelector/>
-            <div id={'unknown'} className={'wallpaper-container'}
-                 style={{backgroundImage: "url(images/wallpaper.jpg)"}}>
+            <div id={'unknown'} className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper.jpg)"}}>
                 <div style={{
                     display: 'flex',
-                    flexDirection: 'column',
                     alignItems: 'center',
                     backgroundColor: '#00000099',
                     textAlign: 'center',
-                    height: '80vh',
-                    justifyContent: 'center'
+                    justifyContent: 'space-evenly',
+                    height: '100vh',
                 }}>
+                    <div>
+                        <MysteryCharacter character={'0'} pos={0}/>
+                        <MysteryCharacter character={'1'} pos={1}/>
+                    </div>
                     <div style={{
                         width: '95%',
                         maxWidth: 700,
@@ -50,21 +50,11 @@ const NotFoundPage = ({history}) => {
                             </button>
                         </div>
                     </div>
+                    <div>
+                        <MysteryCharacter character={'1'} pos={0}/>
+                        <MysteryCharacter character={'0'} pos={1}/>
+                    </div>
                 </div>
-                <div style={{
-                    height: 250,
-                    backgroundColor: 'black',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center'
-                }}>
-                    <GlitchedText
-                        specialCharacter={'~'}
-                        whiteText={mysteryName.slice(0, 3).join(" ")}
-                        coloredText={mysteryName.slice(3, mysteryName.length).join(" ")}
-                    />
-                </div>
-                <CounterSection/>
             </div>
             <Footer/>
         </div>

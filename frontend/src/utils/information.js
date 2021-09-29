@@ -193,7 +193,3 @@ export const statusList = {
         description: 'There was a problem sending the message (data validation problem).'
     }
 };
-
-export const mystery = ['神', '秘', '元', '素'];
-
-export const mysteryName = ['噸', '秒', '升', '1', '3', '3', '7'];

@@ -90,17 +90,17 @@ const showSubtitles = subtitles => keyframes`
 const changeColor = keyframes`
     0% {
         color: silver;
-        scale: 1;
+        transform: scale(1);
     }
     
     50% {
         color: #4169E1;
-        scale: 1.05;
+        transform: scale(1.05);
     }
     
     100% {
         color: silver;
-        scale: 1;
+        transform: scale(1);
     }
 `;
 
@@ -112,7 +112,7 @@ export const IntroWrapper = styled.div`
     flex-direction: column;
     
     @media (max-width: 480px) {
-        scale: 0.6;
+        transform: scale(0.6);
     }
 `;
 

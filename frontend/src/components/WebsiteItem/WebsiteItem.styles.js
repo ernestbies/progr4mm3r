@@ -13,6 +13,7 @@ export const WebsiteStyledItem = styled.a`
     border: 1px solid #FFA50050;
     text-decoration: none;
     position: relative;
+    transition: 1s all;
     
     ${({direction}) => direction === 'center' && css`
         z-index: 2;
@@ -23,38 +24,54 @@ export const WebsiteStyledItem = styled.a`
     `}
     
     ${({direction}) => direction === 'left' && css`
-        z-index: 1;    
+        z-index: 3;    
         margin-right: -50px;    
-        transform: scale(0.9);   
+        transform: scale(1.2);   
         
         @media (orientation: portrait) {
             margin-right: 0;  
             transform: scale(1);  
+            
+            &:hover {
+                transform: scale(1.1);
+            }
         } 
         
         &:hover {
-            transform: scale(0.95);
+            transform: scale(1.3);
         }
     `}
          
     ${({direction}) => direction === 'right' && css`
         z-index: 1;  
-        margin-left: -50px;  
-        transform: scale(0.9);    
+        margin-left: -80px;  
+        transform: scale(0.8);    
         
         @media (orientation: portrait) {
             margin-left: 0;  
             transform: scale(1);  
+            
+            &:hover {
+                transform: scale(1.1);
+            }
         } 
-        
+                    
         &:hover {
-            transform: scale(0.95);
+            transform: scale(0.9);
         }
     `}
     
      @media (orientation: portrait) {
         margin: 20px;
      } 
+     
+     @media (max-width: 512px) {
+        height: 200px;
+     }
+     
+     @media (max-width: 396px) {
+        height: 150px;
+     }
 `;
 
 export const WebsitePin = styled.div`
@@ -71,22 +88,8 @@ export const WebsitePin = styled.div`
     color: orange;
     line-height: 40px;
     text-transform: uppercase;
-    
-    ${({direction}) => direction === 'center' && css`
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-    `}
-    
-        
-    ${({direction}) => direction === 'left' && css`
-        left: 5px;
-    `}
-    
-        
-    ${({direction}) => direction === 'right' && css`
-        right: 5px;     
-    `}
-    
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
 `;

@@ -22,7 +22,7 @@ const ProjectPage = ({history, status}) => {
     }
 
     return (
-        <div className={'App'}>
+        <div>
             <Navbar links={['hall-of-fame']}/>
             <div id={'hall-of-fame'} className={'wallpaper-container'}
                  style={{backgroundImage: "url(images/wallpaper.jpg)"}}>

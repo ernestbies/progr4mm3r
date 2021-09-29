@@ -1,0 +1,29 @@
+.carousel-options {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.carousel-checkbox {
+    margin-left: 30px;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    background-color: transparent;
+    border: 1px solid orange;
+    border-radius: 1px;
+    transition: 1s all;
+}
+
+.carousel-checkbox:checked {
+    background-color: #FFA55099;
+}
+
+.carousel-checker {
+    font-size: 12px;
+    font-family: "Roboto Condensed", serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0 0 0 10px;
+}
+

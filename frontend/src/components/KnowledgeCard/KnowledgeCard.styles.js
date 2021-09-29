@@ -25,7 +25,7 @@ export const Card = styled.div`
     opacity: 0.2;
     perspective: 100px;
     user-select: none;
-    scale: 0.95;
+    transform: scale(0.95);
     
     &.animated {
         animation: ${revealCard} 8s forwards;
@@ -33,7 +33,7 @@ export const Card = styled.div`
     
     &:hover {
         border: 1px solid ${({color}) => color};
-        scale: 1;
+        transform: scale(1);
     }
 `;
 

@@ -1,29 +1,5 @@
 import styled, {keyframes} from "styled-components";
 
-export const CounterSectionDiv = styled.div`
-    display: flex;
-    height: 400px;
-    background-color: black;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-position: top;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    width: 100%;
-    background-image: url(images/wallpaper.jpg);
-`;
-
-export const BackgroundWrapper = styled.div`
-    background-color: #00000099;
-    height: 100%;  
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-`;
-
 const moveLetters = [keyframes`
     0% {
         opacity: 1;
@@ -105,7 +81,7 @@ const moveLetters = [keyframes`
     }
 `];
 
-export const SingleCharacter = styled.p`
+const MysteryCharacter = styled.p`
     color: orange; 
     font-size: 30px;
     -webkit-text-stroke: 1px #000000;
@@ -114,8 +90,6 @@ export const SingleCharacter = styled.p`
     &:after {
         content: "${({character}) => character}";
     }
-    
-    @media (max-width: 480px) {
-        display: none;
-    }
 `;
+
+export default MysteryCharacter;

@@ -69,12 +69,6 @@
   "page_not_found": "Page not found",
   "page_not_found_desc": "Sorry, the page you're looking for cannot be accessed.",
   "back_to_main_page": "Back to the main page",
-  "counter_section_0": "C L I C K   T H I S",
-  "counter_section_1": "F O R",
-  "counter_section_2": "Note",
-  "counter_section_3": "You clicked a total of",
-  "counter_section_4": "times",
-  "counter_section_5": "Access to this statistic is possible\nthrough the use of React Redux.\nHave fun clicking.",
   "contact_text1": "If you have any questions, please feel free to contact me.",
   "contact_text2": "For any business inquiries please contact me via",
   "most_preferred": "the most preferred",
@@ -87,5 +81,10 @@
   "revealing_info": "Revealing information...",
   "revealing_info_success": "Information successfully revealed.",
   "quote_hall_of_fame": "OFFICIAL ERNESTBIES.COM HALL OF FAME SITE",
-  "quote_not_released_project": "COMING SOON... // CURRENTLY 404 PAGE"
+  "quote_not_released_project": "COMING SOON... // CURRENTLY 404 PAGE",
+  "quote_projects": "Passion for programming - to create projects like ",
+  "these": "these",
+  "internet_applications": "internet apps",
+  "all": "all",
+  "auto_sliding": "automatic sliding"
 }

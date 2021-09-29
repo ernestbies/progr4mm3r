@@ -64,12 +64,12 @@ export const projects = [
         id: 3,
         name: 'Restaurant Management System',
         description: {
-            en:  'System for searching information about audiovisual materials. Project implemented as part of an engineering thesis. The application allows you to search and view information about movies, series and people related to the film industry. The application is designed for devices with Android and iOS. The application supports Polish and English.',
-            pl: 'System do wyszukiwania informacji o materiałach audiowizualnych. Projekt realizowany w ramach pracy inżynierskiej. Aplikacja umożliwia wyszukiwanie i przeglądanie informacji o filmach, serialach i osobach związanych z branżą filmową. Aplikacja przeznaczona jest na urządzenia z systemem Android oraz iOS. Obsługuje język polski i angielski.'
+            en:  'Restaurant Management System is a system that allows you to manage a restaurant (adding, editing and removing products). The project consists of the frontend and backend layers. Basic HTTP methods such as GET, POST, PUT and DELETE were used in the project. The website contains a form for adding new objects and tables containing individual data about the products on the restaurant menu. The project was created using React.js and Express.js.',
+            pl: 'Restaurant Management System to system pozwalający na zarządzanie restauracją (dodawanie, edycja oraz usuwanie produktów). Projekt składa się z warstwy frontend oraz backend. W projekcie wykorzystano podstawowe metody HTTP takie jak GET, POST, PUT oraz DELETE. Strona zawiera formularz dodawania nowych obiektów oraz tabele zawierające poszczególne dane dotyczące produktów znajdujących się w menu restauracji. Projekt powstał z wykorzystaniem React.js oraz Express.js.'
         },
         technologies: {
-            desktop: ['JavaScript', 'HTML', 'CSS', 'React.js', 'React Router', 'React Redux', 'Styled Components'],
-            server: ['JavaScript', 'Node.js', 'express.js', 'Nodemailer'],
+            desktop: ['JavaScript', 'HTML', 'CSS', 'React.js', 'React Router', 'Styled Components'],
+            server: ['JavaScript', 'Node.js', 'express.js'],
             database: ['MongoDB', 'mongoose']
         },
         os: ['Windows', 'Linux'],

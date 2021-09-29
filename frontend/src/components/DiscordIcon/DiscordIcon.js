@@ -1,7 +1,8 @@
-import {FaDiscord} from "react-icons/fa";
 import React from "react";
 import contact from "../../utils/contact";
 import {useTranslation} from "react-i18next";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faDiscord} from "@fortawesome/free-brands-svg-icons";
 
 export const DiscordIcon = () => {
 
@@ -31,7 +32,8 @@ export const DiscordIcon = () => {
                     style={{backgroundColor: 'transparent', borderWidth: 0, cursor: 'pointer'}}>
                                 <span id={'discordName'}
                                       className={'tooltip-text'}>{t('copy_text')}</span>
-                <FaDiscord type={'discord'} className={'icon'}/></button>
+                <FontAwesomeIcon icon={faDiscord} type={'discord'} className={'icon'}/>
+            </button>
         </div>
     )
 }

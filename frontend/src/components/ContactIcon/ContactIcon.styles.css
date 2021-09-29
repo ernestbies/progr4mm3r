@@ -1,18 +1,13 @@
 .icon-item {
-    width: 6.5rem;
-    height: 5.5rem;
+    width: 5.2rem;
+    height: 5rem;
 }
 
 .icon {
     color: white;
     margin-top: 10px;
-    font-size: 65px;
+    font-size: 50px;
     transition: color 0.8s ease-in-out;
-}
-
-.icon[type = 'email'] {
-    margin-top: 5px;
-    font-size: 75px;
 }
 
 .icon[type = 'github']:hover {

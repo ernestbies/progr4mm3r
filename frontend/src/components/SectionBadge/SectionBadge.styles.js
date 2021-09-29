@@ -64,8 +64,8 @@ export const StyledDiv = styled.div`
     justify-content: center;
     user-select: none;
     width: ${({width}) => width > 10 ? '300px' : '220px'};
+    background-color: ${({backgroundColor}) => backgroundColor};
     height: 45px;
-    background-color: ${({backgroundColor}) => backgroundColor ?? 'orange'};
     margin-bottom: 25px;
     position: relative;
     margin-top: -10px;
@@ -75,6 +75,7 @@ export const StyledDiv = styled.div`
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 20%, 100% 100%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
     clip-path: polygon(0 0, 100% 0, 100% 30%, 100% 100%, 0 100%, 7% 100%, 0% 70%, 0% 30%);
     transition: background-color 0.8s ease-in-out;
+   
     
     ${({onClick}) => onClick && css`
         cursor: pointer;    

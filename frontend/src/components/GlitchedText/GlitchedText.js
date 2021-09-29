@@ -4,7 +4,7 @@ import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import './GlitchedText.styles.css';
 
-const GlitchedText = ({specialCharacter, whiteText, coloredText, link, quote}) => {
+const GlitchedText = ({specialCharacter, whiteText, coloredText, link, quote, margin}) => {
 
     const {t} = useTranslation('common');
 
@@ -23,7 +23,7 @@ const GlitchedText = ({specialCharacter, whiteText, coloredText, link, quote}) =
     }
 
     return (
-        <div style={{height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
+        <div style={{margin: margin, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column'}}>
             {
                 link ?
                     <Link style={{textDecoration: 'none'}} to={link}>
@@ -54,6 +54,7 @@ GlitchedText.propTypes = {
     specialCharacter: PropTypes.string.isRequired,
     whiteText: PropTypes.string.isRequired,
     coloredText: PropTypes.string.isRequired,
+    margin: PropTypes.string,
     link: PropTypes.string,
     quote: PropTypes.string
 }

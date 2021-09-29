@@ -5,7 +5,7 @@ import {
     IntroSubheader,
     IntroSubtitle,
     IntroTitle,
-    IntroWrapper, Quote,
+    IntroWrapper, Quote, StyledSource, StyledVideo,
     Subtitle
 } from "./Intro.styles";
 import {Logo} from "../Logo/Logo";
@@ -27,7 +27,10 @@ const Intro = () => {
     };
 
     return (
-        <IntroSection>
+        <IntroSection id={'about'}>
+            <StyledVideo autoPlay muted loop>
+                <StyledSource src={'/videos/intro-background.mp4'} type={'video/mp4'}/>
+            </StyledVideo>
             <IntroWrapper>
                 <IntroHeader>
                     <Logo width={60} height={60} style={{marginRight: 20}}/>

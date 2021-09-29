@@ -9,10 +9,10 @@ const SpecialSection = ({revealInfo}) => {
     const {t} = useTranslation('common');
 
     return (
-        <div id={'about'}>
+        <div id={'about'} style={{height: 300}}>
             <SectionBadge content={t('reveal_info')} specialNumber={0} onClick={() => revealInfo()}/>
-            <GlitchedText height={'150px'} backgroundColor={'black'} specialCharacter={'>#'}
-                                whiteText={'ENCRYPT3D INFORM4TI0N'} coloredText={'[0x5]'}/>
+            <GlitchedText specialCharacter={'>#'} whiteText={'ENCRYPT3D INFORM4TI0N'}
+                          coloredText={'[0x5]'} margin={'100px 0 0 0'}/>
         </div>
     )
 }

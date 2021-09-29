@@ -22,7 +22,7 @@ const Hobby = () => {
             <div className={'video-container'}>
                 <SectionBadge position={'end'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
                 <video className={'video'} poster={'/images/wallpaper.jpg'} autoPlay muted loop>
-                    <source src={'/videos/background.mp4'} type={'video/mp4'}/>
+                    <source src={'/videos/timeline-background.mp4'} type={'video/mp4'}/>
                 </video>
                 <TimelineSection/>
             </div>

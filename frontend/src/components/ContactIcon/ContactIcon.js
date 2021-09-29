@@ -1,7 +1,6 @@
 import React from "react";
 import contact from "../../utils/contact";
-import {CgMail} from "react-icons/cg";
-import {FaBitbucket, FaGithub, FaLinkedin} from "react-icons/fa";
+import {FaBitbucket, FaGithub, FaLinkedin, FaRegEnvelope} from "react-icons/fa";
 import {DiscordIcon} from "../DiscordIcon/DiscordIcon";
 import "./ContactIcon.styles.css";
 
@@ -15,7 +14,7 @@ const ContactIcon = ({type}) => {
                        href={type === 'email' ? 'mailto:' + contact.email : contact[type]}>
                         {
                             type === 'email' ?
-                                <CgMail type={'email'} className={'icon'}/> :
+                                <FaRegEnvelope type={'email'} className={'icon'}/> :
                                 type === 'github' ?
                                     <FaGithub type={'github'} className={'icon'}/> :
                                     type === 'bitbucket' ?

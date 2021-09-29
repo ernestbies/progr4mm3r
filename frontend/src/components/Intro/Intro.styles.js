@@ -105,11 +105,14 @@ const changeColor = keyframes`
 `;
 
 export const IntroWrapper = styled.div`
-    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: 100%;  
     
     @media (max-width: 480px) {
         transform: scale(0.6);
@@ -117,14 +120,28 @@ export const IntroWrapper = styled.div`
 `;
 
 export const IntroSection = styled.div`
-    height: 550px;
+    height: 650px;
     display: flex;
     justify-content: center;
     background-color: #000;
     border-bottom-color: orange;
     border-bottom-style: solid;
     border-bottom-width: 1px;
+    position: relative;
 `;
+
+export const StyledVideo = styled.video`
+    height: 100%;
+    width: 100%;
+    filter: brightness(40%);
+    
+    @media (max-width: 720px) {
+        width: inherit;
+        height: 500px;
+    }
+`;
+
+export const StyledSource = styled.source``;
 
 export const IntroHeader = styled.div`
     display: flex;

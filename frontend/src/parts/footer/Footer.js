@@ -1,12 +1,14 @@
 import React from 'react';
-import "./Footer.styles.css";
+import {FooterText, StyledFooter} from "./Footer.styles";
 import {WEBSITE_NAME} from "../../utils/information";
 
 const Footer = () => {
     return (
-        <footer className={'footer'}>
-            <p style={{color: 'white', margin: 0}}>&copy; {WEBSITE_NAME} 2021. All rights reserved.</p>
-        </footer>
+        <StyledFooter>
+            <FooterText>
+                &copy; {WEBSITE_NAME} 2021. All rights reserved.
+            </FooterText>
+        </StyledFooter>
     );
 }
 

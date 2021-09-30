@@ -21,6 +21,12 @@ const Hobby = () => {
 
             <div className={'video-container'}>
                 <SectionBadge position={'end'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 30}}>
+                    <p className={'inform-text'}>{t('quote_timeline')}
+                        {'.'}
+                    </p>
+                    <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
+                </div>
                 <video className={'video'} poster={'/images/wallpaper.jpg'} autoPlay muted loop>
                     <source src={'/videos/timeline-background.mp4'} type={'video/mp4'}/>
                 </video>

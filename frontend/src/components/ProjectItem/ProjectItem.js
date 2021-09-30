@@ -3,12 +3,12 @@ import {FaWrench} from "react-icons/fa";
 import {FcAndroidOs, FcLinux} from "react-icons/fc";
 import {IoLogoApple} from "react-icons/io";
 import React from "react";
+import Link from "../Link/Link";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import './ProjectItem.styles.css';
-import Link from "../Link/Link";
 
-const ProjectItem = ({id, image, color, name, description, technologies, os, languages, links, additionalData}) => {
+const ProjectItem = ({image, color, name, description, technologies, os, languages, links, additionalData}) => {
 
     const {t} = useTranslation('common');
 
@@ -70,7 +70,7 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
     };
 
     return (
-        <div className={'carousel-project-item'} key={id}>
+        <div className={'carousel-project-item'} key={name}>
             <img
                 alt={name}
                 src={image}
@@ -84,7 +84,8 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                         borderLeftColor: color,
                         paddingLeft: 7,
                         fontFamily: 'Roboto Condensed',
-                        margin: 0
+                        margin: 0,
+                        lineHeight: 1.2
                     }}>{name}</p>
                 </div>
                 <p style={{
@@ -162,21 +163,24 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                     }
                     {
                         additionalData &&
-                        <a style={{
+                        <a className={'text-info'} style={{
                             display: 'inline-flex',
                             alignItems: 'center',
                             textDecoration: 'none',
                             textAlign: 'center',
                             marginRight: 3,
                         }}
-                           href={additionalData.link}>
+                           href={additionalData.link}
+                           target={'_blank'}
+                           rel={'noreferrer'}
+                        >
                             <img
                                 width={60}
                                 height={16}
                                 alt={additionalData.name}
                                 src={additionalData.image}
                             />
-                            <span className={'text-info'}>{t(additionalData.text)}</span>
+                         {t(additionalData.text)}
                         </a>
                     }
                     <div style={{
@@ -196,6 +200,9 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
                     {
                         links.youtube && <Link link={links.youtube} type={'youtube'}/>
                     }
+                    {
+                        links.website && <Link link={links.website.url} type={'website'} image={links.website.logo}/>
+                    }
                 </div>
             </div>
         </div>
@@ -203,7 +210,6 @@ const ProjectItem = ({id, image, color, name, description, technologies, os, lan
 }
 
 ProjectItem.propTypes = {
-    id: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,

@@ -15,12 +15,12 @@ import {FaRegEnvelope} from "react-icons/all";
 
 const Menu = () => {
     return (<StyledMenu>
-        <MenuItem>
+        <MenuItem style={{marginBottom: 10}}>
             <StyledMenuLink href={'https://github.com/ernestbies'} target={'_blank'}>
                 <FontAwesomeIcon icon={faGithub} style={{width: 25, height: 25, color: 'white'}}/>
             </StyledMenuLink>
         </MenuItem>
-        <MenuItem>
+        <MenuItem style={{marginBottom: 10}}>
             <StyledMenuLink href={'mailto:' + contact.email} target={'_blank'}>
                 <FaRegEnvelope style={{width: 25, height: 25, color: 'white'}}/>
             </StyledMenuLink>

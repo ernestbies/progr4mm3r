@@ -14,8 +14,10 @@ const Skills = () => {
         <div id={'skills'} style={{textAlign: 'center', color: 'white', backgroundColor: '#0f0f0f'}}>
             <SectionBadge position={'start'} content={t('skills')} signColor={'#1d2026'} specialNumber={3}/>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <p className={'inform-text'}>{t('skills_text1')}<br/>
-                    {t('skills_text2')} <code className={'scale-text'}>{t('programming_languages2')}</code> {t('and')} <code className={'scale-text'}>{t('it_technologies2')}</code> {t('skills_text3')}</p>
+                <p className={'inform-text'}>{t('skills_text')}
+                <code className={'scale-text'}>{t('programming_languages2')}</code>
+                    {' ' + t('and') + ' '}
+                <code className={'scale-text'}>{t('it_technologies2')}</code>{'.'}</p>
                 <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
             </div>
 

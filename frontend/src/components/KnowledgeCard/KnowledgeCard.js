@@ -8,18 +8,15 @@ import {
     CardHeader,
     CardIcon,
     CardImage,
-    CardSubtitle,
     CardTitle,
-    ColoredLink,
     DivWrapper,
     ImagesContainer,
-    TextContent
 } from "./KnowledgeCard.styles";
 
 const KnowledgeCard = ({type}) => {
 
     const [item] = useState(knowledge[type]);
-    const {t, i18n} = useTranslation('common');
+    const {t} = useTranslation('common');
 
     const renderIcons = (type) => {
         return (
@@ -39,22 +36,11 @@ const KnowledgeCard = ({type}) => {
         <Card name={'knowledge-card'} color={item.color}>
             <CardHeader>
                 <CardImage alt={'technology'} src={item.image}/>
-                <CardTitle>{t(item.name)}</CardTitle>
             </CardHeader>
             <DivWrapper backgroundColor={item.color}>
-                <CardSubtitle>{item.technology_stack.join(" · ")}</CardSubtitle>
+                <CardTitle>{t(item.name)}</CardTitle>
             </DivWrapper>
             <CardContent>
-                <TextContent>{item.text[i18n.language]} {
-                    type === 'backend'
-                    && <ColoredLink
-                        target={'_blank'}
-                        rel={'noreferrer'}
-                        href={'http://mediabrowser-server.herokuapp.com/documentation'}
-                    >{t('server_api_info')}
-                    </ColoredLink>
-                }
-                </TextContent>
                 {
                     renderIcons(type)
                 }

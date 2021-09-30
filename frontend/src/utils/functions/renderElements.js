@@ -9,23 +9,22 @@ export const renderElements = (elements, type) => {
 
     switch (type) {
         case 'hobby':
-            elements.map((el) => view.push(
-                <Carousel.Item key={el.id}>
-                    <HobbyItem id={el.id} image={el.image} quote={el.quote} name={el.name} text={el.text} color={el.color}
+            elements.map((el, index) => view.push(
+                <Carousel.Item key={index}>
+                    <HobbyItem id={index} image={el.image} quote={el.quote} name={el.name} text={el.text} color={el.color}
                                keywords={el.keywords}/>
                 </Carousel.Item>
             ));
             break;
         case 'skills':
-            elements.map((el) => view.push(
-                <SkillItem key={el.id} id={el.id} name={el.name} color={el.color} image={el.image}/>
+            elements.map((el, index) => view.push(
+                <SkillItem key={index} id={index} name={el.name} color={el.color} image={el.image}/>
             ));
             break;
         case 'projects':
-            elements.map((el) => view.push(
-                <Carousel.Item key={el.id}>
+            elements.map((el, index) => view.push(
+                <Carousel.Item key={index}>
                     <ProjectItem
-                        id={el.id}
                         image={el.image}
                         color={el.color}
                         name={el.name}

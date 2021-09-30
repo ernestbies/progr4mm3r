@@ -177,10 +177,15 @@ html, body {
 .scale-text {
     color: orange;
     font-size: 15px;
+    font-weight: 300;
 }
 
 .reveal {
     animation: opacity-zero-to-one 5s ease-in-out;
+}
+
+.ref-page:hover {
+    color: orange;
 }
 
 @keyframes loading-dots {

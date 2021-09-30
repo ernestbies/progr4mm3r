@@ -1,3 +1,7 @@
+.text-info {
+    font-size: 10px;
+}
+
 .carousel-project-item {
     display: flex;
     height: 450px;
@@ -10,10 +14,6 @@
     object-fit: contain;
     margin-left: 20px;
     margin-bottom: 20px;
-}
-
-.text-info {
-    font-size: 10px;
 }
 
 @media only screen and (max-width: 992px) {

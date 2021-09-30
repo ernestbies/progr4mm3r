@@ -9,7 +9,7 @@
 .knowledge-card-container {
     display: flex;
     justify-content: center;
-    min-height: 650px;
+    min-height: 350px;
 }
 
 @media only screen and (max-width: 992px) {

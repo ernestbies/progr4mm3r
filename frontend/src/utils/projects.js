@@ -1,6 +1,7 @@
+import {WEBSITE_URL} from "./information";
+
 export const projects = [
     {
-        id: 0,
         name: 'Media Browser',
         description: {
             en:  'System for searching information about audiovisual materials. Project implemented as part of an engineering thesis. The application allows you to search and view information about movies, series and people related to the film industry. The application is designed for devices with Android and iOS. The application supports Polish and English.',
@@ -17,18 +18,21 @@ export const projects = [
         image: 'images/projects/mediabrowser-dashboard.png',
         links: {
             github: 'https://github.com/ernestbies/MediaBrowser-mobile',
-            youtube: 'https://youtu.be/7r1r9JiKsYc'
+            youtube: 'https://youtu.be/7r1r9JiKsYc',
+            website: {
+                url: 'https://mediabrowser-server.herokuapp.com/documentation',
+                logo: '/images/projects/mediabrowser.png'
+            }
         }
     },
     {
-        id: 1,
         name: 'Personal website',
         description: {
             en:  'Portfolio page showing me and my projects. It was the first website I created using React.js. While creating a porfolio website, I learned how to use the JavaScript scripting language and how to design websites with the use of HTML and CSS.',
-            pl: 'Strona portfolio przedstawiająca moją osobę oraz projekty. Była to pierwsza strona internetowa którą stworzyłem z wykorzystaniem React.js. Podczas tworzenia strony porfolio uczyłem się jak używać języka skryptowego JavaScript oraz jak projektować strony internetowe z wykorzystaniem HTML oraz CSS.'
+            pl: 'Strona portfolio przedstawiająca moją osobę oraz projekty. Była to pierwsza strona internetowa, którą stworzyłem z wykorzystaniem React.js. Podczas tworzenia strony porfolio uczyłem się jak używać języka skryptowego JavaScript oraz jak projektować strony internetowe z wykorzystaniem HTML oraz CSS.'
         },
         technologies: {
-            desktop: ['JavaScript', 'HTML', 'CSS', 'React.js', 'React Router', 'React Redux', 'Styled Components', 'Google Recaptcha'],
+            desktop: ['JavaScript', 'HTML', 'CSS', 'React.js', 'React Router', 'React Redux', 'Bootstrap', 'i18next', 'Styled Components', 'Prop Types', 'Google Recaptcha'],
             server: ['JavaScript', 'Node.js', 'express.js', 'Nodemailer'],
             database: ['MongoDB', 'mongoose']
         },
@@ -38,18 +42,21 @@ export const projects = [
         image: 'images/projects/personal-website.png',
         links: {
             github: 'https://github.com/ernestbies/personal-website',
+            website: {
+                url: WEBSITE_URL,
+                logo: '/images/logo.png'
+            }
         }
     },
     {
-        id: 2,
-        name: 'Football club website',
+        name: 'Forest Żabiec - official website',
         description: {
             en:  'The official website of the Forest Żabiec football team. The website presents information about the club, reports and details of statistics.',
-            pl: 'Oficjalna strona drużyny piłkarskiej Forest Żabiec. Na stronie przedstawione są informacje dotyczące klubu, relacje oraz szczegółówe statystyki .'
+            pl: 'Oficjalna strona drużyny piłkarskiej Forest Żabiec. Na stronie przedstawione są informacje dotyczące klubu, relacje oraz szczegółowe statystyki.'
         },
         technologies: {
-            desktop: ['JavaScript', 'HTML', 'CSS', 'React.js', 'React Router', 'React Redux', 'Styled Components'],
-            server: ['JavaScript', 'Node.js', 'Hapi.js'],
+            desktop: ['JavaScript', 'HTML', 'CSS', 'React.js', 'React Router', 'React Redux', 'Styled Components', 'Font Awesome', 'Material UI', 'React Spinners'],
+            server: ['JavaScript', 'Node.js', 'Hapi.js', 'JWT (JSON Web Token)', 'bcrypt'],
             database: ['MongoDB', 'mongoose']
         },
         os: ['Windows', 'Linux'],
@@ -58,10 +65,13 @@ export const projects = [
         image: 'images/projects/football-club.png',
         links: {
             github: 'https://github.com/ernestbies/forestzabiec',
+            website: {
+                url: 'https://forestzabiec.herokuapp.com',
+                logo: '/images/projects/forestzabiec.png'
+            }
         }
     },
     {
-        id: 3,
         name: 'Restaurant Management System',
         description: {
             en:  'Restaurant Management System is a system that allows you to manage a restaurant (adding, editing and removing products). The project consists of the frontend and backend layers. Basic HTTP methods such as GET, POST, PUT and DELETE were used in the project. The website contains a form for adding new objects and tables containing individual data about the products on the restaurant menu. The project was created using React.js and Express.js.',
@@ -81,7 +91,6 @@ export const projects = [
         }
     },
     {
-        id: 4,
         name: 'Camera Fingerprint PRNU',
         description: {
             en: 'Camera Fingerprint PRNU (Autopsy module) uses photo response non-uniformity of camera sensor (PRNU) to check if a photo was truly taken by a suspected camera or not. Module is not based on metadata such as EXIF, performs a physical analysis of the camera sensor, determines photo response non-uniformity (PRNU). The project was presented at the 2020 Open Source Digital Forensics Conference (#OSDFCon) and placed on the organizer\'s home page.',
@@ -105,7 +114,6 @@ export const projects = [
         }
     },
     {
-        id: 5,
         name: 'Spaceships',
         description: {
             en: 'Spaceships is a puzzle game combining two popular games "Ships" and "Minesweeper". Project is based on a client-server architecture. The aim of the game is to find all the ships on the board in the fewest possible steps.',
@@ -118,7 +126,7 @@ export const projects = [
             database: ['PostgreSQL', 'Java Persistence API'],
             documentation: ['Microsoft Word', 'Libre Office', 'LaTeX', 'Unified Modeling Language (UML)']
         },
-        os: ['Windows', 'Android'],
+        os: ['Windows', 'Linux', 'Android'],
         color: 'purple',
         image: 'images/projects/spaceships.png',
         links: {
@@ -126,11 +134,10 @@ export const projects = [
         }
     },
     {
-        id: 6,
         name: 'ApocalyptoGame',
         description: {
-            en: 'ApocalyptoGame is a first-person shooter (FPS) game. In the game, we play the role of a soldier set in a post-apocalyptic world. The player\'s task is to destroy the enemy ship. The player has the ability to interact with the environment, can pick up items. In order to destroy a ship, the player must collect four cells that will help him power the generator. The way to get cells is different - some of them are located on the map, some of them can be obtained by the player by killing aliens, and the last one is possible after killing the boss. After collecting all the cells, the player can power the generator on the map, which will blow up the enemy ship. The game has a developed combat and healing system.',
-            pl: 'ApocalyptoGame to strzelanka z perspektywy pierwszej osoby (FPS). W grze wcielamy się w żołnierza osadzonego w postapokaliptycznym świecie. Zadaniem gracza jest zniszczenie wrogiego statku. Gracz ma możliwość interakcji z otoczeniem, może podnosić przedmioty. Aby zniszczyć statek, gracz musi zebrać cztery ogniwa, które pomogą mu zasilić generator. Sposób zdobywania ogniw jest różny - część z nich znajduje się na mapie, część z nich gracz może zdobyć zabijając przeciwników, a ostatnią po zabiciu bossa. Po zebraniu wszystkich ogniw gracz może zasilić znajdujący się na mapie generator, który wysadzi wrogi statek kosmiczny w powietrze. Gra posiada rozbudowany system walki i leczenia.'
+            en: 'ApocalyptoGame is a first-person shooter (FPS) game. In the game, we play the role of a soldier set in a post-apocalyptic world. The player\'s task is to destroy the enemy ship. The player has the ability to interact with the environment, can pick up items. In order to destroy a ship, the player must collect four cells that will help him power the generator. The way to get cells is different - some of them are located on the map, some of them can be obtained by the player by defending aliens. After collecting all the cells, the player can power the generator on the map, which will blow up the enemy ship. The game has a developed combat and healing system.',
+            pl: 'ApocalyptoGame to strzelanka z perspektywy pierwszej osoby (FPS). W grze wcielamy się w żołnierza osadzonego w postapokaliptycznym świecie. Zadaniem gracza jest zniszczenie wrogiego statku. Gracz ma możliwość interakcji z otoczeniem, może podnosić przedmioty. Aby zniszczyć statek, gracz musi zebrać cztery ogniwa, które pomogą mu zasilić generator. Sposób zdobywania ogniw jest różny - część z nich znajduje się na mapie, część z nich gracz może zdobyć pokonując obcych. Po zebraniu wszystkich ogniw gracz może zasilić znajdujący się na mapie generator, który wysadzi wrogi statek kosmiczny w powietrze. Gra posiada rozbudowany system walki i leczenia.'
         },
         technologies: {
             desktop: ['C#', 'Unity']
@@ -143,7 +150,6 @@ export const projects = [
         }
     },
     {
-        id: 7,
         name: 'Quiz app',
         description: {
             en: 'Mobile application that allows you to solve on-line tests. Tests are downloaded from an external server. The user has the option of solving a specific test and has a specific time to answer a question. In addition, user can choose a random test and view results. The application has a drawer menu that makes it easy to access all screens. The application is designed for Android and iOS.',
@@ -160,8 +166,7 @@ export const projects = [
         }
     },
     {
-        id: 8,
-        name: 'Image binarizer',
+        name: 'Image Binarizer',
         description: {
             en: 'The application allows you to binarize images. The application supports the basic types of binarization - low-level, high-level, two-threshold and conditional. It allows you to load any image (color or black and white), and then select a specific operation. The application works in a distributed environment using Remote Method Invocation (RMI) - a mechanism that enables remote methods of objects invocation. These objects can reside in other Java virtual machines that can be on other computers. In RMI technology, it is necessary to run three processes: client, server and register of objects.',
             pl: 'Aplikacja umożliwia binaryzację obrazów. Aplikacja obsługuje podstawowe typy binaryzacji - niskopoziomowe, wysokopoziomowe, dwuprogowe oraz warunkowe. Umożliwia wczytanie dowolnego obrazu (kolorowego lub czarno-białego), a następnie wybranie określonej operacji. Aplikacja działa w środowisku rozproszonym z wykorzystaniem Remote Method Invocation (RMI) - mechanizmu umożliwiającego zdalne wywoływanie obiektów. Te obiekty mogą znajdować się na innych maszynach wirtualnych Java, które mogą znajdować się na innych komputerach. W technologii RMI konieczne jest uruchomienie trzech procesów: klienta, serwera i rejestru obiektów.'
@@ -170,18 +175,17 @@ export const projects = [
             desktop: ['Java', 'Apache NetBeans IDE', 'Swing', 'Remote Method Invocation (RMI)']
         },
         image: 'images/projects/imagebinarizer.png',
-        os: ['Windows'],
+        os: ['Windows', 'Linux'],
         color: 'grey',
         links: {
             github: 'https://github.com/ernestbies/ImageBinarizer'
         }
     },
     {
-        id: 9,
         name: 'Calculator',
         description: {
-            en: 'Calculator is an app created using the React Native framework. It was my first app created in React Native. The application works in landscape and potrait modes. The application has a basic set of math functions such as addition, subtraction, multiplication, division, percent. After changing the orientation, additional math functions are available.',
-            pl: 'Kalkulator to aplikacja stworzona z wykorzystaniem frameworka React Native. To była moja pierwsza aplikacja stworzona w React Native. Aplikacja działa w trybie krajobrazowym i portretowym. Aplikacja posiada podstawowy zestaw funkcji matematycznych, takich jak dodawanie, odejmowanie, mnożenie, dzielenie, procent. Po zmianie orientacji dostępne są dodatkowe funkcje matematyczne.'
+            en: 'Calculator is an app created using the React Native framework. It was my first app created in React Native. The application works in landscape and potrait modes. The application has a basic set of math functions such as addition, subtraction, multiplication, division, percent. After changing the screen orientation, additional math functions are available.',
+            pl: 'Kalkulator to aplikacja stworzona z wykorzystaniem frameworka React Native. Była to moja pierwsza aplikacja stworzona w React Native. Aplikacja działa w trybie krajobrazowym i portretowym. Aplikacja posiada podstawowy zestaw funkcji matematycznych, takich jak dodawanie, odejmowanie, mnożenie, dzielenie, procent. Po zmianie orientacji ekranu dostępne są dodatkowe funkcje matematyczne.'
         },
         technologies: {
             mobile: ['JavaScript', 'React Native']
@@ -194,7 +198,6 @@ export const projects = [
         }
     },
     {
-        id: 10,
         name: 'Database Connection App',
         description: {
             en: 'The application allows you to connect to any PostgreSQL database using the JDBC engine. The login data can be saved and read because the application uses serialization. In the application, it is possible to view all tables in the database. If the table contains users\' contact details (e-mail address), it is possible to send a message. Sending e-mails is performed by Javax Mail. User can add recipients (TO, CC, BCC), message subject and content. After approval, the e-mail is sent to the selected users.',
@@ -203,7 +206,7 @@ export const projects = [
         technologies: {
             desktop: ['Java', 'Apache NetBeans IDE', 'Swing', 'JDBC', 'PostgreSQL', 'Javax Mail']
         },
-        os: ['Windows'],
+        os: ['Windows', 'Linux'],
         color: 'blue',
         image: 'images/projects/databaseApp.png',
         links: {
@@ -211,7 +214,6 @@ export const projects = [
         }
     },
     {
-        id: 11,
         name: 'Database Analyzer',
         description: {
             en: 'Application for analyzing database performance while using VIEW, MATERIALIZED VIEW, WITH and TEMPORARY TABLE. The application allows you to connect to any PostgreSQL database using the JDBC engine. The login data can be saved and read because the application uses serialization.',
@@ -220,7 +222,7 @@ export const projects = [
         technologies: {
             desktop: ['Java', 'Apache NetBeans IDE', 'Swing', 'JDBC', 'PostgreSQL']
         },
-        os: ['Windows'],
+        os: ['Windows', 'Linux'],
         color: '#0000CD',
         image: 'images/projects/databaseAnalyzer.png',
         links: {
@@ -228,7 +230,6 @@ export const projects = [
         }
     },
     {
-        id: 12,
         name: 'Task planner',
         description: {
             en: 'My first school project in Angular. Task Planner covers the basics of Angular. The application includes data binding, the basic appearance of pages using HTML and CSS, forms, tables, dialogs, downloading data using the HTTP protocol from an external server and others.',
@@ -237,7 +238,7 @@ export const projects = [
         technologies: {
             desktop: ['Angular', 'TypeScript', 'HTML', 'CSS']
         },
-        os: ['Windows'],
+        os: ['Windows', 'Linux'],
         color: '#DC143C',
         image: 'images/projects/taskplanner.png',
         links: {
@@ -245,7 +246,6 @@ export const projects = [
         }
     },
     {
-        id: 13,
         name: 'Chess server',
         description: {
             en: 'An academic project that checks the correctness of moves on a chess board using unit tests. The project uses the Java programming language, the Spring platform and the JUnit library, which allows you to carry out tests.',
@@ -254,7 +254,7 @@ export const projects = [
         technologies: {
             desktop: ['Java', 'Spring Framework', 'JUnit', 'IntelliJ IDEA']
         },
-        os: ['Windows'],
+        os: ['Windows', 'Linux'],
         color: 'red',
         image: 'images/projects/chess-server.png',
         links: {
@@ -262,7 +262,6 @@ export const projects = [
         }
     },
     {
-        id: 14,
         name: 'Bank App',
         description: {
             en: 'An academic project that validates sample basic banking operations using unit tests. The project uses the Java programming language and tests carried out with the Spock library and the Groovy programming language. The basic things related to functional programming were also used, such as streams, maps and filters.',
@@ -271,7 +270,7 @@ export const projects = [
         technologies: {
             desktop: ['Java', 'Groovy', 'Spock', 'IntelliJ IDEA']
         },
-        os: ['Windows'],
+        os: ['Windows', 'Linux'],
         color: 'green',
         image: 'images/projects/bank-app.png',
         links: {
@@ -279,7 +278,70 @@ export const projects = [
         }
     },
     {
-        id: 15,
+        name: 'Java - good practices',
+        description: {
+            en: 'Program and presentation on good Java programming practices, code style and code review.',
+            pl: 'Program oraz prezentacja na temat dobrych praktyk programowania w Java, code style\'u oraz code review.'
+        },
+        technologies: {
+            desktop: ['Java', 'IntelliJ IDEA']
+        },
+        os: ['Windows', 'Linux'],
+        color: '#90EE90',
+        image: 'images/projects/java-good-practices.png',
+        links: {
+            github: 'https://github.com/ernestbies/Java-good-practices'
+        }
+    },
+    {
+        name: 'InventoryHelper',
+        description: {
+            en: 'Application that compares backpacks and chooses the better option. It was my first application using the Java object-oriented language and the NetBeans IDE development environment.',
+            pl: 'Aplikacja porównująca plecaki i wybierająca lepszą opcję. Była to moja pierwsza aplikacja wykorzystująca język obiektowy Java oraz środowisko programistyczne NetBeans IDE.',
+        },
+        technologies: {
+            desktop: ['Java', 'Apache NetBeans IDE']
+        },
+        os: ['Windows', 'Linux'],
+        color: '#F5DEB3',
+        image: 'images/projects/inventory-helper.png',
+        links: {
+            github: 'https://github.com/ernestbies/InventoryHelper'
+        }
+    },
+    {
+        name: 'Algen',
+        description: {
+            en: 'A program that solves a discrete knapsack problem using a genetic algorithm. It was my first project using the C language.',
+            pl: 'Program rozwiązujący dyskretny problem plecakowy z użyciem algorytmu genetycznego. Był to mój pierwszy projekt z wykorzystaniem języka C.'
+        },
+        technologies: {
+            desktop: ['C', 'C++', 'Code::Blocks']
+        },
+        os: ['Windows', 'Linux'],
+        color: '#00FF00',
+        image: 'images/projects/algen.png',
+        links: {
+            github: 'https://github.com/ernestbies/algen'
+        }
+    },
+    {
+        name: 'inspyred',
+        description: {
+            en: 'Wykład oraz laboratorium wraz z programami i przykładami dotyczący algorytmów inspirowanych biologią z wykorzystaniem języka programowania Python oraz biblioteki inspyred.',
+            pl: 'Lecture and laboratory with programs and examples on bio-inspired computational intelligence algorithms using the Python programming language and the inspyred library.'
+        },
+        technologies: {
+            desktop: ['Python', 'inspyred', 'IDLE']
+        },
+        os: ['Windows', 'Linux'],
+        color: '#ADFF2F',
+        image: 'images/projects/inspyred.png',
+        links: {
+            github: 'https://github.com/ernestbies/inspyred'
+        }
+    },
+    {
         name: 'Pizzeria database',
         description: {
             en: 'Pizzeria database created with Toad Data Modeler. Basic SQL components (functions, triggers, etc.) have been implemented in the project. The main goal of the project was to create a database for a pizzeria that allows the customer to place orders for the selected type of pizza along with extras, as well as after agreeing to register in the pizzeria database, getting appropriate discounts. Placing an order is possible via the Internet, by phone or in person. After confirming the payment, the preparation of the pizza is transferred for implementation. When ordering via the Internet or by phone, the customer makes payment by the pizza delivery man.',
@@ -296,7 +358,6 @@ export const projects = [
         }
     },
     {
-        id: 16,
         name: 'Car service station',
         description: {
             en: 'Project implemented as part of POWER Project (Projekt Współpraca Synergia Zarządzanie w Tarnowie). The subject of the project was to describe and model processes using Business Process Modeling Notation (BPMN) showing the operation of car service station. A detailed course of the repair process of the damaged vehicle will be presented in this project, starting from delivering damaged car for repair to handing over the vehicle. A description of the car engine repair, spare parts ordering, car handover and payment process is presented. The main goal of the project is to present the processes that work in most car service stations.',
@@ -305,11 +366,27 @@ export const projects = [
         technologies: {
             desktop: ['Signavio Process Manager - Academic', 'Business Process Model and Notation (BPMN)']
         },
-        os: ['Windows'],
+        os: ['Windows', 'Linux'],
         color: '#D51A1A',
         image: 'images/projects/car_service_station.png',
         links: {
             github: 'https://github.com/ernestbies/Car-service-station-BPMN'
+        }
+    },
+    {
+        name: 'Computer Networks Projects',
+        description: {
+            en: 'Computer network projects created with the Cisco Packet Tracer tool.',
+            pl: 'Projekty sieci komputerowych stworzonych przy użyciu narzędzia Cisco Packet Tracer.'
+        },
+        technologies: {
+            desktop: ['Cisco Packet Tracer']
+        },
+        os: ['Windows', 'Linux'],
+        color: '#1E90FF',
+        image: 'images/projects/computer-networks.png',
+        links: {
+            github: 'https://github.com/ernestbies/computer-networks'
         }
     }
 ]

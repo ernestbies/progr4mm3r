@@ -20,12 +20,11 @@ export const Card = styled.div`
     background: transparent;
     padding: 20px;
     width: 330px;
-    height: 600px;
+    height: 280px;
     margin: 20px;
     opacity: 0.2;
     perspective: 100px;
     user-select: none;
-    transform: scale(0.95);
     
     &.animated {
         animation: ${revealCard} 8s forwards;
@@ -33,7 +32,6 @@ export const Card = styled.div`
     
     &:hover {
         border: 1px solid ${({color}) => color};
-        transform: scale(1);
     }
 `;
 
@@ -44,52 +42,34 @@ export const CardHeader = styled.div`
     margin-right: -20px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    background-color: #FFFFFF90;
-    position: relative;    
-    
-    ${Card}:hover > & {
-        background-color: #00000090;
-    }
+    background-color: #FFFFFF60;
+    position: relative;  
+    background-color: #00000090;  
 `;
 
 export const CardImage = styled.img`
-    width: 90px;
-    height: 75px;
-    margin-top: 20px;
-    
-    ${Card}:hover & {
-        filter: invert(100%);
-    }
-`;
-
-export const CardTitle = styled.p`
-   font-family: Open Sans, serif;
-   font-weight: 300;
-   position: absolute;
-   left: 0;
-   right: 0;
-   bottom: -5px;
-   font-size: 18px;
-   color: black;    
-   
-   ${Card}:hover & {
-       color: white; 
-   }
+    width: 80px;
+    height: 70px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    filter: invert(100%);
 `;
 
 export const DivWrapper = styled.div`
     margin-left: -20px;
     margin-right: -20px;
-    background-color: ${({backgroundColor}) => backgroundColor};
+    background-image: linear-gradient(to right, black, ${({backgroundColor}) => backgroundColor}, black);
+    height: 40px;
 `;
 
-export const CardSubtitle = styled.p`
+export const CardTitle = styled.p`
     margin: auto;
     text-align: center;
     font-size: 15px;
+    line-height: 40px;
     color: white;
-    font-family: Open Sans, serif;
-    font-weight: 300;
+    font-family: Blender Pro Bold, serif;
+    letter-spacing: 1px;
 `;
 
 export const CardContent = styled.div`
@@ -102,34 +82,17 @@ export const CardContent = styled.div`
     margin-bottom: -20px;
     background-color: rgba(0,0,0,0.7);
     position: relative;  
-`;
-
-export const TextContent = styled.p`
-    font-size: 11px;
-    font-weight: 300;
-    text-align: justify;
-    font-family: Open Sans, serif;
-    margin: 10px;
-`;
-
-export const ColoredLink = styled.a`
-    font-size: 11px;
-    color: orange;
-    
-    &:hover {
-        color: orange;
-    }
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const ImagesContainer = styled.div`
     height: 30px;
     display: flex;
+    width: 100%;
     align-items: center;
-    justify-content: space-evenly;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    right: 0;  
+    justify-content: space-evenly; 
 `;
 
 export const CardIcon = styled.img`

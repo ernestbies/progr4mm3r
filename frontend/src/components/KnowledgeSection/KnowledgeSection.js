@@ -12,7 +12,7 @@ const KnowledgeSection = () => {
             <div style={{textAlign: 'center', backgroundColor: '#00000090'}}>
                 <SectionBadge
                     position={'end'}
-                    subtitle={'skills'}
+                    subtitle={t('skills')}
                     content={t('practical_knowledge')}
                     specialNumber={31}
                 />

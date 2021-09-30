@@ -1,6 +1,7 @@
 import styled, {css} from 'styled-components';
 
 export const StyledMenu = styled.ul`
+    width: 50px;
     position: fixed;
     right: 0;
     top: 45%;  
@@ -21,7 +22,6 @@ export const MenuItem = styled.li`
     width: 50px;
     height: 50px;    
     background-color: #1f1c1c;
-    margin-bottom: 10px;
     cursor: pointer;  
     transition: 2s all;
     text-decoration: none;

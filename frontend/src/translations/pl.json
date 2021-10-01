@@ -51,7 +51,6 @@
   "sleep_text": "ponieważ potrzebuję regeneracji",
   "repeat": "powtarzam",
   "repeat_text": "ponieważ to jest moje życie",
-  "contact_with_me": "Skontaktuj się ze mną",
   "copy_text": "Kliknij tutaj, by skopiować nick",
   "copied_text": "zostało skopiowane",
   "dm": "DM",
@@ -88,5 +87,8 @@
   "main": "główne",
   "auto_sliding": "automatyczne przesuwanie",
   "quote_timeline": "Sposób, w jaki spędzamy czas, określa, kim jesteśmy",
-  "quote_projects_list": "Pełna lista moich głównych projektów znajduje się na moim "
+  "quote_projects_list": "Pełna lista moich głównych projektów znajduje się na moim ",
+  "competitions": "konkursy",
+  "quote_competitions": "Stawiam na samorozwój i podnoszenie kwalifikacji zawodowych poprzez udział w ",
+  "competitions2": "konkursach"
 }

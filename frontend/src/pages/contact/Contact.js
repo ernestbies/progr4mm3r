@@ -14,8 +14,8 @@ const Contact = () => {
         <div id={'contact'}>
             <div className={'contact-list'}>
                 <SectionBadge
-                    content={t('contact_with_me')}
-                    position={'start'}
+                    content={t('contact')}
+                    position={'end'}
                     signColor={'#29003b'}
                     signFontColor={'white'}
                     backgroundColor={'white'}
@@ -43,8 +43,8 @@ const Contact = () => {
                     minHeight: 700
                 }}>
                     <SectionBadge content={t('dm')}
-                                  subtitle={'contact'}
-                                  position={'end'}
+                                  subtitle={t('contact')}
+                                  position={'start'}
                                   specialNumber={51}
                                   signColor={'#29003b'}
                                   signFontColor={'white'}

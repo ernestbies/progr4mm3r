@@ -13,14 +13,14 @@ const Hobby = () => {
 
     return (
         <div id={'hobby'} style={{display: 'flex', flexDirection: 'column', backgroundColor: 'black'}}>
-            <SectionBadge position={'start'} content={t('hobby')} specialNumber={4}/>
+            <SectionBadge position={'end'} content={t('hobby')} specialNumber={4}/>
 
             <Carousel className={'carousel-style'}>
                 {renderElements(hobby[i18n.language], 'hobby')}
             </Carousel>
 
             <div className={'video-container'}>
-                <SectionBadge position={'end'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
+                <SectionBadge position={'start'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 30}}>
                     <p className={'inform-text'}>{t('quote_timeline')}
                         {'.'}

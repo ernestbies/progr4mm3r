@@ -1,5 +1,26 @@
 import {WEBSITE_URL} from "./information";
 
+export const mainProjects = [
+    {
+        name: 'Media Browser',
+        image: 'images/projects/mediabrowser-dashboard.png',
+        url: 'https://youtu.be/7r1r9JiKsYc',
+        color: '#F2F2F2'
+    },
+    {
+        name: 'Forest Żabiec',
+        image: 'images/projects/football-club.png',
+        url: 'https://forestzabiec.herokuapp.com',
+        color: '#1F1F1F'
+    },
+    {
+        name: 'Restaurant',
+        image: 'images/projects/rms2.png',
+        url: 'https://github.com/ernestbies/restaurant-management',
+        color: '#FFFFFF'
+    }
+]
+
 export const projects = [
     {
         name: 'Media Browser',
@@ -88,29 +109,6 @@ export const projects = [
         image: 'images/projects/rms.png',
         links: {
             github: 'https://github.com/ernestbies/restaurant-management',
-        }
-    },
-    {
-        name: 'Camera Fingerprint PRNU',
-        description: {
-            en: 'Camera Fingerprint PRNU (Autopsy module) uses photo response non-uniformity of camera sensor (PRNU) to check if a photo was truly taken by a suspected camera or not. Module is not based on metadata such as EXIF, performs a physical analysis of the camera sensor, determines photo response non-uniformity (PRNU). The project was presented at the 2020 Open Source Digital Forensics Conference (#OSDFCon) and placed on the organizer\'s home page.',
-            pl: 'Camera Fingerprint PRNU (moduł Autopsy) wykorzystuje niejednorodność reakcji na zdjęcie czujnika aparatu (PRNU), aby sprawdzić, czy zdjęcie zostało rzeczywiście zrobione przez podejrzany aparat, czy nie. Moduł nie bazuje na metadanych takich jak EXIF, przeprowadza fizyczną analizę matrycy aparatu, określa niejednorodność reakcji foto (PRNU). Projekt został zaprezentowany na konferencji Open Source Digital Forensics 2020 (#OSDFCon) i umieszczony na stronie głównej organizatora.'
-        },
-        technologies: {
-            desktop: ['Autopsy (ver. 4.15.0)', 'Apache Netbeans IDE (ver. 9.0)', 'Python (ver. 3.6.0)']
-        },
-        os: ['Windows'],
-        color: '#808080',
-        additionalData: {
-            name: 'OSDF',
-            image: 'images/projects/osdfcon.png',
-            link: 'https://www.osdfcon.org/2020-event/2020-module-development-contest/',
-            text: 'presented_at_conference'
-        },
-        image: 'images/projects/camerafingerprint.png',
-        links: {
-            github: 'https://github.com/ernestbies/Camera-Fingerprint-PRNU',
-            youtube: 'https://www.youtube.com/watch?v=lsoqVuuq9T0'
         }
     },
     {
@@ -312,11 +310,11 @@ export const projects = [
     {
         name: 'Algen',
         description: {
-            en: 'A program that solves a discrete knapsack problem using a genetic algorithm. It was my first project using the C language.',
-            pl: 'Program rozwiązujący dyskretny problem plecakowy z użyciem algorytmu genetycznego. Był to mój pierwszy projekt z wykorzystaniem języka C.'
+            en: 'A program that implements genetic algorithms in the C language. It was my first project using the C language.',
+            pl: 'Program zawierający implementację algorytmów genetycznych w języku C.. Był to mój pierwszy projekt z wykorzystaniem języka C.'
         },
         technologies: {
-            desktop: ['C', 'C++', 'Code::Blocks']
+            desktop: ['C', 'Code::Blocks']
         },
         os: ['Windows', 'Linux'],
         color: '#00FF00',
@@ -391,20 +389,56 @@ export const projects = [
     }
 ]
 
-export const mainProjects = [
+export const competitionsProjects = [
     {
-        name: 'Media Browser',
-        image: 'images/projects/mediabrowser-dashboard.png',
-        url: 'https://youtu.be/7r1r9JiKsYc'
-    },
-    {
-        name: 'Forest Żabiec',
-        image: 'images/projects/football-club.png',
-        url: 'https://forestzabiec.herokuapp.com'
-    },
-    {
-        name: 'Restaurant',
-        image: 'images/projects/rms2.png',
-        url: 'https://github.com/ernestbies/restaurant-management'
+        name: 'Camera Fingerprint PRNU',
+        description: {
+            en: 'Camera Fingerprint PRNU uses photo response non-uniformity of camera sensor (PRNU) to check if a photo was truly taken by a suspected camera or not. Module is not based on metadata such as EXIF, performs a physical analysis of the camera sensor, determines photo response non-uniformity (PRNU), uses the principle that each sensor pixel behaves differently with effects such as non-uniform photo response, making each sensor is unique, identifies each pixel anomaly and uses this information to create a description of the camera sensor - the camera fingerprint.',
+            pl: 'Camera Fingerprint PRNU wykorzystuje niejednorodność odpowiedzi na zdjęcia czujnika aparatu (PRNU), aby sprawdzić, czy zdjęcie zostało naprawdę zrobione przez podejrzany aparat, czy nie. Moduł nie bazuje na metadanych typu EXIF, wykonuje fizyczną analizę czujnika aparatu, określa niejednorodność odpowiedzi fotoelektrycznej (PRNU), wykorzystuje zasadę, że każdy piksel czujnika zachowuje się inaczej z efektami takimi jak niejednorodność fotoodpowiedzi, dzięki czemu każdy czujnik jest unikalny, identyfikuje każdą anomalię piksela i wykorzystuje te informacje do stworzenia opisu czujnika aparatu – odcisku palca aparatu.'
+        },
+        technologies: [
+            {
+                name: 'Windows OS'
+            },
+            {
+                name: 'Autopsy (ver. 4.15.0)',
+                logo: 'images/technologies/autopsy.png'
+            },
+            {
+                name: 'Python (ver. 3.6.0)',
+                logo: 'images/languages/language-python.png'
+            },
+            {
+                name: 'Apache NetBeans IDE (ver. 9.0)',
+                logo: 'images/platforms/netbeans.png'
+            }
+        ],
+        image: 'images/projects/camerafingerprint.png',
+        links: [
+            {
+                name: 'Organizer',
+                url: 'https://www.osdfcon.org/2020-event/2020-module-development-contest',
+                image: 'images/competitions/osdfcon-logo.png',
+                color: '#ef433c'
+            },
+            {
+                name: 'Github',
+                url: 'https://github.com/ernestbies/Camera-Fingerprint-PRNU',
+                color: '#FFFFFF'
+            },
+            {
+                name: 'Youtube',
+                url: 'https://www.youtube.com/watch?v=lsoqVuuq9T0',
+                color: '#FF0000'
+            },
+        ],
+        competition: {
+            name: 'Open Source Digital Forensics Conference (OSDFCon 2020)',
+            image: 'images/competitions/osdfcon.png',
+            text: {
+                pl: 'Projekt został zaprezentowany na konferencji oraz umieszczony na stronie organizatora.',
+                en: 'The project was presented at the conference and posted on the organizer\'s website.'
+            }
+        }
     }
 ]

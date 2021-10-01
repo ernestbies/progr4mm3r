@@ -11,7 +11,7 @@ const KnowledgeSection = () => {
         <div id={'knowledge'} className={'wallpaper-container'} style={{backgroundImage: "url(images/wallpaper.jpg)"}}>
             <div style={{textAlign: 'center', backgroundColor: '#00000090'}}>
                 <SectionBadge
-                    position={'end'}
+                    position={'start'}
                     subtitle={t('skills')}
                     content={t('practical_knowledge')}
                     specialNumber={31}

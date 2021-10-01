@@ -51,7 +51,6 @@
   "sleep_text": "because I need a rest",
   "repeat": "repeat",
   "repeat_text": "because this is the life I love",
-  "contact_with_me": "Contact with me",
   "copy_text": "Click here to copy the username",
   "copied_text": "has been copied to clipboard",
   "dm": "DM",
@@ -88,5 +87,8 @@
   "main": "main",
   "auto_sliding": "automatic sliding",
   "quote_timeline": "The way we spend our time defines who we are",
-  "quote_projects_list": "A full list of my main projects can be found on my "
+  "quote_projects_list": "A full list of my main projects can be found on my ",
+  "competitions": "competitions",
+  "quote_competitions": "I focus on self-development and improving professional qualifications through participation in ",
+  "competitions2": "competitions"
 }

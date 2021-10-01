@@ -11,8 +11,8 @@ const Skills = () => {
     const {t} = useTranslation('common');
 
     return (
-        <div id={'skills'} style={{textAlign: 'center', color: 'white', backgroundColor: '#0f0f0f'}}>
-            <SectionBadge position={'start'} content={t('skills')} signColor={'#1d2026'} specialNumber={3}/>
+        <div id={'skills'} style={{textAlign: 'center', color: 'white'}}>
+            <SectionBadge position={'end'} content={t('skills')} signColor={'#1d2026'} specialNumber={3}/>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <p className={'inform-text'}>{t('skills_text')}
                 <code className={'scale-text'}>{t('programming_languages2')}</code>

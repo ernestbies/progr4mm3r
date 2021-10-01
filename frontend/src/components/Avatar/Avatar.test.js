@@ -12,7 +12,7 @@ describe('avatar tests', () => {
 
     beforeEach(() => {
         avatar = renderer.create(
-            <Avatar width={200} height={200} src={'images/me.jpg'}/>
+            <Avatar width={200} height={200} src={'images/me.png'}/>
         );
         tree = avatar.toJSON();
     });

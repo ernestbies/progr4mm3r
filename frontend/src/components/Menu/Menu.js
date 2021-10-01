@@ -12,7 +12,6 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDiscord, faGithub} from "@fortawesome/free-brands-svg-icons";
 import {FaRegEnvelope} from "react-icons/all";
 
-
 const Menu = () => {
     return (<StyledMenu>
         <MenuItem style={{marginBottom: 10}}>

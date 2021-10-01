@@ -8,7 +8,7 @@ import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import './ProjectItem.styles.css';
 
-const ProjectItem = ({image, color, name, description, technologies, os, languages, links, additionalData}) => {
+const ProjectItem = ({image, color, name, description, technologies, os, languages, links}) => {
 
     const {t} = useTranslation('common');
 
@@ -85,7 +85,8 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
                         paddingLeft: 7,
                         fontFamily: 'Roboto Condensed',
                         margin: 0,
-                        lineHeight: 1.2
+                        lineHeight: '30px',
+                        fontSize: 25
                     }}>{name}</p>
                 </div>
                 <p style={{
@@ -150,39 +151,6 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
                             flexDirection: 'row'
                         }}>{renderLanguages(languages)}</div>
                     }
-                    {
-                        additionalData &&
-                        <div style={{
-                            width: 1,
-                            height: 15,
-                            backgroundColor: '#282c34',
-                            marginLeft: 5,
-                            marginRight: 8,
-                            display: 'inline-block',
-                        }}/>
-                    }
-                    {
-                        additionalData &&
-                        <a className={'text-info'} style={{
-                            display: 'inline-flex',
-                            alignItems: 'center',
-                            textDecoration: 'none',
-                            textAlign: 'center',
-                            marginRight: 3,
-                        }}
-                           href={additionalData.link}
-                           target={'_blank'}
-                           rel={'noreferrer'}
-                        >
-                            <img
-                                width={60}
-                                height={16}
-                                alt={additionalData.name}
-                                src={additionalData.image}
-                            />
-                         {t(additionalData.text)}
-                        </a>
-                    }
                     <div style={{
                         width: 1,
                         height: 15,
@@ -217,8 +185,7 @@ ProjectItem.propTypes = {
     technologies: PropTypes.object.isRequired,
     os: PropTypes.arrayOf(PropTypes.string).isRequired,
     languages: PropTypes.array,
-    links: PropTypes.object.isRequired,
-    additionalData: PropTypes.object
+    links: PropTypes.object.isRequired
 }
 
 export default ProjectItem;

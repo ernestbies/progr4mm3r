@@ -7,6 +7,7 @@ import SectionBadge from "../../components/SectionBadge/SectionBadge";
 import WebsitesSection from "../../components/WebsitesSection/WebsitesSection";
 import './Projects.css'
 import contact from "../../utils/contact";
+import CompetitionsSection from "../../components/CompetitionsSection/CompetitionsSection";
 
 const Projects = () => {
 
@@ -31,13 +32,14 @@ const Projects = () => {
                 </p>
                 <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
             </div>
-            <div className={'carousel-options'}>
+            <div className={'carousel-options'} style={{paddingTop: 30}}>
                 <input className={'carousel-checkbox'} type={'checkbox'} onChange={() => setChecked(!checked)} checked={checked}/>
                 <p className={'carousel-checker'}>{t('auto_sliding')}</p>
             </div>
             <Carousel interval={checked ? 3000 : null}>
                 {renderElements(projectsList, 'projects')}
             </Carousel>
+            <CompetitionsSection/>
         </div>
     );
 }

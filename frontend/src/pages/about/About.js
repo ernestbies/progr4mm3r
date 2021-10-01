@@ -25,7 +25,7 @@ const About = () => {
                      backgroundImage: 'url(images/wallpaper.jpg)',
                  }}>
                 <div className={'avatar-container col'} style={{flex: 2}}>
-                    <Avatar className={'avatar'} width={200} height={200} src={'images/me.jpg'}/>
+                    <Avatar className={'avatar'} width={200} height={200} src={'images/me.png'}/>
                     <AchievementsBlock items={info[i18n.language].achievements}/>
                 </div>
                 <div className={'text-container col'} style={{flex: 5, padding: 0, paddingTop: 40}}>

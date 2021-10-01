@@ -5,7 +5,8 @@ const WebsiteItemContainer = styled.div`
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding: 50px;
+    padding-top: 30px;
+    padding-bottom: 50px;
     
     @media (orientation: portrait) {
         flex-wrap: wrap; 

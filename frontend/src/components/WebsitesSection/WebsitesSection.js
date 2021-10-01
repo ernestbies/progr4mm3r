@@ -9,6 +9,15 @@ const WebsitesSection = () => {
 
     const {t} = useTranslation('common');
 
+    const renderWebsites = () => {
+        return mainProjects.map((e, index) =>
+            <WebsiteItem name={e.name} url={e.url}
+                         websiteImage={e.image} direction={index === 0 ? 'left' : index === 1 ? 'center' : 'right'}
+                         backgroundColor={e.color}
+            />
+        );
+    }
+
     return (
         <div id={'websites'}>
             <div style={{textAlign: 'center', backgroundColor: '#0f0f0f'}}>
@@ -25,20 +34,7 @@ const WebsitesSection = () => {
                         </p>
                         <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
                     </div>
-                    <WebsiteItemContainer>
-                        <WebsiteItem name={mainProjects[0].name} url={mainProjects[0].url}
-                                     websiteImage={mainProjects[0].image} direction={'left'}
-                                     backgroundColor={'white'}
-                        />
-                        <WebsiteItem name={mainProjects[1].name} url={mainProjects[1].url}
-                                     websiteImage={mainProjects[1].image} direction={'center'}
-                                     backgroundColor={'#1F1F1F'}
-                        />
-                        <WebsiteItem name={mainProjects[2].name} url={mainProjects[2].url}
-                                     websiteImage={mainProjects[2].image} direction={'right'}
-                                     backgroundColor={'white'}
-                        />
-                    </WebsiteItemContainer>
+                    <WebsiteItemContainer>{renderWebsites()}</WebsiteItemContainer>
                 </div>
             </div>
         </div>

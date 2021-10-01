@@ -18,19 +18,21 @@ export const introduction = {
         about: 'GET TO KNOW ME BETTER...',
         projects: 'BROWSE MY PROJECTS...',
         skills: 'GET TO KNOW MY SKILLS...',
+        hobby: 'FIND OUT WHAT I\'M INTERESTED IN...',
         contact: '... AND CONTACT WITH ME'
     },
     pl: {
         about: 'DOWIEDZ SIĘ CZEGOŚ O MNIE...',
         projects: 'ZOBACZ MOJE PROJEKTY...',
         skills: 'POZNAJ MOJE UMIEJĘTNOŚCI...',
+        hobby: 'DOWIEDZ SIĘ CZYM SIĘ INTERESUJĘ...',
         contact: '... SKONTAKTUJ SIĘ ZE MNĄ'
     }
 };
 
 export const shortInfo = {
     en: ['programmer', 'semi-professional e-sports athlete', 'movies enthusiast'],
-    pl: ['programista', 'półprofesjonalny e-sportowiec', 'entuzjasta filmowy']
+    pl: ['programista', 'półprofesjonalny e-sportowiec', 'entuzjasta filmów']
 };
 
 export const info = {

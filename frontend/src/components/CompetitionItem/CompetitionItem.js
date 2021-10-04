@@ -12,9 +12,9 @@ import React from "react";
 import {useTranslation} from "react-i18next";
 import {faAward} from "@fortawesome/free-solid-svg-icons";
 import {FaGithub, FaYoutube} from "react-icons/fa";
-import {AiFillWindows} from "react-icons/all";
+import {AiFillWindows, FcLinux} from "react-icons/all";
 
-const CompetitionItem = ({name, image, description, competition, links, technologies}) => {
+const CompetitionItem = ({name, image, description, competition, links, technologies, order}) => {
 
     const {i18n} = useTranslation('common');
 
@@ -46,6 +46,10 @@ const CompetitionItem = ({name, image, description, competition, links, technolo
                 <IconTechWrapper title={e.name} key={index}>
                     <AiFillWindows size={25}/>
                 </IconTechWrapper> :
+                e.name.includes('Linux') ?
+                    <IconTechWrapper title={e.name} key={index}>
+                        <FcLinux size={25}/>
+                    </IconTechWrapper> :
                 <IconTechWrapper title={e.name} key={index}>
                     <StyledIcon src={e.logo}/>
                 </IconTechWrapper>
@@ -54,10 +58,10 @@ const CompetitionItem = ({name, image, description, competition, links, technolo
 
     return (
         <StyledCompetitionItem>
-            <ProjectImageWrapper>
+            <ProjectImageWrapper order={order}>
                 <ProjectImage image={image}/>
             </ProjectImageWrapper>
-            <ProjectInfo>
+            <ProjectInfo order={order}>
                 <ProjectTitle>{name}</ProjectTitle>
                 <CompetitionInfo>
                     <CompetitionIcon src={competition.image}/>

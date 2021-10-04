@@ -11,9 +11,9 @@ const CompetitionsSection = () => {
     const {t} = useTranslation('common');
 
     const renderCompetitions = () => {
-        return competitionsProjects.map(e =>
-            <CompetitionItem image={e.image} name={e.name} description={e.description} competition={e.competition}
-                             links={e.links} technologies={e.technologies}
+        return competitionsProjects.map((e, index) =>
+            <CompetitionItem key={index} order={index % 2 === 0 ? 'left' : 'right'} image={e.image} name={e.name} links={e.links}
+                             description={e.description} competition={e.competition} technologies={e.technologies}
             />
         );
     }

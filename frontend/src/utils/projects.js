@@ -440,5 +440,59 @@ export const competitionsProjects = [
                 en: 'The project was presented at the conference and posted on the organizer\'s website.'
             }
         }
+    },
+    {
+        name: 'iOS Device Data Extractor',
+        description: {
+            en: 'iOS Device Data Extractor is an Autopsy module that creates an encrypted or non-encrypted iOS backup of iPhone and iPad, currently running iOS 10.2 and above. It extracts files from an encrypted or unencrypted iOS backup, including a backup made with iTunes, and can compress them into a ZIP archive for use with the iLEAPP module, for example.',
+            pl: 'iOS Device Data Extractor to moduł Autopsy, który tworzy zaszyfrowaną lub nieszyfrowaną kopię zapasową iPhone\'a i iPada z systemem iOS 10.2 lub nowszym. Wyodrębnia pliki z zaszyfrowanej lub niezaszyfrowanej kopii zapasowej systemu iOS, w tym kopii zapasowej utworzonej za pomocą iTunes, może ją skompresować do archiwum ZIP do użytku na przykład z modułem iLEAPP.'
+        },
+        technologies: [
+            {
+                name: 'Windows OS'
+            },
+            {
+                name: 'Linux (Ubuntu 20.04 OS)'
+            },
+            {
+                name: 'Autopsy (ver. 4.19.1)',
+                logo: 'images/technologies/autopsy.png'
+            },
+            {
+                name: 'Java',
+                logo: 'images/languages/language-java.png'
+            },
+            {
+                name: 'Apache NetBeans IDE (ver. 12.2)',
+                logo: 'images/platforms/netbeans.png'
+            }
+        ],
+        image: 'images/projects/iOSDDE.png',
+        links: [
+            {
+                name: 'Organizer',
+                url: 'https://www.osdfcon.org/2021-event/2021-module-development-contest',
+                image: 'images/competitions/osdfcon-logo.png',
+                color: '#ef433c'
+            },
+            {
+                name: 'Github',
+                url: 'https://github.com/ernestbies/iOSDeviceDataExtractor',
+                color: '#FFFFFF'
+            },
+            {
+                name: 'Youtube',
+                url: 'https://www.youtube.com/watch?v=CrBmTBpnK5c',
+                color: '#FF0000'
+            },
+        ],
+        competition: {
+            name: 'Open Source Digital Forensics Conference (Virtual OSDFCon 2021)',
+            image: 'images/competitions/osdfcon.png',
+            text: {
+                pl: 'Projekt został zaprezentowany na konferencji oraz umieszczony na stronie organizatora.',
+                en: 'The project was presented at the conference and posted on the organizer\'s website.'
+            }
+        }
     }
 ]

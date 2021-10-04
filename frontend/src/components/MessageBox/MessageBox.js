@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {formatData, HALL_OF_FAME_MYSTERY, WEBSITE_NAME} from "../../utils/information";
 import MessageItem from "../MessageItem/MessageItem";
-import {fetchPosts, sendPost} from "../../utils/helpers/FetchData";
+import {fetchPosts, sendPost} from "../../utils/helpers/fetchData";
 import {AiFillLock, AiFillUnlock} from "react-icons/ai";
 import CustomInput from "../CustomInput/CustomInput";
 import {connect} from "react-redux";

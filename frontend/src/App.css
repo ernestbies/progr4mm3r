@@ -1,3 +1,8 @@
+:root {
+    color-scheme: dark;
+    scrollbar-color: orange #1f1c1c;
+}
+
 * {
     box-sizing: border-box;
 }

@@ -5,6 +5,7 @@ const WebsiteItemContainer = styled.div`
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
     padding-top: 30px;
     padding-bottom: 50px;
     

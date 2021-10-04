@@ -39,6 +39,11 @@ export const ProjectImageWrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex: 2;
+    order: ${({order}) => order === 'left' ? 0 : 1};
+    
+    @media (max-width: 1024px) {
+        order: 0;
+    }
 `;
 
 export const ProjectInfo = styled.div`
@@ -48,9 +53,11 @@ export const ProjectInfo = styled.div`
     align-items: start;
     padding: 30px;
     width: 100%;
+    order: ${({order}) => order === 'left' ? 1 : 0}
     
     @media (max-width: 1024px) {
         padding: 0;
+        order: 1;
     }
 `;
 

@@ -21,7 +21,7 @@ const Hobby = () => {
 
             <div className={'video-container'}>
                 <SectionBadge position={'start'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', marginBottom: 30}}>
+                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 30}}>
                     <p className={'inform-text'}>{t('quote_timeline')}
                         {'.'}
                     </p>

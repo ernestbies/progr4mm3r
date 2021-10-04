@@ -26,7 +26,7 @@ const Menu = () => {
         </MenuItem>
         <MenuItem expandable>
             <FontAwesomeIcon icon={faDiscord} style={{width: 25, height: 25, color: 'white', flex: 1}}/>
-            <StyledMenuWrapper href={'#contact'}>
+            <StyledMenuWrapper href={'/#contact'}>
                 <StyledMenuText>{'Discord: '}
                     <StyledColoredMenuText>{'tsl#2025'}</StyledColoredMenuText>
                 </StyledMenuText>

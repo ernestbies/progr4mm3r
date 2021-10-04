@@ -29,12 +29,7 @@ export const WebsiteStyledItem = styled.a`
         transform: scale(1.2);   
         
         @media (orientation: portrait) {
-            margin-right: 0;  
-            transform: scale(1);  
-            
-            &:hover {
-                transform: scale(1.1);
-            }
+            margin-right: 0;
         } 
         
         &:hover {
@@ -48,12 +43,7 @@ export const WebsiteStyledItem = styled.a`
         transform: scale(0.8);    
         
         @media (orientation: portrait) {
-            margin-left: 0;  
-            transform: scale(1);  
-            
-            &:hover {
-                transform: scale(1.1);
-            }
+            margin-left: 0;
         } 
                     
         &:hover {
@@ -63,6 +53,11 @@ export const WebsiteStyledItem = styled.a`
     
      @media (orientation: portrait) {
         margin: 20px;
+        transform: scale(1);
+        
+        &:hover {
+            transform: scale(1.1);
+        }
      } 
      
      @media (max-width: 512px) {

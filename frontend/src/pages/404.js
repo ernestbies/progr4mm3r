@@ -4,6 +4,7 @@ import Footer from "../parts/footer/Footer";
 import {useTranslation} from "react-i18next";
 import NotFoundElement from "../components/NotFoundElement/NotFoundElement";
 import MysteryCharacter from "../components/MysteryCharacter/MysteryCharacter";
+import Menu from "../components/Menu/Menu";
 
 const NotFoundPage = ({history}) => {
 
@@ -56,6 +57,7 @@ const NotFoundPage = ({history}) => {
                     </div>
                 </div>
             </div>
+            <Menu/>
             <Footer/>
         </div>
     )

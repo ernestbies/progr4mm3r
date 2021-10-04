@@ -6,6 +6,7 @@ import MessageFaq from "../components/MessageFaq/MessageFaq";
 import {AiOutlineInfoCircle} from "react-icons/ai";
 import {BiStats} from "react-icons/bi";
 import {connect} from "react-redux";
+import Menu from "../components/Menu/Menu";
 
 const ProjectPage = ({history, status}) => {
 
@@ -151,6 +152,7 @@ const ProjectPage = ({history, status}) => {
                     <MessageFaq/>
                 </div>
             </div>
+            <Menu/>
             <Footer/>
         </div>
     )

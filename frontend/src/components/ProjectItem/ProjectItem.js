@@ -117,7 +117,7 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
                         margin: 0
                     }}>{t('technical_info')}</p>
                 </div>
-                <div style={{marginBottom: 30, marginTop: 10, display: 'flex', alignItems: 'center'}}>
+                <div style={{marginBottom: 30, marginTop: 10, display: 'flex', alignItems: 'center', flexWrap: 'wrap'}}>
                     {
                         os.includes('Windows') && <AiFillWindows size={20} style={{marginRight: 3}}/>
                     }

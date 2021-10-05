@@ -19,243 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/messageController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/controllers/postController.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/message.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/stat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/message.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes/post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/emailSender.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/mongoConverter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/validateCaptcha.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/messageValidationSchema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/postValidationSchema.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/competitions/osdfcon-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/competitions/osdfcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/hobby/cinematography.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/hobby/esports.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/hobby/music.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/hobby/programming.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/knowledge/backend.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/knowledge/databases.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/knowledge/frontend.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/knowledge/testing.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/css.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/html.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-c-plus-plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-c-sharp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-c.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-groovy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-haskell.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-java.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-js.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-plpgsql.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-python.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-r.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-sql.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/languages/language-ts.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/me.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/platforms/intellij.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/platforms/netbeans.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/algen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/apocalyptogame.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/bank-app.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/calculator-dashboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/camerafingerprint.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/car_service_station.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/chess-server.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/computer-networks.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/databaseAnalyzer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/databaseApp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/football-club.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/forestzabiec.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/iOSDDE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/imagebinarizer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/inspyred.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/inventory-helper.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/java-good-practices.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/mediabrowser-dashboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/mediabrowser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/personal-website.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/pizzeria-database.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/quiz-dashboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/rms.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/rms2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/spaceships.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/projects/taskplanner.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/angular.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/autopsy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/git.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/hapijs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/jest.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/junit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/jwt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/mongodb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/mongoose.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/nodejs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/reactjs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/reactnative.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/spock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/spring.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/sqlite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/tdm.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/uml.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/technologies/unity.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/wallpaper.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/wallpaper1stare.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/wallpaper2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/wallpaper3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/wallpaper4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/wallpaper5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/wallpaper6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/wallpapersss.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/videos/intro-background.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/videos/timeline-background.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/statusActions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/BlenderProBold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/OpenSans-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/OpenSans-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/OpenSans-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/PressStart2P-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/RobotoCondensed-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/RobotoCondensed-Italic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/RobotoCondensed-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/RobotoCondensed-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/SourceCodePro-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/SourceCodePro-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/fonts/SourceCodePro-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AboutInfo/AboutInfo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AboutInfo/AboutInfo.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AchievementsBlock/AchievementsBlock.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AchievementsBlock/AchievementsBlock.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/AnimationsHandler/AnimationsHandler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Avatar/Avatar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Avatar/Avatar.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Avatar/Avatar.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CompetitionItem/CompetitionItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CompetitionItem/CompetitionItem.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CompetitionsSection/CompetitionsSection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CompetitionsSection/CompetitionsSections.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ConfirmAlert/ConfirmAlert.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ConfirmAlert/ConfirmAlert.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ContactForm/ContactForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ContactForm/ContactForm.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ContactForm/ContactForm.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ContactIcon/ContactIcon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ContactIcon/ContactIcon.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CustomCaret/CustomCaret.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CustomCaret/CustomCaret.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CustomInput/CustomInput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/CustomInput/CustomInput.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/DiscordIcon/DiscordIcon.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/GlitchedText/GlitchedText.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/GlitchedText/GlitchedText.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HamburgerMenu/HamburgerMenu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HamburgerMenu/HamburgerMenu.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HobbyItem/HobbyItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/HobbyItem/HobbyItem.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InfoBadge/InfoBadge.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/InfoBadge/InfoBadge.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Intro/Intro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Intro/Intro.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/KnowledgeCard/KnowledgeCard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/KnowledgeCard/KnowledgeCard.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/KnowledgeSection/KnowledgeSection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LanguageSelector/LanguageSelector.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/LanguageSelector/LanguageSelector.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Link/Link.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Link/Link.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Logo/Logo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Logo/Logo.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Menu/Menu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/Menu/Menu.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/MessageBox/MessageBox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/MessageFaq/MessageFaq.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/MessageFaq/MessageFaq.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/MessageItem/MessageItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/MessageItem/MessageItem.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/MysteryCharacter/MysteryCharacter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/NotFoundElement/NotFoundElement.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/NotFoundElement/NotFoundElement.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/NotFoundSection/NotFoundSection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/NotReleasedProject/NotReleasedProject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/NotReleasedProject/NotReleasedProject.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PageContent/PageContent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/PageWrappers/PageWrappers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProjectItem/ProjectItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/ProjectItem/ProjectItem.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SectionBadge/SectionBadge.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SectionBadge/SectionBadge.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SkillItem/SkillItem.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SkillItem/SkillItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/SpecialSection/SpecialSection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TimelineComponent/TimelineComponent.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TimelineComponent/TimelineComponent.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TimelineSection/TimelineSection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TimelineText/TimelineText.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/TimelineText/TimelineText.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/WebsiteItem/WebsiteItem.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/WebsiteItem/WebsiteItem.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/WebsiteItemContainer/WebsiteItemContainer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/WebsitesSection/WebsitesSection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/404.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/MainPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/ProjectPage.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/about/About.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/about/About.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/contact/Contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/contact/Contact.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/hobby/Hobby.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/hobby/Hobby.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/projects/Projects.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/projects/Projects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/skills/Skills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/pages/skills/Skills.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/parts/footer/Footer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/parts/footer/Footer.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/parts/navbar/Navbar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/parts/navbar/Navbar.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/parts/navbar/Navbar.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/rootReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducers/statusReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reportWebVitals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/setupTests.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/store/store.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/translations/en.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/translations/pl.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/contact.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/functions/renderElements.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/helpers/fetchData.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/hobby.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/information.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/knowledge.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/projects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/utils/skills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -502,7 +266,7 @@
       <workItem from="1633352113704" duration="657000" />
       <workItem from="1633417841779" duration="7412000" />
       <workItem from="1633430435707" duration="2225000" />
-      <workItem from="1633436413327" duration="331000" />
+      <workItem from="1633436413327" duration="1126000" />
     </task>
     <servers />
   </component>
@@ -575,10 +339,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1625815620686" />
-    <state x="342" y="157" width="579" height="624" key="find.popup" timestamp="1633436741656">
+    <state x="342" y="157" width="579" height="624" key="find.popup" timestamp="1633436800776">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="342" y="157" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633436741656" />
+    <state x="342" y="157" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633436800776" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1632832539330">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

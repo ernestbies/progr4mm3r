@@ -5,7 +5,7 @@ export const StyledBox = styled.div`
     display: flex;
     flex-direction: row;
     background-color: black;
-    border-top: solid 1px #FFFFFF50;
+    border-top: solid 1px #FFA55050;
     
     @media (orientation: portrait) {
         flex-direction: column;

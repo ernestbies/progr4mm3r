@@ -19,7 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="" />
+    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.styles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/NotReleasedProject/NotReleasedProject.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotReleasedProject/NotReleasedProject.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/Contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/contact/Contact.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/Contact.styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/translations/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/pl.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/fonts" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -55,6 +68,10 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ernest\Documents\personal-website\src\assets\fonts" />
+      <recent name="C:\Users\Ernest\Documents\personal-website\frontend\src\parts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Ernest\Documents\personal-website\frontend\src\components" />
       <recent name="C:\Users\Ernest\Documents\personal-website\frontend\src\components\TimelineText" />
@@ -62,11 +79,19 @@
       <recent name="C:\Users\Ernest\Documents\personal-website\frontend\src\components\NotReleasedProject" />
       <recent name="C:\Users\Ernest\Documents\personal-website\frontend\src\components\MyTimeline" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Ernest\Documents\personal-website\frontend\src\parts" />
-    </key>
   </component>
   <component name="RunManager" selected="Jest.avatar tests.Avatar renders correctly">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Avatar renders correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -266,7 +291,8 @@
       <workItem from="1633352113704" duration="657000" />
       <workItem from="1633417841779" duration="7412000" />
       <workItem from="1633430435707" duration="2225000" />
-      <workItem from="1633436413327" duration="1126000" />
+      <workItem from="1633436413327" duration="1643000" />
+      <workItem from="1633439675772" duration="4976000" />
     </task>
     <servers />
   </component>
@@ -339,10 +365,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1625815620686" />
-    <state x="342" y="157" width="579" height="624" key="find.popup" timestamp="1633436800776">
+    <state x="357" y="154" width="579" height="624" key="find.popup" timestamp="1633445125701">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="342" y="157" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633436800776" />
+    <state x="357" y="154" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633445125701" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1632832539330">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

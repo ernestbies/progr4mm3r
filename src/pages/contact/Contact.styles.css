@@ -1,7 +1,8 @@
 .contact-list {
-    background-color: #29003b;
+    background-image: linear-gradient(to bottom right, #FFA500, #000000, #000000, #000000, #FFA500);
     text-align: center;
-    height: 350px;
+    border-top: 1px solid #FFFFFF90;
+    position: relative;
 }
 
 .contact-icons {
@@ -9,4 +10,52 @@
     align-items: center;
     justify-content: center;
     margin-top: 50px;
+}
+
+.email-container {
+    padding: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.email-header {
+    font-family: 'Roboto Condensed', serif;
+    font-size: 25px;
+    color: white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.email-text {
+    font-family: 'Roboto Condensed', serif;
+    font-size: 17px;
+    color: grey;
+    transition: 1s ease-in-out;
+    text-decoration: none!important;
+}
+
+.email-text:hover {
+    color: orange;
+}
+
+.signature {
+    font-family: 'Caveat', serif;
+    font-size: 20px;
+    line-height: 1;
+    color: #dbdbdb;
+    position: absolute;
+    bottom: 70px;
+    left: 100px;
+    white-space: pre-wrap;
+    display: inline-block;
+}
+
+@media (max-width: 800px) {
+    .signature {
+        position: static;
+        margin-bottom: 50px;
+    }
 }

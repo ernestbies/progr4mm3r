@@ -178,6 +178,7 @@ html, body {
     font-size: 15px;
     font-family: 'Open Sans', serif;
     width: 90%;
+    white-space: pre-wrap;
 }
 
 .scale-text {

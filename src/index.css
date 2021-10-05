@@ -89,3 +89,8 @@ code {
   src: url("./assets/fonts/RobotoCondensed-Bold.ttf") format('truetype');
 }
 
+@font-face {
+  font-family: 'Caveat';
+  font-weight: 400;
+  src: url("./assets/fonts/Caveat-Regular.ttf") format('truetype');
+}

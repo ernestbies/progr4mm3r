@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {knowledge, knowledgeCodes} from "../../utils/knowledge";
+import {knowledge} from "../../utils/knowledge";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import {
@@ -22,7 +22,7 @@ const KnowledgeCard = ({type}) => {
         return (
             <ImagesContainer key={type}>
                 {
-                    knowledgeCodes[type].map(knowledge =>
+                    knowledge[type].technology_stack.map(knowledge =>
                         <CardIcon key={knowledge.name}
                                   title={knowledge.name}
                                   alt={knowledge.name}

@@ -34,4 +34,5 @@ export const StyledText = styled.span`
     font-family: Open Sans, serif;
     color: gray;
     font-weight: 300;
+    margin-top: 2px;
 `;

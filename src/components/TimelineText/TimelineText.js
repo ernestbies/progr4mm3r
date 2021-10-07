@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {StyledP, StyledSpan, StyledText} from "./TimelineText.styles";
 import {useTranslation} from "react-i18next";
 
-export const TimelineText = ({type, color}) => {
+const TimelineText = ({type, color}) => {
 
     const {t} = useTranslation('common');
 
@@ -18,3 +18,5 @@ TimelineText.propTypes = {
     type: PropTypes.string.isRequired,
     color: PropTypes.string.isRequired
 }
+
+export default TimelineText;

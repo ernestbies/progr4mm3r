@@ -22,16 +22,12 @@
     <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactForm/ContactForm.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotReleasedProject/NotReleasedProject.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotReleasedProject/NotReleasedProject.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact/Contact.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/Contact.styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translations/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/pl.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/KnowledgeCard/KnowledgeCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KnowledgeCard/KnowledgeCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimelineComponent/TimelineComponent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimelineComponent/TimelineComponent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimelineComponent/TimelineComponent.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimelineComponent/TimelineComponent.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimelineText/TimelineText.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimelineText/TimelineText.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TimelineText/TimelineText.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TimelineText/TimelineText.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/knowledge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/knowledge.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -292,7 +288,10 @@
       <workItem from="1633417841779" duration="7412000" />
       <workItem from="1633430435707" duration="2225000" />
       <workItem from="1633436413327" duration="1643000" />
-      <workItem from="1633439675772" duration="4976000" />
+      <workItem from="1633439675772" duration="5629000" />
+      <workItem from="1633452714842" duration="521000" />
+      <workItem from="1633508991008" duration="1351000" />
+      <workItem from="1633601376678" duration="9258000" />
     </task>
     <servers />
   </component>
@@ -337,10 +336,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="449" y="148" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1536.824@0.0.1536.824" timestamp="1626083657952" />
-    <state x="686" y="209" key="FileChooserDialogImpl" timestamp="1633435263291">
+    <state x="686" y="209" key="FileChooserDialogImpl" timestamp="1633509767958">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="686" y="209" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633435263291" />
+    <state x="686" y="209" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1633509767958" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1627042601941">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -357,18 +356,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1627042601941" />
-    <state x="509" y="115" key="RollbackChangesDialog" timestamp="1626955850558">
+    <state x="509" y="115" key="RollbackChangesDialog" timestamp="1633610684571">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="509" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1626955850558" />
+    <state x="509" y="115" key="RollbackChangesDialog/0.0.1536.824@0.0.1536.824" timestamp="1633610684571" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1625815620686">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1625815620686" />
-    <state x="357" y="154" width="579" height="624" key="find.popup" timestamp="1633445125701">
+    <state x="357" y="154" width="579" height="624" key="find.popup" timestamp="1633609439533">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="357" y="154" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633445125701" />
+    <state x="357" y="154" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633609439533" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1632832539330">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

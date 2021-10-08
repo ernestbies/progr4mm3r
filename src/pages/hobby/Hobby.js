@@ -19,18 +19,17 @@ const Hobby = () => {
                 {renderElements(hobby[i18n.language], 'hobby')}
             </Carousel>
 
-            <div className={'video-container'}>
-                <SectionBadge position={'start'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
-                <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 30}}>
-                    <p className={'inform-text'}>{t('quote_timeline')}
-                        {'.'}
-                    </p>
-                    <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
+            <div id={'knowledge'} className={'wallpaper-style-container'} style={{backgroundImage: "url(images/wallpaper2.jpg)"}}>
+                <div style={{textAlign: 'center', backgroundColor: '#00000085'}}>
+                    <SectionBadge position={'start'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
+                    <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 30}}>
+                        <p className={'inform-text'}>{t('quote_timeline')}
+                            {'.'}
+                        </p>
+                        <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
+                    </div>
+                    <TimelineSection/>
                 </div>
-                <video className={'video'} poster={'/images/wallpaper.jpg'} autoPlay muted loop>
-                    <source src={'/videos/timeline-background.mp4'} type={'video/mp4'}/>
-                </video>
-                <TimelineSection/>
             </div>
         </div>
     );

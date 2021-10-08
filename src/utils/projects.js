@@ -87,7 +87,7 @@ export const projects = [
         links: {
             github: 'https://github.com/ernestbies/forestzabiec',
             website: {
-                url: 'https://forestzabiec.herokuapp.com',
+                url: 'https://forestzabiec.netlify.app',
                 logo: '/images/projects/forestzabiec.png'
             }
         }

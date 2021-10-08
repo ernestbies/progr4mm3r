@@ -23,6 +23,17 @@ html, body {
     width: 100%;
 }
 
+.wallpaper-style-container {
+    background-position: center;
+    background-size: 65%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-top: 1px solid #FFFFFF90;
+    margin: auto;
+    width: 100%;
+    background-color: #1e1e1e;
+}
+
 .video-container {
     position: relative;
     border-top: 1px solid #FFFFFF90;
@@ -268,6 +279,12 @@ html, body {
 
     .scale-text {
         font-size: 12px;
+    }
+}
+
+@media (orientation: portrait) {
+    .wallpaper-style-container {
+        background-size: cover;
     }
 }
 

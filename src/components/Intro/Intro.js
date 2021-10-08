@@ -29,7 +29,7 @@ const Intro = () => {
     return (
         <IntroSection id={'about'}>
             <StyledVideo autoPlay muted loop>
-                <StyledSource src={'/videos/intro-background.mp4'} type={'video/mp4'}/>
+                <StyledSource src={'/videos/intro.mp4'} type={'video/mp4'}/>
             </StyledVideo>
             <IntroWrapper>
                 <IntroHeader>

@@ -7,7 +7,7 @@ export const AboutInfoContent = styled.div`
     word-break: break-word;
     margin-left: 20px;
     margin-right: 20px;
-    max-width: 570px;
+    max-width: 600px;
     margin-top: 10px;
     margin-bottom: 15px;
     font-size: 12px;

@@ -19,22 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/wallpaper1stare.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/wallpaper2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/wallpaper2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/wallpaper3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/wallpaper4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/wallpaper5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/wallpaper6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/wallpapersss.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/videos/intro-background.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/videos/timeline-background.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Intro/Intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Intro/Intro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/hobby/Hobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/hobby/Hobby.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/information.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/information.js" afterDir="false" />
-    </list>
+    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +45,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../forestzabiec" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -289,6 +274,7 @@
       <workItem from="1633601376678" duration="10387000" />
       <workItem from="1633679264870" duration="7839000" />
       <workItem from="1633691788740" duration="107000" />
+      <workItem from="1633696202206" duration="296000" />
     </task>
     <servers />
   </component>
@@ -361,10 +347,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1625815620686" />
-    <state x="370" y="155" width="579" height="624" key="find.popup" timestamp="1633691006354">
+    <state x="370" y="155" width="579" height="624" key="find.popup" timestamp="1633696568602">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="370" y="155" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633691006354" />
+    <state x="370" y="155" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633696568602" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1632832539330">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

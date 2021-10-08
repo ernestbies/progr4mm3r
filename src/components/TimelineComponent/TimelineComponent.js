@@ -23,7 +23,7 @@ export default function TimelineComponent() {
         <Timeline style={{marginBottom: 0}}>
             <TimelineItem>
                 <TimelineContent style={{display: 'flex', alignItems: 'start', opacity: 0}}>
-                    <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
+                    <Paper elevation={3} className={classes.paper}>
                         <TimelineText type={'eat'} color={'white'}/>
                     </Paper>
                 </TimelineContent>
@@ -34,7 +34,7 @@ export default function TimelineComponent() {
                     <TimelineConnector/>
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper}>
+                    <Paper elevation={3} className={classes.paper} style={{textAlign: 'left'}}>
                         <TimelineText type={'eat'} color={'white'}/>
                     </Paper>
                 </TimelineContent>
@@ -70,7 +70,7 @@ export default function TimelineComponent() {
                     <TimelineConnector/>
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper}>
+                    <Paper elevation={3} className={classes.paper} style={{textAlign: 'left'}}>
                         <TimelineText type={'play'} color={'purple'}/>
                     </Paper>
                 </TimelineContent>
@@ -106,7 +106,7 @@ export default function TimelineComponent() {
                     <TimelineConnector/>
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper}>
+                    <Paper elevation={3} className={classes.paper} style={{textAlign: 'left'}}>
                         <TimelineText type={'watchMovies'} color={'green'}/>
                     </Paper>
                 </TimelineContent>
@@ -141,7 +141,7 @@ export default function TimelineComponent() {
                     </TimelineDot>
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper}>
+                    <Paper elevation={3} className={classes.paper} style={{textAlign: 'left'}}>
                         <TimelineText type={'repeat'} color={'#DC143C'}/>
                     </Paper>
                 </TimelineContent>

@@ -19,20 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Link/Link.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Link/Link.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectItem/ProjectItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectItem/ProjectItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WebsiteItem/WebsiteItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebsiteItem/WebsiteItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WebsiteItem/WebsiteItem.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebsiteItem/WebsiteItem.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WebsiteItemContainer/WebsiteItemContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebsiteItemContainer/WebsiteItemContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WebsitesSection/WebsitesSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebsitesSection/WebsitesSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projects/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/Projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translations/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/pl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/information.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/information.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/projects.js" afterDir="false" />
-    </list>
+    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -288,7 +275,7 @@
       <workItem from="1633679264870" duration="7839000" />
       <workItem from="1633691788740" duration="107000" />
       <workItem from="1633696202206" duration="1580000" />
-      <workItem from="1633765564817" duration="4264000" />
+      <workItem from="1633765564817" duration="5159000" />
     </task>
     <servers />
   </component>
@@ -361,10 +348,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1625815620686" />
-    <state x="370" y="155" width="579" height="624" key="find.popup" timestamp="1633770425047">
+    <state x="370" y="155" width="579" height="624" key="find.popup" timestamp="1633772355770">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="370" y="155" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633770425047" />
+    <state x="370" y="155" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633772355770" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1632832539330">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

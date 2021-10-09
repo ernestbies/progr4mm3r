@@ -169,7 +169,7 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
                         links.youtube && <Link link={links.youtube} type={'youtube'}/>
                     }
                     {
-                        links.website && <Link link={links.website.url} type={'website'} image={links.website.logo}/>
+                        links.website && <Link link={links.website.url} type={'website'} webType={links.website.type} image={links.website.logo}/>
                     }
                 </div>
             </div>

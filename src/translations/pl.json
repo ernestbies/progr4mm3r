@@ -18,6 +18,7 @@
   "technologies_text": "Stos technologiczny",
   "technical_info": "Informacje techniczne",
   "project_page": "Strona projektu",
+  "project_server": "Serwer API (dokumentacja)",
   "presentation_video": "Prezentacja wideo",
   "project_homepage": "Strona domowa",
   "desktop": "Aplikacja desktopowa",
@@ -83,5 +84,7 @@
   "quote_projects_list": "Pełna lista moich głównych projektów znajduje się na moim ",
   "competitions": "konkursy",
   "quote_competitions": "Stawiam na samorozwój i podnoszenie kwalifikacji zawodowych poprzez udział w ",
-  "competitions2": "konkursach"
+  "competitions2": "konkursach",
+  "note": "Uwaga",
+  "private_repo_info": "Niektóre z projektów są w repozytoriach prywatnych ze względów bezpieczeństwa (wgląd w kod źródłowy możliwy po wcześniejszym kontakcie)."
 }

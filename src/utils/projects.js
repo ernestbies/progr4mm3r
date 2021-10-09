@@ -5,19 +5,31 @@ export const mainProjects = [
         name: 'Media Browser',
         image: 'images/projects/mediabrowser-dashboard.png',
         url: 'https://youtu.be/7r1r9JiKsYc',
-        color: '#F2F2F2'
+        color: '#F2F2F2',
+        description: {
+            en:  'System for searching information about audiovisual materials. Project implemented as part of an engineering thesis.',
+            pl: 'System do wyszukiwania informacji o materiałach audiowizualnych. Projekt realizowany w ramach pracy inżynierskiej.'
+        },
     },
     {
         name: 'Forest Żabiec',
         image: 'images/projects/football-club.png',
-        url: 'https://forestzabiec.herokuapp.com',
-        color: '#1F1F1F'
+        url: 'https://forestzabiec.netlify.app',
+        color: '#1F1F1F',
+        description: {
+            en:  'The official website of the Forest Żabiec football team. The website presents information about the club.',
+            pl: 'Oficjalna strona drużyny piłkarskiej Forest Żabiec. Na stronie przedstawione są informacje dotyczące klubu.'
+        },
     },
     {
         name: 'Restaurant',
         image: 'images/projects/rms2.png',
         url: 'https://github.com/ernestbies/restaurant-management',
-        color: '#FFFFFF'
+        color: '#FFFFFF',
+        description: {
+            en:  'Restaurant Management System is a system that allows you to manage a restaurant (adding, editing and removing products).',
+            pl: 'Restaurant Management System to system pozwalający na zarządzanie restauracją (dodawanie, edycja oraz usuwanie produktów).'
+        },
     }
 ]
 
@@ -38,9 +50,9 @@ export const projects = [
         languages: ['PL', 'US'],
         image: 'images/projects/mediabrowser-dashboard.png',
         links: {
-            github: 'https://github.com/ernestbies/MediaBrowser-mobile',
             youtube: 'https://youtu.be/7r1r9JiKsYc',
             website: {
+                type: 'server',
                 url: 'https://mediabrowser-server.herokuapp.com/documentation',
                 logo: '/images/projects/mediabrowser.png'
             }
@@ -62,7 +74,6 @@ export const projects = [
         languages: ['PL', 'US'],
         image: 'images/projects/personal-website.png',
         links: {
-            github: 'https://github.com/ernestbies/personal-website',
             website: {
                 url: WEBSITE_URL,
                 logo: '/images/logo.png'
@@ -85,7 +96,6 @@ export const projects = [
         languages: ['PL'],
         image: 'images/projects/football-club.png',
         links: {
-            github: 'https://github.com/ernestbies/forestzabiec',
             website: {
                 url: 'https://forestzabiec.netlify.app',
                 logo: '/images/projects/forestzabiec.png'

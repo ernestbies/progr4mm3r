@@ -7,7 +7,7 @@ const WebsiteItemContainer = styled.div`
     height: 100%;
     width: 100%;
     padding-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 70px;
     
     @media (orientation: portrait) {
         flex-wrap: wrap; 

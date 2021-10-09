@@ -29,6 +29,8 @@ const Projects = () => {
                     {' '+ t('and3') + ' '}
                     <a className={'scale-text ref-page'} href={contact.bitbucket} target={'_blank'} rel={'noreferrer'}>{'Bitbucket'}
                     </a>{'.'}
+                    <br/>
+                    <span style={{color: 'orange'}}>{t('note') + ': '}</span>{t('private_repo_info')}
                 </p>
                 <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
             </div>

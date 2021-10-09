@@ -18,6 +18,7 @@
   "technologies_text": "Technology stack",
   "technical_info": "Technical information",
   "project_page": "Project page",
+  "project_server": "API server (documentation)",
   "presentation_video": "Presentation video",
   "project_homepage": "Homepage",
   "desktop": "Desktop",
@@ -83,5 +84,7 @@
   "quote_projects_list": "A full list of my main projects can be found on my ",
   "competitions": "competitions",
   "quote_competitions": "I focus on self-development and improving professional qualifications through participation in ",
-  "competitions2": "competitions"
+  "competitions2": "competitions",
+  "note": "Note",
+  "private_repo_info": "Some of the projects are in private repositories for security reasons (access to the source code is possible after prior contact)."
 }

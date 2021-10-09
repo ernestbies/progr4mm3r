@@ -12,6 +12,7 @@ const WebsitesSection = () => {
     const renderWebsites = () => {
         return mainProjects.map((e, index) =>
             <WebsiteItem key={index} name={e.name} url={e.url}
+                         description={e.description}
                          websiteImage={e.image} direction={index === 0 ? 'left' : index === 1 ? 'center' : 'right'}
                          backgroundColor={e.color}
             />

@@ -4,7 +4,7 @@ import {FaBitbucket, FaGithub, FaYoutube} from "react-icons/fa";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 
-const Link = ({link, type, image}) => {
+const Link = ({link, type, image, webType}) => {
 
     const {t} = useTranslation('common');
 
@@ -17,7 +17,8 @@ const Link = ({link, type, image}) => {
                         : <div/>
         }
         <LinkText>{type === 'youtube' ? t('presentation_video') :
-            type === 'website' ? t('project_homepage') : t('project_page')}</LinkText>
+            (type === 'website' && webType === 'server') ? t('project_server') :
+                (type === 'website' && webType !== 'server') ? t('project_homepage') : t('project_page')}</LinkText>
     </StyledLink>);
 };
 

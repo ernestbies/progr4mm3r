@@ -1,73 +1,64 @@
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 @font-face {
   font-family: 'Open Sans';
   font-weight: 400;
   src: url("./assets/fonts/OpenSans-Regular.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-weight: 300;
   src: url("./assets/fonts/OpenSans-Light.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Open Sans';
   font-weight: 700;
   src: url("./assets/fonts/OpenSans-Bold.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Press Start';
   font-weight: 400;
   src: url("./assets/fonts/PressStart2P-Regular.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Source Code Pro';
   font-weight: 300;
   src: url("./assets/fonts/SourceCodePro-Light.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Source Code Pro';
   font-weight: 400;
   src: url("./assets/fonts/SourceCodePro-Regular.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Source Code Pro';
   font-weight: 700;
   src: url("./assets/fonts/SourceCodePro-Bold.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Blender Pro Bold';
   font-weight: 700;
   src: url("./assets/fonts/BlenderProBold.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Roboto Condensed';
   font-weight: 400;
   src: url("./assets/fonts/RobotoCondensed-Regular.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
@@ -75,22 +66,26 @@ code {
   font-weight: 400;
   font-style: italic;
   src: url("./assets/fonts/RobotoCondensed-Italic.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Roboto Condensed';
   font-weight: 300;
   src: url("./assets/fonts/RobotoCondensed-Light.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Roboto Condensed';
   font-weight: 700;
   src: url("./assets/fonts/RobotoCondensed-Bold.ttf") format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Caveat';
   font-weight: 400;
   src: url("./assets/fonts/Caveat-Regular.ttf") format('truetype');
+  font-display: swap;
 }

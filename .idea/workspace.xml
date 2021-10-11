@@ -21,8 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectItem/ProjectItem.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectItem/ProjectItem.styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +280,7 @@
       <workItem from="1633696202206" duration="1580000" />
       <workItem from="1633765564817" duration="5195000" />
       <workItem from="1633799861121" duration="16000" />
-      <workItem from="1633942124849" duration="2967000" />
+      <workItem from="1633942124849" duration="4993000" />
     </task>
     <servers />
   </component>
@@ -354,10 +353,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1625815620686" />
-    <state x="370" y="155" width="579" height="624" key="find.popup" timestamp="1633948119510">
+    <state x="370" y="155" width="579" height="624" key="find.popup" timestamp="1633957637687">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="370" y="155" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633948119510" />
+    <state x="370" y="155" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1633957637687" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1632832539330">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

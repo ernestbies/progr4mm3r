@@ -3,7 +3,7 @@ import {WEBSITE_URL} from "./information";
 export const mainProjects = [
     {
         name: 'Media Browser',
-        image: 'images/projects/mediabrowser-dashboard.png',
+        image: 'images/projects/mediabrowser-dashboard.jpg',
         url: 'https://youtu.be/7r1r9JiKsYc',
         color: '#F2F2F2',
         description: {
@@ -13,7 +13,7 @@ export const mainProjects = [
     },
     {
         name: 'Forest Żabiec',
-        image: 'images/projects/football-club.png',
+        image: 'images/projects/football-club.jpg',
         url: 'https://forestzabiec.netlify.app',
         color: '#1F1F1F',
         description: {
@@ -48,7 +48,7 @@ export const projects = [
         os: ['Windows', 'Linux', 'Android', 'iOS'],
         color: 'orange',
         languages: ['PL', 'US'],
-        image: 'images/projects/mediabrowser-dashboard.png',
+        image: 'images/projects/mediabrowser-dashboard.jpg',
         links: {
             youtube: 'https://youtu.be/7r1r9JiKsYc',
             website: {
@@ -94,7 +94,7 @@ export const projects = [
         os: ['Windows', 'Linux'],
         color: '#d3fd25',
         languages: ['PL'],
-        image: 'images/projects/football-club.png',
+        image: 'images/projects/football-club.jpg',
         links: {
             website: {
                 url: 'https://forestzabiec.netlify.app',
@@ -136,7 +136,7 @@ export const projects = [
         },
         os: ['Windows', 'Linux', 'Android'],
         color: '#ab09ab',
-        image: 'images/projects/spaceships.png',
+        image: 'images/projects/spaceships.jpg',
         links: {
             github: 'https://github.com/ernestbies/SpaceShips'
         }
@@ -152,7 +152,7 @@ export const projects = [
         },
         os: ['Windows'],
         color: 'red',
-        image: 'images/projects/apocalyptogame.png',
+        image: 'images/projects/apocalyptogame.jpg',
         links: {
             github: 'https://github.com/ernestbies/ApocalyptoGame'
         }
@@ -423,7 +423,7 @@ export const competitionsProjects = [
                 logo: 'images/platforms/netbeans.png'
             }
         ],
-        image: 'images/projects/camerafingerprint.png',
+        image: 'images/projects/camerafingerprint.jpg',
         links: [
             {
                 name: 'Organizer',
@@ -477,7 +477,7 @@ export const competitionsProjects = [
                 logo: 'images/platforms/netbeans.png'
             }
         ],
-        image: 'images/projects/iOSDDE.png',
+        image: 'images/projects/iOSDDE.jpg',
         links: [
             {
                 name: 'Organizer',

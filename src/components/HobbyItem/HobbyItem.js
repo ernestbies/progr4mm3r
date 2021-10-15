@@ -25,7 +25,7 @@ const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
                     paddingTop: 10
                 }}>{quote}</p>
                 <p style={{
-                    fontSize: 12,
+                    fontSize: 13,
                     fontFamily: 'Roboto Condensed',
                     marginTop: 20,
                     maxWidth: 500,

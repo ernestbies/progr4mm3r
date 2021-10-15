@@ -148,7 +148,7 @@ export const CompetitionSubtitle = styled.span`
 
 export const ProjectDesc = styled.p`
     font-family: Roboto Condensed, serif;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
     color: white;
     text-align: left;

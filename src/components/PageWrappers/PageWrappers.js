@@ -4,15 +4,11 @@ const PAGE_MAIN_COLOR = 'black';
 
 const revealPage = keyframes`
     0% {
-        width: 0;
         opacity: 0;
-        overflow: hidden;
     }
     
     100% {
-        width: 100%;
         opacity: 1;
-        overflow: visible;
     }
 `;
 

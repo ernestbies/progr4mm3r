@@ -29,7 +29,7 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
 
         if (numOfTechnologies === 1) {
             view.push(
-                <code key={numOfTechnologies} style={{fontSize: 11, color: color}}>
+                <code key={numOfTechnologies} style={{fontSize: 13, color: color}}>
                     {renderTechnologies(technologies[Object.keys(technologies)])}
                 </code>
             )
@@ -37,13 +37,13 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
             Object.keys(technologies).map((technology) =>
                 view.push(
                     <p key={technology} style={{
-                        fontSize: 12,
                         fontFamily: 'Roboto Condensed',
                         fontWeight: 300,
+                        fontSize: 13,
                         marginBottom: 5
                     }}>{t(technology) + ':'} <code style={{
-                        fontSize: 12,
                         fontStyle: 'normal',
+                        fontSize: 13,
                         color: color
                     }}>{renderTechnologies(technologies[technology])}</code></p>
                 )
@@ -90,7 +90,7 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
                     }}>{name}</p>
                 </div>
                 <p style={{
-                    fontSize: 12,
+                    fontSize: 13,
                     fontFamily: 'Roboto Condensed',
                     fontWeight: 300,
                     marginTop: 30,
@@ -145,7 +145,7 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
                         languages &&
                         <div style={{
                             fontFamily: 'Open Sans',
-                            fontSize: 11,
+                            fontSize: 13,
                             fontWeight: 300,
                             display: 'inline-flex',
                             flexDirection: 'row'

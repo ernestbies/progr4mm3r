@@ -10,9 +10,9 @@ export const AboutInfoContent = styled.div`
     max-width: 600px;
     margin-top: 10px;
     margin-bottom: 15px;
-    font-size: 12px;
+    font-size: 13px;
     font-weight: 300;
-    height: 300px;
+    height: 330px;
 
     @media (max-width: 800px) {
         height: auto;

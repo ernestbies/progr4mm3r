@@ -19,15 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Logo/Logo.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Logo/Logo.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact/Contact.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/Contact.styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/navbar/Navbar.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/navbar/Navbar.styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/navbar/Navbar.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/navbar/Navbar.styles.js" afterDir="false" />
-    </list>
+    <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -304,7 +296,7 @@
       <workItem from="1634288781866" duration="220000" />
       <workItem from="1634289216827" duration="629000" />
       <workItem from="1634302059567" duration="718000" />
-      <workItem from="1634370132962" duration="4810000" />
+      <workItem from="1634370132962" duration="5480000" />
     </task>
     <servers />
   </component>
@@ -377,10 +369,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1634205366477" />
-    <state x="370" y="155" width="579" height="624" key="find.popup" timestamp="1634375122243">
+    <state x="370" y="155" width="579" height="624" key="find.popup" timestamp="1634376331362">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="370" y="155" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1634375122243" />
+    <state x="370" y="155" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1634376331362" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1632832539330">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -78,7 +78,7 @@ export default function TimelineComponent() {
             <TimelineItem>
                 <TimelineContent style={{display: 'flex', alignItems: 'start'}}>
                     <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto', textAlign: 'right'}}>
-                        <TimelineText type={'meetFriends'} color={'red'}/>
+                        <TimelineText type={'meetFriends'} color={'yellow'}/>
                     </Paper>
                 </TimelineContent>
                 <TimelineSeparator>

@@ -13,19 +13,23 @@ const PageContent = ({showContent, setShowContent, withAnimations}) => {
 
     const revealInfo = () => {
         setShowContent(true);
-        localStorage.setItem('reveal', 'PAGE_REVEALED');
+        localStorage.setItem('reveal', 'PAGE_DECRYPTED');
     }
 
     return (
-        showContent ?
-        <SectionWrapper withAnimations={withAnimations}>
-            <About/>
-            <Projects/>
-            <Skills/>
-            <Hobby/>
-            <Contact/>
-            <Menu/>
-        </SectionWrapper> : <SpecialSection revealInfo={revealInfo}/>
+            <>
+                {
+                    showContent ?
+                        <SectionWrapper withAnimations={withAnimations}>
+                            <About/>
+                            <Projects/>
+                            <Skills/>
+                            <Hobby/>
+                            <Contact/>
+                        </SectionWrapper> : <SpecialSection revealInfo={revealInfo}/>
+                }
+                <Menu revealPage={revealInfo}/>
+            </>
     )
 }
 

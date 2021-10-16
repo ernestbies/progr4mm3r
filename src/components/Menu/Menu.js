@@ -12,7 +12,14 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDiscord, faGithub} from "@fortawesome/free-brands-svg-icons";
 import {FaRegEnvelope} from "react-icons/all";
 
-const Menu = () => {
+const Menu = ({revealPage}) => {
+
+    const navigateToContact = () => {
+        if(!localStorage.getItem('reveal')) {
+            revealPage();
+        }
+    };
+
     return (<StyledMenu>
         <MenuItem style={{marginBottom: 10}}>
             <StyledMenuLink href={'https://github.com/ernestbies'} target={'_blank'}>
@@ -26,7 +33,7 @@ const Menu = () => {
         </MenuItem>
         <MenuItem expandable>
             <FontAwesomeIcon icon={faDiscord} style={{width: 25, height: 25, color: 'white', flex: 1}}/>
-            <StyledMenuWrapper href={'/#contact'}>
+            <StyledMenuWrapper onClick={navigateToContact} href={'/#contact'}>
                 <StyledMenuText>{'Discord: '}
                     <StyledColoredMenuText>{'tsl#2025'}</StyledColoredMenuText>
                 </StyledMenuText>

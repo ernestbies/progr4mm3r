@@ -19,8 +19,9 @@ const Hobby = () => {
                 {renderElements(hobby[i18n.language], 'hobby')}
             </Carousel>
 
-            <div id={'knowledge'} className={'wallpaper-style-container'} style={{backgroundImage: "url(images/wallpaper2.jpg)"}}>
-                <div style={{textAlign: 'center', backgroundColor: '#00000085'}}>
+            <div id={'knowledge'} className={'wallpaper-style-container'}
+                 style={{backgroundImage: "url(images/wallpaper2.jpg)", backgroundSize: 'cover'}}>
+                <div style={{textAlign: 'center', backgroundColor: '#00000095'}}>
                     <SectionBadge position={'start'} content={t('timeline')} subtitle={'hobby'} specialNumber={41}/>
                     <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginBottom: 30}}>
                         <p className={'inform-text'}>{t('quote_timeline')}

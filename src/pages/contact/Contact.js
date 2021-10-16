@@ -24,7 +24,7 @@ const Contact = () => {
                 />
                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                     <p className={'inform-text'}>{t('contact_text1')}
-                        {'\n' + t('contact_text2')} <code className={'scale-text'}>e-mail</code>.</p>
+                        {'\n' + t('contact_text2')} <code className={'scale-text'} style={{color: '#DC143C'}}>e-mail</code>.</p>
                     <div style={{width: 100, height: 1, backgroundColor: 'white'}}/>
                 </div>
                 <div className={'contact-icons'}>

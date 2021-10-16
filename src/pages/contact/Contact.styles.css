@@ -1,5 +1,5 @@
 .contact-list {
-    background-image: linear-gradient(to bottom right, #FFA500, #000000, #000000, #000000, #FFA500);
+    background-image: linear-gradient(to bottom right, red, #000000, #000000, #000000, red);
     text-align: center;
     border-top: 1px solid #FFFFFF90;
     position: relative;
@@ -38,7 +38,7 @@
 }
 
 .email-text:hover {
-    color: orange;
+    color: #DC143C;
 }
 
 .signature {

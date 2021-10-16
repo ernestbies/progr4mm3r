@@ -17,13 +17,13 @@ export const navbarThemes = {
     },
     light: {
         background: 'white',
-        color: '#9932CC',
+        color: 'red',
         fontColor: 'black',
         additionalColor: 'black'
     },
     special: {
         background: '#000015',
-        color: '#9932CC',
+        color: 'red',
         fontColor: 'black',
         additionalColor: 'orange'
     }
@@ -80,8 +80,8 @@ const changeBorderTheme = keyframes`
     }
 
     50% {
-        color: #9932CC;
-        border-bottom-color: #9932CC;
+        color: red;
+        border-bottom-color: red;
     }
 
     100% {

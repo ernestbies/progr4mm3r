@@ -170,7 +170,7 @@ html, body {
     font-weight: 300;
     font-family: Source Code Pro, serif;
     font-size: 19px;
-    animation-name: orange-to-purple;
+    animation-name: change-theme;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
@@ -229,13 +229,13 @@ html, body {
     }
 }
 
-@keyframes orange-to-purple {
+@keyframes change-theme {
     0% {
         color: orange;
     }
 
     50% {
-        color: #9932CC;
+        color: #DC143C;
     }
 
     100% {

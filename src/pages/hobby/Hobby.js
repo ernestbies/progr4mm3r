@@ -2,7 +2,6 @@ import React from 'react';
 import {Carousel} from 'react-bootstrap';
 import {hobby} from "../../utils/hobby";
 import {renderElements} from "../../utils/functions/renderElements";
-import "./Hobby.styles.css";
 import {useTranslation} from "react-i18next";
 import TimelineSection from "../../components/TimelineSection/TimelineSection";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";

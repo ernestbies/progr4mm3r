@@ -4,8 +4,8 @@ export const BACKEND_URL = 'https://ernestbies-backend.herokuapp.com';
 export const HALL_OF_FAME_MYSTERY = 'ZXJuZXN0Ymllc0BzZWNyZXRfMDE=';
 export const NOT_RELEASED_PROJECT = 'project_h_01';
 export const WEBSITE_TITLE = {
-    en: 'Ernest Bieś - portfolio website',
-    pl: 'Ernest Bieś - strona portfolio'
+    en: 'Ernest Bieś - personal website',
+    pl: 'Ernest Bieś - strona internetowa'
 };
 
 export const languages = {

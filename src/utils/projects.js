@@ -61,8 +61,8 @@ export const projects = [
     {
         name: 'Personal website',
         description: {
-            en:  'Portfolio page showing me and my projects. It was the first website I created using React.js. While creating a porfolio website, I learned how to use the JavaScript scripting language and how to design websites with the use of HTML and CSS.',
-            pl: 'Strona portfolio przedstawiająca moją osobę oraz projekty. Była to pierwsza strona internetowa, którą stworzyłem z wykorzystaniem React.js. Podczas tworzenia strony porfolio uczyłem się jak używać języka skryptowego JavaScript oraz jak projektować strony internetowe z wykorzystaniem HTML oraz CSS.'
+            en:  'Personal website showing me and my projects. It was the first website I created using React.js. While creating a porfolio website, I learned how to use the JavaScript scripting language and how to design websites with the use of HTML and CSS.',
+            pl: 'Strona przedstawiająca moją osobę oraz moje projekty. Była to pierwsza strona internetowa, którą stworzyłem z wykorzystaniem React.js. Podczas tworzenia strony porfolio uczyłem się jak używać języka skryptowego JavaScript oraz jak projektować strony internetowe z wykorzystaniem HTML oraz CSS.'
         },
         technologies: {
             desktop: ['JavaScript', 'HTML', 'CSS', 'React.js', 'React Router', 'React Redux', 'Bootstrap', 'i18next', 'Styled Components', 'Prop Types', 'Google Recaptcha'],

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {knowledge} from "../../utils/knowledge";
+import {knowledge} from "../../utils/data/knowledge";
 import {useTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import {

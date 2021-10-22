@@ -1,6 +1,6 @@
 import React from 'react';
 import {Carousel} from 'react-bootstrap';
-import {hobby} from "../../utils/hobby";
+import {hobby} from "../../utils/data/hobby";
 import {renderElements} from "../../utils/functions/renderElements";
 import {useTranslation} from "react-i18next";
 import TimelineSection from "../../components/TimelineSection/TimelineSection";
@@ -14,7 +14,7 @@ const Hobby = () => {
         <div id={'hobby'} style={{display: 'flex', flexDirection: 'column', backgroundColor: 'black'}}>
             <SectionBadge position={'end'} content={t('hobby')} specialNumber={4}/>
 
-            <Carousel className={'carousel-style'}>
+            <Carousel className={'carousel-style'} interval={null}>
                 {renderElements(hobby[i18n.language], 'hobby')}
             </Carousel>
 

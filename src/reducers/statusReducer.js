@@ -1,4 +1,4 @@
-import {statusList} from "../utils/information";
+import {statusList} from "../utils/data/information";
 
 export const STATUS_FETCH = 'STATUS_FETCH';
 export const STATUS_CONNECT = 'STATUS_CONNECT';

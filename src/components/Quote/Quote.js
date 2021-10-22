@@ -1,4 +1,4 @@
-import {quote} from "../../utils/information";
+import {quote} from "../../utils/data/information";
 import React from "react";
 import './Quote.styles.css';
 

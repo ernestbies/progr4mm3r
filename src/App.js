@@ -4,7 +4,7 @@ import {Switch, Route, Redirect} from 'react-router';
 import MainPage from "./pages/MainPage";
 import ProjectPage from "./pages/ProjectPage";
 import NotFoundPage from "./pages/404";
-import {WEBSITE_TITLE} from "./utils/information";
+import {WEBSITE_TITLE} from "./utils/data/information";
 import {BrowserRouter} from "react-router-dom";
 
 const App = () => {

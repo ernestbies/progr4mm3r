@@ -3,44 +3,24 @@ import Projects from "../../pages/projects/Projects";
 import Skills from "../../pages/skills/Skills";
 import Hobby from "../../pages/hobby/Hobby";
 import Contact from "../../pages/contact/Contact";
-import SpecialSection from "../SpecialSection/SpecialSection";
 import React from "react";
 import {SectionWrapper} from "../PageWrappers/PageWrappers";
-import PropTypes from 'prop-types';
 import Menu from "../Menu/Menu";
+import NotReleasedProject from "../NotReleasedProject/NotReleasedProject";
 
-const PageContent = ({showContent, setShowContent, withAnimations}) => {
-
-    const revealInfo = () => {
-        setShowContent(true);
-        localStorage.setItem('reveal', 'PAGE_DECRYPTED');
-    }
+const PageContent = () => {
 
     return (
-            <>
-                {
-                    showContent ?
-                        <SectionWrapper withAnimations={withAnimations}>
-                            <About/>
-                            <Projects/>
-                            <Skills/>
-                            <Hobby/>
-                            <Contact/>
-                        </SectionWrapper> : <SpecialSection revealInfo={revealInfo}/>
-                }
-                <Menu revealPage={revealInfo}/>
-            </>
+        <SectionWrapper>
+            <About/>
+            <Projects/>
+            <Skills/>
+            <Hobby/>
+            <Contact/>
+            <NotReleasedProject/>
+            <Menu/>
+        </SectionWrapper>
     )
-}
-
-PageContent.propTypes = {
-    showContent: PropTypes.bool.isRequired,
-    setShowContent: PropTypes.func.isRequired,
-    withAnimations: PropTypes.bool
-}
-
-PageContent.defaultProps = {
-    withAnimations: false
 }
 
 export default PageContent;

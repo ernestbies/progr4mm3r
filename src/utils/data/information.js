@@ -2,6 +2,7 @@ export const WEBSITE_NAME = 'ernestbies.com';
 export const WEBSITE_URL = 'https://ernestbies.netlify.app';
 export const BACKEND_URL = 'https://ernestbies-backend.herokuapp.com';
 export const HALL_OF_FAME_MYSTERY = 'ZXJuZXN0Ymllc0BzZWNyZXRfMDE=';
+export const RECAPTCHA_SITE_KEY = '6LdCr7saAAAAAMgbDCtCl4u6GQ_WAba9ZkZgrFd1';
 export const NOT_RELEASED_PROJECT = 'project_h_01';
 export const WEBSITE_TITLE = {
     en: 'Ernest Bieś - personal website',

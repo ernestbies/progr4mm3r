@@ -1,6 +1,6 @@
 import React from "react";
 import GlitchedText from "../GlitchedText/GlitchedText";
-import {NOT_RELEASED_PROJECT} from "../../utils/information";
+import {NOT_RELEASED_PROJECT} from "../../utils/data/information";
 import {BoxElement, ClipPathElement, StyledBox} from "./NotReleasedProject.styles";
 
 const NotReleasedProject = () => {

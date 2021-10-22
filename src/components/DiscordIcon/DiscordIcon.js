@@ -1,8 +1,9 @@
 import React from "react";
-import contact from "../../utils/contact";
+import contact from "../../utils/data/contact";
 import {useTranslation} from "react-i18next";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faDiscord} from "@fortawesome/free-brands-svg-icons";
+import {DiscordIconWrapper} from "./DiscordIcon.styles";
 
 export const DiscordIcon = () => {
 
@@ -26,7 +27,7 @@ export const DiscordIcon = () => {
     }
 
     return (
-        <div className={'tooltip-class'}>
+        <DiscordIconWrapper className={'tooltip-class'}>
             <button id={'discordIcon'} onClick={() => copyName()} onMouseOut={() => outCopyName()}
                     color={'white'}
                     style={{backgroundColor: 'transparent', borderWidth: 0, cursor: 'pointer'}}>
@@ -34,6 +35,6 @@ export const DiscordIcon = () => {
                                       className={'tooltip-text'}>{t('copy_text')}</span>
                 <FontAwesomeIcon icon={faDiscord} type={'discord'} className={'icon'}/>
             </button>
-        </div>
+        </DiscordIconWrapper>
     )
 }

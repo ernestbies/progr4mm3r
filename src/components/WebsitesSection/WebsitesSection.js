@@ -2,7 +2,7 @@ import React from "react";
 import {useTranslation} from "react-i18next";
 import SectionBadge from "../SectionBadge/SectionBadge";
 import WebsiteItem from "../WebsiteItem/WebsiteItem";
-import {mainProjects} from "../../utils/projects";
+import {mainProjects} from "../../utils/data/projects";
 import WebsiteItemContainer from "../WebsiteItemContainer/WebsiteItemContainer";
 
 const WebsitesSection = () => {

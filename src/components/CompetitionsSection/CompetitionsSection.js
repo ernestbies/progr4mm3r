@@ -3,7 +3,7 @@ import SectionBadge from "../SectionBadge/SectionBadge";
 import {useTranslation} from "react-i18next";
 import {CompetitionContainer} from "./CompetitionsSections.styles";
 import CompetitionItem from "../CompetitionItem/CompetitionItem";
-import {competitionsProjects} from "../../utils/projects";
+import {competitionsProjects} from "../../utils/data/projects";
 
 const CompetitionsSection = () => {
 

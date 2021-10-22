@@ -1,6 +1,6 @@
 import React from "react";
 import CustomCaret from "../CustomCaret/CustomCaret";
-import {hallOfFameFaq, NOT_RELEASED_PROJECT, statusList, WEBSITE_NAME} from "../../utils/information";
+import {hallOfFameFaq, NOT_RELEASED_PROJECT, statusList, WEBSITE_NAME} from "../../utils/data/information";
 import {BoxQaA, ColoredText, CommandText, FaqContainer, FaqHeader, TextQaA} from "./MessageFaq.styles";
 
 const MessageFaq = () => {

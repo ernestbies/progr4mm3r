@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {languages, WEBSITE_TITLE} from "../../utils/information";
+import {languages, WEBSITE_TITLE} from "../../utils/data/information";
 import {withTranslation} from "react-i18next";
 import PropTypes from 'prop-types';
 import {LanguageButton, LanguageDivider, SelectorSection} from "./LanguageSelector.styles";

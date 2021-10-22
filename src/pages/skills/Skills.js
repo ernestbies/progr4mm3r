@@ -1,5 +1,5 @@
 import React from 'react';
-import {skills} from "../../utils/skills";
+import {skills} from "../../utils/data/skills";
 import {renderElements} from "../../utils/functions/renderElements";
 import "./Skills.styles.css";
 import {useTranslation} from "react-i18next";

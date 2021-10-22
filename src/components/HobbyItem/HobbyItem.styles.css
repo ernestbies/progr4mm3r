@@ -15,7 +15,7 @@
     .carousel-hobby-item {
         flex-direction: column;
         align-items: center;
-        height: 650px;
+        height: 100%;
     }
 
     .carousel-hobby-img {

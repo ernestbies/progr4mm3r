@@ -9,7 +9,7 @@ import {
     Subtitle
 } from "./Intro.styles";
 import {Logo} from "../Logo/Logo";
-import {WEBSITE_NAME, shortInfo, introduction} from "../../utils/information";
+import {WEBSITE_NAME, shortInfo, introduction} from "../../utils/data/information";
 import {useTranslation} from "react-i18next";
 
 const Intro = () => {

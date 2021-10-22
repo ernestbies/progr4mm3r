@@ -1,4 +1,4 @@
-import {info} from "../../utils/information";
+import {info} from "../../utils/data/information";
 import React, {useEffect, useState} from "react";
 import {useTranslation} from "react-i18next";
 import {AboutInfoContent, ColoredText, InfoHeader, InfoSection, InfoText} from "./AboutInfo.styles";

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
-import {formatData, NOT_RELEASED_PROJECT} from "../../utils/information";
+import {formatData, NOT_RELEASED_PROJECT} from "../../utils/data/information";
 import CustomCaret from "../CustomCaret/CustomCaret";
 import {MessageDiv, MessageLine} from "./MessageItem.styles";
 

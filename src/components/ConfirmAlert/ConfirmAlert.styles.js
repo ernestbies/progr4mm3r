@@ -14,16 +14,33 @@ const showButton = keyframes`
 `;
 
 export const StyledAlert = styled(Alert)`
-    width: 300px;
+    width: 250px;
+    height: 100px;
     bottom: 1px;
     right: 1px;
     animation-name: ${showButton};
+    background-color: black;
     animation-duration: 2s;
     animation-fill-mode: forwards;
     position: fixed;
-`
+    z-index: 10;
+    border: 1px solid grey;
+    
+    @media (max-width: 360px) {
+        bottom: 0;
+        right: 0;
+        transform: scale(0.8);
+    }
+`;
+
+export const AlertTitle = styled.p`
+    font-size: 15px;
+    font-family: Roboto Condensed, serif; 
+    color: ${({variant}) => variant === 'success' ? 'orange' : 'darkred'};   
+`;
 
 export const AlertText = styled.p`
-    font-size: ${({fontSize}) => fontSize};
-    font-family: Open Sans, serif;    
-`
+    font-size: 11px;
+    font-family: Roboto Condensed, serif; 
+    color: white;   
+`;

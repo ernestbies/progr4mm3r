@@ -53,10 +53,10 @@
   "topic": "Temat wiadomości",
   "type_here": "Napisz tutaj",
   "send": "Wyślij",
-  "alert_success_topic": "Wiadomość wysłana",
-  "alert_success_text": "Twoja wiadomość została wysłana. Odpowiem najszybciej jak to możliwe!",
-  "alert_error_topic": "Błąd",
-  "alert_error_text": "Wystąpił problem z wysłaniem Twojej wiadomości. Spróbuj ponownie później!",
+  "alert_success_topic": "Weryfikacja pomyślna",
+  "alert_success_text": "Weryfikacja przebiegła pomyślnie. Możesz teraz wysłać wiadomość e-mail.",
+  "alert_error_topic": "Błąd weryfikacji",
+  "alert_error_text": "Wystąpił błąd podczas weryfikacji danych. Spróbuj ponownie.",
   "hall-of-fame": "Sala sławy",
   "click_here_to": "kliknij aby wykonać",
   "contact_info": "Dziękuję za zainteresowanie,",
@@ -89,5 +89,12 @@
   "quote_competitions": "Stawiam na samorozwój i podnoszenie kwalifikacji zawodowych poprzez udział w ",
   "competitions2": "konkursach",
   "note": "Uwaga",
-  "private_repo_info": "Niektóre z projektów są w repozytoriach prywatnych ze względów bezpieczeństwa (wgląd w kod źródłowy możliwy po wcześniejszym kontakcie)."
+  "private_repo_info": "Niektóre z projektów są w repozytoriach prywatnych ze względów bezpieczeństwa (wgląd w kod źródłowy możliwy po wcześniejszym kontakcie).",
+  "subject_validation": "Temat wiadomości jest wymagany.",
+  "body_validation": "Treść wiadomości jest wymagana.",
+  "recaptcha_validation": "Wymagana jest weryfikacja Recaptcha.",
+  "subject": "Temat wiadomości",
+  "body": "Treść wiadomości...",
+  "send_msg": "Wyślij wiadomość",
+  "clear": "Wyczyść"
 }

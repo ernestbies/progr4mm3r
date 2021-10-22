@@ -53,10 +53,10 @@
   "topic": "Topic",
   "type_here": "Type here",
   "send": "Send",
-  "alert_success_topic": "Message sent",
-  "alert_success_text": "Your message has been sent successfully. I will reply as soon as possible!",
-  "alert_error_topic": "Error",
-  "alert_error_text": "There was a problem sending your message. Please try again later!",
+  "alert_success_topic": "Verification success",
+  "alert_success_text": "The verification was successful. You can now send an email.",
+  "alert_error_topic": "Verification error",
+  "alert_error_text": "An error occurred while validating the data. Please try again.",
   "hall-of-fame": "Hall of Fame",
   "click_here_to": "click here to",
   "contact_info": "Thank you for your interest,",
@@ -89,5 +89,12 @@
   "quote_competitions": "I focus on self-development and improving professional qualifications through participation in ",
   "competitions2": "competitions",
   "note": "Note",
-  "private_repo_info": "Some of the projects are in private repositories for security reasons (access to the source code is possible after prior contact)."
+  "private_repo_info": "Some of the projects are in private repositories for security reasons (access to the source code is possible after prior contact).",
+  "subject_validation": "Subject is required.",
+  "body_validation": "Message content is required.",
+  "recaptcha_validation": "Recaptcha validation is required.",
+  "subject": "Subject",
+  "body": "Message content...",
+  "send_msg": "Send message",
+  "clear": "Clear"
 }

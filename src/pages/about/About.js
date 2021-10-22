@@ -1,5 +1,5 @@
 import React from 'react';
-import {info, calculateAge} from "../../utils/information";
+import {info, calculateAge} from "../../utils/data/information";
 import './About.styles.css';
 import {useTranslation} from "react-i18next";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";

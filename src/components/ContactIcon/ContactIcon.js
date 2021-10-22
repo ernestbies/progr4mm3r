@@ -1,29 +1,30 @@
 import React from "react";
-import contact from "../../utils/contact";
-import {FaBitbucket, FaGithub, FaLinkedin} from "react-icons/fa";
+import contact from "../../utils/data/contact";
+import {FaGithub, FaBitbucket, FaLinkedin, FaRegEnvelope} from "react-icons/fa";
 import {DiscordIcon} from "../DiscordIcon/DiscordIcon";
+import {StyledIcon} from "./ContactIcon.styles";
 import "./ContactIcon.styles.css";
 
 const ContactIcon = ({type}) => {
-    return (
-        <div className={'icon-item'}>
-            {
-                type === 'discord' ?
-                    <DiscordIcon/> :
-                    <a color={'white'} target={'_blank'} rel={'noreferrer'} style={{outline: 'none'}}
-                       href={type === 'email' ? 'mailto:' + contact.email : contact[type]}>
-                        {
-                            type === 'github' ?
-                                <FaGithub type={'github'} className={'icon'}/> :
-                                type === 'bitbucket' ?
-                                    <FaBitbucket type={'bitbucket'} className={'icon'}/> :
-                                    type === 'linkedin' ?
-                                        <FaLinkedin type={'linkedin'} className={'icon'}/> : <div/>
 
-                        }
-                    </a>
-            }
-        </div>
+    const Icon = () => {
+        return type === 'email' ?
+            <FaRegEnvelope type={'email'} className={'icon'}/> :
+            type === 'github' ?
+                <FaGithub type={'github'} className={'icon'}/> :
+                type === 'bitbucket' ?
+                    <FaBitbucket type={'bitbucket'} className={'icon'}/> :
+                    type === 'linkedin' ?
+                        <FaLinkedin type={'linkedin'} className={'icon'}/> : <div/>;
+    }
+
+    return (
+        type === 'discord' ?
+            <DiscordIcon/> :
+            <StyledIcon iconType={type} target={'_blank'} rel={'noreferrer'}
+                        href={type === 'email' ? 'mailto:' + contact.email : contact[type]}>
+                <Icon/>
+            </StyledIcon>
     )
 }
 

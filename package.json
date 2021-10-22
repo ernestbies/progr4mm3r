@@ -15,6 +15,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.6.0",
+    "formik": "^2.2.9",
     "i18next": "^20.2.4",
     "prop-types": "^15.7.2",
     "react": "^17.0.1",
@@ -30,7 +31,8 @@
     "react-scrollspy": "^3.4.3",
     "redux": "^4.1.0",
     "styled-components": "^5.3.0",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "yup": "^0.32.11"
   },
   "scripts": {
     "start": "react-scripts start",

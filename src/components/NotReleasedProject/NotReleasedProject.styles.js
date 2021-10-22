@@ -14,7 +14,6 @@ export const StyledBox = styled.div`
 
 export const BoxElement = styled.div`
     flex: 1;
-    background-color: red;
     display: flex;
     align-items: center;
     justify-content: center;

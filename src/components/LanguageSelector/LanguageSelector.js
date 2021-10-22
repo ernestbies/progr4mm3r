@@ -16,10 +16,6 @@ class LanguageSelector extends Component {
         }
     }
 
-    /* componentDidMount() {
-        console.log('Current language:', this.props.i18n.language);
-    } */
-
     changeLanguageFunction = (language) => {
         document.title = WEBSITE_TITLE[language];
         this.props.i18n.changeLanguage(language).then(() => localStorage.setItem('language', language));

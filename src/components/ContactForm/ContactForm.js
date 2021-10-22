@@ -33,7 +33,6 @@ const ContactForm = () => {
         <Formik initialValues={{subject: '', body: '', recaptcha: ''}}
                 validationSchema={contactFormValidation} validateOnMount={true}
                 onSubmit={(values, { setSubmitting, resetForm, validateForm })=> {
-                    console.log(recaptchaRef);
                     validateRecaptcha(values.recaptcha)
                         .then((res) => res.json())
                         .then((res) => {
@@ -43,7 +42,6 @@ const ContactForm = () => {
                                     `mailto:${contact.email}?subject=${values.subject}&body=${values.body}`,
                                     '_self'
                                 );
-                                console.log(recaptchaRef);
                             } else {
                                 setAlertVariant('error');
                             }

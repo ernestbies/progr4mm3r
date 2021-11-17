@@ -20,56 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f1ed0ce9-51de-4f3f-b7b5-1e0eece1ae66" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/AboutInfo/AboutInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AboutInfo/AboutInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CompetitionsSection/CompetitionsSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CompetitionsSection/CompetitionsSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmAlert/ConfirmAlert.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmAlert/ConfirmAlert.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ConfirmAlert/ConfirmAlert.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ConfirmAlert/ConfirmAlert.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DiscordIcon/DiscordIcon.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DiscordIcon/DiscordIcon.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HobbyItem/HobbyItem.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HobbyItem/HobbyItem.styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Intro/Intro.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Intro/Intro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/KnowledgeCard/KnowledgeCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/KnowledgeCard/KnowledgeCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LanguageSelector/LanguageSelector.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LanguageSelector/LanguageSelector.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Menu/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Menu/Menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageBox/MessageBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageBox/MessageBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageFaq/MessageFaq.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageFaq/MessageFaq.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MessageItem/MessageItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MessageItem/MessageItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotReleasedProject/NotReleasedProject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotReleasedProject/NotReleasedProject.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/NotReleasedProject/NotReleasedProject.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/NotReleasedProject/NotReleasedProject.styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageContent/PageContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageContent/PageContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PageWrappers/PageWrappers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PageWrappers/PageWrappers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ProjectItem/ProjectItem.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProjectItem/ProjectItem.styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Quote/Quote.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Quote/Quote.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SpecialSection/SpecialSection.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SpecialSection/SpecialSection.styles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/WebsitesSection/WebsitesSection.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebsitesSection/WebsitesSection.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/MainPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/MainPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/about/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/about/About.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact/Contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/Contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/contact/Contact.styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/contact/Contact.styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/hobby/Hobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/hobby/Hobby.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/projects/Projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/Projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/skills/Skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/skills/Skills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/footer/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/navbar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/navbar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/statusReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/statusReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translations/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/translations/pl.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/translations/pl.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/data/contact.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/helpers/fetchData.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/helpers/fetchData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/hobby.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/data/hobby.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/information.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/data/information.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/knowledge.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/data/knowledge.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/data/projects.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/skills.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/data/skills.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CompetitionItem/CompetitionItem.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CompetitionItem/CompetitionItem.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ContactIcon/ContactIcon.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/DiscordIcon/DiscordIcon.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DiscordIcon/DiscordIcon.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WebsiteItem/WebsiteItem.styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WebsiteItem/WebsiteItem.styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/projects/Projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/projects/Projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/data/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/data/projects.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +53,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../personal-website-backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/frontend/node_modules/react-scripts" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -343,7 +300,34 @@
       <workItem from="1634646308041" duration="1442000" />
       <workItem from="1634734173627" duration="3009000" />
       <workItem from="1634803359364" duration="16959000" />
-      <workItem from="1634891764625" duration="13087000" />
+      <workItem from="1634891764625" duration="13796000" />
+      <workItem from="1635152001770" duration="364000" />
+      <workItem from="1635161211184" duration="1253000" />
+      <workItem from="1635417618054" duration="1192000" />
+      <workItem from="1635771236798" duration="178000" />
+      <workItem from="1635845734314" duration="35000" />
+      <workItem from="1635927767902" duration="326000" />
+      <workItem from="1635928152594" duration="1311000" />
+      <workItem from="1635931559579" duration="6000" />
+      <workItem from="1635931642222" duration="63000" />
+      <workItem from="1635931905281" duration="607000" />
+      <workItem from="1635934731523" duration="1349000" />
+      <workItem from="1636019224337" duration="166000" />
+      <workItem from="1636019514388" duration="272000" />
+      <workItem from="1636026755478" duration="945000" />
+      <workItem from="1636366508769" duration="765000" />
+      <workItem from="1636546954604" duration="1696000" />
+      <workItem from="1636627459498" duration="686000" />
+      <workItem from="1636716067880" duration="734000" />
+      <workItem from="1636804121554" duration="270000" />
+      <workItem from="1636805363404" duration="867000" />
+      <workItem from="1636883225632" duration="11000" />
+      <workItem from="1636888234072" duration="1378000" />
+      <workItem from="1636890607317" duration="978000" />
+      <workItem from="1636985883841" duration="7000" />
+      <workItem from="1637056208836" duration="783000" />
+      <workItem from="1637061829172" duration="835000" />
+      <workItem from="1637064583512" duration="1229000" />
     </task>
     <servers />
   </component>
@@ -380,26 +364,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1631619028958" />
-    <state x="686" y="209" key="FileChooserDialogImpl" timestamp="1634894239389">
+    <state x="686" y="209" key="FileChooserDialogImpl" timestamp="1636883234457">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="686" y="209" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1634894239389" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1627042601941">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1627042601941" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1627042601941">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1627042601941" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1627042601941">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1627042601941" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1627042601941">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1627042601941" />
+    <state x="686" y="209" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1636883234457" />
     <state x="509" y="115" key="RollbackChangesDialog" timestamp="1634809123305">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -408,10 +376,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1634205366477" />
-    <state x="370" y="155" width="579" height="624" key="find.popup" timestamp="1634907305564">
+    <state x="306" y="148" width="579" height="624" key="find.popup" timestamp="1637064657861">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="370" y="155" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1634907305564" />
+    <state x="306" y="148" width="579" height="624" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1637064657861" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1632832539330">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

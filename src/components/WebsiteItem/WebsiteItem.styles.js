@@ -13,7 +13,7 @@ export const WebsiteStyledItem = styled.a`
     border: 1px solid #FFA50050;
     text-decoration: none !important;
     position: relative;
-    transition: 1s all;
+    transition: all 1s;
     
     ${({direction}) => direction === 'center' && css`
         z-index: 2;

@@ -19,7 +19,7 @@ export const StyledIcon = styled.a`
     background-image: linear-gradient(${({iconType}) => iconColors[iconType]}, ${({iconType}) => iconColors[iconType]});
     background-repeat: no-repeat;
     background-size: 0% 100%;
-    transition: 1s all ease-in-out; 
+    transition: all 1s ease-in-out; 
     
     &:hover {
         background-size: 100% 100%;

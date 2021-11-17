@@ -24,7 +24,7 @@ export const mainProjects = [
     {
         name: 'Restaurant',
         image: 'images/projects/rms2.png',
-        url: 'https://github.com/ernestbies/restaurant-management',
+        url: 'https://rms-ernestbies.netlify.app',
         color: '#FFFFFF',
         description: {
             en:  'Restaurant Management System is a system that allows you to manage a restaurant (adding, editing and removing products).',
@@ -37,7 +37,7 @@ export const projects = [
     {
         name: 'Media Browser',
         description: {
-            en:  'System for searching information about audiovisual materials. Project implemented as part of an engineering thesis. The application allows you to search and view information about movies, series and people related to the film industry. The application is designed for devices with Android and iOS. The application supports Polish and English.',
+            en: 'System for searching information about audiovisual materials. Project implemented as part of an engineering thesis. The application allows you to search and view information about movies, series and people related to the film industry. The application is designed for devices with Android and iOS. The application supports Polish and English.',
             pl: 'System do wyszukiwania informacji o materiałach audiowizualnych. Projekt realizowany w ramach pracy inżynierskiej. Aplikacja umożliwia wyszukiwanie i przeglądanie informacji o filmach, serialach i osobach związanych z branżą filmową. Aplikacja przeznaczona jest na urządzenia z systemem Android oraz iOS. Obsługuje język polski i angielski.'
         },
         technologies: {
@@ -61,7 +61,7 @@ export const projects = [
     {
         name: 'Personal website',
         description: {
-            en:  'Personal website showing me and my projects. It was the first website I created using React.js. While creating a porfolio website, I learned how to use the JavaScript scripting language and how to design websites with the use of HTML and CSS.',
+            en: 'Personal website showing me and my projects. It was the first website I created using React.js. While creating a porfolio website, I learned how to use the JavaScript scripting language and how to design websites with the use of HTML and CSS.',
             pl: 'Strona przedstawiająca moją osobę oraz moje projekty. Była to pierwsza strona internetowa, którą stworzyłem z wykorzystaniem React.js. Podczas tworzenia strony porfolio uczyłem się jak używać języka skryptowego JavaScript oraz jak projektować strony internetowe z wykorzystaniem HTML oraz CSS.'
         },
         technologies: {
@@ -83,7 +83,7 @@ export const projects = [
     {
         name: 'Forest Żabiec - official website',
         description: {
-            en:  'The official website of the Forest Żabiec football team. The website presents information about the club, reports and details of statistics.',
+            en: 'The official website of the Forest Żabiec football team. The website presents information about the club, reports and details of statistics.',
             pl: 'Oficjalna strona drużyny piłkarskiej Forest Żabiec. Na stronie przedstawione są informacje dotyczące klubu, relacje oraz szczegółowe statystyki.'
         },
         technologies: {
@@ -105,7 +105,7 @@ export const projects = [
     {
         name: 'Restaurant Management System',
         description: {
-            en:  'Restaurant Management System is a system that allows you to manage a restaurant (adding, editing and removing products). The project consists of the frontend and backend layers. Basic HTTP methods such as GET, POST, PUT and DELETE were used in the project. The website contains a form for adding new objects and tables containing individual data about the products on the restaurant menu. The project was created using React.js and Express.js.',
+            en: 'Restaurant Management System is a system that allows you to manage a restaurant (adding, editing and removing products). The project consists of the frontend and backend layers. Basic HTTP methods such as GET, POST, PUT and DELETE were used in the project. The website contains a form for adding new objects and tables containing individual data about the products on the restaurant menu. The project was created using React.js and Express.js.',
             pl: 'Restaurant Management System to system pozwalający na zarządzanie restauracją (dodawanie, edycja oraz usuwanie produktów). Projekt składa się z warstwy frontend oraz backend. W projekcie wykorzystano podstawowe metody HTTP takie jak GET, POST, PUT oraz DELETE. Strona zawiera formularz dodawania nowych obiektów oraz tabele zawierające poszczególne dane dotyczące produktów znajdujących się w menu restauracji. Projekt powstał z wykorzystaniem React.js oraz Express.js.'
         },
         technologies: {
@@ -336,8 +336,8 @@ export const projects = [
     {
         name: 'inspyred',
         description: {
-            en: 'Wykład oraz laboratorium wraz z programami i przykładami dotyczący algorytmów inspirowanych biologią z wykorzystaniem języka programowania Python oraz biblioteki inspyred.',
-            pl: 'Lecture and laboratory with programs and examples on bio-inspired computational intelligence algorithms using the Python programming language and the inspyred library.'
+            en: 'Lecture and laboratory with programs and examples on bio-inspired computational intelligence algorithms using the Python programming language and the inspyred library.',
+            pl: 'Wykład oraz laboratorium wraz z programami i przykładami dotyczący algorytmów inspirowanych biologią z wykorzystaniem języka programowania Python oraz biblioteki inspyred.'
         },
         technologies: {
             desktop: ['Python', 'inspyred', 'IDLE']

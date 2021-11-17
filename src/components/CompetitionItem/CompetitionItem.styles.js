@@ -96,7 +96,7 @@ export const IconWrapper = styled.a`
     margin: 5px;
     border-radius: 50%;
     z-index: 1;
-    transition: 1s all;
+    transition: all 1s;
     
     &:hover {
         border: 1px solid ${({color}) => color + 90};

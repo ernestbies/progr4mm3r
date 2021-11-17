@@ -12,7 +12,7 @@ export const DiscordIconWrapper = styled.div`
     background-image: linear-gradient(#5c64f3, #5c64f3);
     background-repeat: no-repeat;
     background-size: 0% 100%;
-    transition: 1s all ease-in-out; 
+    transition: all 1s ease-in-out; 
     cursor: pointer;
     
     &:hover {

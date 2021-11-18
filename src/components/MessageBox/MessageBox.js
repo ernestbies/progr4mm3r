@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import {formatData, HALL_OF_FAME_MYSTERY, WEBSITE_NAME} from "../../utils/data/information";
+import {formatData, HALL_OF_FAME_MYSTERY} from "../../utils/data/information";
 import MessageItem from "../MessageItem/MessageItem";
 import {fetchPosts, sendPost} from "../../utils/helpers/fetchData";
 import {AiFillLock, AiFillUnlock} from "react-icons/ai";
@@ -208,8 +208,7 @@ const MessageBox = ({passToParent, status, setStatus}) => {
                                     marginLeft: 5,
                                     marginTop: 5,
                                 }}>
-                                    {'> Hall of Fame Console powered by '}&copy; {WEBSITE_NAME} 2021. All rights
-                                    reserved.
+                                    {'> Hall of Fame Console'}
                                 </p>
                                 <p style={{
                                     fontFamily: 'Source Code Pro',
@@ -235,7 +234,7 @@ const MessageBox = ({passToParent, status, setStatus}) => {
                                 marginLeft: 5,
                                 marginTop: 5,
                             }}>
-                                {'> Hall of Fame Console powered by '}&copy; {WEBSITE_NAME} 2021. All rights reserved.
+                                {'> Hall of Fame Console'}
                             </p>
                             <p style={{
                                 fontFamily: 'Source Code Pro',
@@ -286,7 +285,7 @@ const MessageBox = ({passToParent, status, setStatus}) => {
                         fontSize: 10,
                         marginLeft: 5,
                         marginTop: 5
-                    }}>> Message creator for &copy; {WEBSITE_NAME} Hall of Fame Console.</p>
+                    }}>> Message creator for Hall of Fame Console.</p>
                     <p style={{
                         fontFamily: 'Source Code Pro',
                         fontWeight: 700,

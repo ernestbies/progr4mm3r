@@ -1,6 +1,6 @@
 import React from "react";
 import CustomCaret from "../CustomCaret/CustomCaret";
-import {hallOfFameFaq, NOT_RELEASED_PROJECT, statusList, WEBSITE_NAME} from "../../utils/data/information";
+import {hallOfFameFaq, NOT_RELEASED_PROJECT, statusList} from "../../utils/data/information";
 import {BoxQaA, ColoredText, CommandText, FaqContainer, FaqHeader, TextQaA} from "./MessageFaq.styles";
 
 const MessageFaq = () => {
@@ -38,7 +38,7 @@ const MessageFaq = () => {
             <CommandText color={'orange'} marginTop={-15}>~/{NOT_RELEASED_PROJECT}/{'introduction'}
                 <ColoredText style={{color: 'white'}}>$ cat hall_of_fame_faq.txt</ColoredText>
             </CommandText>
-            <CommandText fontSize={'small'} marginBottom={25} marginTop={-15}>&copy; {WEBSITE_NAME} Hall of Fame FAQ</CommandText>
+            <CommandText fontSize={'small'} marginBottom={25} marginTop={-15}>{'> Hall of Fame FAQ'}</CommandText>
             {
                 renderQaA(hallOfFameFaq)
             }

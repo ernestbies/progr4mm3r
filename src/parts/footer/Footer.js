@@ -1,12 +1,11 @@
 import React from 'react';
 import {FooterText, StyledFooter} from "./Footer.styles";
-import {WEBSITE_NAME} from "../../utils/data/information";
 
 const Footer = () => {
     return (
         <StyledFooter>
             <FooterText>
-                &copy; {WEBSITE_NAME} 2021. All rights reserved.
+                App developed by &copy; ernestbies.com 2021. All rights reserved.
             </FooterText>
         </StyledFooter>
     );

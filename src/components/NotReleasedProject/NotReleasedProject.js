@@ -11,7 +11,7 @@ const NotReleasedProject = () => {
                           whiteText={'click_here_to'}
                           coloredText={'cd ' + NOT_RELEASED_PROJECT}
                           link={'/hall-of-fame'}
-                          quote={'quote_hall_of_fame'}
+                          quote={'hall-of-fame'}
             />
         </BoxElement>
         <ClipPathElement>

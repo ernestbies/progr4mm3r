@@ -1,4 +1,3 @@
-export const WEBSITE_NAME = 'ernestbies.com';
 export const WEBSITE_URL = 'https://ernestbies.netlify.app';
 export const BACKEND_URL = 'https://ernestbies-backend.herokuapp.com';
 export const HALL_OF_FAME_MYSTERY = 'ZXJuZXN0Ymllc0BzZWNyZXRfMDE=';

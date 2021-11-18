@@ -149,6 +149,8 @@ export const IntroHeader = styled.div`
     opacity: 0.1;
     animation: ${reveal} 5s forwards;
     margin-top: 100px;
+    justify-content: center;
+    align-items: center;
 `;
 
 export const IntroSubheader = styled.div`
@@ -164,7 +166,10 @@ export const IntroTitle = styled.p`
     font-size: 60px;
     font-family: 'Blender Pro Bold', serif; 
     color: white;
-    margin-top: -20px;
+    
+    @media (max-width: 360px) {
+        font-size: 50px;
+    }
 `;
 
 export const IntroSubtitle = styled.span`

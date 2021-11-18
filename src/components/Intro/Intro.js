@@ -9,7 +9,7 @@ import {
     Subtitle
 } from "./Intro.styles";
 import {Logo} from "../Logo/Logo";
-import {WEBSITE_NAME, shortInfo, introduction} from "../../utils/data/information";
+import {shortInfo, introduction} from "../../utils/data/information";
 import {useTranslation} from "react-i18next";
 
 const Intro = () => {
@@ -34,7 +34,7 @@ const Intro = () => {
             <IntroWrapper>
                 <IntroHeader>
                     <Logo width={60} height={60} style={{marginRight: 20}}/>
-                    <IntroTitle>{WEBSITE_NAME}</IntroTitle>
+                    <IntroTitle>{'Ernest Bieś'}</IntroTitle>
                 </IntroHeader>
                 <IntroSubheader>
                     {

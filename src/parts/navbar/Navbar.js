@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react';
 import Scrollspy from 'react-scrollspy'
 import "./Navbar.styles.css";
-import {WEBSITE_NAME, WEBSITE_URL} from "../../utils/data/information";
+import {WEBSITE_URL} from "../../utils/data/information";
 import {useTranslation} from "react-i18next";
 import LanguageSelector from "../../components/LanguageSelector/LanguageSelector";
 import {navbarThemesTypes, NavbarLink, SpecialNavbarLink, StyledNav, WebsiteHeader} from "./Navbar.styles";
@@ -98,7 +98,7 @@ const Navbar = ({history, links, languageSelector, enableContent, defaultTheme})
         <StyledNav ref={navbar} currentTheme={currentTheme}>
             <AnimationsHandler activeSection={findActiveSection(viewState)}/>
             <WebsiteHeader title={document.title} currentTheme={currentTheme} onClick={() => redirect()}>
-                <Logo style={{marginRight: 10}} lightMode={currentTheme === navbarThemesTypes.light}/>{WEBSITE_NAME}
+                <Logo style={{marginRight: 10}} lightMode={currentTheme === navbarThemesTypes.light}/>{'Ernest Bieś'}
             </WebsiteHeader>
             <Scrollspy className={'nav-menu'}
                        ref={scrollSpy}

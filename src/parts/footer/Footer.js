@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <StyledFooter>
             <FooterText>
-                App developed by &copy; ernestbies.com 2021. All rights reserved.
+                App developed by &copy; ernestbies.netlify.app 2021. All rights reserved.
             </FooterText>
         </StyledFooter>
     );

@@ -1,4 +1,4 @@
-export const WEBSITE_URL = 'https://ernestbies.netlify.app';
+export const WEBSITE_URL = 'https://ebies.netlify.app';
 export const BACKEND_URL = 'https://ernestbies-backend.herokuapp.com';
 export const HALL_OF_FAME_MYSTERY = 'ZXJuZXN0Ymllc0BzZWNyZXRfMDE=';
 export const RECAPTCHA_SITE_KEY = '6LdCr7saAAAAAMgbDCtCl4u6GQ_WAba9ZkZgrFd1';

@@ -51,7 +51,7 @@ export const hobby = {
             id: 1,
             name: 'E-sport',
             quote: 'Ćwicz, aż twoi idole staną się twoimi rywalami...',
-            text: 'E-sportem i grami komputerowymi interesowałem się od dziecka. Gry e-sportowe związane są z emocjami, rywalizacją i chęcią ciągłego doskonalenia swoich umiejętności. Rzeczy te nie są mi obce. Rywalizowałem z najlepszymi graczami z całego świata w takich grach jak Counter Strike, H1Z1, Fortnite, Apex Legends czy VALORANT. E-sport nauczył mnie chęci ciągłego rozwoju, wyciągania wniosków i pracy zespołowej, która jest kluczowym elementem każdej gry e-sportowej. Podczas gier on-line miałam również okazję poznać wiele osób z całego świata, z którymi na co dzień mam bardzo dobry kontakt.',
+            text: 'E-sportem i grami komputerowymi interesowałem się od dziecka. Gry e-sportowe związane są z emocjami, rywalizacją i chęcią ciągłego doskonalenia swoich umiejętności. Rzeczy te nie są mi obce. Rywalizowałem z najlepszymi graczami z całego świata w takich grach jak Counter Strike, H1Z1, Fortnite, Apex Legends czy VALORANT. E-sport nauczył mnie chęci ciągłego rozwoju, wyciągania wniosków i pracy zespołowej, która jest kluczowym elementem każdej gry e-sportowej. Podczas gier on-line miałem również okazję poznać wiele osób z całego świata, z którymi na co dzień mam bardzo dobry kontakt.',
             image: '/images/hobby/esports.jpg',
             color: 'red',
             keywords: ['poznawaj', 'rywalizuj', 'zwyciężaj']

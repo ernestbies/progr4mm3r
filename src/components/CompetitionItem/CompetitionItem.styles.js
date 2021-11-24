@@ -137,7 +137,7 @@ export const CompetitionTitle = styled.span`
     color: #C0C0C0;  
     
     @media (max-width: 480px) {
-        font-size: 12px;
+        font-size: 11px;
     }
 `;
 
@@ -154,7 +154,7 @@ export const CompetitionSubtitle = styled.span`
     font-style: italic;
     
     @media (max-width: 480px) {
-        font-size: 12px;
+        font-size: 11px;
     }
 `;
 
@@ -172,7 +172,7 @@ export const ProjectDesc = styled.p`
     }
     
     @media (max-width: 480px) {
-        font-size: 11px;
+        font-size: 10px;
     }
 `;
 

@@ -15,9 +15,9 @@ const Skills = () => {
             <SectionBadge position={'end'} content={t('skills')} signColor={'#1d2026'} specialNumber={3}/>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <p className={'inform-text'}>{t('skills_text')}
-                <code className={'scale-text'}>{t('programming_languages2')}</code>
+                <span className={'scale-text'}>{t('programming_languages2')}</span>
                     {' ' + t('and') + ' '}
-                <code className={'scale-text'}>{t('it_technologies2')}</code>{'.'}</p>
+                <span className={'scale-text'}>{t('it_technologies2')}</span>{'.'}</p>
                 <div style={{width: 100, height: 1, backgroundColor: 'orange'}}/>
             </div>
 

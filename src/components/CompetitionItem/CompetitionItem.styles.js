@@ -125,6 +125,7 @@ export const ProjectTitle = styled.p`
     padding-left: 7px;
     margin-bottom: 20px;
     text-align: left;
+    color: white;
     
     @media (max-width: 480px) {
         font-size: 20px;

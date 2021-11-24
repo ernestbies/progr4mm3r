@@ -25,9 +25,9 @@ const Projects = () => {
             <SectionBadge position={'end'} content={t('projects')} subtitle={t('main')} specialNumber={2}/>
             <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
                 <p className={'inform-text'}>{t('quote_projects_list')}
-                    <a className={'scale-text ref-page'} href={contact.github} target={'_blank'} rel={'noreferrer'}>{'GitHub'}</a>
+                    <a className={'scale-text'} href={contact.github} target={'_blank'} rel={'noreferrer'}>{'GitHub'}</a>
                     {' '+ t('and3') + ' '}
-                    <a className={'scale-text ref-page'} href={contact.bitbucket} target={'_blank'} rel={'noreferrer'}>{'Bitbucket'}
+                    <a className={'scale-text'} href={contact.bitbucket} target={'_blank'} rel={'noreferrer'}>{'Bitbucket'}
                     </a>{'.'}
                     <br/>
                     <span style={{color: 'orange'}}>{t('note') + ': '}</span>{t('private_repo_info')}

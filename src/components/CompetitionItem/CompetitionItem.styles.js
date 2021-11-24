@@ -125,12 +125,20 @@ export const ProjectTitle = styled.p`
     padding-left: 7px;
     margin-bottom: 20px;
     text-align: left;
+    
+    @media (max-width: 480px) {
+        font-size: 20px;
+    }
 `;
 
 export const CompetitionTitle = styled.span`
     font-size: 14px;
     font-family: Roboto Condensed, serif;
     color: #C0C0C0;  
+    
+    @media (max-width: 480px) {
+        font-size: 12px;
+    }
 `;
 
 export const CompetitionInfo = styled.div`
@@ -144,6 +152,10 @@ export const CompetitionSubtitle = styled.span`
     font-family: Roboto Condensed, serif;
     color: grey;    
     font-style: italic;
+    
+    @media (max-width: 480px) {
+        font-size: 12px;
+    }
 `;
 
 export const ProjectDesc = styled.p`
@@ -157,6 +169,10 @@ export const ProjectDesc = styled.p`
     
     @media (max-width: 1024px) {
         width: 100%;
+    }
+    
+    @media (max-width: 480px) {
+        font-size: 11px;
     }
 `;
 

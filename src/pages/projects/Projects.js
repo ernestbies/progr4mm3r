@@ -6,7 +6,6 @@ import {useTranslation} from "react-i18next";
 import SectionBadge from "../../components/SectionBadge/SectionBadge";
 import WebsitesSection from "../../components/WebsitesSection/WebsitesSection";
 import './Projects.css'
-import contact from "../../utils/data/contact";
 import CompetitionsSection from "../../components/CompetitionsSection/CompetitionsSection";
 
 const Projects = () => {

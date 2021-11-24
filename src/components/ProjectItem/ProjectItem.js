@@ -85,8 +85,8 @@ const ProjectItem = ({image, color, name, description, technologies, os, languag
                         paddingLeft: 7,
                         fontFamily: 'Roboto Condensed',
                         margin: 0,
-                        lineHeight: '30px',
-                        fontSize: 25
+                        lineHeight: '22px',
+                        fontSize: 22
                     }}>{name}</p>
                 </div>
                 <p style={{

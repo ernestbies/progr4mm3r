@@ -16,7 +16,7 @@ const HobbyItem = ({id, image, quote, name, text, color, keywords}) => {
             <div className={'carousel-content'}>
                 <div style={{display: 'flex', textAlign: 'center', alignItems: 'center'}}>
                     <div style={{width: 5, height: 30, backgroundColor: color}}/>
-                    <p style={{paddingLeft: 7, fontFamily: 'Roboto Condensed', margin: 0}}>{name}</p>
+                    <p style={{paddingLeft: 7, fontSize: 22, lineHeight: '22px', fontFamily: 'Roboto Condensed', margin: 0}}>{name}</p>
                 </div>
                 <p style={{
                     fontSize: 14,

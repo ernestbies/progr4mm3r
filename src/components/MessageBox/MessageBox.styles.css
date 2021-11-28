@@ -1,0 +1,13 @@
+.msg-input-box {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    flex: 1;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .msg-input-box {
+        flex-direction: column;
+    }
+}

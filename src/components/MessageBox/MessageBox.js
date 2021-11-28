@@ -277,7 +277,7 @@ const MessageBox = ({passToParent, status, setStatus}) => {
                         </div>
                 }
             </div>
-            <div style={{display: 'flex', flexDirection: 'row', backgroundColor: 'black', flex: 1}}>
+            <div className={'msg-input-box'}>
                 <div style={{flex: 4}}>
                     <p style={{
                         fontFamily: 'Source Code Pro',
@@ -371,8 +371,7 @@ const MessageBox = ({passToParent, status, setStatus}) => {
                         <button onClick={() => confirmChanges()}
                                 style={{
                                     width: 80,
-                                    marginLeft: 10,
-                                    marginRight: 10,
+                                    margin: 10,
                                     fontFamily: 'Source Code Pro',
                                     fontSize: 11
                                 }}>

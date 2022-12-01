@@ -93,5 +93,9 @@
   "subject": "Subject",
   "body": "Message content...",
   "send_msg": "Send message",
-  "clear": "Clear"
+  "clear": "Clear",
+  "important": "IMPORTANT! ",
+  "pageInfo": "This page is no longer developed and updated. All current information about me can be found on my website - ",
+  "appDevelopedBy": "App developed by",
+  "allRightsReserved": "All rights reserved"
 }

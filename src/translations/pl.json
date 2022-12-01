@@ -93,5 +93,9 @@
   "subject": "Temat wiadomości",
   "body": "Treść wiadomości...",
   "send_msg": "Wyślij wiadomość",
-  "clear": "Wyczyść"
+  "clear": "Wyczyść",
+  "important": "WAŻNE! ",
+  "pageInfo": "Strona ta nie jest już rozwijana i aktualizowana. Wszystkie aktualne informacje o mnie znajdują się na mojej stronie internetowej - ",
+  "appDevelopedBy": "Strona stworzona przez",
+  "allRightsReserved": "Wszelkie prawa zastrzeżone"
 }

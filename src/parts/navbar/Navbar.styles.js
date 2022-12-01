@@ -1,32 +1,32 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 // Available themes (navigation bar)
 export const navbarThemesTypes = {
-    dark: 'dark',
-    light: 'light',
-    special: 'special'
-}
+    dark: "dark",
+    light: "light",
+    special: "special",
+};
 
 // Available themes - properties (navigation bar)
 export const navbarThemes = {
     dark: {
-        background: 'black',
-        color: 'orange',
-        fontColor: 'white',
-        additionalColor: 'white'
+        background: "black",
+        color: "orange",
+        fontColor: "white",
+        additionalColor: "white",
     },
     light: {
-        background: 'white',
-        color: 'red',
-        fontColor: 'black',
-        additionalColor: 'black'
+        background: "white",
+        color: "red",
+        fontColor: "black",
+        additionalColor: "black",
     },
     special: {
-        background: '#000015',
-        color: 'red',
-        fontColor: 'black',
-        additionalColor: 'orange'
-    }
+        background: "#000015",
+        color: "red",
+        fontColor: "black",
+        additionalColor: "orange",
+    },
 };
 
 const changeLetters = keyframes`
@@ -99,29 +99,30 @@ const StyledNav = styled.nav`
     position: fixed;
     justify-content: center;
     text-align: center;
-    background-color: ${({currentTheme}) => navbarThemes[currentTheme].background};
+    background-color: ${({ currentTheme }) =>
+        navbarThemes[currentTheme].background};
     padding-top: 15px;
-    z-index: 2;
-    
+    z-index: 999;
+
     @media (max-width: 992px) {
         padding-bottom: 15px;
     }
 `;
 
 const WebsiteHeader = styled.div`
-    font-family: 'Open Sans', serif;
+    font-family: "Open Sans", serif;
     font-size: 16px;
     font-weight: 300;
-    color: ${({currentTheme}) => navbarThemes[currentTheme].color};
+    color: ${({ currentTheme }) => navbarThemes[currentTheme].color};
     display: inline;
     position: absolute;
     left: 50px;
     cursor: pointer;
-    
+
     &:hover {
-        color: ${({currentTheme}) => navbarThemes[currentTheme].color};
+        color: ${({ currentTheme }) => navbarThemes[currentTheme].color};
     }
-    
+
     @media (max-width: 992px) {
         position: static;
     }
@@ -129,18 +130,18 @@ const WebsiteHeader = styled.div`
 
 const NavbarLink = styled.div`
     cursor: pointer;
-    font-family: 'Open Sans', serif;
+    font-family: "Open Sans", serif;
     font-weight: 300;
     font-size: 16px;
     margin-bottom: -15px;
-    color: ${({currentTheme}) => navbarThemes[currentTheme].fontColor};
+    color: ${({ currentTheme }) => navbarThemes[currentTheme].fontColor};
     width: 7.5rem;
-    
+
     &:hover {
         color: orange;
         text-decoration: none;
-    }   
-        
+    }
+
     @media (max-width: 992px) {
         position: static;
         margin-bottom: 0;
@@ -156,21 +157,16 @@ const SpecialNavbarLink = styled(NavbarLink)`
     font-family: Source Code Pro, serif;
     text-transform: uppercase;
     animation: ${changeBorderTheme} 5s infinite;
-    
+
     &:after {
         content: "";
         animation: ${changeLetters} 8s infinite ease-in-out;
     }
-    
+
     &:before {
         content: "";
         animation: ${showHide} 8s infinite ease-in-out;
     }
 `;
 
-export {
-    StyledNav,
-    WebsiteHeader,
-    NavbarLink,
-    SpecialNavbarLink
-}
+export { StyledNav, WebsiteHeader, NavbarLink, SpecialNavbarLink };

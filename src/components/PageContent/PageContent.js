@@ -7,12 +7,10 @@ import React from 'react';
 import { SectionWrapper } from '../PageWrappers/PageWrappers';
 import Menu from '../Menu/Menu';
 import NotReleasedProject from '../NotReleasedProject/NotReleasedProject';
-import InfoContainer from '../InfoContainer/InfoContainer';
 
 const PageContent = () => {
     return (
         <SectionWrapper>
-            <InfoContainer />
             <About />
             <Projects />
             <Skills />

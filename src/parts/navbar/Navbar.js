@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Scrollspy from 'react-scrollspy';
 import './Navbar.styles.css';
-import { WEBSITE_URL } from '../../utils/information/site';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import {
@@ -56,11 +55,7 @@ const Navbar = ({ history, links, languageSelector, defaultTheme }) => {
 
     const redirect = () => {
         if (typeof window !== 'undefined') {
-            if (history.location.pathname !== '/') {
-                window.location.replace(WEBSITE_URL);
-            } else {
-                window.scrollTo(0, 0);
-            }
+            window.scrollTo(0, 0);
         }
     };
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {infoTypes} from "./AboutInfo";
 import PropTypes from 'prop-types';
+import { infoTypes } from '../../utils/data/information';
 
 export const AboutInfoContent = styled.div`
     display: inline-block;
@@ -22,12 +22,14 @@ export const AboutInfoContent = styled.div`
 
 export const InfoSection = styled.p`
     color: white;
-    font-family: ${({consoleText}) => consoleText ? 'Source Code Pro' : 'Open Sans'}, serif;
+    font-family: ${({ consoleText }) =>
+            consoleText ? 'Source Code Pro' : 'Open Sans'},
+        serif;
     margin-bottom: 10px;
 `;
 
 InfoSection.propTypes = {
-    consoleText: PropTypes.bool
+    consoleText: PropTypes.bool,
 };
 
 export const InfoText = styled.span`
@@ -35,29 +37,30 @@ export const InfoText = styled.span`
 `;
 
 export const ColoredText = styled.span`
-    color: ${({color}) => color ?? 'orange'};
-    font-weight: ${({fontWeight}) => fontWeight ?? '300'};
+    color: ${({ color }) => color ?? 'orange'};
+    font-weight: ${({ fontWeight }) => fontWeight ?? '300'};
 `;
 
 ColoredText.propTypes = {
     color: PropTypes.string,
-    fontWeight: PropTypes.string
+    fontWeight: PropTypes.string,
 };
 
 export const InfoHeader = styled.span`
     color: orange;
     font-family: Roboto Condensed, serif;
     font-weight: bold;
-    
+
     &:before {
-        content: "> ${({headerType}) => infoTypes.header + infoTypes.connector + headerType}";
+        content: '> ${({ headerType }) =>
+            infoTypes.header + infoTypes.connector + headerType}';
     }
-    
+
     &:after {
-        content: ":";
+        content: ':';
     }
 `;
 
 InfoHeader.propTypes = {
-    headerType: PropTypes.string.isRequired
+    headerType: PropTypes.string.isRequired,
 };

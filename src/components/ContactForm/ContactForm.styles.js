@@ -19,7 +19,7 @@ export const ContactInput = styled.input`
     padding: 3px;
     padding-left: 10px;
     outline: none;
-    
+
     &:focus {
         border-color: red;
     }
@@ -37,7 +37,7 @@ export const ContactTextArea = styled.textarea`
     font-size: 15px;
     resize: none;
     outline: none;
-    
+
     &:focus {
         border-color: red;
     }
@@ -51,7 +51,7 @@ export const ButtonsContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    
+
     @media (max-width: 480px) {
         flex-direction: column;
     }
@@ -69,15 +69,15 @@ export const ContactSubmitButton = styled.button`
     background: linear-gradient(to right, darkred 50%, transparent 50%);
     background-size: 200% 100%;
     background-position: right bottom;
-    transition: all .5s ease-out;
-    color: white;  
-    margin-bottom: 20px;  
+    transition: all 0.5s ease-out;
+    color: white;
+    margin-bottom: 20px;
     position: relative;
-    
+
     &:hover {
-        background-position: left bottom; 
+        background-position: left bottom;
     }
-    
+
     &:disabled {
         color: grey;
     }
@@ -93,21 +93,13 @@ export const ContactSubmitButtonSign = styled.div`
     border-bottom: 2px solid darkred;
 `;
 
-export const Colored = styled.span`color: red;`
-
-export const ReCaptchaWrapper = styled.div`
-    margin: 0 auto; 
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
-    @media (max-width: 992px) { 
-        width: 232px;
-    }
+export const Colored = styled.span`
+    color: red;
 `;
 
 export const TextError = styled.p`
     color: white;
     font-family: Roboto Condensed, serif;
-    font-size: 12px;  
-    margin: 5px;  
+    font-size: 12px;
+    margin: 5px;
 `;

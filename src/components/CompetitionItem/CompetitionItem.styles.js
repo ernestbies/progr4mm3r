@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const StyledCompetitionItem = styled.div`
-    display: flex;    
+    display: flex;
     flex-wrap: wrap;
 
     @media (max-width: 1024px) {
@@ -13,22 +13,22 @@ export const StyledCompetitionItem = styled.div`
 export const ProjectImage = styled.div`
     width: 576px;
     height: 324px;
-    background-image: url(${({image}) => image});
-    background-size: contain;
+    background-image: url(${({ image }) => image});
+    background-size: cover;
     background-color: black;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 20px;
-    border: 1px solid #FFA50050;
+    border: 1px solid #ffa50050;
     margin-bottom: 30px;
     align-self: center;
-    
+
     @media (max-width: 512px) {
-       height: 200px;
+        height: 200px;
     }
-     
+
     @media (max-width: 396px) {
-       height: 150px;
+        height: 150px;
     }
     flex: 1;
 `;
@@ -39,8 +39,8 @@ export const ProjectImageWrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex: 2;
-    order: ${({order}) => order === 'left' ? 0 : 1};
-    
+    order: ${({ order }) => (order === 'left' ? 0 : 1)};
+
     @media (max-width: 1024px) {
         order: 0;
     }
@@ -53,9 +53,8 @@ export const ProjectInfo = styled.div`
     align-items: start;
     padding: 30px;
     width: 100%;
-    order: ${({order}) => order === 'left' ? 1 : 0}
-    
-    @media (max-width: 1024px) {
+    order: ${({ order }) => (order === 'left' ? 1 : 0)} @media
+        (max-width: 1024px) {
         padding: 0;
         order: 1;
     }
@@ -97,9 +96,9 @@ export const IconWrapper = styled.a`
     border-radius: 50%;
     z-index: 1;
     transition: all 1s;
-    
+
     &:hover {
-        border: 1px solid ${({color}) => color + 90};
+        border: 1px solid ${({ color }) => color + 90};
     }
 `;
 
@@ -126,7 +125,7 @@ export const ProjectTitle = styled.p`
     margin-bottom: 20px;
     text-align: left;
     color: white;
-    
+
     @media (max-width: 480px) {
         font-size: 20px;
     }
@@ -135,8 +134,8 @@ export const ProjectTitle = styled.p`
 export const CompetitionTitle = styled.span`
     font-size: 14px;
     font-family: Roboto Condensed, serif;
-    color: #C0C0C0;  
-    
+    color: #c0c0c0;
+
     @media (max-width: 480px) {
         font-size: 11px;
     }
@@ -151,9 +150,9 @@ export const CompetitionInfo = styled.div`
 export const CompetitionSubtitle = styled.span`
     font-size: 14px;
     font-family: Roboto Condensed, serif;
-    color: grey;    
+    color: grey;
     font-style: italic;
-    
+
     @media (max-width: 480px) {
         font-size: 11px;
     }
@@ -167,11 +166,11 @@ export const ProjectDesc = styled.p`
     text-align: left;
     margin-top: 20px;
     width: 90%;
-    
+
     @media (max-width: 1024px) {
         width: 100%;
     }
-    
+
     @media (max-width: 480px) {
         font-size: 10px;
     }

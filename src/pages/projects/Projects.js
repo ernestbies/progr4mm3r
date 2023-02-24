@@ -51,24 +51,6 @@ const Projects = () => {
                     >
                         {'GitHub'}
                     </a>
-                    {', '}
-                    <a
-                        className={'scale-text ref-page'}
-                        href={contact.bitbucket}
-                        target={'_blank'}
-                        rel={'noreferrer'}
-                    >
-                        {'Bitbucket'}
-                    </a>
-                    {` ${t('and')} ${t('my')} `}
-                    <a
-                        className={'scale-text ref-page'}
-                        href={contact.website}
-                        target={'_blank'}
-                        rel={'noreferrer'}
-                    >
-                        {t('website')}
-                    </a>
                     {'.'}
                 </p>
                 <div

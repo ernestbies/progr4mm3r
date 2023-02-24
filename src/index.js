@@ -4,35 +4,31 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {I18nextProvider} from 'react-i18next';
+import { I18nextProvider } from 'react-i18next';
 import i18next from 'i18next';
 import common_en from './translations/en.json';
 import common_pl from './translations/pl.json';
-import {BrowserRouter as Router} from 'react-router-dom';
-import {Provider} from 'react-redux';
-import store from './store/store';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 i18next.init({
-    interpolation: {escapeValue: false},
+    interpolation: { escapeValue: false },
     lng: localStorage.getItem('language') ?? 'en',
     resources: {
         en: {
-            common: common_en
+            common: common_en,
         },
         pl: {
-            common: common_pl
+            common: common_pl,
         },
     },
 });
 
 ReactDOM.render(
-    <Provider store={store}>
-        <I18nextProvider i18n={i18next}>
-            <Router>
-                <App/>
-            </Router>
-        </I18nextProvider>
-    </Provider>,
+    <I18nextProvider i18n={i18next}>
+        <Router>
+            <App />
+        </Router>
+    </I18nextProvider>,
     document.getElementById('root')
 );
 

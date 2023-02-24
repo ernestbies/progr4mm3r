@@ -1,9 +1,9 @@
 import renderer from 'react-test-renderer';
-import Avatar from "./Avatar";
-import React from "react";
+import Avatar from './Avatar';
+import React from 'react';
 
-jest.mock("react-i18next", () => ({
-    useTranslation: () => ({ t: key => key }),
+jest.mock('react-i18next', () => ({
+    useTranslation: () => ({ t: (key) => key }),
 }));
 
 describe('avatar tests', () => {
@@ -12,7 +12,7 @@ describe('avatar tests', () => {
 
     beforeEach(() => {
         avatar = renderer.create(
-            <Avatar width={200} height={200} src={'images/me.png'}/>
+            <Avatar width={200} height={200} src={'images/avatar.png'} />
         );
         tree = avatar.toJSON();
     });
@@ -33,6 +33,6 @@ describe('avatar tests', () => {
     });
 
     afterAll(() => {
-       console.info('Tests finished')
+        console.info('Tests finished');
     });
 });

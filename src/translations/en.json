@@ -59,7 +59,6 @@
     "alert_success_text": "The verification was successful. You can now send an email.",
     "alert_error_topic": "Verification error",
     "alert_error_text": "An error occurred while validating the data. Please try again.",
-    "hall-of-fame": "Hall of Fame",
     "click_here_to": "click here to",
     "contact_info": "Thank you for your interest,",
     "page_not_found": "Page not found",
@@ -91,11 +90,11 @@
     "competitions2": "competitions",
     "subject_validation": "Subject is required.",
     "body_validation": "Message content is required.",
-    "recaptcha_validation": "Recaptcha validation is required.",
     "subject": "Subject",
     "body": "Message content...",
     "send_msg": "Send message",
     "clear": "Clear",
     "appDevelopedBy": "App developed by",
-    "allRightsReserved": "All rights reserved"
+    "allRightsReserved": "All rights reserved",
+    "my-website": "My website"
 }

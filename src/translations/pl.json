@@ -59,7 +59,6 @@
     "alert_success_text": "Weryfikacja przebiegła pomyślnie. Możesz teraz wysłać wiadomość e-mail.",
     "alert_error_topic": "Błąd weryfikacji",
     "alert_error_text": "Wystąpił błąd podczas weryfikacji danych. Spróbuj ponownie.",
-    "hall-of-fame": "Sala sławy",
     "click_here_to": "kliknij aby wykonać",
     "contact_info": "Dziękuję za zainteresowanie,",
     "page_not_found": "Zasób nieznaleziony",
@@ -91,11 +90,11 @@
     "competitions2": "konkursach",
     "subject_validation": "Temat wiadomości jest wymagany.",
     "body_validation": "Treść wiadomości jest wymagana.",
-    "recaptcha_validation": "Wymagana jest weryfikacja Recaptcha.",
     "subject": "Temat wiadomości",
     "body": "Treść wiadomości...",
     "send_msg": "Wyślij wiadomość",
     "clear": "Wyczyść",
     "appDevelopedBy": "Strona stworzona przez",
-    "allRightsReserved": "Wszelkie prawa zastrzeżone"
+    "allRightsReserved": "Wszelkie prawa zastrzeżone",
+    "my-website": "Moja strona internetowa"
 }

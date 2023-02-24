@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Scrollspy from 'react-scrollspy';
 import './Navbar.styles.css';
-import { WEBSITE_URL } from '../../utils/data/information';
+import { WEBSITE_URL } from '../../utils/information/site';
 import { useTranslation } from 'react-i18next';
 import LanguageSelector from '../../components/LanguageSelector/LanguageSelector';
 import {
@@ -32,9 +32,11 @@ const Navbar = ({ history, links, languageSelector, defaultTheme }) => {
     const prevTheme = prevThemeRef.current;
 
     useEffect(() => {
-        window.addEventListener('scroll', changeNavbar, { passive: true });
+        typeof window !== 'undefined' &&
+            window.addEventListener('scroll', changeNavbar, { passive: true });
         return () => {
-            window.removeEventListener('scroll', changeNavbar);
+            typeof window !== 'undefined' &&
+                window.removeEventListener('scroll', changeNavbar);
         };
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
@@ -46,15 +48,19 @@ const Navbar = ({ history, links, languageSelector, defaultTheme }) => {
     }, [currentTheme]);
 
     const scrollTo = (id) => {
-        const section = document.getElementById(id);
-        section && window.scrollTo(0, section.offsetTop);
+        if (typeof window !== 'undefined') {
+            const section = document.getElementById(id);
+            section && window.scrollTo(0, section.offsetTop);
+        }
     };
 
     const redirect = () => {
-        if (history.location.pathname !== '/') {
-            window.location.replace(WEBSITE_URL);
-        } else {
-            window.scrollTo(0, 0);
+        if (typeof window !== 'undefined') {
+            if (history.location.pathname !== '/') {
+                window.location.replace(WEBSITE_URL);
+            } else {
+                window.scrollTo(0, 0);
+            }
         }
     };
 
@@ -127,7 +133,7 @@ const Navbar = ({ history, links, languageSelector, defaultTheme }) => {
                     style={{ marginRight: 10 }}
                     lightMode={currentTheme === navbarThemesTypes.light}
                 />
-                {'Ernest Bieś'}
+                {'Programm3r'}
             </WebsiteHeader>
             <Scrollspy
                 className={'nav-menu'}

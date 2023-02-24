@@ -1,9 +1,9 @@
 {
-  "short_name": "Personal website",
-  "name": "Ernest Bieś - personal website",
-  "icons": [],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+    "short_name": "Programm3r",
+    "name": "Programm3r - portfolio creator",
+    "icons": [],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
 }

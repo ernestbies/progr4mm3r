@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const reveal = keyframes`
     0% {
@@ -10,7 +10,7 @@ const reveal = keyframes`
     }
 `;
 
-const showSubtitles = subtitles => keyframes`
+const showSubtitles = (subtitles) => keyframes`
     0% {
         content: "${subtitles?.about}";
         opacity: 0;
@@ -112,8 +112,8 @@ export const IntroWrapper = styled.div`
     left: 0;
     top: 80px;
     width: 100%;
-    height: 100%;  
-    
+    height: 100%;
+
     @media (max-width: 480px) {
         transform: scale(0.6);
     }
@@ -134,7 +134,7 @@ export const StyledVideo = styled.video`
     height: 100%;
     width: 100%;
     filter: brightness(40%);
-    
+
     @media (max-width: 720px) {
         width: inherit;
         height: 500px;
@@ -160,13 +160,15 @@ export const IntroSubheader = styled.div`
     opacity: 0.1;
     animation: ${reveal} 5s forwards;
     animation-delay: 2s;
+    margin-top: 16px;
 `;
 
 export const IntroTitle = styled.p`
     font-size: 60px;
-    font-family: 'Blender Pro Bold', serif; 
+    font-family: 'Blender Pro Bold', serif;
     color: white;
-    
+    margin-bottom: 0px;
+
     @media (max-width: 360px) {
         font-size: 50px;
     }
@@ -174,21 +176,22 @@ export const IntroTitle = styled.p`
 
 export const IntroSubtitle = styled.span`
     font-size: 20px;
-    font-family: 'Blender Pro Bold', serif; 
-    color: ${({color}) => color};
+    font-family: 'Blender Pro Bold', serif;
+    color: ${({ color }) => color};
     white-space: pre;
     margin-bottom: 80px;
 `;
 
 export const Subtitle = styled.p`
     font-size: 18px;
-    font-family: 'Blender Pro Bold', serif; 
+    font-family: 'Blender Pro Bold', serif;
     color: silver;
     height: 15px;
-    
+
     &:before {
-        content: "";
-        animation: ${({subtitles}) => showSubtitles(subtitles)} 25s infinite ease-in-out;
+        content: '';
+        animation: ${({ subtitles }) => showSubtitles(subtitles)} 25s infinite
+            ease-in-out;
         animation-delay: 3s;
     }
 `;
@@ -196,7 +199,7 @@ export const Subtitle = styled.p`
 export const Quote = styled.p`
     user-select: none;
     font-size: 15px;
-    font-family: 'Roboto Condensed', serif; 
+    font-family: 'Roboto Condensed', serif;
     color: white;
     height: 15px;
     letter-spacing: 1px;

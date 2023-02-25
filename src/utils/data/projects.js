@@ -14,7 +14,7 @@ export const mainProjects = [
     {
         name: 'Forest Żabiec',
         image: 'images/projects/football-club.jpg',
-        url: 'https://forestzabiec.netlify.app',
+        url: 'https://forestzabiec.pl',
         color: '#1F1F1F',
         description: {
             en: 'The official website of the Forest Żabiec football team. The website presents information about the club.',
@@ -22,9 +22,9 @@ export const mainProjects = [
         },
     },
     {
-        name: 'Restaurant',
+        name: 'RMS',
         image: 'images/projects/rms2.png',
-        url: 'https://rms-ernestbies.netlify.app',
+        url: 'https://restaurantmanagementsystem.netlify.app',
         color: '#FFFFFF',
         description: {
             en: 'Restaurant Management System is a system that allows you to manage a restaurant (adding, editing and removing products).',

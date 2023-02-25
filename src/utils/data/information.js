@@ -33,8 +33,8 @@ export const shortInfo = {
 
 export const info = {
     en: {
-        name: 'Lorem',
-        surname: 'Ipsum',
+        name: 'IT',
+        surname: 'Specialist',
         country: {
             name: 'Poland',
             short: 'PL',

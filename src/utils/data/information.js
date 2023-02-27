@@ -1,6 +1,6 @@
 export const WEBSITE_TITLE = {
-    en: 'Programm3r - portfolio creator',
-    pl: 'Programm3r - kreator portfolio',
+    en: 'Progr4mm3r - portfolio creator',
+    pl: 'Progr4mm3r - kreator portfolio',
 };
 
 export const languages = {
@@ -115,7 +115,7 @@ export const info = {
 };
 
 export const infoTypes = {
-    header: 'programm3r',
+    header: 'progr4mm3r',
     connector: '@',
     sections: {
         info: 'info',

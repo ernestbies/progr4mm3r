@@ -128,7 +128,7 @@ const Navbar = ({ history, links, languageSelector, defaultTheme }) => {
                     style={{ marginRight: 10 }}
                     lightMode={currentTheme === navbarThemesTypes.light}
                 />
-                {'Programm3r'}
+                {'Progr4mm3r'}
             </WebsiteHeader>
             <Scrollspy
                 className={'nav-menu'}

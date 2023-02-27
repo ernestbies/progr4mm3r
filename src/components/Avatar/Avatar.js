@@ -20,7 +20,7 @@ const Avatar = ({ width, height, src }) => (
                     height={50}
                     style={{ marginTop: 50, marginBottom: 10 }}
                 />
-                <StyledText>{'Programm3r'}</StyledText>
+                <StyledText>{'Progr4mm3r'}</StyledText>
                 <StyledSubtext>{'portfolio creator'}</StyledSubtext>
             </StyledAvatarBack>
         </StyledAvatarInner>

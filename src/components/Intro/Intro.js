@@ -44,7 +44,7 @@ const Intro = () => {
             <IntroWrapper>
                 <IntroHeader>
                     <Logo width={60} height={60} style={{ marginRight: 20 }} />
-                    <IntroTitle>{'Programm3r'}</IntroTitle>
+                    <IntroTitle>{'Progr4mm3r'}</IntroTitle>
                 </IntroHeader>
                 <IntroSubheader>{renderSubheader()}</IntroSubheader>
                 <Subtitle subtitles={introduction[i18n?.language]} />

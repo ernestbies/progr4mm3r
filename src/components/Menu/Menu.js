@@ -45,7 +45,7 @@ const Menu = () => {
                     <StyledMenuText>
                         {'Discord: '}
                         <StyledColoredMenuText>
-                            {'tsl#2025'}
+                            {contact.discord}
                         </StyledColoredMenuText>
                     </StyledMenuText>
                 </StyledMenuWrapper>

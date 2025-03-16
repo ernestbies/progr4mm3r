@@ -1,7 +1,7 @@
 {
     "name": "progr4mm3r",
     "author": "Ernest Bieś <ernestbies@gmail.com>",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "private": true,
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.36",

@@ -4,7 +4,7 @@ const contact = {
     linkedin: 'https://www.linkedin.com/in/ernestbies',
     github: 'https://github.com/ernestbies',
     bitbucket: 'https://bitbucket.org/ernestbies',
-    discord: 'tsl#2025',
+    discord: 'tsl1337',
 };
 
 export default contact;

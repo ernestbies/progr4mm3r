@@ -5,8 +5,8 @@ export const StyledBox = styled.div`
     display: flex;
     flex-direction: row;
     background-color: black;
-    border-top: solid 1px #FFA55050;
-    
+    border-top: solid 1px #ffa55050;
+
     @media (orientation: portrait) {
         flex-direction: column;
     }
@@ -28,8 +28,16 @@ export const ClipPathElement = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 0 100%, 10% 55%, 3% 56%);
-    
+    clip-path: polygon(
+        15% 0,
+        100% 0,
+        100% 0,
+        100% 100%,
+        0 100%,
+        10% 55%,
+        3% 56%
+    );
+
     @media (orientation: portrait) {
         flex: 1;
         clip-path: none;

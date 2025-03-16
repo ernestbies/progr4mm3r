@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const rotateElement = keyframes`
     0% {
@@ -21,17 +21,17 @@ export const StyledAvatarInner = styled.div`
 `;
 
 export const StyledAvatar = styled.div`
-    width: ${({width}) => width + 'px'};    
-    height: ${({height}) => height + 'px'};
+    width: ${({ width }) => width + 'px'};
+    height: ${({ height }) => height + 'px'};
     border-radius: 50%;
     margin-top: 15px;
     margin-bottom: 15px;
-    -webkit-transition: .2s all;
+    -webkit-transition: 0.2s all;
     position: relative;
     perspective: 1000px;
-    
+
     &:hover {
-       filter: brightness(0.4);
+        filter: brightness(0.4);
     }
 `;
 
@@ -39,21 +39,21 @@ export const StyledAvatarFront = styled.img`
     position: absolute;
     width: 100%;
     height: 100%;
-    width: inherit;   
+    width: inherit;
     height: inherit;
     border-radius: inherit;
     object-fit: cover;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     margin-left: -100px;
-    border: 1px solid #FFA55090;
+    border: 1px solid #ffa55090;
 `;
 
 export const StyledAvatarBack = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    width: inherit;   
+    width: inherit;
     height: inherit;
     border-radius: inherit;
     background-color: black;
@@ -64,18 +64,22 @@ export const StyledAvatarBack = styled.div`
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border: 1px solid #FFA55090;
+    border: 1px solid #ffa55090;
 `;
 
 export const StyledText = styled.p`
-    font-family: Blender Pro Bold, serif;
+    font-family:
+        Blender Pro Bold,
+        serif;
     letter-spacing: 1px;
     color: orange;
     font-size: 15px;
 `;
 
 export const StyledSubtext = styled.p`
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     color: white;
     font-size: 10px;
     margin-top: -15px;

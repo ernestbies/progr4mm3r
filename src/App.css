@@ -2,7 +2,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -19,7 +20,7 @@ html, body {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    border-top: 1px solid #FFFFFF90;
+    border-top: 1px solid #ffffff90;
     margin: auto;
     width: 100%;
 }
@@ -29,7 +30,7 @@ html, body {
     background-size: 65%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    border-top: 1px solid #FFFFFF90;
+    border-top: 1px solid #ffffff90;
     margin: auto;
     width: 100%;
     background-color: black;
@@ -37,7 +38,7 @@ html, body {
 
 .video-container {
     position: relative;
-    border-top: 1px solid #FFFFFF90;
+    border-top: 1px solid #ffffff90;
     background-color: black;
     z-index: 0;
 }
@@ -94,7 +95,7 @@ html, body {
 }
 
 .tooltip-class .tooltip-text::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 100%;
     left: 50%;
@@ -131,7 +132,7 @@ html, body {
 }
 
 .tooltip-class-small .tooltip-text::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 100%;
     left: 50%;
@@ -155,19 +156,24 @@ html, body {
     border-width: 1px;
     padding: 10px 20px;
     border-radius: 8px;
-    transition: color 2s ease-in-out, border-color 2s ease-in-out, background-color 2s ease-in-out;
+    transition:
+        color 2s ease-in-out,
+        border-color 2s ease-in-out,
+        background-color 2s ease-in-out;
 }
 
 .orange-button:hover {
     border-color: white;
-    background-color: #FFA50090;
+    background-color: #ffa50090;
     color: black;
 }
 
 .colored-text {
     color: orange;
     font-weight: 300;
-    font-family: Source Code Pro, serif;
+    font-family:
+        Source Code Pro,
+        serif;
     font-size: 19px;
     animation-name: change-theme;
     animation-duration: 5s;
@@ -208,23 +214,29 @@ html, body {
 }
 
 @keyframes loading-dots {
-    0%, 20% {
+    0%,
+    20% {
         color: rgba(0, 0, 0, 0);
-        text-shadow: .25em 0 0 rgba(0, 0, 0, 0),
-        .5em 0 0 rgba(0, 0, 0, 0);
+        text-shadow:
+            0.25em 0 0 rgba(0, 0, 0, 0),
+            0.5em 0 0 rgba(0, 0, 0, 0);
     }
     40% {
         color: white;
-        text-shadow: .25em 0 0 rgba(0, 0, 0, 0),
-        .5em 0 0 rgba(0, 0, 0, 0);
+        text-shadow:
+            0.25em 0 0 rgba(0, 0, 0, 0),
+            0.5em 0 0 rgba(0, 0, 0, 0);
     }
     60% {
-        text-shadow: .25em 0 0 white,
-        .5em 0 0 rgba(0, 0, 0, 0);
+        text-shadow:
+            0.25em 0 0 white,
+            0.5em 0 0 rgba(0, 0, 0, 0);
     }
-    80%, 100% {
-        text-shadow: .25em 0 0 white,
-        .5em 0 0 white;
+    80%,
+    100% {
+        text-shadow:
+            0.25em 0 0 white,
+            0.5em 0 0 white;
     }
 }
 
@@ -234,7 +246,7 @@ html, body {
     }
 
     50% {
-        color: #DC143C;
+        color: #dc143c;
     }
 
     100% {
@@ -253,7 +265,6 @@ html, body {
 }
 
 @media only screen and (max-width: 992px) {
-
     .carousel-content {
         margin: 40px;
         text-align: left;
@@ -264,11 +275,9 @@ html, body {
         transform: scale(0.77);
         transform-origin: 0 0;
     }
-
 }
 
 @media only screen and (max-width: 480px) {
-
     .inform-text {
         font-size: 12px;
     }
@@ -287,4 +296,3 @@ html, body {
         background-size: cover;
     }
 }
-

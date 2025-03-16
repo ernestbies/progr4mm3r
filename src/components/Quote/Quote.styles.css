@@ -1,5 +1,5 @@
-.quote-component{
-    font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+.quote-component {
+    font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
     margin: 0 auto;
     align-self: center;
     padding: 3rem;
@@ -13,22 +13,23 @@
     color: white;
     font-weight: 300;
     font-style: italic;
-    font-family: "Open Sans", serif;
+    font-family: 'Open Sans', serif;
     font-size: 13px;
     margin: 1rem auto 2rem;
 }
 
 .quote-component blockquote.EN {
-    background: linear-gradient(to right, orange 3px, transparent 3px) 0 100%,
-    linear-gradient(to left, orange 3px, transparent 3px) 100% 0,
-    linear-gradient(to bottom, orange 3px, transparent 3px) 100% 0,
-    linear-gradient(to top, orange 3px, transparent 3px) 0 100%;
+    background:
+        linear-gradient(to right, orange 3px, transparent 3px) 0 100%,
+        linear-gradient(to left, orange 3px, transparent 3px) 100% 0,
+        linear-gradient(to bottom, orange 3px, transparent 3px) 100% 0,
+        linear-gradient(to top, orange 3px, transparent 3px) 0 100%;
     background-repeat: no-repeat;
     background-size: 14px 14px;
 }
 
 .quote-component blockquote.quote:before,
-.quote-component blockquote.quote:after{
+.quote-component blockquote.quote:after {
     font-family: Cambria, serif;
     font-style: normal;
     position: absolute;
@@ -36,7 +37,7 @@
     font-size: 40px;
 }
 
-.quote-component blockquote.EN:before{
+.quote-component blockquote.EN:before {
     font-family: Cambria, serif;
     content: '“';
     top: -20px;
@@ -44,7 +45,7 @@
     right: 100%;
 }
 
-.quote-component blockquote.EN:after{
+.quote-component blockquote.EN:after {
     content: '”';
     margin-left: -15px;
     left: 100%;

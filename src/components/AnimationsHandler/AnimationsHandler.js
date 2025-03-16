@@ -1,17 +1,15 @@
-import {useEffect} from "react";
+import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const AnimationsHandler = ({activeSection}) => {
-
+const AnimationsHandler = ({ activeSection }) => {
     const cards = document.getElementsByName('knowledge-card');
     const texts = document.getElementsByName('timeline-text');
-    const elements = {cards, texts};
+    const elements = { cards, texts };
 
     useEffect(() => {
         playAnimations(activeSection);
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activeSection]);
-
 
     const playAnimations = (sectionName) => {
         switch (sectionName) {
@@ -24,23 +22,23 @@ const AnimationsHandler = ({activeSection}) => {
             default:
                 return;
         }
-    }
+    };
 
     const applyAnimation = (elements) => {
-        if(elements.length) {
-            if(!elements.item(0).classList.contains('animated')) {
-                for(let i = 0; i < elements.length; i++) {
+        if (elements.length) {
+            if (!elements.item(0).classList.contains('animated')) {
+                for (let i = 0; i < elements.length; i++) {
                     elements.item(i).classList.toggle('animated');
                 }
             }
         }
-    }
+    };
 
-    return (<></>);
-}
+    return <></>;
+};
 
 AnimationsHandler.propTypes = {
-    activeSection: PropTypes.string
-}
+    activeSection: PropTypes.string,
+};
 
 export default AnimationsHandler;

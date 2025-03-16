@@ -204,7 +204,9 @@ export const Quote = styled.p`
     height: 15px;
     letter-spacing: 1px;
     margin-top: 60px;
-    animation: ${reveal} 5s forwards, ${changeColor} 5s ease-in-out infinite;
+    animation:
+        ${reveal} 5s forwards,
+        ${changeColor} 5s ease-in-out infinite;
 
     &:before {
         content: '#';

@@ -77,8 +77,8 @@ const Navbar = ({ history, links, languageSelector, defaultTheme }) => {
             sections?.contact
                 ? navbarThemesTypes.light
                 : sections?.unknown
-                ? navbarThemesTypes.special
-                : navbarThemesTypes.dark
+                  ? navbarThemesTypes.special
+                  : navbarThemesTypes.dark
         );
     };
 

@@ -22,7 +22,9 @@
 }
 
 .info-style {
-    font-family: Open Sans, serif;
+    font-family:
+        Open Sans,
+        serif;
     font-size: 11px;
     font-weight: 300;
     padding-right: 7px;
@@ -32,7 +34,7 @@
 .info-bar {
     width: 1px;
     height: 14px;
-    background-color: #FFFFFF50;
+    background-color: #ffffff50;
     margin-right: 7px;
 }
 

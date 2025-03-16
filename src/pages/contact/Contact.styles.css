@@ -1,7 +1,14 @@
 .contact-list {
-    background-image: linear-gradient(to bottom right, red, #000000, #000000, #000000, red);
+    background-image: linear-gradient(
+        to bottom right,
+        red,
+        #000000,
+        #000000,
+        #000000,
+        red
+    );
     text-align: center;
-    border-top: 1px solid #FFFFFF90;
+    border-top: 1px solid #ffffff90;
     position: relative;
 }
 
@@ -34,11 +41,11 @@
     font-size: 17px;
     color: grey;
     transition: 1s ease-in-out;
-    text-decoration: none!important;
+    text-decoration: none !important;
 }
 
 .email-text:hover {
-    color: #DC143C;
+    color: #dc143c;
 }
 
 .signature {

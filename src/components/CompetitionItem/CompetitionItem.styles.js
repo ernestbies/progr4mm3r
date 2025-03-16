@@ -115,7 +115,9 @@ export const IconTechWrapper = styled.div`
 `;
 
 export const ProjectTitle = styled.p`
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     font-size: 25px;
     line-height: 30px;
     border-left-width: 5px;
@@ -133,7 +135,9 @@ export const ProjectTitle = styled.p`
 
 export const CompetitionTitle = styled.span`
     font-size: 14px;
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     color: #c0c0c0;
 
     @media (max-width: 480px) {
@@ -149,7 +153,9 @@ export const CompetitionInfo = styled.div`
 
 export const CompetitionSubtitle = styled.span`
     font-size: 14px;
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     color: grey;
     font-style: italic;
 
@@ -159,7 +165,9 @@ export const CompetitionSubtitle = styled.span`
 `;
 
 export const ProjectDesc = styled.p`
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     font-size: 13px;
     font-weight: 300;
     color: white;

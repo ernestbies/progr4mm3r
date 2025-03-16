@@ -1,4 +1,4 @@
-import styled, {keyframes, css} from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 import PropTypes from 'prop-types';
 
 const changeContent = keyframes`
@@ -53,48 +53,56 @@ const rotateAnimation = keyframes`
         -o-transform: rotate(0deg);
         transform: rotate(0deg);
     }
-`
+`;
 
 export const StyledPar = styled.p`
     color: orange;
-    font-family: Source Code Pro, serif;
+    font-family:
+        Source Code Pro,
+        serif;
     font-weight: 300;
     font-size: 20px;
     display: inline;
     user-select: none;
-    
+
     &:before {
-        content: "> ";
-        animation: ${changeContent} 6s infinite; 
+        content: '> ';
+        animation: ${changeContent} 6s infinite;
     }
-    
+
     &:after {
-        content: ": ";
+        content: ': ';
     }
 `;
 
 export const ColoredSpan = styled.span`
-    color: ${({color}) => color};
-    font-family: Source Code Pro, serif;
+    color: ${({ color }) => color};
+    font-family:
+        Source Code Pro,
+        serif;
     font-weight: 300;
     font-size: 20px;
     user-select: none;
 `;
 
-export const StyledContent = styled.span` 
+export const StyledContent = styled.span`
     &:after {
-        content: "${({value}) => value}";
+        content: '${({ value }) => value}';
         display: inline-block;
-        ${props => props.animation.split(' ').includes('change') && css`
-            animation: ${changeNumber} 3s infinite steps(1);
-        `}
-        ${props => props.animation.split(' ').includes('rotate')  && css`
-            animation: ${rotateAnimation} 3s infinite steps(1);
-        `}
+        ${(props) =>
+            props.animation.split(' ').includes('change') &&
+            css`
+                animation: ${changeNumber} 3s infinite steps(1);
+            `}
+        ${(props) =>
+            props.animation.split(' ').includes('rotate') &&
+            css`
+                animation: ${rotateAnimation} 3s infinite steps(1);
+            `}
     }
 `;
 
 StyledContent.propTypes = {
     value: PropTypes.string.isRequired,
     animation: PropTypes.string,
-}
+};

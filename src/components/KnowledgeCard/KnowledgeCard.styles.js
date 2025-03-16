@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const revealCard = keyframes`
     0% {
@@ -16,7 +16,7 @@ export const Card = styled.div`
     display: flex;
     flex-direction: column;
     border-radius: 25px;
-    border: 1px solid #FFFFFF90;
+    border: 1px solid #ffffff90;
     background: transparent;
     padding: 20px;
     width: 330px;
@@ -25,13 +25,13 @@ export const Card = styled.div`
     opacity: 0.2;
     perspective: 100px;
     user-select: none;
-    
+
     &.animated {
         animation: ${revealCard} 8s forwards;
     }
-    
+
     &:hover {
-        border: 1px solid ${({color}) => color};
+        border: 1px solid ${({ color }) => color};
     }
 `;
 
@@ -42,9 +42,9 @@ export const CardHeader = styled.div`
     margin-right: -20px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    background-color: #FFFFFF60;
-    position: relative;  
-    background-color: #00000090;  
+    background-color: #ffffff60;
+    position: relative;
+    background-color: #00000090;
 `;
 
 export const CardImage = styled.img`
@@ -58,7 +58,12 @@ export const CardImage = styled.img`
 export const DivWrapper = styled.div`
     margin-left: -20px;
     margin-right: -20px;
-    background-image: linear-gradient(to right, black, ${({backgroundColor}) => backgroundColor}, black);
+    background-image: linear-gradient(
+        to right,
+        black,
+        ${({ backgroundColor }) => backgroundColor},
+        black
+    );
     height: 40px;
 `;
 
@@ -68,7 +73,9 @@ export const CardTitle = styled.p`
     font-size: 15px;
     line-height: 40px;
     color: white;
-    font-family: Blender Pro Bold, serif;
+    font-family:
+        Blender Pro Bold,
+        serif;
     letter-spacing: 1px;
 `;
 
@@ -80,8 +87,8 @@ export const CardContent = styled.div`
     margin-right: -20px;
     margin-left: -20px;
     margin-bottom: -20px;
-    background-color: rgba(0,0,0,0.7);
-    position: relative;  
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,7 +99,7 @@ export const ImagesContainer = styled.div`
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
 `;
 
 export const CardIcon = styled.img`

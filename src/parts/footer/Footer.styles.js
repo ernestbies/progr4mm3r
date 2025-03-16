@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledFooter = styled.footer`
     width: 100%;
     padding: 1rem;
-    font-family: "Open Sans", serif;
+    font-family: 'Open Sans', serif;
     text-align: center;
     font-weight: 300;
     font-size: 0.7rem;
@@ -13,5 +13,5 @@ export const StyledFooter = styled.footer`
 
 export const FooterText = styled.p`
     color: grey;
-    margin: 0;    
+    margin: 0;
 `;

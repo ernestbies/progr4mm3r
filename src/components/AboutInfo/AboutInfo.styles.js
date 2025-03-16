@@ -22,8 +22,8 @@ export const AboutInfoContent = styled.div`
 
 export const InfoSection = styled.p`
     color: white;
-    font-family: ${({ consoleText }) =>
-            consoleText ? 'Source Code Pro' : 'Open Sans'},
+    font-family:
+        ${({ consoleText }) => (consoleText ? 'Source Code Pro' : 'Open Sans')},
         serif;
     margin-bottom: 10px;
 `;
@@ -48,7 +48,9 @@ ColoredText.propTypes = {
 
 export const InfoHeader = styled.span`
     color: orange;
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     font-weight: bold;
 
     &:before {

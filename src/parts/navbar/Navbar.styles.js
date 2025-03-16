@@ -1,31 +1,31 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 // Available themes (navigation bar)
 export const navbarThemesTypes = {
-    dark: "dark",
-    light: "light",
-    special: "special",
+    dark: 'dark',
+    light: 'light',
+    special: 'special',
 };
 
 // Available themes - properties (navigation bar)
 export const navbarThemes = {
     dark: {
-        background: "black",
-        color: "orange",
-        fontColor: "white",
-        additionalColor: "white",
+        background: 'black',
+        color: 'orange',
+        fontColor: 'white',
+        additionalColor: 'white',
     },
     light: {
-        background: "white",
-        color: "red",
-        fontColor: "black",
-        additionalColor: "black",
+        background: 'white',
+        color: 'red',
+        fontColor: 'black',
+        additionalColor: 'black',
     },
     special: {
-        background: "#000015",
-        color: "red",
-        fontColor: "black",
-        additionalColor: "orange",
+        background: '#000015',
+        color: 'red',
+        fontColor: 'black',
+        additionalColor: 'orange',
     },
 };
 
@@ -110,7 +110,7 @@ const StyledNav = styled.nav`
 `;
 
 const WebsiteHeader = styled.div`
-    font-family: "Open Sans", serif;
+    font-family: 'Open Sans', serif;
     font-size: 16px;
     font-weight: 300;
     color: ${({ currentTheme }) => navbarThemes[currentTheme].color};
@@ -130,7 +130,7 @@ const WebsiteHeader = styled.div`
 
 const NavbarLink = styled.div`
     cursor: pointer;
-    font-family: "Open Sans", serif;
+    font-family: 'Open Sans', serif;
     font-weight: 300;
     font-size: 16px;
     margin-bottom: -15px;
@@ -154,17 +154,19 @@ const SpecialNavbarLink = styled(NavbarLink)`
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: orange;
-    font-family: Source Code Pro, serif;
+    font-family:
+        Source Code Pro,
+        serif;
     text-transform: uppercase;
     animation: ${changeBorderTheme} 5s infinite;
 
     &:after {
-        content: "";
+        content: '';
         animation: ${changeLetters} 8s infinite ease-in-out;
     }
 
     &:before {
-        content: "";
+        content: '';
         animation: ${showHide} 8s infinite ease-in-out;
     }
 `;

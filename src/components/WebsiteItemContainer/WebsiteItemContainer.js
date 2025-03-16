@@ -8,10 +8,10 @@ const WebsiteItemContainer = styled.div`
     width: 100%;
     padding-top: 30px;
     padding-bottom: 70px;
-    
+
     @media (orientation: portrait) {
-        flex-wrap: wrap; 
-    } 
+        flex-wrap: wrap;
+    }
 `;
 
 export default WebsiteItemContainer;

@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const showHide = keyframes`
     0% {
@@ -15,12 +15,12 @@ const showHide = keyframes`
 `;
 
 export const Caret = styled.span`
-    display: ${({visible}) => visible ? 'inline-block' : 'none'};
+    display: ${({ visible }) => (visible ? 'inline-block' : 'none')};
     background-color: white;
-    width: ${({width}) => width+'px'};
-    height: ${({height}) => height+'px'};
+    width: ${({ width }) => width + 'px'};
+    height: ${({ height }) => height + 'px'};
     animation-name: ${showHide};
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    animation-timing-function: steps(1);    
+    animation-timing-function: steps(1);
 `;

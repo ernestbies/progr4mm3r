@@ -11,7 +11,9 @@ export const ContactContainer = styled.form`
 export const ContactInput = styled.input`
     background-color: black;
     border: 1px solid darkred;
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     width: 100%;
     color: white;
     font-weight: 300;
@@ -63,7 +65,9 @@ export const ContactSubmitButton = styled.button`
     border: 0;
     border-left: 2px solid darkred;
     font-size: 13px;
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     height: 30px;
     display: block;
     background: linear-gradient(to right, darkred 50%, transparent 50%);
@@ -99,7 +103,9 @@ export const Colored = styled.span`
 
 export const TextError = styled.p`
     color: white;
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     font-size: 12px;
     margin: 5px;
 `;

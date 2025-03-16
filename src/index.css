@@ -4,15 +4,15 @@
 @import url('https://fonts.googleapis.com/css?family=Caveat:400');
 
 @font-face {
-  font-family: 'Press Start';
-  font-weight: 400;
-  src: url("./assets/fonts/PressStart2P-Regular.woff2") format('woff2');
-  font-display: swap;
+    font-family: 'Press Start';
+    font-weight: 400;
+    src: url('./assets/fonts/PressStart2P-Regular.woff2') format('woff2');
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Blender Pro Bold';
-  font-weight: 700;
-  src: url("./assets/fonts/BlenderProBold.woff2") format('woff2');
-  font-display: swap;
+    font-family: 'Blender Pro Bold';
+    font-weight: 700;
+    src: url('./assets/fonts/BlenderProBold.woff2') format('woff2');
+    font-display: swap;
 }

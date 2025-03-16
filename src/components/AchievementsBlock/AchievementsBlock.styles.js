@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 const showHideAnimation = keyframes`
     0% {
@@ -15,7 +15,7 @@ const showHideAnimation = keyframes`
 `;
 
 export const TextWrapper = styled.div`
-    display: ${({display}) => display};
+    display: ${({ display }) => display};
     animation: ${showHideAnimation} 10s ease-in-out;
     margin-top: 5px;
 `;

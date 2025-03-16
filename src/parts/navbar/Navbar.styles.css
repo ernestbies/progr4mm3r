@@ -32,7 +32,7 @@
     }
 }
 
-@keyframes change-theme-to-light-from-dark{
+@keyframes change-theme-to-light-from-dark {
     0% {
         background-color: black;
     }
@@ -43,7 +43,6 @@
 }
 
 @media only screen and (max-width: 992px) {
-
     .nav-menu {
         display: none;
         width: 100%;

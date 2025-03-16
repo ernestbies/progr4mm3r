@@ -6,7 +6,7 @@ export const BadgeItem = styled.div`
     height: 20px;
     position: absolute;
     right: 0;
-    bottom: -20px;  
+    bottom: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,16 +18,18 @@ export const BadgeItem = styled.div`
 
 export const BadgeTitle = styled.span`
     color: black;
-    font-size: 11px;    
+    font-size: 11px;
     letter-spacing: 1px;
-    font-family: Blender Pro Bold, serif;
+    font-family:
+        Blender Pro Bold,
+        serif;
     margin-left: 15px;
-    
+
     &:before {
-        content: "// ";
+        content: '// ';
     }
-    
+
     &:after {
-        content: "_";
+        content: '_';
     }
 `;

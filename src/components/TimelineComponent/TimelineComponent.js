@@ -12,137 +12,199 @@ import LaptopMacIcon from '@material-ui/icons/LaptopMac';
 import HotelIcon from '@material-ui/icons/Hotel';
 import RepeatIcon from '@material-ui/icons/Repeat';
 import WatchIcon from '@material-ui/icons/LiveTv';
-import TimelineText from "../TimelineText/TimelineText";
-import TimelineItem from "../TimelineItem/TimelineItem";
-import {useStyles} from "./TimelineComponent.styles";
+import TimelineText from '../TimelineText/TimelineText';
+import TimelineItem from '../TimelineItem/TimelineItem';
+import { useStyles } from './TimelineComponent.styles';
 
 export default function TimelineComponent() {
     const classes = useStyles();
 
     return (
-        <Timeline style={{marginBottom: 0}}>
+        <Timeline style={{ marginBottom: 0 }}>
             <TimelineItem>
-                <TimelineContent style={{display: 'flex', alignItems: 'start', opacity: 0}}>
+                <TimelineContent
+                    style={{ display: 'flex', alignItems: 'start', opacity: 0 }}
+                >
                     <Paper elevation={3} className={classes.paper}>
-                        <TimelineText type={'eat'} color={'white'}/>
+                        <TimelineText type={'eat'} color={'white'} />
                     </Paper>
                 </TimelineContent>
                 <TimelineSeparator>
                     <TimelineDot>
-                        <FastfoodIcon/>
+                        <FastfoodIcon />
                     </TimelineDot>
-                    <TimelineConnector/>
+                    <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper} style={{textAlign: 'left'}}>
-                        <TimelineText type={'eat'} color={'white'}/>
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ textAlign: 'left' }}
+                    >
+                        <TimelineText type={'eat'} color={'white'} />
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-                <TimelineContent style={{display: 'flex', alignItems: 'start'}}>
-                    <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto', textAlign: 'right'}}>
-                        <TimelineText type={'code'} color={'orange'}/>
+                <TimelineContent
+                    style={{ display: 'flex', alignItems: 'start' }}
+                >
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ marginLeft: 'auto', textAlign: 'right' }}
+                    >
+                        <TimelineText type={'code'} color={'orange'} />
                     </Paper>
                 </TimelineContent>
                 <TimelineSeparator>
-                    <TimelineDot style={{backgroundColor: 'orange'}}>
-                        <LaptopMacIcon/>
+                    <TimelineDot style={{ backgroundColor: 'orange' }}>
+                        <LaptopMacIcon />
                     </TimelineDot>
-                    <TimelineConnector/>
+                    <TimelineConnector />
                 </TimelineSeparator>
-                <TimelineContent style={{opacity: 0}}>
+                <TimelineContent style={{ opacity: 0 }}>
                     <Paper elevation={3} className={classes.paper}>
-                        <TimelineText type={'code'} color={'orange'}/>
+                        <TimelineText type={'code'} color={'orange'} />
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-                <TimelineContent style={{display: 'flex', alignItems: 'start', opacity: 0}}>
-                    <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
-                        <TimelineText type={'play'} color={'purple'}/>
+                <TimelineContent
+                    style={{ display: 'flex', alignItems: 'start', opacity: 0 }}
+                >
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ marginLeft: 'auto' }}
+                    >
+                        <TimelineText type={'play'} color={'purple'} />
                     </Paper>
                 </TimelineContent>
                 <TimelineSeparator>
-                    <TimelineDot style={{backgroundColor: 'purple'}}>
-                        <SportsEsportsIcon/>
+                    <TimelineDot style={{ backgroundColor: 'purple' }}>
+                        <SportsEsportsIcon />
                     </TimelineDot>
-                    <TimelineConnector/>
+                    <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper} style={{textAlign: 'left'}}>
-                        <TimelineText type={'play'} color={'purple'}/>
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ textAlign: 'left' }}
+                    >
+                        <TimelineText type={'play'} color={'purple'} />
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-                <TimelineContent style={{display: 'flex', alignItems: 'start'}}>
-                    <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto', textAlign: 'right'}}>
-                        <TimelineText type={'meetFriends'} color={'yellow'}/>
+                <TimelineContent
+                    style={{ display: 'flex', alignItems: 'start' }}
+                >
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ marginLeft: 'auto', textAlign: 'right' }}
+                    >
+                        <TimelineText type={'meetFriends'} color={'yellow'} />
                     </Paper>
                 </TimelineContent>
                 <TimelineSeparator>
-                    <TimelineDot style={{backgroundColor: 'red'}}>
-                        <PeopleIcon/>
+                    <TimelineDot style={{ backgroundColor: 'red' }}>
+                        <PeopleIcon />
                     </TimelineDot>
-                    <TimelineConnector/>
+                    <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper} style={{opacity: 0}}>
-                        <TimelineText type={'meetFriends'} color={'red'}/>
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ opacity: 0 }}
+                    >
+                        <TimelineText type={'meetFriends'} color={'red'} />
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-                <TimelineContent style={{display: 'flex', alignItems: 'start', opacity: 0}}>
-                    <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
-                        <TimelineText type={'watchMovies'} color={'green'}/>
+                <TimelineContent
+                    style={{ display: 'flex', alignItems: 'start', opacity: 0 }}
+                >
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ marginLeft: 'auto' }}
+                    >
+                        <TimelineText type={'watchMovies'} color={'green'} />
                     </Paper>
                 </TimelineContent>
                 <TimelineSeparator>
-                    <TimelineDot style={{backgroundColor: 'green'}}>
-                        <WatchIcon/>
+                    <TimelineDot style={{ backgroundColor: 'green' }}>
+                        <WatchIcon />
                     </TimelineDot>
-                    <TimelineConnector/>
+                    <TimelineConnector />
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper} style={{textAlign: 'left'}}>
-                        <TimelineText type={'watchMovies'} color={'green'}/>
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ textAlign: 'left' }}
+                    >
+                        <TimelineText type={'watchMovies'} color={'green'} />
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-                <TimelineContent style={{display: 'flex', alignItems: 'start'}}>
-                    <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto', textAlign: 'right'}}>
-                        <TimelineText type={'sleep'} color={'blue'}/>
+                <TimelineContent
+                    style={{ display: 'flex', alignItems: 'start' }}
+                >
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ marginLeft: 'auto', textAlign: 'right' }}
+                    >
+                        <TimelineText type={'sleep'} color={'blue'} />
                     </Paper>
                 </TimelineContent>
                 <TimelineSeparator>
-                    <TimelineDot style={{backgroundColor: 'blue'}}>
-                        <HotelIcon/>
+                    <TimelineDot style={{ backgroundColor: 'blue' }}>
+                        <HotelIcon />
                     </TimelineDot>
-                    <TimelineConnector className={classes.secondaryTail}/>
+                    <TimelineConnector className={classes.secondaryTail} />
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper} style={{opacity: 0}}>
-                        <TimelineText type={'sleep'} color={'blue'}/>
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ opacity: 0 }}
+                    >
+                        <TimelineText type={'sleep'} color={'blue'} />
                     </Paper>
                 </TimelineContent>
             </TimelineItem>
             <TimelineItem>
-                <TimelineContent style={{display: 'flex', alignItems: 'start', opacity: 0}}>
-                    <Paper elevation={3} className={classes.paper} style={{marginLeft: 'auto'}}>
-                        <TimelineText type={'repeat'} color={'#DC143C'}/>
+                <TimelineContent
+                    style={{ display: 'flex', alignItems: 'start', opacity: 0 }}
+                >
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ marginLeft: 'auto' }}
+                    >
+                        <TimelineText type={'repeat'} color={'#DC143C'} />
                     </Paper>
                 </TimelineContent>
                 <TimelineSeparator>
-                    <TimelineDot style={{backgroundColor: '#DC143C'}}>
-                        <RepeatIcon/>
+                    <TimelineDot style={{ backgroundColor: '#DC143C' }}>
+                        <RepeatIcon />
                     </TimelineDot>
                 </TimelineSeparator>
                 <TimelineContent>
-                    <Paper elevation={3} className={classes.paper} style={{textAlign: 'left'}}>
-                        <TimelineText type={'repeat'} color={'#DC143C'}/>
+                    <Paper
+                        elevation={3}
+                        className={classes.paper}
+                        style={{ textAlign: 'left' }}
+                    >
+                        <TimelineText type={'repeat'} color={'#DC143C'} />
                     </Paper>
                 </TimelineContent>
             </TimelineItem>

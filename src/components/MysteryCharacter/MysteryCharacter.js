@@ -1,6 +1,7 @@
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
-const moveLetters = [keyframes`
+const moveLetters = [
+    keyframes`
     0% {
         opacity: 1;
     }
@@ -79,16 +80,17 @@ const moveLetters = [keyframes`
         margin-bottom: 200px;
         opacity: 0;
     }
-`];
+`,
+];
 
 const MysteryCharacter = styled.p`
-    color: orange; 
+    color: orange;
     font-size: 30px;
     -webkit-text-stroke: 1px #000000;
-    animation: ${({pos}) => moveLetters[pos]} 10s infinite;
-    
+    animation: ${({ pos }) => moveLetters[pos]} 10s infinite;
+
     &:after {
-        content: "${({character}) => character}";
+        content: '${({ character }) => character}';
     }
 `;
 

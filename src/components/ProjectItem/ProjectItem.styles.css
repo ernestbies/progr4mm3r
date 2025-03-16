@@ -17,7 +17,6 @@
 }
 
 @media only screen and (max-width: 992px) {
-
     .carousel-project-item {
         flex-direction: column;
         align-items: center;
@@ -28,7 +27,6 @@
         width: 90%;
         margin: 0;
     }
-
 }
 
 @media only screen and (max-width: 480px) {

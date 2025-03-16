@@ -7,44 +7,44 @@ export const knowledge = {
             {
                 type: 'languages',
                 code: 'language-js',
-                name: 'JavaScript'
+                name: 'JavaScript',
             },
             {
                 type: 'languages',
                 code: 'html',
-                name: 'HTML'
+                name: 'HTML',
             },
             {
                 type: 'languages',
                 code: 'css',
-                name: 'CSS'
+                name: 'CSS',
             },
             {
                 type: 'technologies',
                 code: 'reactjs',
-                name: 'React.js'
+                name: 'React.js',
             },
             {
                 type: 'technologies',
                 code: 'reactnative',
-                name: 'React Native'
+                name: 'React Native',
             },
             {
                 type: 'languages',
                 code: 'language-java',
-                name: 'Java'
+                name: 'Java',
             },
             {
                 type: 'platforms',
                 code: 'netbeans',
-                name: 'NetBeans IDE'
+                name: 'NetBeans IDE',
             },
             {
                 type: 'platforms',
                 code: 'intellij',
-                name: 'IntelliJ IDEA'
-            }
-        ]
+                name: 'IntelliJ IDEA',
+            },
+        ],
     },
     backend: {
         name: 'backend',
@@ -54,49 +54,49 @@ export const knowledge = {
             {
                 type: 'languages',
                 code: 'language-js',
-                name: 'JavaScript'
+                name: 'JavaScript',
             },
             {
                 type: 'technologies',
                 code: 'nodejs',
-                name: 'Node.js'
+                name: 'Node.js',
             },
             {
                 type: 'technologies',
                 code: 'hapijs',
-                name: 'Hapi.js'
+                name: 'Hapi.js',
             },
             {
                 type: 'technologies',
                 code: 'jwt',
-                name: 'JSON Web Token'
+                name: 'JSON Web Token',
             },
             {
                 type: 'languages',
                 code: 'language-java',
-                name: 'Java'
+                name: 'Java',
             },
             {
                 type: 'technologies',
                 code: 'spring',
-                name: 'Spring'
+                name: 'Spring',
             },
             {
                 type: 'technologies',
                 code: 'uml',
-                name: 'Unified Modeling Language'
+                name: 'Unified Modeling Language',
             },
             {
                 type: 'technologies',
                 code: 'heroku',
-                name: 'Heroku (Cloud Application Platform)'
+                name: 'Heroku (Cloud Application Platform)',
             },
             {
                 type: 'technologies',
                 code: 'netlify',
-                name: 'Netlify (Cloud Application Platform)'
-            }
-        ]
+                name: 'Netlify (Cloud Application Platform)',
+            },
+        ],
     },
     databases: {
         name: 'databases',
@@ -106,34 +106,34 @@ export const knowledge = {
             {
                 type: 'languages',
                 code: 'language-sql',
-                name: 'SQL'
+                name: 'SQL',
             },
             {
                 type: 'languages',
                 code: 'language-plpgsql',
-                name: 'PL/pg SQL'
+                name: 'PL/pg SQL',
             },
             {
                 type: 'technologies',
                 code: 'mongodb',
-                name: 'MongoDB'
+                name: 'MongoDB',
             },
             {
                 type: 'technologies',
                 code: 'mongoose',
-                name: 'mongoose'
+                name: 'mongoose',
             },
             {
                 type: 'technologies',
                 code: 'sqlite',
-                name: 'SQLite'
+                name: 'SQLite',
             },
             {
                 type: 'technologies',
                 code: 'tdm',
-                name: 'Toad Data Modeler'
-            }
-        ]
+                name: 'Toad Data Modeler',
+            },
+        ],
     },
     testing: {
         name: 'testing_code_quality',
@@ -143,38 +143,38 @@ export const knowledge = {
             {
                 type: 'languages',
                 code: 'language-js',
-                name: 'JavaScript'
+                name: 'JavaScript',
             },
             {
                 type: 'technologies',
                 code: 'jest',
-                name: 'Jest'
+                name: 'Jest',
             },
             {
                 type: 'languages',
                 code: 'language-java',
-                name: 'Java'
+                name: 'Java',
             },
             {
                 type: 'technologies',
                 code: 'junit',
-                name: 'JUnit'
+                name: 'JUnit',
             },
             {
                 type: 'languages',
                 code: 'language-groovy',
-                name: 'Groovy'
+                name: 'Groovy',
             },
             {
                 type: 'technologies',
                 code: 'spock',
-                name: 'Spock'
+                name: 'Spock',
             },
             {
                 type: 'technologies',
                 code: 'git',
-                name: 'GIT'
-            }
-        ]
-    }
-}
+                name: 'GIT',
+            },
+        ],
+    },
+};

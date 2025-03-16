@@ -100,7 +100,9 @@ export const WebsitePin = styled.div`
     background-color: black;
     border-radius: 20px;
     border: 1px solid #ffa50050;
-    font-family: Blender Pro Bold, serif;
+    font-family:
+        Blender Pro Bold,
+        serif;
     font-size: 10px;
     color: orange;
     line-height: 40px;
@@ -118,7 +120,9 @@ export const WebsiteHoverContent = styled.div`
 `;
 
 export const WebsiteTitle = styled.p`
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     font-size: 17px;
     color: white;
     margin: 15px;
@@ -130,7 +134,9 @@ export const WebsiteTitle = styled.p`
 `;
 
 export const WebsiteDesc = styled.p`
-    font-family: Roboto Condensed, serif;
+    font-family:
+        Roboto Condensed,
+        serif;
     font-size: 12px;
     color: white;
     margin: 15px;

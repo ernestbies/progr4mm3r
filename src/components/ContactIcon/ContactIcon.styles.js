@@ -2,8 +2,6 @@ import styled from 'styled-components';
 
 const iconColors = {
     github: '#696969',
-    bitbucket: '#1a74ed',
-    linkedin: '#0e76a8',
     email: '#8b0000',
 };
 

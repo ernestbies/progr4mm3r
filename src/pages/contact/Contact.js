@@ -49,9 +49,7 @@ const Contact = () => {
                 <div className={'contact-icons'}>
                     <ContactIcon type={'email'} />
                     <ContactIcon type={'github'} />
-                    <ContactIcon type={'bitbucket'} />
                     <ContactIcon type={'discord'} />
-                    <ContactIcon type={'linkedin'} />
                 </div>
                 <div className={'email-container'} style={{ padding: 50 }}>
                     <p className={'email-header'}>{t('contact2')}</p>
